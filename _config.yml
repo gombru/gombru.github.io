@@ -1,0 +1,18 @@
+# Site settings
+title: Blog de Raúl Gómez - Visión por ordenador
+email: raulgombru@gmail.com
+description: "Visión por ordenador en español."
+baseurl: ""
+url: "http://gombru.github.io"
+twitter_username: gombru
+github_username:  gombru
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
