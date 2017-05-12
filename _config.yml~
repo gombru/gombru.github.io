@@ -1,11 +1,11 @@
 # Site settings
-title: Andrej Karpathy blog
-email: 
-description: "Musings of a Computer Scientist."
+title: Blog de Raúl Gómez - Visión por ordenador
+email: raulgombru@gmail.com
+description: "Visión por ordenador en español."
 baseurl: ""
-url: "http://karpathy.github.io"
-twitter_username: karpathy
-github_username:  karpathy
+url: "http://gombru.github.io"
+twitter_username: gombru
+github_username:  gombru
 
 # Build settings
 markdown: kramdown
