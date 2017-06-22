@@ -1,4 +1,4 @@
 # My blog
 
-Este es mi blog, que usa [Jekyll](http://jekyllrb.com/)
+My web site, which uses [Jekyll](http://jekyllrb.com/)
 
