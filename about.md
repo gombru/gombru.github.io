@@ -9,3 +9,8 @@ I'm **Raúl Gómez Bruballa**, an industrial PhD student in Eurecat and the Comp
 I was born in Altafulla and moved to Barcelona to study telecomunications engeniering, with an specialization in audivisuals systems. After that I did a computer vision master in the UAB, where now I'm doing my PhD toguether with Eurecat, the catalonia technological center.
 
 In this personal website I will write about my scientific work, either publications, toy experiments or coding stuff.
+
+<div class="imgcap">
+<img src="/assets/me.jpg">
+</div>
+
