@@ -1,7 +1,7 @@
 # Site settings
-title: Raúl Gombru
+title: Raúl Gombru blog
 email: raulgombru@gmail.com
-description: "Raúl Gómez Bruballa personal website."
+description: "Computer vision, deep learning and image processing stuff."
 baseurl: ""
 url: "http://gombru.github.io"
 twitter_username: gombru
