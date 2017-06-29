@@ -108,12 +108,40 @@ The net has learned to identify some interesting patterns beyond cities touristi
 ### New York TP
 
 <div class="imgcap">
-<img src="/assets/cities_classification/image8.jpg">
-</div>
-<div class="imgcap">
-<img src="/assets/cities_classification/image8.jpg">
+	<div style="display:inline-block">
+		<img src="/assets/cities_classification/image16.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image14.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image12.jpg" height="240">
+	</div>
 </div>
 
+<div class="imgcap">
+	<div style="display:inline-block">
+		<img src="/assets/cities_classification/image9.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image10.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image8.jpg" height="240">
+	</div>
+</div>
+
+<div class="imgcap">
+	<div style="display:inline-block">
+		<img src="/assets/cities_classification/imag18.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image21.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image19.jpg" height="240">
+	</div>
+</div>
 #### A sample of New York misclassified images:
 
 <div class="imgcap">
