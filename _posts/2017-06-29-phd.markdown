@@ -30,11 +30,11 @@ Also, there are some bots and image repetitions (Don’t try this experiment wit
 
 ## Training
 
-I trained an AlexNet for classifying the images between the 10 cities. I first resized the dataset to 300x300 for efficiency purposes (It might be better to resize it keeping the images aspect ratio, but here I didn’t).  I applied online data augmentation: 224x224 random crops and mirroring with 50% probability. I initialized from the Imagenet trained model and fine-tuned only the last 3 convolutional layers and the fully connected layers (other layers are frozen). I used a learning rate of 0.001.
+I trained an AlexNet using Caffe for classifying the images between the 10 cities. I first resized the dataset to 300x300 for efficiency purposes (It might be better to resize it keeping the images aspect ratio, but here I didn’t).  I applied online data augmentation: 224x224 random crops and mirroring with 50% probability. I initialized from the Imagenet trained model and fine-tuned only the last 3 convolutional layers and the fully connected layers (other layers are frozen). I used a learning rate of 0.001.
 
 I got a classification accuracy of 30%. That might be not so far from human accuracy, since most of the images are not representative of the city. We can observe that some overfitting starts to appear. So applying a more aggressive data augmentation could improve the performance.
 
-The code for the CNN training is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/cnn).
+The code for the CNN training in PyCaffe is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/cnn).
 
 <div class="imgcap">
 <img src="/assets/cities_classification/training.png" height="480">
@@ -160,6 +160,7 @@ The net has learned to identify some interesting patterns beyond cities touristi
 	This is an example of missclasified images. In the first image, the net might be recognizing Joakim Noah, a former Chicago Bulls player. The second image might be taken in New York, but a UK flag appears, so the net identifies London there. The third image maybe is also from New York, but the net has learned that palms are more frequent in other places.
 	</div>
 </div>
+
 
 
 That was a toy experiment I did while creating the InstaCities1M dataset, which I’m using in more complex stuff that I will publish soon.

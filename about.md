@@ -10,7 +10,8 @@ I was born in Altafulla and moved to Barcelona to study telecomunications engeni
 
 In this personal website I will write about my scientific work, either publications, toy experiments or coding stuff.
 
+
 <div class="imgcap">
-<img src="/assets/me.jpg">
+<img src="/assets/me.jpg" height="350">
 </div>
 
