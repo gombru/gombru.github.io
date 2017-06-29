@@ -18,9 +18,7 @@ An alternative for that is learning from free existing non-human annotated data.
 I've have created a huge dataset of social media images with associated text, InstaCities1M. It's formed by Instagram images associated associated with one of the 10 most populated English speaking cities all over the world. It has 100K images for each city, which makes a total of 1M images. The interest of this dataset is: First that is formed by recent social media data. The text associated with the images is the description and the hashtags written by the photo up-loaders. So it's the kind of free available data that would be very interesting to be able to learn from. Second, each image is associated to one city, so we can use this weakly labeled image classes to evaluate our experiments.
 
 
-```
-Cities used: London, New York, Sydney, Los Angeles, Chicago, Melbourne, Miami, Toronto, Singapore and San Francisco.
-```
+`Cities used: London, New York, Sydney, Los Angeles, Chicago, Melbourne, Miami, Toronto, Singapore and San Francisco.`
 
 To download the images from Instagram I used [InstaLooter](https://github.com/althonos/InstaLooter), a simple python script that parses the Instagram web without the need API access (The instagram API is only available for approved apps). You can download images quite fast for that, depending on what do you search. I simply did queries with the city names, and I got the 1M images after 2 weeks and some problems. The code I used is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/instagram).
 
@@ -69,48 +67,43 @@ The net has learned to identify some interesting patterns beyond cities touristi
 
 ### London TP
 
+
 <div class="imgcap">
-<div style="display:inline-block">
-	<img src="/assets/cities_classification/image6.jpg">
-</div>
-<div style="display:inline-block; margin-left: 10px;">
-	<img src="/assets/cities_classification/image2.jpg">
-</div>
+	<div style="display:inline-block">
+		<img src="/assets/cities_classification/image6.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image2.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image1.jpg" height="240">
+	</div>
 </div>
 
 <div class="imgcap">
-<div style="display:inline-block">
-	<img src="/assets/cities_classification/image1.jpg">
-</div>
-<div style="display:inline-block; margin-left: 20px;">
-	<img src="/assets/cities_classification/image5.jpg">
-</div>
+	<div style="display:inline-block">
+		<img src="/assets/cities_classification/image5.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image7.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image11.jpg" height="240">
+	</div>
 </div>
 
 <div class="imgcap">
-<img src="/assets/cities_classification/image1.jpg">
+	<div style="display:inline-block">
+		<img src="/assets/cities_classification/image13.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image15.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image17.jpg" height="240">
+	</div>
 </div>
-<div class="imgcap">
-<img src="/assets/cities_classification/image5.jpg">
-</div>
-<div class="imgcap">
-<img src="/assets/cities_classification/image7.jpg">
-</div>
-<div class="imgcap">
-<img src="/assets/cities_classification/image11.jpg">
-</div>
-<div class="imgcap">
-<img src="/assets/cities_classification/image13.jpg">
-</div>
-<div class="imgcap">
-<img src="/assets/cities_classification/image15.jpg">
-</div>
-<div class="imgcap">
-<img src="/assets/cities_classification/image17.jpg">
-</div>
-<div class="imgcap">
-<img src="/assets/cities_classification/image20.jpg">
-</div>
+
 
 ### New York TP
 
@@ -124,25 +117,25 @@ The net has learned to identify some interesting patterns beyond cities touristi
 #### A sample of New York misclassified images:
 
 <div class="imgcap">
-<div style="display:inline-block">
-	<img src="/assets/cities_classification/image22.jpg" height="240">
-</div>
-<div style="display:inline-block; margin-left: 10px;">
-	<img src="/assets/cities_classification/image23.jpg" height="240">
-</div>
-<div style="display:inline-block; margin-left: 10px;">
-	<img src="/assets/cities_classification/image4.jpg" height="240">
-</div>
+	<div style="display:inline-block">
+		<img src="/assets/cities_classification/image22.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image23.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/cities_classification/image4.jpg" height="240">
+	</div>
+
+	<div class="thecap">
+	This is an example of missclasified images. In the first image, the net might be recognizing Joakim Noah, a former Chicago Bulls player. The second image might be taken in New York, but a UK flag appears, so the net identifies London there. The third image maybe is also from New York, but the net has learned that palms are more frequent in other places.
+	</div>
 </div>
 
-<div class="thecap">This is an example of missclasified images. In the first image, the net might be recognizing Joakim Noah, a former Chicago Bulls player. The second image might be taken in New York, but a UK flag appears, so the net identifies London there. The third image maybe is also from New York, but the net has learned that palms are more frequent in other places.</div>
-</div>
 
 That was a toy experiment I did while creating the InstaCities1M dataset, which I’m using in more complex stuff that I will publish soon.
  
-```
-By the way, did not seem weird to you AlexNet being overfitted with a 1M dataset? These experiment has been done with a 20% subset of InstaCities1M, so 200K images. That was because I did it while I was still building the dataset. Would it overfit with the 1M dataset?
-```
+`By the way, did not seem weird to you AlexNet being overfitted with a 1M dataset? These experiment has been done with a 20% subset of InstaCities1M, so 200K images. That was because I did it while I was still building the dataset. Would it overfit with the 1M dataset?`
 
 
 
