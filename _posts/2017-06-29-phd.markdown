@@ -97,7 +97,7 @@ The net has learned to identify some interesting patterns beyond cities touristi
 		<img src="/assets/cities_classification/image13.jpg" height="240">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/cities_classification/image15.jpg" height="240">
+		<img src="/assets/cities_classification/image20.jpg" height="240">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
 		<img src="/assets/cities_classification/image17.jpg" height="240">
