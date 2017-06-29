@@ -38,7 +38,7 @@ I got a classification accuracy of 30%. That might be not so far from human accu
 The code for the CNN training is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/cnn).
 
 <div class="imgcap">
-<img src="/cities_classification/training.png">
+<img src="/assets/cities_classification/training.png">
 </div>
 
 
@@ -73,15 +73,15 @@ The net has learned to identify some interesting patterns beyond cities touristi
 #### A sample of New York misclassified images:
 
 <div class="imgcap">
-<img src="/cities_classification/image22.jpg">
+<img src="/assets/cities_classification/image22.jpg">
 </div>
 That’s recognizing Joakim Noah, former Chicago Bulls player
 <div class="imgcap">
-<img src="/cities_classification/image23.jpg">
+<img src="/assets/cities_classification/image23.jpg">
 </div>
 A UK flag in New York
 <div class="imgcap">
-<img src="/cities_classification/image4.jpg">
+<img src="/assets/cities_classification/image4.jpg">
 </div>
 Palms are not from New York
 
