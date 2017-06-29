@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I'm **Raúl Gómez Bruballa**, an industrial PhD student in Eurecat and the Computer Vision Center, Universitat Autònoma de Barcelona. I work in computer vision and deep learning.
+I'm **Raúl Gómez Bruballa**, an industrial PhD student in Eurecat and the Computer Vision Center, Universitat Autònoma de Barcelona. I'm interested in computer vision, deep learning and image processing. I'm working on scene interpretation using images and associated text, with a special focus on learning from web and social media data.
 
 I was born in Altafulla and moved to Barcelona to study telecomunications engeniering with an specialization in audiovisuals systems at the Universitat Politècnica de Catalunya. After that I did a computer vision master at the UAB, where now I'm doing my PhD toguether with Eurecat, the catalonia technological center.
 
