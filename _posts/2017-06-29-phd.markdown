@@ -37,7 +37,7 @@ I got a classification accuracy of 30%. That might be not so far from human accu
 The code for the CNN training is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/cnn).
 
 <div class="imgcap">
-<img src="/assets/cities_classification/training.png">
+<img src="/assets/cities_classification/training.png" height="480">
 </div>
 
 
@@ -45,8 +45,9 @@ The code for the CNN training is available [here](https://github.com/gombru/Soci
 
 `Accuracy: 26.3%`
 
-`Accuracy per class:`
-`london = 0.296673455533`
+```
+Accuracy per class:
+london = 0.296673455533
 newyork = 0.212831585441
 sydney = 0.243430152144
 losangeles = 0.182625237793
@@ -56,6 +57,10 @@ miami = 0.332631578947
 toronto = 0.213836477987
 singapore = 0.415828303152
 sanfrancisco = 0.291230366492
+```
+
+
+
 
 ## What can the net identify? 
 
@@ -68,16 +73,18 @@ The net has learned to identify some interesting patterns beyond cities touristi
 	<img src="/assets/cities_classification/image6.jpg">
 </div>
 <div style="display:inline-block; margin-left: 20px;">
-	<img src="/assets/cities_classification/image2.jpg" height="206">
+	<img src="/assets/cities_classification/image2.jpg">
 </div>
 
 
 <div class="imgcap">
-<img src="/assets/cities_classification/image6.jpg">
+<div style="display:inline-block">
+	<img src="/assets/cities_classification/image1.jpg">
 </div>
-<div class="imgcap">
-<img src="/assets/cities_classification/image2.jpg">
+<div style="display:inline-block; margin-left: 20px;">
+	<img src="/assets/cities_classification/image5.jpg">
 </div>
+
 <div class="imgcap">
 <img src="/assets/cities_classification/image1.jpg">
 </div>
@@ -115,17 +122,16 @@ The net has learned to identify some interesting patterns beyond cities touristi
 #### A sample of New York misclassified images:
 
 <div class="imgcap">
-<img src="/assets/cities_classification/image22.jpg">
+<div style="display:inline-block">
+	<img src="/assets/cities_classification/image22.jpg">
 </div>
-That’s recognizing Joakim Noah, former Chicago Bulls player
-<div class="imgcap">
-<img src="/assets/cities_classification/image23.jpg">
+<div style="display:inline-block; margin-left: 20px;">
+	<img src="/assets/cities_classification/image23.jpg" height="206">
+<div style="display:inline-block; margin-left: 20px;">
+	<img src="/assets/cities_classification/image24.jpg" height="206">
 </div>
-A UK flag in New York
-<div class="imgcap">
-<img src="/assets/cities_classification/image4.jpg">
+<div class="thecap">This is an example of missclasified images. In the first image, the net might be recognizing Joakim Noah, a former Chicago Bulls player. The second image might be taken in New York, but a UK flag appears, so the net identifies London there. The third image maybe is also from New York, but the net has learned that palms are more frequent in other places.</div>
 </div>
-Palms are not from New York
 
 That was a toy experiment I did while creating the InstaCities1M dataset, which I’m using in more complex stuff that I will publish soon.
  
