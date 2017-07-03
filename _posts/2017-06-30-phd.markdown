@@ -81,6 +81,14 @@ I trained it using a cluster with 4 Nvidia GTX 1080 Ti. THe batch size was set t
  
 > I have to say that [the rule that Facebook stated](https://research.fb.com/publications/imagenet1kin1h/) (If you increase the batch size by k, you can increase the learning rate by k and you’ll get the same performance) was not fulfilled here. I couldn’t increase the learning rate that much. Though, the learning was less noisy using a big batch size.
 
+<div class="imgcap">
+<img src="/assets/instagram_topics/training.png">
+	<div class="thecap">
+	Training the regression Googlenet for 1M iterations.
+	</div>
+</div>
+
+
 The PyCaffe code to train the topic regression GoogleNet is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/googlenet_regression) (Single GPU and multi-GPU).
  
 ## Results: Retrieval by text 
@@ -98,12 +106,12 @@ Now I can do text queries, compute its topic distribution using LDA and then ret
  
 ### Query by a city name
  
-Despite our setup has nothing to do with cities, we are using a dataset that has each image associated with one city. So we can perform retrieval experiments with the city names and evaluate them analytically. Clearly a net trained for city classification would perform better, but this pipeline (and this results) can be extrapolated to other queries.
+Despite our setup has nothing to do with cities, we are using a dataset that has each image associated with one city. So we can perform retrieval experiments with the city names and evaluate them analytically. Clearly a net trained for city classification would perform better, but this pipeline (and this results) can be extrapolated to other queries. Metrics used are [TOP100 and AP](https://en.wikipedia.org/wiki/Information_retrieval).
  
 <div class="imgcap">
 <img src="/assets/instagram_topics/table.png">
 	<div class="thecap">
-	Those are [TOP100 and AP](https://en.wikipedia.org/wiki/Information_retrieval) results for the retrieval by city names.
+	Those are TOP100 and AP results for the retrieval by city names.
 	</div>
 </div>
 
@@ -158,7 +166,8 @@ Let's have a look at the first 3 images retrieved by different concepts, startin
 
 **"car" + "yellow"**
 
-<div style="display:inline-block">
+<div class="imgcap">
+	<div style="display:inline-block">
 		<img src="/assets/instagram_topics/yellow_car_2.jpg" height="240">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
@@ -167,7 +176,7 @@ Let's have a look at the first 3 images retrieved by different concepts, startin
 	<div style="display:inline-block; margin-left: 10px;">
 		<img src="/assets/instagram_topics/yellow_car_1.jpg" height="240">
 	</div>
-</div>
+</div
 
 
 **"sunrise" + "beach"**. But most of the times we get images only matching one concept.
