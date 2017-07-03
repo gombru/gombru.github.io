@@ -176,7 +176,7 @@ Let's have a look at the first 3 images retrieved by different concepts, startin
 	<div style="display:inline-block; margin-left: 10px;">
 		<img src="/assets/instagram_topics/yellow_car_1.jpg" height="240">
 	</div>
-</div
+</div>
 
 
 **"sunrise" + "beach"**. But most of the times we get images only matching one concept.
