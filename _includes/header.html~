@@ -25,7 +25,7 @@
       <div class="trigger">
         {% assign sorted_pages = site.pages | sort:"order" %}
 	{% for node in sorted_pages %}
-          {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
+          {% if node.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ node.title }}</a>{% endif %}
         {% endfor %}
       </div>
     </nav>
