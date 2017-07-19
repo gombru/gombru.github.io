@@ -61,7 +61,7 @@ The topic score is the value regressed by the CNN for that topic.
 The ingredient score is the value regressed by the CNN for a topic multiplied by the score of the ingredient in that topic.
 
 <div class="imgcap">
-<img src="/assets/ingredients/train_pipeline.png">
+<img src="/assets/ingredients/test_pipeline.png">
 	<div class="thecap">
 	Inferring ingredients from images of cooked food.
 	</div>
@@ -101,9 +101,6 @@ Inferred ingredients by the LDA 200 pipeline in black, groundtruth ingredients i
 </div>
 <div class="imgcap">
 <img src="/assets/ingredients/img6.jpg">
-</div>
-<div class="imgcap">
-<img src="/assets/ingredients/img7.jpg">
 </div>
 
 
