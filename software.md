@@ -4,6 +4,6 @@ title: Software
 permalink: /software/
 ---
 
-**#### SetaMind ####**
+### SetaMind ###
 
 
