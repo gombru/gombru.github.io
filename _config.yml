@@ -6,6 +6,7 @@ baseurl: ""
 url: "http://gombru.github.io"
 twitter_username: gombru
 github_username:  gombru
+linkedin_username:  raulgomezbruballa
 
 # Build settings
 markdown: kramdown
