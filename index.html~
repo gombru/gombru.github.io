@@ -11,6 +11,9 @@ layout: default
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         <br>
         {{ post.excerpt }}
+	<div class="imgcap">
+	<img src= "{{ post.img }}" height="240">
+	</div>
       </li>
     {% endfor %}
   </ul>
