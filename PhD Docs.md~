@@ -1,0 +1,22 @@
+---
+layout: page
+title: PhD documents and other non-published work
+permalink: /PhD-Docs/
+---
+
+#### CVPR2017
+In the computer vision center CVPR is organized each year to present students work. Each student prepares an abstract, some slides and a poster.  
+[PDF]()[Slides](https://docs.google.com/presentation/d/1CQa3Dc0RmdocB1GP2quzxtlNvZEOsUxvI7i1CQ163lc/edit?usp=sharing)[Poster]()
+
+#### PhD Research plan and 1st year report
+Here it is my research plan and the report of the first year (6 months)  
+[Research plan]()[1st year report]()
+
+#### Poster at IAPR Summer School on Document Analysis
+I went to this [summer school](http://cvit.iiit.ac.in/SSDA/) in Jaipur and I presented there a poster about the work done in my master thesis.  
+[Poster]()
+
+#### Master's thesis
+**Automatic discovery of textual information in images from Social Networks using FCN**
+I did the [computer vision master](http://pagines.uab.cat/mcv/) offered by the UAB (Computer Vision Center), UPC, UPF, and UOC. I did the Master's Thesis at Eurecat. It was about reading text in Social Media images. It ended in a text/non-text image classification system and in the improvement of the state of the art TextProposals algorithm, which lead to a [publication](https://arxiv.org/abs/1702.05089).  
+[PDF]()[Slides](https://docs.google.com/presentation/d/1mu7wdI4DUGxHuF_bshniV8mMWiXrQmoB18nfcIBU-as/edit?usp=sharing)[Poster]()[Code](https://github.com/gombru/TextInSocialNetworks)

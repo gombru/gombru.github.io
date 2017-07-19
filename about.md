@@ -15,3 +15,11 @@ In this personal website I will write about my scientific work, either publicati
 <img src="/assets/me.jpg" height="350">
 </div>
 
+
+### Places you can find me:
+
+**E-mail**   <a href="mailto:{{ site.email }}">{{ site.email }}</a>  
+**Github**   [gombru](https://github.com/gombru)  
+**Linkedin**   [Raul Gomez Bruballa](https://www.linkedin.com/in/raulgomezbruballa)  
+**Twitter**   [gombru](ttps://twitter.com/gombru)  
+
