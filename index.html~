@@ -12,7 +12,7 @@ layout: default
         <br>
         {{ post.excerpt }}
 	<div class="imgcap">
-	<img src= "{{ post.img }}" height="200">
+	<img src= "{{ post.img }}" height="180">
 	</div>
       </li>
     {% endfor %}
