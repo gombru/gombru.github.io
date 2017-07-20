@@ -41,6 +41,8 @@ We split the dataset in 800K training, 50K validation and 150K test.
  
 There are several decisions regarding the LDA model training. We have to choose the number of topics, the chunksize (every how many iterations update the model -batch size-) and the passes over the whole corpus. Furthermore we need to define the text preprocessing. Also, usually the less frequent words in the corpus are removed.
 All that parameters influence the computational requirements to train the LDA, which are quite high when using a large vocabulary or number of documents.
+
+> The LDA basically creates topics from the training text taking into account which words appear together in the text pieces. Those topics have a semantic sense. For instance, one topic can gather words about cooking and another one about sports. Then the LDA can infer a topic distribution for any piece of text. That topic distributions codes how a piece of text is related to each one of the topics. 
  
 #### Text preprocessing
 ```
@@ -62,7 +64,7 @@ repetition_theshold = 150 # Remove words with less than x instances
  
 > I used gensim LDA multicore and the training took ~1day in a machine with an Intel(R) Core(TM) i7-5820K CPU @ 3.30GHz with 64GB of RAM and 12 threads. Notice that the RAM usage was high, ~50GB.
  
-The python code for LDA trainning and inferring is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/lda).
+> The python code for LDA trainning and inferring is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/lda).
  
 #### Getting the image GT topic distribution
 We will use as image GT topic distribution the topic distribution of the text associated to images. To compute it, we just preprocess the text the same way we did it in the LDA training and infer it using the LDA model.
@@ -90,7 +92,7 @@ I trained it using a cluster with 4 Nvidia GTX 1080 Ti. THe batch size was set t
 </div>
 
 
-The PyCaffe code to train the topic regression GoogleNet is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/googlenet_regression) (Single GPU and multi-GPU).
+> The PyCaffe code to train the topic regression GoogleNet is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/googlenet_regression) (Single GPU and multi-GPU).
  
 ## Results: Retrieval by text 
  

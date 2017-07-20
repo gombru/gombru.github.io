@@ -21,7 +21,9 @@ I've have created a huge dataset of social media images with associated text, **
 
 > Cities used: London, New York, Sydney, Los Angeles, Chicago, Melbourne, Miami, Toronto, Singapore and San Francisco.
 
-To download the images from Instagram I used [InstaLooter](https://github.com/althonos/InstaLooter), a simple python script that parses the Instagram web without the need API access (The instagram API is only available for approved apps). You can download images quite fast for that, depending on what do you search. I simply did queries with the city names, and I got the 1M images after 2 weeks and some problems. The code I used is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/instagram).
+To download the images from Instagram I used [InstaLooter](https://github.com/althonos/InstaLooter), a simple python script that parses the Instagram web without the need API access (The instagram API is only available for approved apps). You can download images quite fast for that, depending on what do you search. I simply did queries with the city names, and I got the 1M images after 2 weeks and some problems. 
+
+> The code I used to download images from Instagram is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/instagram).
 
 That’s social media data, so it’s very noisy. Instagram does the search by the text associated to the image, and not all images that have the word “london” in the description are from london. Overmore, from the images that were taken in London, only some of them will be representative of the city. We cannot infer that a photo of a dog taken in London inside a house is Londoner (or maybe we can if that’s a typical british race or furniture). 
 ¿What would happen if we used images taken in London GPS coordinates instead of accompanied with the word London? Ok all images would be from London but a lot less representative.
@@ -35,7 +37,7 @@ I **trained an AlexNet using Caffe** for classifying the images between the 10 c
 
 I got a classification accuracy of 30%. That might be not so far from human accuracy, since most of the images are not representative of the city. We can observe that some overfitting starts to appear. So applying a more aggressive data augmentation could improve the performance.
 
-The code for the CNN training in PyCaffe is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/cnn).
+> The code for the CNN training in PyCaffe is available [here](https://github.com/gombru/SocialMediaWeakLabeling/tree/master/cnn).
 
 <div class="imgcap">
 <img src="/assets/cities_classification/training.png" height="480">
