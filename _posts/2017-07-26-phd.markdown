@@ -18,7 +18,7 @@ The WebVision dataset It's a dataset formed by 2.4M images compiled from **Googl
 The original images are available, but in this experiments I used the resized dataset, where images smaller side is always 256px.
 
 <div class="imgcap">
-<img src="/assets/webvision/dataset.png" height="100>
+<img src="/assets/webvision/dataset.png">
 	<div class="thecap">
 	Distribution of images per categories and sources of the WebVision dataset. Source: www.vision.ee.ethz.ch/webvision
 	</div>
@@ -182,7 +182,7 @@ Given the softmax loss:
 </div>
 
 Where **C** are the classes to be inferred [0-999], **i** is the GT class, **Sj** are the scores inferred by the net for each class and **Si** is the score inferred by the net for the GT class.
-We want to add a scalar &#955; that weights the loss for each sample depending in how reliable its label is. So we want a softmax loss with soft labels:
+We want to add a scalar **&#955;** that weights the loss for each sample depending in how reliable its label is. So we want a softmax loss with soft labels:
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" title="L = \lambda * -log\left ( \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}} \right )" /></a>
@@ -245,7 +245,7 @@ def backward(self, top, propagate_down, bottom):
          delta[r,:] *= labels_scores[r]
    bottom[i].diff[...] = delta / bottom[0].num
 ```
-In the backward pass we need to compute the gradients of each element of the batch respect to each one of the classes scores **Sj**. As the gradient for all the classes **C** except the GT class **i** is equal to *probs* *  **&#955;**, we assign *probs* values to *delta*. Then for the Gt class **i** (*int(labels[r])*) we subtract 1 to match the gradient expression. Finally we multiply all the gradient expressions by the labels scores **&#955;**. We compute the mean gradients of all the batch to run the backpropagation.
+In the backward pass we need to compute the gradients of each element of the batch respect to each one of the classes scores **Sj**. As the gradient for all the classes **C** except the GT class **i** is equal to *probs*  **&#955;**, we assign *probs* values to *delta*. Then for the Gt class **i** (*int(labels[r])*) we subtract 1 to match the gradient expression. Finally we multiply all the gradient expressions by the labels scores **&#955;**. We compute the mean gradients of all the batch to run the backpropagation.
 
 > The Caffe Python layer of this softmax loss using soft labels is available [here](https://github.com/gombru/WebVision/blob/master/googlenet/SoftMaxSoftLabel.py).
 
