@@ -18,7 +18,7 @@ The WebVision dataset It's a dataset formed by 2.4M images compiled from **Googl
 The original images are available, but in this experiments I used the resized dataset, where images smaller side is always 256px.
 
 <div class="imgcap">
-<img src="/assets/webvision/dataset.png">
+<img src="/assets/webvision/dataset.png" height="100>
 	<div class="thecap">
 	Distribution of images per categories and sources of the WebVision dataset. Source: www.vision.ee.ethz.ch/webvision
 	</div>
@@ -67,19 +67,20 @@ So I put the training LMDB in the empty SSD (filled it), the validation LMDB in 
 >[The rule that Facebook stated](https://research.fb.com/publications/imagenet1kin1h/) (If you increase the batch size by k, you can increase the learning rate by k and you’ll get the same performance) was not fulfilled here. I couldn’t increase the learning rate despite using a bigger batch size. Though, the learning was less noisy using a big batch size.
 
 
+
 <div class="imgcap">
-	<img src="/assets/webvision/training_1.png" height = 300>
+	<img src="/assets/webvision/training_1.png" height = "300">
 </div>
 
 <div class="imgcap">
-	<img src="/assets/webvision/training_2.png" height = 300>
+	<img src="/assets/webvision/training_2.png" height = "300">
 </div>
 
 <div class="imgcap">
-	<img src="/assets/webvision/training_3.png" height = 300>
+	<img src="/assets/webvision/training_3.png" height = "300">
 	<div class="thecap">
 	Those are the training plots for different training steps (0-80k, 80k-280k, 200k-1.6M iter
-	</div
+	</div>
 </div>
 
 
@@ -98,20 +99,20 @@ Here some examples of the discarded images for some classes:
 For the class 0: “Tench”
 
 <div class="imgcap">
-<img src="/assets/webvision/class1_gt.jpg" height = 300>
+<img src="/assets/webvision/class1_gt.jpg" height = "200">
 </div>
 
 We discarded:
 
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/webvision/class1_1.jpg" height = 240>
+		<img src="/assets/webvision/class1_1.jpg" height = "140">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/webvision/class1_2.jpg" height = 240>
+		<img src="/assets/webvision/class1_2.jpg" height = "140">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/webvision/class1_3.jpg" height = 240>
+		<img src="/assets/webvision/class1_3.jpg" height = "140">
 	</div>
 </div>
 
@@ -119,20 +120,20 @@ We discarded:
 For the class 300: “tiger beetle”
 
 <div class="imgcap">
-<img src="/assets/webvision/class2_gt.jpg" height = 300>
+<img src="/assets/webvision/class2_gt.jpg" height = "200">
 </div>
 
 We discarded:
 
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/webvision/class2_1.jpg" height = 240>
+		<img src="/assets/webvision/class2_1.jpg" height = "140">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/webvision/class2_2.jpg" height = 240>
+		<img src="/assets/webvision/class2_2.jpg" height = "140">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/webvision/class2_3.jpg" height = 240>
+		<img src="/assets/webvision/class2_3.jpg" height = "140">
 	</div>
 </div>
 
@@ -140,20 +141,20 @@ We discarded:
 For the class 800: “slot, one-armed bandit”
 
 <div class="imgcap">
-<img src="/assets/webvision/class3_gt.jpg" height = 300>
+<img src="/assets/webvision/class3_gt.jpg" height = "200">
 </div>
 
 We discarded:
 
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/webvision/class3_1.jpg" height = 240>
+		<img src="/assets/webvision/class3_1.jpg" height = "240">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/webvision/class3_2.jpg" height = 240>
+		<img src="/assets/webvision/class3_2.jpg" height = "240">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/webvision/class3_3.jpg" height = 240>
+		<img src="/assets/webvision/class3_3.jpg" height = "240">
 	</div>
 </div>
 
@@ -247,7 +248,7 @@ I continued training the model using the softmax loss with soft labels from the 
 ## Strategy 2: 2-headed CNN
 
 <div class="imgcap">
-<img src="/assets/webvision/2_head_CNN.png">
+	<img src="/assets/webvision/2_head_CNN.png">
 </div>
 
 
@@ -270,13 +271,13 @@ I weighted the weights giving 0.75 to the classification head and 0.25 to the re
 
  
 <div class="imgcap">
-	<img src="/assets/webvision/training_2head_1.png" height = 300>
+	<img src="/assets/webvision/training_2head_1.png" height = "300">
 </div>
 <div class="imgcap">
-	<img src="/assets/webvision/training_2head_2.png" height = 300>
+	<img src="/assets/webvision/training_2head_2.png" height = "300">
 </div>
 <div class="imgcap">
-<img src="/assets/webvision/training_2head_3.png" height = 300>
+<img src="/assets/webvision/training_2head_3.png" height = "300">
 	<div class="thecap">
 	Some plots of the 2-head CNN training procedure
 	</div
@@ -288,7 +289,7 @@ I weighted the weights giving 0.75 to the classification head and 0.25 to the re
 The classification results were much better for the strategy 1 than for the strategy 2. However, using an ensemble of these two classifiers helped. I also found out that evaluating different patches of the same image provided a boost in the results. The boost provided by this techniques in the Imagenet challenge are explained by google in [the Inception paper](https://arxiv.org/abs/1512.00567).
 
 <div class="imgcap">
-	<img src="/assets/webvision/results.png" height = 300>
+	<img src="/assets/webvision/results.png" height = "300">
 </div>
 
 
