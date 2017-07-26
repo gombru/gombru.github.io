@@ -94,9 +94,9 @@ With the trained LDA, we **computed the topic distribution of the texts associat
 
 It’s a very simple method, but **the noise removal was effective, especially for some classes that have a name that can generate confusions between two objects**, or for classes that have a lot of noise because there are few images results of them in google or flickr. We discarded the 10% of the training set. For the classes containing few samples, we were less restrictive.
 
-Here some examples of the discarded images for some classes:
+### Some examples of the discarded images for some classes:
 
-For the class 0: “Tench”
+#### For the class 0: “Tench”
 
 <div class="imgcap">
 <img src="/assets/webvision/class1_gt.jpg" height = "200">
@@ -117,7 +117,7 @@ We discarded:
 </div>
 
 
-For the class 300: “tiger beetle”
+#### For the class 300: “tiger beetle”
 
 <div class="imgcap">
 <img src="/assets/webvision/class2_gt.jpg" height = "200">
@@ -138,7 +138,7 @@ We discarded:
 </div>
 
 
-For the class 800: “slot, one-armed bandit”
+#### For the class 800: “slot, one-armed bandit”
 
 <div class="imgcap">
 <img src="/assets/webvision/class3_gt.jpg" height = "200">
@@ -148,13 +148,13 @@ We discarded:
 
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/webvision/class3_1.jpg" height = "240">
+		<img src="/assets/webvision/class3_1.jpg" height = "140">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/webvision/class3_2.jpg" height = "240">
+		<img src="/assets/webvision/class3_2.jpg" height = "140">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/webvision/class3_3.jpg" height = "240">
+		<img src="/assets/webvision/class3_3.jpg" height = "140">
 	</div>
 </div>
 
@@ -167,7 +167,7 @@ We discarded:
 
 
 As we have explained, the **text associated to an image can give a clue about if the label assigned to it is correct or not**. That information can be used taking profit of the LDA. This strategy, **instead of discarding those images whose associated text has a topic distribution which is not similar to the mean of the class, generates a confidence for each label based on that**.
-Let’s explain it with the example in the figure: We have previously trained an LDA with all the training text and computed the mean topic distribution of the text associated to the images of the class “salmon”. Then, for each image associated to this class, we compute the topic distribution of its associated text, and compute the cosine similarity with the mean of the class “salmon”. If the image contains a salmon fish (which is the kind of images we want for the class), the text will probably talk about fishes, rivers… so it will have a topic distribution similar to the mean of the class, and we can trust its label “salmon” and assign to it a weight of 1. But if the text associated to the image talks about cooking, its topic distribution will be very different from the mean of the class, so we cannot trust the label that much, we will assign it a weightc &#955; of 0.3. 
+Let’s explain it with the example in the figure: We have previously trained an LDA with all the training text and computed the mean topic distribution of the text associated to the images of the class “salmon”. Then, for each image associated to this class, we compute the topic distribution of its associated text, and compute the cosine similarity with the mean of the class “salmon”. If the image contains a salmon fish (which is the kind of images we want for the class), the text will probably talk about fishes, rivers… so it will have a topic distribution similar to the mean of the class, and we can trust its label “salmon” and assign to it a weight of 1. But if the text associated to the image talks about cooking, its topic distribution will be very different from the mean of the class, so we cannot trust the label that much, we will assign it a weight &#955; of 0.3. 
 
 We call this weighted labels soft labels. **The idea is giving in the training procedure more importance to those labels with a high confidence &#955;**. So the net uses a higher learning rate when we are sure that the image contains a salmon fish, but a lower one when we are not sure because it may contain a salmon dish, a T-shirt of salmon color, or whatever.
 
@@ -177,23 +177,30 @@ To learn using soft labels we create a custom  softmax loss were the contributio
 
 Given the softmax loss:
 
+<div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" title="L = -log\left ( \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}} \right )" /></a>
+</div>
 
 Where **C** are the classes to be inferred [0-999], **i** is the GT class, **Sj** are the scores inferred by the net for each class and **Si** is the score inferred by the net for the GT class.
 We want to add a scalar &#955; that weights the loss for each sample depending in how reliable its label is. So we want a softmax loss with soft labels:
 
+<div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" title="L = \lambda * -log\left ( \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}} \right )" /></a>
+</div>
 
 Defined the loss, now we have to minimize it. We’ll do so with gradient descent. To do that we **evaluate the gradient of the loss function with respect to the parameters**, so that we know how we should change the parameters to decrease the loss. So we need to compute the gradient respect each **Sj**, which are the scores given by the net for each clas. The gradient expression will be the same for all **C** except for the GT class **i**, because the score of the GT class **Si** is in the nominator.
 
 After some calculus, the derivative respect to the GT score **Si** is:
 
+<div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial}{\partial&space;s_{i}}&space;\left&space;(&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)&space;\right&space;)&space;=&space;\lambda&space;\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}e^{s_{j}}}&space;-&space;1&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial}{\partial&space;s_{i}}&space;\left&space;(&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)&space;\right&space;)&space;=&space;\lambda&space;\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}e^{s_{j}}}&space;-&space;1&space;\right&space;)" title="\frac{\partial}{\partial s_{i}} \left ( \lambda * -log\left ( \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}} \right ) \right ) = \lambda \left ( \frac{e^{s_{i}}}{\sum_{j}^{C}e^{s_{j}}} - 1 \right )" /></a>
+</div>
 
 And the derivative respect to the other classes would be: 
 
+<div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial}{\partial&space;s_{k}}&space;\left&space;(&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)&space;\right&space;)&space;=&space;\lambda&space;\left&space;(&space;\frac{e^{s_{k}}}{\sum_{j}^{C}e^{s_{j}}}\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial}{\partial&space;s_{k}}&space;\left&space;(&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)&space;\right&space;)&space;=&space;\lambda&space;\left&space;(&space;\frac{e^{s_{k}}}{\sum_{j}^{C}e^{s_{j}}}\right&space;)" title="\frac{\partial}{\partial s_{k}} \left ( \lambda * -log\left ( \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}} \right ) \right ) = \lambda \left ( \frac{e^{s_{k}}}{\sum_{j}^{C}e^{s_{j}}}\right )" /></a>
-
+</div>
 
 Where **k** is a class from **C** different from **i**.
 
@@ -275,13 +282,11 @@ I weighted the weights giving 0.75 to the classification head and 0.25 to the re
 </div>
 <div class="imgcap">
 	<img src="/assets/webvision/training_2head_2.png" height = "300">
-</div>
-<div class="imgcap">
-<img src="/assets/webvision/training_2head_3.png" height = "300">
 	<div class="thecap">
 	Some plots of the 2-head CNN training procedure
-	</div
+	</div>
 </div>
+
 
 
 ## Results
@@ -289,7 +294,7 @@ I weighted the weights giving 0.75 to the classification head and 0.25 to the re
 The classification results were much better for the strategy 1 than for the strategy 2. However, using an ensemble of these two classifiers helped. I also found out that evaluating different patches of the same image provided a boost in the results. The boost provided by this techniques in the Imagenet challenge are explained by google in [the Inception paper](https://arxiv.org/abs/1512.00567).
 
 <div class="imgcap">
-	<img src="/assets/webvision/results.png" height = "300">
+	<img src="/assets/webvision/results.png" height = "270">
 </div>
 
 
