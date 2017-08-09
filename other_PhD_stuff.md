@@ -5,7 +5,7 @@ permalink: /other-material/
 order: 4
 ---
 
-#### CVPR2017
+#### CVCRD2017
 In the computer vision center CVPR is organized each year to present students work. Each student prepares an abstract, some slides and a poster.  
 [[PDF](https://drive.google.com/file/d/0B-DM8FPBNpG6SDhEMDdKSGJJOVU/view?usp=sharing)]   [[Slides](https://docs.google.com/presentation/d/1CQa3Dc0RmdocB1GP2quzxtlNvZEOsUxvI7i1CQ163lc/edit?usp=sharing)]   [[Poster](https://drive.google.com/file/d/0B-DM8FPBNpG6dWNkc3JfUmFhWmM/view?usp=sharing)]
 
