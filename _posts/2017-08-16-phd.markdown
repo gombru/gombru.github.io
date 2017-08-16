@@ -14,7 +14,7 @@ SetaMind is a simple Android application: You take a picture of a mushroom with 
 I built this app because I wanted to learn how neural nets can be embedded in a phone. Also, I wanted to show how neural nets can be trained solely with web data obtaining models that are useful in real word applications. The resulting app can help those amateur mushroom pickers that have trouble to identify the different species. 
 
 <div class="imgcap">
-	<img src="/assets/setamind/setamind.png" height="240">			
+	<img src="/assets/setamind/setamind.png" height="280">			
 	<div class="thecap">
 	Some App screenshots.
 	</div>
@@ -34,7 +34,7 @@ We also add a background class using images from COCO.
 I fine-tuned an ImageNet pretrained Googlenet removing the first 2 loss layers and using only the last loss layer. I used Caffe. When training, I did an online data-balancing by inputting to the net the same number of images per class. I used random cropping and mirroring as data augmentation.
 
 <div class="imgcap">
-	<img src="/assets/setamind/setamind_training.png" height="240">			
+	<img src="/assets/setamind/setamind_training.png" height="280">			
 	<div class="thecap">
 	Setamind training plot.
 	</div>
