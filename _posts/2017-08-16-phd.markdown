@@ -1,0 +1,79 @@
+---
+layout: post
+comments: false
+title:  "SetaMind: Building an android app that identifies the species of a mushroom"
+excerpt: "SetaMind is a simple Android application: You take a picture of a mushroom with your phone and the app identifies the species and provides information about it. To identify the species it uses a classification CNN that runs locally in the phone."
+date:   2017-08-16 20:00:00
+img: "/assets/setamind/setamind_screenshots.png"
+mathjax: false
+---
+
+SetaMind is a simple Android application: You take a picture of a mushroom with your phone and the app identifies the species and provides information about it. To identify the species it uses a classification CNN that runs locally in the phone and can distinguish 24 different mushroom species. The app is [available in Google Play](https://play.google.com/store/apps/details?id=gombru.setamind).
+
+## The idea
+I built this app because I wanted to learn how neural nets can be embedded in a phone. Also, I wanted to show how neural nets can be trained solely with web data obtaining models that are useful in real word applications. The resulting app can help those amateur mushroom pickers that have trouble to identify the different species. 
+
+<div class="imgcap">
+	<img src="/assets/setamind/setamind_screenshots.png" height="240">			
+	<div class="thecap">
+	Some App screenshots.
+	</div>
+</div>
+
+## The data
+The dataset was compiled using Flickr and Google images. I selected the most popular mushroom types and took the different names they have. Then I did queries in both search engines using those names. The quality of the images I got was very variant for the different queries. I discarded the most noisy queries, and also discarded the mushroom species for which I got less than 1000 images. Finally I got 24 classes:  
+I created a balanced test set setting aside 300 images for each class
+
+> When working entirely with web data, we cannot ensure that test images do not appear in the training set, since two queries might return the same images and the images in a query can be repeated. We can review the dataset and delete duplicates (checking image size, file weight, or even checking pixel values)  but still we will have to deal with some duplicates.
+
+The mushroom classes used are: Agaricus arvensis: Agaricus campestris, Amanita caesarea, Amanita muscaria, Amanita phalloides, Amanita rubescens, Armillaria mellea, Boletus Aereus, Boletus edulis, Boletus erythropus, Boletus pinicola, Cantharellus cibarius, Cantharellus lutescens, Clathrus ruber, Clitocybe gibba, Clitocybe nebularis, Coprinus comatus, Craterellus cornucopioides. Hydnum repandum, Lactarius deliciosus, Lepista nuda, Macrolepiota procera, Marasmius oreades and Morchella.
+
+We also add a background class using images from COCO.
+
+## Training the classification CNN
+I fine-tuned an ImageNet pretrained Googlenet removing the first 2 loss layers and using only the last loss layer. I used Caffe. When training, I did an online data-balancing by inputting to the net the same number of images per class. I used random cropping and mirroring as data augmentation.
+
+<div class="imgcap">
+	<img src="/assets/setamind/setamind_training.png" height="240">			
+	<div class="thecap">
+	Setamind training plot.
+	</div>
+</div>
+
+The accuracy per class is:
+
+```
+Accuracy: 58%
+Accuracy per class:
+agaricus_arvensis = 0.398843930636
+agaricus_campestris = 0.418079096045
+amanita_caesarea = 0.650793650794
+amanita_muscaria = 0.731958762887
+amanita_phalloides = 0.604060913706
+amanita_rubescens = 0.5
+armillaria_mellea = 0.642201834862
+boletus_aereus = 0.113300492611
+boletus_edulis = 0.412087912088
+boletus_erythropus = 0.703448275862
+boletus_pinicola = 0.35652173913
+cantharellus_cibarius = 0.516431924883
+cantharellus_lutescens = 0.427184466019
+clathrus_ruber = 0.906040268456
+clitocybe_gibba = 0.628205128205
+clitocybe_nebularis = 0.683615819209
+coprinus_comatus = 0.877272727273
+craterellus_cornucopioides = 0.695652173913
+hydnum_repandum = 0.208791208791
+lactarius_deliciosus = 0.685897435897
+lepista_nuda = 0.779735682819
+macrolepiota_procera = 0.698924731183
+marasmius_oreades = 0.428571428571
+morchella = 0.852040816327
+```
+
+The results differ a lot from one class to another. That is mainly because of the variance of  noise between classes and the amount of images we have between classes. Also because of the inter class variance of each class. 
+We have to take into account that noise is also present in the test set. So if we have a class where 20% of the images are loss, the accuracy will be penalized with a 20%. So, considering the noise, the results obtained are quite good.Try the app yourself!
+
+
+## Running a CNN in the phone
+The app uses Caffe and JNI to run the CNN in the Android phone. See [caffe-android-lib](https://github.com/sh1r0/caffe-android-lib). You first have to write your caffe CNN prediction code in C++ and the JNI functions to link it with the java code. Then compile it using caffe-android-lib and Android NDK. This will generate the JNI libs that you should include in the Android project. The most tricky part is sharing an image between the Java and the C++ code.
