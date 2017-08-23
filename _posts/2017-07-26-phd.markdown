@@ -162,7 +162,7 @@ We discarded:
 ## Strategy 1: Using soft-labels
 
 <div class="imgcap">
-<img src="/assets/webvision/softlabels_pipeline.png" height="240">
+<img src="/assets/webvision/softlabels_pipeline.png" height="260">
 </div>
 
 
