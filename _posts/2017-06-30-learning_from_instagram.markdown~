@@ -10,7 +10,7 @@ mathjax: false
 
 ## Introduction 
  
-In the [Using Instagram data to learn a city classifier](https://gombru.github.io/2017/06/25/city_classifier/) post we talk about the importance of designing algorithms capable to learn from web and social media data.
+In the [Using Instagram data to learn a city classifier](https://gombru.github.io/2017/03/29/phd/) post we talk about the importance of designing algorithms capable to learn from web and social media data.
  
 > Web and social media is an infinite source of images associated with text and other data. We can use that associated data to learn image representations, avoiding the dependence of human annotated data, one of the bottlenecks of machine learning. 
  
