@@ -1,6 +1,6 @@
 ---
 layout: post
-comments: false
+comments: true
 title:  "Learning image topics from Instagram to build an image retrieval system"
 excerpt: "Learning of a joint embedding of text and images using InstaCities1M. A LDA and a CNN are used to embbed text and images respectibly in a topic space. Then a retrieval by text system is built and tested."
 date:   2017-06-30 20:00:00
