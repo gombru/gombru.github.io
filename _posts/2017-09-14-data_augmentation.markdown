@@ -24,7 +24,7 @@ To answer these questions and decide which data augmentation techniques use, I d
 In the experiments I first train a model without any data augmentation. That is resizing the training images to the size of the CNN input layer (224x224). Then I train a model for each one of the proposed data augmentations techniques. For all those models, random cropping will also be used. I also train a model using all the proposed techniques at the same time. 
 
 <div class="imgcap">
-<img src="/assets/data_augmentation/augmented_images.png" height="250">
+<img src="/assets/data_augmentation/augmented_images.png" height="210">
 </div>
 
 
