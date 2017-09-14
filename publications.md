@@ -10,7 +10,7 @@ order: 2
 
 The former DLPR workshot publication lead to this journal publication. We extended our experiments and we improved our algorithm by using the FCN heatmaps to suppress the non-textual regions at the beggining of the text proposals stage, achieving a more efficient pipeline.
 <div class="imgcap">
-<img src="/assets/publications/fast.jpg" height="300">
+<img src="/assets/publications/fcn.jpg" height="300">
 </div>
 
 ### Improving Text Proposals for Scene Images with Fully Convolutional Networks ###
