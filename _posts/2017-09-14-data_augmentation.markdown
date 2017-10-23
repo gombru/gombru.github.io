@@ -84,6 +84,6 @@ The reason why the results with data augmentation are worse and not equal, is pr
 
 So from now I won’t use these data augmentation techniques. I might still use random cropping with non-aggressive parameters because is much more efficient to crop than to resize images and also because that avoids deforming the image.
 
-
+> [This work by Google](https://arxiv.org/abs/1611.03530) studies how regularizers (such as data augmentation) impact the CNN training process and its generalization error. Check it, it's interesting!
 
 
