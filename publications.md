@@ -6,7 +6,7 @@ order: 2
 ---
 
 ### FAST: Facilitated and Accurate Scene Text Proposals through FCN Guided Pruning
-Dena Bazazian, **Raul Gomez**, Anguelos Nicolaou, Lluis Gomez, Dimosthenis Karatzas, Andrew D.Bagdanov.   
+Dena Bazazian, **Raul Gomez**, Anguelos Nicolaou, Lluis Gomez, Dimosthenis Karatzas and Andrew D.Bagdanov.   
 Pattern Recognition Letters, 2017. [[PDF](http://www.sciencedirect.com/science/article/pii/S0167865517302982)]  
 
 The former DLPR workshop publication lead to this journal publication. We extended our experiments and we improved our algorithm by using the FCN heatmaps to suppress the non-textual regions at the beggining of the text proposals stage, achieving a more efficient pipeline.
