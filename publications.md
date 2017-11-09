@@ -18,7 +18,7 @@ The former DLPR workshop publication lead to this journal publication. We extend
 Dena Bazazian, **Raul Gomez**, Anguelos Nicolaou, Lluis Gomez, Dimosthenis Karatzas and Andrew Bagdanov.  
 ICPR workshop (DLPR), 2016. [[PDF](https://arxiv.org/abs/1702.05089)]  
 
-This came out from my MS's thesis. It's about how to use a text detection FCN to improve the text proposals algorithm (developed by [Lluis Gomez i Bigorda](http://lluisgomez.github.io/), one of my advisors). The code for the FCN model and training is [here](https://github.com/gombru/TextFCN) and the code for the text proposals pipeline is [here](https://github.com/gombru/TextProposalsInitialSuppression). Watching the FCN detect text in real time is pretty cool.
+This came out from my MS's thesis. It's about how to use a text detection FCN to improve the text proposals algorithm (developed by [Lluis Gomez i Bigorda](http://lluisgomez.github.io/), one of my advisors). The code for the FCN model training is [here](https://github.com/gombru/TextFCN) and the code for the text proposals pipeline is [here](https://github.com/gombru/TextProposalsInitialSuppression). Watching the FCN detect text in real time is pretty cool.
 <div class="imgcap">
 <img src="/assets/publications/fcn.gif" height="300">
 </div>
