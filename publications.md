@@ -5,7 +5,7 @@ permalink: /publications/
 order: 2
 ---
 
-###FAST: Facilitated and Accurate Scene Text Proposals through FCN Guided Pruning
+### FAST: Facilitated and Accurate Scene Text Proposals through FCN Guided Pruning
 Dena Bazazian, **Raul Gomez**, Anguelos Nicolaou, Lluis Gomez, Dimosthenis Karatzas, Andrew D.Bagdanov.   
 Pattern Recognition Letters, 2017. [[PDF](http://www.sciencedirect.com/science/article/pii/S0167865517302982)]  
 
@@ -14,7 +14,7 @@ The former DLPR workshop publication lead to this journal publication. We extend
 <img src="/assets/publications/fast.jpg" height="300">
 </div>
 
-###Improving Text Proposals for Scene Images with Fully Convolutional Networks
+### Improving Text Proposals for Scene Images with Fully Convolutional Networks
 Dena Bazazian, **Raul Gomez**, Anguelos Nicolaou, Lluis Gomez, Dimosthenis Karatzas and Andrew Bagdanov.  
 ICPR workshop (DLPR), 2016. [[PDF](https://arxiv.org/abs/1702.05089)]  
 
