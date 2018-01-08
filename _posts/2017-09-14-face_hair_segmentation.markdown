@@ -44,13 +44,13 @@ The FCN has been trained using Caffe for 300k iterations with a batch size of 1.
 
 > The learning rate is so low because the loss in not normalized over pixels.
 
-**The size of the training images is set to 512x512 to better fit the receptive field of the FCN.* An aggressive data augmentation is used, and I’ve found it to be it necessary in this case to overcome the limited amount of data and its low variance. Specifically, I found that in all the training images the faces are centered and have a similar size respect to the image. That made a model trained without data augmentation fail detecting non-centered faces or smaller faces.
+**The size of the training images is set to 512x512 to better fit the receptive field of the FCN.** An aggressive data augmentation is used, and I’ve found it to be it necessary in this case to overcome the limited amount of data and its low variance. Specifically, I found that in all the training images the faces are centered and have a similar size respect to the image. That made a model trained without data augmentation fail detecting non-centered faces or smaller faces.
 
 **Initially images are resized to 600x600. Then mirroring is applied with a probability of 0.5. Then, a random zero padding between 0 and 250 is added with a probability of 0.5. Then the resulting images are rescaled with a random scaling factor from 1 to 1.4.  Finally, a random crop of 512x512 is taken from that image.**
 The data augmentation is performed online using a PyCaffe data layer, and [the code is self-explanatory](https://github.com/gombru/FaceFCN/blob/master/layers.py).
 
 <div class="imgcap">
-<img src="/assets/facefcn/training.png" height="250">
+<img src="/assets/facefcn/training.png" height="300">
 	<div class="thecap">
 	FaceFCN training plot.
 	</div>
