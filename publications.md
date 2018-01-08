@@ -8,7 +8,7 @@ order: 2
 **Raul Gomez**, Baoguang Shi, Lluis Gomez, Lukas Numann, Andreas Veit, Jiri Matas, Serge Belongie and Dismosthenis Karatzas.   
 ICDAR, 2017.   
 
-I organized the ICDAR 2017 competition on COCO-Text within the [Robust Reading Competition framework](http://rrc.cvc.uab.es/?ch=5&com=evaluation&task=1&gtv=1) and wrote this competition report. Tasks were text localization, cropped words reading and end to end. Though the competition is over, the platform is still open for submissions.   
+I organized the ICDAR 2017 competition on COCO-Text within the [Robust Reading Competition framework](http://rrc.cvc.uab.es/?ch=5&com=evaluation&task=1&gtv=1) and wrote this competition report. Tasks were text localization, cropped words recognition and end to end. Though the competition is over, the platform is still open for submissions.   
 <div class="imgcap">
 <img src="/assets/publications/coco-text.png" height="250">
 </div>
