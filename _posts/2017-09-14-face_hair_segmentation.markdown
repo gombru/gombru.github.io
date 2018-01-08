@@ -11,14 +11,14 @@ mathjax: false
 Following a similar approach than the one used to train the [Text Detection FCN](https://github.com/gombru/TextFCN) I trained the same FCN model for **Face and Hair pixel level segmentation**. As in the TextFCN, the model used is the [fcn8s-atonce model by Long and Shelhamer](https://github.com/shelhamer/fcn.berkeleyvision.org), in this case adapted to detect 3 classes: Face, Hair and Background.
 
 <div class="imgcap">
-<img src="/assets/facefcn/facefcn.gif" height="250">
+<img src="/assets/facefcn/FaceFCN.gif" height="250">
 	<div class="thecap">
 	Running FaceFCN on real time. It runs at 6fps on a TitanX.
 	</div>
 </div>
 
 
-The code to train the model is available [here](https://github.com/gombru/FaceFCN), and a trained caffemodel can be downloaded [here](https://drive.google.com/file/d/1XlBnUdVIH2Fw5NxOIcxjzJFPEA6kJjfS/view?usp=sharing).
+> The code to train the model is available [here](https://github.com/gombru/FaceFCN), and a trained caffemodel can be downloaded [here](https://drive.google.com/file/d/1XlBnUdVIH2Fw5NxOIcxjzJFPEA6kJjfS/view?usp=sharing).
 
 Siyang Qin, from the University of California, published [a similar approach in ICME 2017](https://users.soe.ucsc.edu/~siqin/papers/ICME.pdf), which includes a segmentation refinement and a lighter FCN, and probably produces better results than the model provided here. However, they don’t provide code nor a trained model.
 
