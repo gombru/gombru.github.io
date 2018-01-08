@@ -2,9 +2,9 @@
 layout: post
 comments: true
 title:  "FCN for Face and Hair segmentation"
-excerpt: "Training and FCN for Face an Hair pixel level segmentation."
+excerpt: "Training a fully convolutional network to perform pixel level segmentation of faces and hair."
 date:   2018-01-08 20:00:00
-img: "/assets/facefcn/ex_bb.png"
+img: "/assets/facefcn/ex_bb.jpg"
 mathjax: false
 ---
 
