@@ -13,3 +13,22 @@ SetaMind is [available in Google Play](https://play.google.com/store/apps/detail
 <div class="imgcap">
 <img src="/assets/setamind/setamind.png" height="300">
 </div>
+
+### FaceFCN ###
+
+A Caffe Fully Convolutional Network for Face and Hair segmentation. Adapted from [FCNs for Semantic Segmentation by Long and Shelhamer](https://github.com/shelhamer/fcn.berkeleyvision.org).  
+**[Blog post](https://gombru.github.io/2018/01/08/face_hair_segmentation/)**  
+**[FaceFCN on Github](https://github.com/gombru/FaceFCN)**
+
+<div class="imgcap">
+<img src="/assets/facefcn/FaceFCN.gif.gif" height="300">
+</div>
+
+### TextFCN ###
+
+A Caffe Fully Convolutional Network that detects any kind of text and generates pixel-level heatmaps. Adapted from [FCNs for Semantic Segmentation by Long and Shelhamer](https://github.com/shelhamer/fcn.berkeleyvision.org). This came out form my [MS's thesis](https://drive.google.com/file/d/0B-DM8FPBNpG6QXdQN3JaY3pBMFU/view), and lead to [ICPR workshop](https://arxiv.org/abs/1702.05089) and [Pattern Recognition Letters Journal](http://www.sciencedirect.com/science/article/pii/S0167865517302982) publications.  
+**[TextFCN on Github](https://github.com/gombru/TextFCN)**
+
+<div class="imgcap">
+<img src="/assets/publications/fcn.gif" height="300">
+</div>
