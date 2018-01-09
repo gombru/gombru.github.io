@@ -146,8 +146,7 @@ We can compare the top visited tourist attractions in Barcelona with its names a
 	</div>
 </div>
 
-**We can compare the top visited attractions with the most mentioned attractions, which we could see as the most trendy attractions. Because people maybe visits a lot the Museu Picasso but don’t talk about it in Social Media.**
-A conclusion could be that people talk more about architecture and neighbourhoods than about museums, and that people also post a lot about places near Barcelona (Sitges, Montserrat…).
+**We can compare the top visited attractions with the most mentioned attractions, which we could see as the most trendy attractions. Because people maybe visits a lot the Museu Picasso but don’t talk about it in Social Media.** A conclusion could be that people talk more about architecture and neighbourhoods than about museums, and that people also post a lot about places near Barcelona (Sitges, Montserrat…).
 
 ### Top word in each language
 
