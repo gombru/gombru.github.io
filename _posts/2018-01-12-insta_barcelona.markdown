@@ -25,7 +25,7 @@ Once the embeddings are learnt, we will be able to **infer what people talks abo
  - What kind of images do people post when they talk about “gracia” and “Barcelona”?
 
 <div class="imgcap">
-<img src="/assets/insta_barcelona/breakfast.jpg" height="300">
+<img src="/assets/insta_barcelona/breakfast.jpg" height="200">
 </div>
 
 
