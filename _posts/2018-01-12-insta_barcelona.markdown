@@ -30,11 +30,13 @@ Once the embeddings are learnt, we will be able to **infer what people talks abo
 
 > For a more detailed explanation of the embeddings learnt, please refer [here -not published yet-](https://gombru.github.io/) or [here](https://gombru.github.io/2017/06/30/learning_from_instagram/).
 
-## Data adquisition
+## Data adquisition and filtering
+
+#### Data adquisition
 
 To download the images from Instagram I used [InstaLooter](https://github.com/althonos/InstaLooter), a simple python script that parses the Instagram web without the need API access (the instagram API is only available for approved apps). You can download images quite fast with that. I searched for the word “barcelona” and downloaded 623K images and captions.
 
-## Dataset filtering
+#### Dataset filtering
 
 - **Images without a caption or short caption (less than 3 words).**
 
@@ -83,7 +85,7 @@ A [Word2Vec](https://code.google.com/archive/p/word2vec/) representation for wor
 **For a more detailed explanation of the embeddings learning, please refer [here](https://gombru.github.io/) or [here](https://gombru.github.io/2017/06/30/learning_from_instagram/).**
 
 <div class="imgcap">
-<img src="/assets/insta_barcelona/pipeline_training.png" height="200">
+<img src="/assets/insta_barcelona/pipeline_training.png" height="210">
 	<div class="thecap">
 	A regression CNN is trained to map the images to the Word2Vec space. Word2Vec representations of the captions associated to images are used as ground truth.
 	</div>
@@ -153,13 +155,15 @@ We can compare the top visited tourist attractions in Barcelona with its names a
 Histograms of the top frequent words in each of the languages.
 
 <div class="imgcap">
-<img src="/assets/insta_barcelona/top_words_en.png" height="360">
-</div>
-<div class="imgcap">
-<img src="/assets/insta_barcelona/top_words_es.png" height="360">
-</div>
-<div class="imgcap">
-<img src="/assets/insta_barcelona/top_words_ca.png" height="360">
+	<div style="display:inline-block">
+		<img src="/assets/insta_barcelona/top_words_en.png" height = "200" width = "200">
+	</div>
+	<div style="display:inline-block; margin-left: 1px;">
+		<img src="/assets/insta_barcelona/top_words_es.png" height = "200" width = "200">
+	</div>
+	<div style="display:inline-block; margin-left: 1px;">
+		<img src="/assets/insta_barcelona/top_words_ca.png" height = "200" width = "200">
+	</div>
 </div>
 
 
@@ -338,7 +342,7 @@ As the regression CNN has learnt to map images to the Word2Vec space, we can do 
 </div>
 
 
-#####  Neighbourhoods:
+####  Neighbourhoods:
 **Poblenou**: Lots of flats being promoted now there
 <div class="imgcap">
 	<div style="display:inline-block">
