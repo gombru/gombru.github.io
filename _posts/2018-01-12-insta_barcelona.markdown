@@ -15,14 +15,14 @@ In a former post, [Learning to Learn from Web Data -not published yet-](https://
 **This post aims to show that learning this common space from Social Media data has very useful applications. To do so, we will learn the embedding with Instagram posts associated to a specific topic: Barcelona. That is, images with captions where the word “Barcelona” appears.**
 Once the embeddings are learnt, we will be able to **infer what people talks about when they use the word “Barcelona”, or what images people relate with Barcelona and another topic. That can lead to social or commercial interesting analysis**. For instance:
 
- - Which ones are the most common words that appear together with Barcelona?
- - Which languages do people use most when talking about Barcelona?
- - Which words people write together with the word “food” and “Barcelona"?
- - What kind of images people post when talking about “healthy” and “Barcelona”?
- - What kind of images people post when talking about “beer” and “Barcelona”?
- - What kind of images people post when talking about “cerveza” and “Barcelona”?
- - What kind of images people post when talking about “healthy”, “restaurant” and “Barcelona”?
- - What kind of images people post when talking about “gracia” and “Barcelona”?
+ - What are the most common words that appear along with Barcelona?
+ - What languages do people use most when they speak about Barcelona?
+ - What words do people write along with the word "food" and "Barcelona"?
+ - What kind of images do people post when they talk about “healthy” and “Barcelona”?
+ - What kind of images do people post when they talk about “beer” and “Barcelona”?
+ - What kind of images do people post when they talk about “cerveza” and “Barcelona”?
+ - What kind of images do people post when they talk about “healthy”, “restaurant” and “Barcelona”?
+ - What kind of images do people post when they talk about “gracia” and “Barcelona”?
 
 **Notice that this kind of analysis could be applied to any other concept instead of Barcelona if sufficient data can be collected.**
 
@@ -32,7 +32,7 @@ Once the embeddings are learnt, we will be able to **infer what people talks abo
 
 ## Data adquisition
 
-To download the images from Instagram I used [InstaLooter](https://github.com/althonos/InstaLooter), a simple python script that parses the Instagram web without the need API access (The instagram API is only available for approved apps). You can download images quite fast with that. I searched for the word “barcelona” and downloaded 623K images and captions.
+To download the images from Instagram I used [InstaLooter](https://github.com/althonos/InstaLooter), a simple python script that parses the Instagram web without the need API access (the instagram API is only available for approved apps). You can download images quite fast with that. I searched for the word “barcelona” and downloaded 623K images and captions.
 
 ## Dataset filtering
 
@@ -51,10 +51,10 @@ To download the images from Instagram I used [InstaLooter](https://github.com/al
 
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/users1.png" height = "320">
+		<img src="/assets/insta_barcelona/users1.png" height = "280">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/insta_barcelona/users2.png" height = "320">
+		<img src="/assets/insta_barcelona/users2.png" height = "280">
 	</div>
 	<div class="thecap">
 	Number of posts of top contributing users. User with most posts: 2374
@@ -89,13 +89,13 @@ A [Word2Vec](https://code.google.com/archive/p/word2vec/) representation for wor
 	</div>
 </div>
 
-### Word2Vec
+#### Word2Vec
 
 Word2Vec learns vector representations from non annotated text, where words having similar semantics have similar representations. The learned space has a semantic structure, so we can operate over it (king + woman = queen).
-A Word2Vec model is trained from scratch using the [Gensim implementation](https://radimrehurek.com/gensim/models/word2vec.html). A dimensionality of 300 is set for the embedding vectors. We used a window of 8 and do 50 corpus iterations. English, spanish and catalan stop words were removed.
-To get the embeddings of the captions, we compute the Word2Vec representation of every word and do the TF-IDF averaged mean over the words in the caption. We also use Gensim to build our [TF-IDF model](https://radimrehurek.com/gensim/models/tfidfmodel.html).
+A Word2Vec model is trained from scratch using the [Gensim Word2Vec implementation](https://radimrehurek.com/gensim/models/word2vec.html). A dimensionality of 300 is set for the embedding vectors. We used a window of 8 and do 50 corpus iterations. English, spanish and catalan stop words were removed.
+To get the embeddings of the captions, we compute the Word2Vec representation of every word and do the TF-IDF weighted mean over the words in the caption. That's a common practice in order to give more importance in the enconding to more discriminative words. To build our TF-IDF mode, we also use the  [Gensim TF-IDF implementation](https://radimrehurek.com/gensim/models/tfidfmodel.html).
 
-### Regression CNN
+#### Regression CNN
 
 We train a CNN to regress captions Word2Vec embeddings from images. The trained net will let us project any image to the Word2Vec space. The CNN used is a GoogleNet and the framework Caffe.  We train it using Sigmoid Cross Entropy Loss and initializing from the ImageNet trained model.
 
@@ -105,31 +105,31 @@ Word2Vec builds a vectorial space were words having similar semantics are mapped
 
 ### Which words do people associate with “Barcelona” and “ “ :
 
-__**Generic:**__
+**Generic:**
 
-**food**:  thaifood foodtour eatingout todayfood foodislife smokedsalmon eat degustation foodforthesoul bodegongourmet  
-**shopping**: shoppingtime shoppingday shopaholic onlineshopping multibrand musthave loveshoes __emporioarmani__ casualwear fashionday  
-**beer**: spanishbeer __estella__ __desperados__ beerlover aleandhop beers brewery __estrellagalicia__ __mahou__ goodbee  
+ - **food**:  thaifood foodtour eatingout todayfood foodislife smokedsalmon eat degustation foodforthesoul bodegongourmet  
+ - **shopping**: shoppingtime shoppingday shopaholic onlineshopping multibrand musthave loveshoes  <span style="color:brown">emporioarmani</span> casualwear fashionday  
+ - **beer**: spanishbeer <span style="color:brown">estella</span> <span style="color:brown">desperados</span> beerlover aleandhop beers brewery <span style="color:brown">estrellagalicia</span> <span style="color:brown">mahou</span> goodbee  
 
-__**Beer:**__
+**Beer:**
 
-**cerveza**: __cervezanegra__ cervezas jarra beertography birra beerlife fresquita birracultura birracooltura lovebeer  
-**cervesa**: __cervesaartesana__ __yobebocraft__ beernerd __idrinkcraft__ bcnbeer lambicus cerveses instabeer daus __cervezaartesana__  
-**estrella**:  __spanishbeer__ cerveza __lager__ damm cnil estrellagalicia estrellabeer cervecera gengibre fritos  
-**moritz**: __moritzbarcelona__ __fabricamoritz__ beerstagram volldamm craftbeer damm beerxample lovebeer barradebar beerlovers  
+ - **cerveza**: <span style="color:brown">cervezanegra</span> cervezas jarra beertography birra beerlife fresquita birracultura birracooltura lovebeer  
+ - **cervesa**: <span style="color:brown">cervesaartesana</span> <span style="color:brown">yobebocraft</span> beernerd <span style="color:brown">idrinkcraft</span> bcnbeer lambicus cerveses instabeer daus <span style="color:brown">cervezaartesana</span>  
+ - **estrella**:  <span style="color:brown">spanishbeer</span> cerveza <span style="color:brown">lager</span> damm cnil estrellagalicia estrellabeer cervecera gengibre fritos  
+ - **moritz**: <span style="color:brown">moritzbarcelona</span> <span style="color:brown">fabricamoritz</span> beerstagram volldamm craftbeer damm beerxample lovebeer barradebar beerlovers  
 
-__**Restaurants:**__
+**Restaurants:**
 
-**sushi + restaurant**: sushibar sushitime japo [gruponomo](https://www.nomomoto.es/) sashimi sushilovers japanesefood bestrestaurant sushiporn comidajaponesa  
-**healthy + restaurant**: salad eathealthy delicious [flaxkale](http://teresacarles.com/fk/) veggiefood healthyfood [cangambus](http://www.cangambus.cat/la-capella) healthyeating [thegreenspot](http://www.encompaniadelobos.com/the-green-spot/) menjarsaludable  
+ - **sushi + restaurant**: sushibar sushitime japo [gruponomo](https://www.nomomoto.es/) sashimi sushilovers japanesefood bestrestaurant sushiporn comidajaponesa  
+ - **healthy + restaurant**: salad eathealthy delicious [flaxkale](http://teresacarles.com/fk/) veggiefood healthyfood [cangambus](http://www.cangambus.cat/la-capella) healthyeating [thegreenspot](http://www.encompaniadelobos.com/the-green-spot/) menjarsaludable  
 
-__**Neightbourhoods:**__
+**Neightbourhoods:**
 
-**sants**: barridesants pisapis assajarhostot santsmontjuic __inconformistes__ __menueconomico__ poblesec __menubarato__ santsmontjuc hostafrancs  
-**gracia**: grcia viladegracia barridegracia barriodegracia farr jardinets grandegracia __torrentdelolla__ __hotelcasafuster__ lanena  
-**santantoni**: santantoni descobreixbcn __vermouthlovers__ __modernism__ fembarri bcncoffee bcnmoltms __vermouthtime__ mesqhotels larotonda  
-**badalona**: pontdelpetroli badalonamola lovebadalona santadria badalonacity badalonaturisme __escoladevela__ igbadalona bdn __portviu__  
-**sitges**:  igerssitges santperederibes sitgesbeach __intadogs__ garraf __gaysitges__ aiguadol imperfectsalon __patinavela__ visitsitges  
+ - **sants**: barridesants pisapis assajarhostot santsmontjuic <span style="color:brown">inconformistes</span> <span style="color:brown">menueconomico</span> poblesec <span style="color:brown">menubarato</span> santsmontjuc hostafrancs  
+ - **gracia**: grcia viladegracia barridegracia barriodegracia farr jardinets grandegracia <span style="color:brown">torrentdelolla</span> <span style="color:brown">hotelcasafuster</span> lanena  
+ - **santantoni**: santantoni descobreixbcn <span style="color:brown">vermouthlovers</span> <span style="color:brown">modernism</span> fembarri bcncoffee bcnmoltms <span style="color:brown">vermouthtime</span> mesqhotels larotonda  
+ - **badalona**: pontdelpetroli badalonamola lovebadalona santadria badalonacity badalonaturisme <span style="color:brown">escoladevela</span> igbadalona bdn <span style="color:brown">portviu</span>  
+ - **sitges**:  igerssitges santperederibes sitgesbeach <span style="color:brown">intadogs</span> garraf <span style="color:brown">gaysitges</span> aiguadol imperfectsalon <span style="color:brown">patinavela</span> visitsitges  
 
 ### What atractions do people talk more about? 
 
@@ -174,232 +174,232 @@ Histograms of the top frequent words in each of the languages.
 
 As the regression CNN has learnt to map images to the Word2Vec space, we can do the same *nearest words* experiment we did with text but with images. That is, **retrieving the images that people associate with the word “Barcelona” and the word “ “:**
 
-__Generic:__
+##### Generic
 **Barcelona**:
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/barcelona_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/barcelona_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/barcelona_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/barcelona_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/barcelona_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/barcelona_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/barcelona_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/barcelona_4.jpg" height = "185" width = "185">
 	</div>
 </div>
 
 **Gaudi**:
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/gaudi_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/gaudi_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/gaudi_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/gaudi_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/gaudi_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/gaudi_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/gaudi_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/gaudi_4.jpg" height = "185" width = "185">
 	</div>
 </div>
 
-__Food:__
+##### Food
 **Breakfast**: What people have for breakfast in Barcelona? What kind of breakfast people post on Instagram in Barcelona?
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/breakfast_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/breakfast_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/breakfast_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/breakfast_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/breakfast_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/breakfast_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/breakfast_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/breakfast_4.jpg" height = "185" width = "185">
 	</div>
 </div>
 
 **Dinner**: It’s clear that mostly tourist post with this word, and that they always have seafood paella.
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/dinner_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/dinner_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/dinner_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/dinner_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/dinner_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/dinner_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/dinner_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/dinner_4.jpg" height = "185" width = "185">
 	</div>
 </div>
 
 **Healthy**: What kind of food people think is healthy in Barcelona?
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/healthy_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/healthy_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/healthy_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/healthy_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/healthy_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/healthy_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/healthy_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/healthy_4.jpg" height = "185" width = "185">
 	</div>
 </div>
 
 **Healthy + Restaurant**: If you have been in Barcelona, you might recognice some places
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/healthy_restaurant_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/healthy_restaurant_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/healthy_restaurant_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/healthy_restaurant_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/healthy_restaurant_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/healthy_restaurant_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/healthy_restaurant_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/healthy_restaurant_4.jpg" height = "185" width = "185">
 	</div>
 </div>
 
 **Beer**:
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/beer_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/beer_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/beer_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/beer_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/beer_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/beer_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/beer_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/beer_4.jpg" height = "185" width = "185">
 	</div>
 </div>
 
-__Differences between languages:__
+##### Differences between languages
 **Catalonia** (en):
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/catalonia_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/catalonia_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/catalonia_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/catalonia_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/catalonia_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/catalonia_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/catalonia_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/catalonia_4.jpg" height = "185" width = "185">
 	</div>
-</div
+</div>
 
 **Cataluña** (es):
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/cataluna_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/cataluna_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/cataluna_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/cataluna_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/cataluna_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/cataluna_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/cataluna_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/cataluna_4.jpg" height = "185" width = "185">
 	</div>
 </div
 
 **Catalunya** (ca):
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/catalunya_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/catalunya_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/catalunya_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/catalunya_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/catalunya_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/catalunya_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/catalunya_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/catalunya_4.jpg" height = "185" width = "185">
 	</div>
 </div>
 
 
-__Neighbourhoods:__
+#####  Neighbourhoods:
 **Poblenou**: Lots of flats being promoted now there
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/poblenou_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/poblenou_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/poblenou_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/poblenou_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/poblenou_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/poblenou_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/poblenou_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/poblenou_4.jpg" height = "185" width = "185">
 	</div>
 </div>
 
 **Poblesec**: A trendy place to have tapas these days
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/poblesec_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/poblesec_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/poblesec_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/poblesec_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/poblesec_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/poblesec_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/poblesec_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/poblesec_4.jpg" height = "185" width = "185">
 	</div>
 </div>
 
 **Rambla**: Touristic Mercat Boqueria
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/rambla_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/rambla_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/rambla_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/rambla_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/rambla_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/rambla_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/rambla_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/rambla_4.jpg" height = "185" width = "185">
 	</div>
 </div>
 
 **Gracia**: It seems people post a lot of street art photos associated to Gracia
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/insta_barcelona/gracia_1.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/gracia_1.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/gracia_2.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/gracia_2.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/gracia_3.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/gracia_3.jpg" height = "185" width = "185">
 	</div>
 	<div style="display:inline-block; margin-left: 1px;">
-		<img src="/assets/insta_barcelona/gracia_4.jpg" height = "200" width = "200">
+		<img src="/assets/insta_barcelona/gracia_4.jpg" height = "185" width = "185">
 	</div>
 </div>
 
