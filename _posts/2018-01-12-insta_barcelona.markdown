@@ -24,6 +24,11 @@ Once the embeddings are learnt, we will be able to **infer what people talks abo
  - What kind of images do people post when they talk about “healthy”, “restaurant” and “Barcelona”?
  - What kind of images do people post when they talk about “gracia” and “Barcelona”?
 
+<div class="imgcap">
+<img src="/assets/insta_barcelona/breakfast.jpg" height="300">
+</div>
+
+
 **Notice that this kind of analysis could be applied to any other concept instead of Barcelona if sufficient data can be collected.**
 
 > The code used is available [here](https://github.com/gombru/insbcn).
