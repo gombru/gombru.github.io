@@ -41,7 +41,7 @@ To download the images from Instagram I used [InstaLooter](https://github.com/al
 - **Images with captions in other languages than english, spanish or catalan.**  I used [langdetect](https://pypi.python.org/pypi/langdetect?), a python language detection library ported from Google's language-detection. I discarded posts that had 0 probabilities of belonging to one of those languages.
 
 <div class="imgcap">
-<img src="/assets/insta_barcelona/languages.png" height="400">
+<img src="/assets/insta_barcelona/languages.png" height="360">
 	<div class="thecap">
 	Number of posts collected per language.
 	</div>
@@ -153,20 +153,20 @@ We can compare the top visited tourist attractions in Barcelona with its names a
 Histograms of the top frequent words in each of the languages.
 
 <div class="imgcap">
-<img src="/assets/insta_barcelona/top_words_en.png" height="400">
+<img src="/assets/insta_barcelona/top_words_en.png" height="360">
 </div>
 <div class="imgcap">
-<img src="/assets/insta_barcelona/top_words_es.png" height="400">
+<img src="/assets/insta_barcelona/top_words_es.png" height="360">
 </div>
 <div class="imgcap">
-<img src="/assets/insta_barcelona/top_words_ca.png" height="400">
+<img src="/assets/insta_barcelona/top_words_ca.png" height="360">
 </div>
 
 
 ## Images associated with text concepts
 
 <div class="imgcap">
-<img src="/assets/insta_barcelona/pipeline_retrieval.png" height="170">
+<img src="/assets/insta_barcelona/pipeline_retrieval.png" height="160">
 	<div class="thecap">
 	To use the embedding as an image retrieval by text system, we embed the querying text using the learnt Word2Vec model and we retrieve the nearest images in the joint space.
 	</div>
@@ -174,7 +174,7 @@ Histograms of the top frequent words in each of the languages.
 
 As the regression CNN has learnt to map images to the Word2Vec space, we can do the same *nearest words* experiment we did with text but with images. That is, **retrieving the images that people associate with the word “Barcelona” and the word “ “:**
 
-##### Generic
+#### Generic
 **Barcelona**:
 <div class="imgcap">
 	<div style="display:inline-block">
@@ -207,7 +207,7 @@ As the regression CNN has learnt to map images to the Word2Vec space, we can do 
 	</div>
 </div>
 
-##### Food
+#### Food
 **Breakfast**: What people have for breakfast in Barcelona? What kind of breakfast people post on Instagram in Barcelona?
 <div class="imgcap">
 	<div style="display:inline-block">
@@ -288,7 +288,7 @@ As the regression CNN has learnt to map images to the Word2Vec space, we can do 
 	</div>
 </div>
 
-##### Differences between languages
+#### Differences between languages
 **Catalonia** (en):
 <div class="imgcap">
 	<div style="display:inline-block">
@@ -319,7 +319,7 @@ As the regression CNN has learnt to map images to the Word2Vec space, we can do 
 	<div style="display:inline-block; margin-left: 1px;">
 		<img src="/assets/insta_barcelona/cataluna_4.jpg" height = "185" width = "185">
 	</div>
-</div
+</div>
 
 **Catalunya** (ca):
 <div class="imgcap">
