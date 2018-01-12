@@ -23,8 +23,7 @@ Following a similar approach than the one used to train the [Text Detection FCN]
 Siyang Qin, from the University of California, published [a similar approach in ICME 2017](https://users.soe.ucsc.edu/~siqin/papers/ICME.pdf), which includes a segmentation refinement and a lighter FCN, and probably produces better results than the model provided here. However, they don’t provide code nor a trained model.
 
 ## Data
-The model has been trained using the [Part Labels Database]
-(http://vis-www.cs.umass.edu/lfw/part_labels/). It contains 2927 images of faces of famous people with pixel-level labelings into Hair/Skin/Background labels. Images size is 250x250 pixels.
+The model has been trained using the [Part Labels Database](http://vis-www.cs.umass.edu/lfw/part_labels/). It contains 2927 images of faces of famous people with pixel-level labelings into Hair/Skin/Background labels. Images size is 250x250 pixels.
 
 <div class="imgcap">
 	<div style="display:inline-block">
