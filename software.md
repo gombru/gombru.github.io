@@ -19,7 +19,6 @@ SetaMind is [available in Google Play](https://play.google.com/store/apps/detail
 
 A Caffe Fully Convolutional Network for Face and Hair segmentation. Adapted from [FCNs for Semantic Segmentation](https://github.com/shelhamer/fcn.berkeleyvision.org) by Long and Shelhamer.  
 **[Blog post](https://gombru.github.io/2018/01/08/face_hair_segmentation/)**  
-**[FaceFCN on Github](https://github.com/gombru/FaceFCN)**
 
 <div class="imgcap">
 <img src="/assets/facefcn/FaceFCN.gif" height="300">
