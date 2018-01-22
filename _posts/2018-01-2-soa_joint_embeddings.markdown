@@ -51,50 +51,58 @@ To summarize the work on joint image and text embeddings, I’ll split the metho
 > The methods described here are mainly methods from the “Computer Vision Community”, which are currently all deep learning based. However, the “Multimedia Community” also works in semantic joint image text embeddings, focusing in the image retrieval task and proposing other kind of approaches. Those works use other datasets, such as [MIRFLICKR](https://dl.acm.org/citation.cfm?id=1743384.1743477) or [NUS-WIDE](https://dl.acm.org/citation.cfm?id=1743384.1743477), and other evaluation metrics.
 
 ### CCA based
-Canonical Correlation Analysis finds linear projections that maximize the correlations between projected vectors from the two views. CCA is hard to scale to large amounts of data.
+Canonical Correlation Analysis finds linear projections that maximize the correlations between projected vectors from the two views. CCA is hard to scale to large amounts of data.  
+
 **[Associating Neural Word Embeddings with Deep Image Representations using Fisher Vectors](https://www.cs.tau.ac.il/~wolf/papers/Klein_Associating_Neural_Word_2015_CVPR_paper.pdf)**. Benjamin Klein et al., Tel Aviv University, CVPR 2015.**
 They use Fisher Vectors as sentences representations by pooling the Word2Vec embedding of each word in a sentence, and use CCA to build the joint embedding. They present image retrieval results on Flickr8K, Flickr30K and COCO. 
 
 ### Contrast based
 
 <div class="imgcap">
-<img src="/assets/soa_joint_embeddings/contrast_based.png">
+<img src="/assets/soa_joint_embeddings/contrastive_based.png" height="250">
 	<div class="thecap">
 	Contrast based methods training pipeline.
 	</div>
 </div>
 
 
-In this category I group all methods that use a loss function that, for each image, compares the distances between the inferred image representation with its associated text representation and with a non-matching text representation, maximizing the difference between those distances until a given margin. The objective is to ensure that correct annotations get ranked higher than incorrect ones. This kind of loss is also called **ranking loss** and **[Hingue loss](https://en.wikipedia.org/wiki/Hinge_loss).
-Put the loss. Put a figure.
+In this category I group all methods that use a loss function that, for each image, compares the distances between the inferred image representation with its associated text representation and with a non-matching text representation, maximizing the difference between those distances until a given margin. The objective is to ensure that correct annotations get ranked higher than incorrect ones. This kind of loss is also called **ranking loss** and **[Hingue loss](https://en.wikipedia.org/wiki/Hinge_loss).  
+
+
 **[DeViSE: A Deep Visual-Semantic Embedding Model] (https://research.google.com/pubs/pub41869.html). Andrea Frome et al., Google, NIPS 2013.**
-They train a CNN to predict labels word2vec representations instead of one-hot encoded labels using a ranking loss. This way they achieve a model that generalizes to classes outside of the labeled training set (zero-shot learning), and achieve incorrect predictions to be semantically close to the desired label. They show results on Imagenet classification.
+They train a CNN to predict labels word2vec representations instead of one-hot encoded labels using a ranking loss. This way they achieve a model that generalizes to classes outside of the labeled training set (zero-shot learning), and achieve incorrect predictions to be semantically close to the desired label. They show results on Imagenet classification.  
+
 **[Latent Embeddings for Zero-shot Classification](https://arxiv.org/pdf/1603.08895.pdf). Yongqin Xian et al. MPI for Informatics (Germany), CVPR 2016.**
-A similar approach to DeVise. They train a CNN to predict labels embeddings using a ranking loss, and report results on zero-shot classification datasets.
+A similar approach to DeVise. They train a CNN to predict labels embeddings using a ranking loss, and report results on zero-shot classification datasets.  
+
 **[Learning Deep Structure-Preserving Image-Text Embeddings](https://arxiv.org/abs/1511.06078). Liwei Wang et al., University of Illinois, CVPR 2016.**
 They use a bi-directional ranking loss, learning fully connected layers over both fixed image and text embeddings. As the text representation, they user Fisher vectors over Word2Vec.
 They present image retrieval results on Flickr30K and COCO, and phrase localization results on Flickr30k Entities.
-A journal article of a similar work has also been published: [Learning Two-Branch Neural Networks for Image-Text Matching Tasks](https://arxiv.org/abs/1704.03470). There they also compare to an LSTM encoding in the same pipeline, for which they report slightly worse results.
+A journal article of a similar work has also been published: [Learning Two-Branch Neural Networks for Image-Text Matching Tasks](https://arxiv.org/abs/1704.03470). There they also compare to an LSTM encoding in the same pipeline, for which they report slightly worse results.  
+
 **[Joint Image-Text Representation by Gaussian Visual-Semantic Embedding](http://www.cs.dartmouth.edu/~chenfang/paper_pdf/GVSE_16.pdf). Zhou Ren et al., University of California, ACM Multimedia 2016.**
-They propose a joint embedding where each text concept is mapped to a density distribution in the semantic space, instead to a single point. To do that, they map GloVe text embeddings as Gaussian distributions. They train the model using a ranking loss, and report classification results on MIT Places205 dataset.
-You may want to see Zhou Ren’s PhD thesis, [“Joint Image-Text Representation Learning”](https://escholarship.org/uc/item/66f282s6).
-**[Beyond instance-level image retrieval: Leveraging captions to learn a global visual representation for semantic retrieval](http://openaccess.thecvf.com/content_cvpr_2017/papers/Gordo_Beyond_Instance-Level_Image_CVPR_2017_paper.pdf). Albert Gordo et al., Xerox Research, CVPR 2017.
+They propose a joint embedding where each text concept is mapped to a density distribution in the semantic space, instead to a single point. To do that, they map GloVe text embeddings as Gaussian distributions. They train the model using a ranking loss, and report classification results on MIT Places205 dataset.  
+You may want to see **Zhou Ren’s PhD thesis, [“Joint Image-Text Representation Learning”](https://escholarship.org/uc/item/66f282s6)**.  
+
+**[Beyond instance-level image retrieval: Leveraging captions to learn a global visual representation for semantic retrieval](http://openaccess.thecvf.com/content_cvpr_2017/papers/Gordo_Beyond_Instance-Level_Image_CVPR_2017_paper.pdf).** Albert Gordo et al., Xerox Research, CVPR 2017.
 They use a bi-directional model trained with a ranking loss. They use tf-idf over Bag of Words to build a text representation. They evaluate using non standard measures on non standard datasets.
 
 ### Regression based
 In this category I group all methods that train a CNN using a loss to explicitly regress its associated text representation. 
 
 <div class="imgcap">
-<img src="/assets/soa_joint_embeddings/regression_based.png">
+<img src="/assets/soa_joint_embeddings/regression_based.png"  height="250">
 	<div class="thecap">
 	Regression based methods training pipeline.
 	</div>
 </div>
 
 **[Linking Image and Text with 2-Way Nets](https://www.cs.tau.ac.il/~wolf/papers/capturing-deep-cross.pdf). Avis Eisenschtat et al., Tel Aviv University, CVPR 2017.**
-They propose a bi-directional network architecture that employs two tied network channels that project two data sources into a common space using the **Euclidean loss**. As text embeddings, they use Fisher Vectors over Word2Vec. They present image retrieval results on Flickr8k, Flickr30k and COCO.
+They propose a bi-directional network architecture that employs two tied network channels that project two data sources into a common space using the **Euclidean loss**. As text embeddings, they use Fisher Vectors over Word2Vec. They present image retrieval results on Flickr8k, Flickr30k and COCO.  
+
 **[Self-supervised learning of visual features through embedding images into text topic spaces](https://arxiv.org/abs/1705.08631). Lluis Gomez et al., Computer Vision Center, UAB (Spain). CVPR 2017.**
-They learn an LDA text representation using wikipedia articles, and then train a CNN to embed the images of those articles to the LDA topic space using a cross entropy loss. They report classification results on PASCAL VOC and retrieval results on the Wikipedia dataset..
+They learn an LDA text representation using wikipedia articles, and then train a CNN to embed the images of those articles to the LDA topic space using a cross entropy loss. They report classification results on PASCAL VOC and retrieval results on the Wikipedia dataset.  
+
 **[Cross-Modal Retrieval With CNN Visual Features: A New Baseline](http://ieeexplore.ieee.org/document/7428926/)**. Yunchao Wei et al., IEEE Transactions on Cybernetics, 2017.
 They use an LDA as the text encoder and train a CNN using cross entropy loss. They show retrieval results in different multimedia datasets.
 
@@ -103,25 +111,31 @@ They use an LDA as the text encoder and train a CNN using cross entropy loss. Th
 <div class="imgcap">
 <img src="/assets/soa_joint_embeddings/lstm_based.png">
 	<div class="thecap">
-	LSTM based methods pipeline. [Source](http://brain.kaist.ac.kr/research.html).
+	LSTM based methods pipeline. Source: http://brain.kaist.ac.kr/research.html.
 	</div>
 </div>
 
 
 Here I group methods that are based on inputting CNN image features to an LSTM. They are also “contrast based”, since they use ranking loses.
-They are used for image captioning, since the LSTM can produce a caption word by word when image features are inputted, and also for retrieval, using as a common embedding for images and text the latest hidden state of the LSTM.
+They are used for image captioning, since the LSTM can produce a caption word by word when image features are inputted, and also for retrieval, using as a common embedding for images and text the latest hidden state of the LSTM.  
+
 **[Unifying Visual-Semantic Embeddings with Multimodal Neural Language Models](https://arxiv.org/pdf/1411.2539.pdf)**. Ryan Kiros et al., University of Toronto, TACL 2015.**
-They encode sentences using an LSTM over their words Word2Vec representations, and map CNN image features to the same space by a learnable linear projection. They report image retreival results on Flickr8K and Flickr20K.
+They encode sentences using an LSTM over their words Word2Vec representations, and map CNN image features to the same space by a learnable linear projection. They report image retreival results on Flickr8K and Flickr20K.  
+
 **[Order-Embeddings of Images and Language](https://arxiv.org/abs/1511.06361). Ivan Vendrov, Ryan Kiros et al., University of Toronto, ICLR 2016.**
-They build over above Ruan Kiros work, but taking proffit of Word Net structure and using GRUs to embed sentences. They report image retrieval results on COCO.
+They build over above Ruan Kiros work, but taking proffit of Word Net structure and using GRUs to embed sentences. They report image retrieval results on COCO.  
+
 **Andrej Karpathy et al. image captioning papers**
-[Deep Fragment Embeddings for Bidirectional Image Sentence Mapping](https://cs.stanford.edu/people/karpathy/nips2014.pdf). NIPS 2014.
-[Deep Visual-Semantic Alignments for Generating Image Descriptions](https://cs.stanford.edu/people/karpathy/cvpr2015.pdf). CVPR 2015.
-DenseCap: Fully Convolutional Localization Networks for Dense Captioning(https://cs.stanford.edu/people/karpathy/densecap.pdf). CVPR 2016.
+[Deep Fragment Embeddings for Bidirectional Image Sentence Mapping](https://cs.stanford.edu/people/karpathy/nips2014.pdf). NIPS 2014.  
+[Deep Visual-Semantic Alignments for Generating Image Descriptions](https://cs.stanford.edu/people/karpathy/cvpr2015.pdf). CVPR 2015.  
+[DenseCap: Fully Convolutional Localization Networks for Dense Captioning](https://cs.stanford.edu/people/karpathy/densecap.pdf). CVPR 2016.  
+
 To describe an image, they use RCNN, which detects objects in the image and produces an embedding for each one of the objects. The representations of a predefined number of objects and of the whole image are concatenated. To describe the sentence, they use an LSTM over its Word2Vec words representations. However, they report to have little change in performance when using random word representations.
-They report image retrieval, phrase localization and captioning results on Flickr8K, Flickr30K and COCO.
-**[Deep Reinforcement Learning-based Image Captioning with Embedding Reward](https://arxiv.org/abs/1704.03899). Zhou Ren et al. Snap Inc. CVPR 2017.
-They address the image captioning task introducing a reinforcement learning reward when generating the captions, that, instead of only taking into account the word to be generated, it takes into account the possible full sentences that could be generated afterwards.
+They report image retrieval, phrase localization and captioning results on Flickr8K, Flickr30K and COCO.  
+
+**[Deep Reinforcement Learning-based Image Captioning with Embedding Reward](https://arxiv.org/abs/1704.03899).** Zhou Ren et al. Snap Inc. CVPR 2017.
+They address the image captioning task introducing a reinforcement learning reward when generating the captions, that, instead of only taking into account the word to be generated, it takes into account the possible full sentences that could be generated afterwards.  
+
 **[Learning Cross-modal Embeddings for Cooking Recipes and Food Images](http://im2recipe.csail.mit.edu/). Amaia Salvador et al., UPC (Spain) and MIT. CVPR 2017.**
 They learn a joint embedding of food images, ingredients and text, so they can retrieve a recipe for a given food image. They use an LSTM over word2vec representations to encode text and train the net using a ranking loss. They published the code and the dataset, Recipe1M.
 
@@ -133,4 +147,5 @@ The table below is a performance comparison of image retrieval, or image-sentenc
 <img src="/assets/soa_joint_embeddings/COCO_table.png">
 </div>
 
+**...**
 
