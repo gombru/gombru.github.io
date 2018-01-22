@@ -66,10 +66,10 @@ They use Fisher Vectors as sentences representations by pooling the Word2Vec emb
 </div>
 
 
-In this category I group all methods that use a loss function that, for each image, compares the distances between the inferred image representation with its associated text representation and with a non-matching text representation, maximizing the difference between those distances until a given margin. The objective is to ensure that correct annotations get ranked higher than incorrect ones. This kind of loss is also called **ranking loss** and **[Hingue loss](https://en.wikipedia.org/wiki/Hinge_loss).  
+In this category I group all methods that use a loss function that, for each image, compares the distances between the inferred image representation with its associated text representation and with a non-matching text representation, maximizing the difference between those distances until a given margin. The objective is to ensure that correct annotations get ranked higher than incorrect ones. This kind of loss is also called **ranking loss** and **[Hingue loss](https://en.wikipedia.org/wiki/Hinge_loss)**.
 
 
-**[DeViSE: A Deep Visual-Semantic Embedding Model] (https://research.google.com/pubs/pub41869.html). Andrea Frome et al., Google, NIPS 2013.**
+**[DeViSE: A Deep Visual-Semantic Embedding Model](https://research.google.com/pubs/pub41869.html). Andrea Frome et al., Google, NIPS 2013.**
 They train a CNN to predict labels word2vec representations instead of one-hot encoded labels using a ranking loss. This way they achieve a model that generalizes to classes outside of the labeled training set (zero-shot learning), and achieve incorrect predictions to be semantically close to the desired label. They show results on Imagenet classification.  
 
 **[Latent Embeddings for Zero-shot Classification](https://arxiv.org/pdf/1603.08895.pdf). Yongqin Xian et al. MPI for Informatics (Germany), CVPR 2016.**
