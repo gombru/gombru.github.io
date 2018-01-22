@@ -28,7 +28,6 @@ To solve this task, the idea is to learn a joint embedding with semantic structu
 The objective is to describe an image with natural language. It is achieved training an LSTM over image features to produce an image caption. 
 ### Phrase Localization
 The goal of phrase localization is to predict a bounding box in tan image for each entity mention from the caption of the image. A region proposals algorithm is run over the images, and the retrieval is performed over the resulting image patches.
-Figure from [Learning Deep Structure-Preserving Image-Text Embeddings](https://arxiv.org/abs/1511.06078), Liwet Wang.
 ### Image Classification
 The semantic structure of the learned joint embedding space has been used to improve image classification results. The idea is to train a CNN to predict the semantic embedding of a label instead a one-hot encoding of the label. This way, the CNN gains robustness against drastical errors.
 
@@ -38,7 +37,7 @@ Before exploring the state of the art on joint image text embedding methods, it�
  - **LDA**: Latent Dirichlet Allocation learns latent topics from a collection of text documents and maps words to a vector of probabilities of those topics. It can describe a document by assigning topic distributions to them, which in turn have word distributions assigned.
 - **Word2Vec**: Learns relationships between words automatically using a feed-forward neural network. It builds distributed semantic representations of words using the context of them considering both words before and after the target word.
 - **GloVe**: It is a count-based model. It learns the word vectors by essentially doing dimensionality reduction on the co-occurrence counts matrix.
--**FastText**: While Word2Vec and GloVe treat each word in a corpus like an atomic entity, FastText treats each word as composed of character ngrams. So the vector of a word is made of the sum of this character ngrams. This is specially useful for morphologically rich languages. This way, it achieves generating better word embedding for rare words and embeddings for out of vocabulary words. 
+- **FastText**: While Word2Vec and GloVe treat each word in a corpus like an atomic entity, FastText treats each word as composed of character ngrams. So the vector of a word is made of the sum of this character ngrams. This is specially useful for morphologically rich languages. This way, it achieves generating better word embedding for rare words and embeddings for out of vocabulary words. 
 - **LSTM**: They are given as input CNN image features, and are trained to produce the GT caption word by word. Usually the GT words are one-hot encoded, though other encodings (such as Word2Vec encodings) have been tried in the literature. They can output and encode texts of any length.
 
 > Notice that Word2Vec, GloVe and FastText are word embedding methods, so we’ll need an extra step to produce sentences representations. A simple way to do that is to encode a sentence with the mean of its word vectors, or with the TF-IDF weighted mean. 
@@ -47,11 +46,11 @@ Before exploring the state of the art on joint image text embedding methods, it�
 ## Joint Image and Text Embedding Methods
 There is not a task-wise nor a dataset-wise best joint embedding method. Published methods are quite different and most of them claim to be the best in one of the former tasks. However the exposed comparisons are frequently not reliable, because they differ in the datasets used, the splits or the evaluation method. Also, in some works authors claim to be the best when restricted to use certain CNN image features. We could use an standard benchmark and evaluation here! The most used databases are [COCO](http://cocodataset.org/#home), [Fllickr30k](http://web.engr.illinois.edu/~bplumme2/Flickr30kEntities/) and [Flickr8k](http://nlp.cs.illinois.edu/HockenmaierGroup/8k-pictures.html). Below we include a image retrieval performance comparison between the listed methods on COCO. Anyway, the objective of this post is not to select the best methods on each task, but to review the different proposed solutions for them.
 
-To summarize the work on joint image and text embeddings, I’ll split the methods in four families. CCA, Contrast based, Regression based and LSTM based.
+To summarize the work on joint image and text embeddings, I’ll split the methods in four families. **CCA based, Contrast based, Regression based and LSTM based**.
 
 > The methods described here are mainly methods from the “Computer Vision Community”, which are currently all deep learning based. However, the “Multimedia Community” also works in semantic joint image text embeddings, focusing in the image retrieval task and proposing other kind of approaches. Those works use other datasets, such as [MIRFLICKR](https://dl.acm.org/citation.cfm?id=1743384.1743477) or [NUS-WIDE](https://dl.acm.org/citation.cfm?id=1743384.1743477), and other evaluation metrics.
 
-### CCA
+### CCA based
 Canonical Correlation Analysis finds linear projections that maximize the correlations between projected vectors from the two views. CCA is hard to scale to large amounts of data.
 **[Associating Neural Word Embeddings with Deep Image Representations using Fisher Vectors](https://www.cs.tau.ac.il/~wolf/papers/Klein_Associating_Neural_Word_2015_CVPR_paper.pdf)**. Benjamin Klein et al., Tel Aviv University, CVPR 2015.**
 They use Fisher Vectors as sentences representations by pooling the Word2Vec embedding of each word in a sentence, and use CCA to build the joint embedding. They present image retrieval results on Flickr8K, Flickr30K and COCO. 
