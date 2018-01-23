@@ -53,7 +53,7 @@ To summarize the work on joint image and text embeddings, I’ll split the metho
 ### CCA based
 Canonical Correlation Analysis finds linear projections that maximize the correlations between projected vectors from the two views. CCA is hard to scale to large amounts of data.  
 
-**[Associating Neural Word Embeddings with Deep Image Representations using Fisher Vectors](https://www.cs.tau.ac.il/~wolf/papers/Klein_Associating_Neural_Word_2015_CVPR_paper.pdf)**. Benjamin Klein et al., Tel Aviv University, CVPR 2015.**
+**[Associating Neural Word Embeddings with Deep Image Representations using Fisher Vectors](https://www.cs.tau.ac.il/~wolf/papers/Klein_Associating_Neural_Word_2015_CVPR_paper.pdf). Benjamin Klein et al., Tel Aviv University, CVPR 2015.**
 They use Fisher Vectors as sentences representations by pooling the Word2Vec embedding of each word in a sentence, and use CCA to build the joint embedding. They present image retrieval results on Flickr8K, Flickr30K and COCO. 
 
 ### Contrast based
@@ -119,21 +119,21 @@ They use an LDA as the text encoder and train a CNN using cross entropy loss. Th
 Here I group methods that are based on inputting CNN image features to an LSTM. They are also “contrast based”, since they use ranking loses.
 They are used for image captioning, since the LSTM can produce a caption word by word when image features are inputted, and also for retrieval, using as a common embedding for images and text the latest hidden state of the LSTM.  
 
-**[Unifying Visual-Semantic Embeddings with Multimodal Neural Language Models](https://arxiv.org/pdf/1411.2539.pdf)**. Ryan Kiros et al., University of Toronto, TACL 2015.**
+**[Unifying Visual-Semantic Embeddings with Multimodal Neural Language Models](https://arxiv.org/pdf/1411.2539.pdf). Ryan Kiros et al., University of Toronto, TACL 2015.**
 They encode sentences using an LSTM over their words Word2Vec representations, and map CNN image features to the same space by a learnable linear projection. They report image retreival results on Flickr8K and Flickr20K.  
 
 **[Order-Embeddings of Images and Language](https://arxiv.org/abs/1511.06361). Ivan Vendrov, Ryan Kiros et al., University of Toronto, ICLR 2016.**
 They build over above Ruan Kiros work, but taking proffit of Word Net structure and using GRUs to embed sentences. They report image retrieval results on COCO.  
 
-**Andrej Karpathy et al. image captioning papers**
-[Deep Fragment Embeddings for Bidirectional Image Sentence Mapping](https://cs.stanford.edu/people/karpathy/nips2014.pdf). NIPS 2014.  
-[Deep Visual-Semantic Alignments for Generating Image Descriptions](https://cs.stanford.edu/people/karpathy/cvpr2015.pdf). CVPR 2015.  
-[DenseCap: Fully Convolutional Localization Networks for Dense Captioning](https://cs.stanford.edu/people/karpathy/densecap.pdf). CVPR 2016.  
+**Andrej Karpathy et al. image captioning papers**  
+**[Deep Fragment Embeddings for Bidirectional Image Sentence Mapping](https://cs.stanford.edu/people/karpathy/nips2014.pdf). NIPS 2014.**  
+**[Deep Visual-Semantic Alignments for Generating Image Descriptions](https://cs.stanford.edu/people/karpathy/cvpr2015.pdf). CVPR 2015.**  
+**[DenseCap: Fully Convolutional Localization Networks for Dense Captioning](https://cs.stanford.edu/people/karpathy/densecap.pdf). CVPR 2016.**  
 
 To describe an image, they use RCNN, which detects objects in the image and produces an embedding for each one of the objects. The representations of a predefined number of objects and of the whole image are concatenated. To describe the sentence, they use an LSTM over its Word2Vec words representations. However, they report to have little change in performance when using random word representations.
 They report image retrieval, phrase localization and captioning results on Flickr8K, Flickr30K and COCO.  
 
-**[Deep Reinforcement Learning-based Image Captioning with Embedding Reward](https://arxiv.org/abs/1704.03899).** Zhou Ren et al. Snap Inc. CVPR 2017.
+**[Deep Reinforcement Learning-based Image Captioning with Embedding Reward](https://arxiv.org/abs/1704.03899). Zhou Ren et al. Snap Inc. CVPR 2017.**
 They address the image captioning task introducing a reinforcement learning reward when generating the captions, that, instead of only taking into account the word to be generated, it takes into account the possible full sentences that could be generated afterwards.  
 
 **[Learning Cross-modal Embeddings for Cooking Recipes and Food Images](http://im2recipe.csail.mit.edu/). Amaia Salvador et al., UPC (Spain) and MIT. CVPR 2017.**
