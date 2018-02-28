@@ -57,8 +57,6 @@ Next figures show the training and validation accuracy during the training of th
 	</div>
 </div>
 
-CAPTION
-The training and validation accuracies when training with the different data augmentation techniques.
 <div class="imgcap">
 <img src="/assets/data_augmentation/102flowers_2.png" height="430">
 	<div class="thecap">
