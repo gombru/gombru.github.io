@@ -13,7 +13,7 @@ In this personal website I will write about my scientific work, either publicati
 
 
 <div class="imgcap">
-<img src="/assets/me2.jpg" height="350">
+<img src="/assets/me2.jpeg" height="340">
 </div>
 
 
@@ -22,5 +22,5 @@ In this personal website I will write about my scientific work, either publicati
 **E-mail**   <a href="mailto:{{ site.email }}">{{ site.email }}</a>  
 **Github**   [gombru](https://github.com/gombru)  
 **Linkedin**   [Raul Gomez Bruballa](https://www.linkedin.com/in/raulgomezbruballa)  
-**Twitter**   [gombru](https://twitter.com/gombru)  
+**Twitter**   [gombru](ttps://twitter.com/gombru)  
 
