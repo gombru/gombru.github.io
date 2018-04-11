@@ -8,11 +8,14 @@ order: 4
 ## ForumTurisTIC
 [Eurecat](https://eurecat.org/) organizes a tourism forum in Barcelona, [ForumTurisTIC](https://www.forumturistic.com/). I presented there the possibilities of applying my research to tourism analysis in the [inspirational session](https://www.forumturistic.com/ponentes/raul-gomez-eurecat/). [[Slides]](https://docs.google.com/presentation/d/1z-BmhiaB5UC7vhCTkENtiH3NsaYEhise2WEWnfHw1_0/edit?usp=sharing)  [[Video]]()
 
+
 <div class="imgcap">
-<img src="/assets/forumTurisTIC/presentation_1.jpg" height="260">
-</div>
-<div class="imgcap">
-<img src="/assets/forumTurisTIC/presentation_2.jpg" height="260">
+	<div style="display:inline-block">
+	<img src="/assets/forumTurisTIC/presentation_1.jpg" height="260">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+	<img src="/assets/forumTurisTIC/presentation_2.jpg" height="260">
+	</div>
 </div>
 
 ### CVCRD2017
