@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Presenting tourism applications of my research at ForumTurisTIC"
 excerpt: "Applying algorithms to learn from images and associated text to Barcelona Instagram images lead to interesting results for the tourism industry, which I presented in ForumTurisTIC."
-date:   20187-02-11 20:00:00
+date:   2018-02-11 20:00:00
 img: "/assets/forumTurisTIC/presentation.png"
 mathjax: false
 ---
@@ -13,39 +13,39 @@ Applying algorithms to [learn from images and associated text to Barcelona Insta
 [Eurecat](https://eurecat.org/) organizes a tourism forum in Barcelona, [ForumTurisTIC](https://www.forumturistic.com/). I presented there the possibilities of applying my research to tourism analysis in the [inspirational session](https://www.forumturistic.com/ponentes/raul-gomez-eurecat/). The objective was explaining in a non-technical way how the pipeline works and which applications could it have in the tourism industry. Attendants were quite interested in the possibilities.
 
 <div class="imgcap">
-<img src="/assets/forumTurisTIC/presentation_1.jpg" height="300">
+<img src="/assets/forumTurisTIC/presentation_1.jpg" height="260">
 </div>
 <div class="imgcap">
-<img src="/assets/forumTurisTIC/presentation_2.jpg" height="300">
+<img src="/assets/forumTurisTIC/presentation_2.jpg" height="260">
 </div>
 
 **The main points of the presentation where**:
 
  - Algorithms can learn relations between images and text.
  - They can be trained without supervision using Instagram images and associated text.
- - The data available in Instagram related to Barcelona is a lot, and its mainly related to tourism.
+ - The data available in Instagram related to Barcelona is a lot, and its mainly related to tourism.  
 
 	<div class="imgcap">
-	<img src="/assets/forumTurisTIC/instagram_post.png" height="300">
+	<img src="/assets/forumTurisTIC/instagram_post.png" height="260">
 	</div>
 	<div class="imgcap">
-	<img src="/assets/forumTurisTIC/languages.png" height="300">
-	</div>
+	<img src="/assets/forumTurisTIC/languages.png" height="260">
+	</div>  
 
 
  - We can infer which words Instagram users relate to any concept.
 
-> **hotel**: luxuryhotel hotels designhotel elpalace beautifulhotels hotelroom boutiquehotel mobarcelona ghotelcentral 
-> **hostel**:	hostellife hostelbarcelona peretarres hostelone hostelfun airbnb generator spongelife yeahhostel 
-> **elpalace**: 		hotel designhotels monumenthotel mesqhotels hotels luxuryhotel designhotel mobarcelona luxuryhotels
+> **hotel**: luxuryhotel hotels designhotel elpalace beautifulhotels hotelroom boutiquehotel mobarcelona ghotelcentral   
+> **hostel**:	hostellife hostelbarcelona peretarres hostelone hostelfun airbnb generator spongelife yeahhostel   
+> **elpalace**: 		hotel designhotels monumenthotel mesqhotels hotels luxuryhotel designhotel mobarcelona luxuryhotels  
 
- - We can infer which kind of images Instagram users relate to any concept.
+ - We can infer which kind of images Instagram users relate to any concept.  
 
 	<div class="imgcap">
-	<img src="/assets/forumTurisTIC/im_results.png" height="320">
+	<img src="/assets/forumTurisTIC/im_results.png" height="260">
 	</div>
 
- - This pipeline is extrapolable to any other city (or any other subject).  
+ - This pipeline is extrapolable to any other city (or any other subject).    
 
 **Following, in Spanish, the presentation slides and video**.
 
