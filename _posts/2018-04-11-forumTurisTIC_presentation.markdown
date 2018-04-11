@@ -22,7 +22,7 @@ Applying algorithms to [learn from images and associated text to Barcelona Insta
 </div>
 
 
-###Main points of the presentation
+### Main points of the presentation
 
  - Algorithms can learn relations between images and text.
  - They can be trained without supervision using Instagram images and associated text.
@@ -58,13 +58,13 @@ Applying algorithms to [learn from images and associated text to Barcelona Insta
 
 <br/>
 
-###Slides
+### Slides
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQRevpxy_lU5zeacOgbi9qpzgTny8q9ppiIzCCZEx_aGMkQi-8ywt7Rg92OekBdYeEzldCATopj0GNC/embed?start=false&loop=false&delayms=3000" frameborder="0" width="768" height="455" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 [Download](https://docs.google.com/presentation/d/1z-BmhiaB5UC7vhCTkENtiH3NsaYEhise2WEWnfHw1_0/edit?usp=sharing).
 
 
-###Video
+### Video
 The presentation video will be available soon.
  
  
