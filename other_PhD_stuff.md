@@ -9,10 +9,10 @@ order: 4
 [Eurecat](https://eurecat.org/) organizes a tourism forum in Barcelona, [ForumTurisTIC](https://www.forumturistic.com/). I presented there the possibilities of applying my research to tourism analysis in the [inspirational session](https://www.forumturistic.com/ponentes/raul-gomez-eurecat/). [[Slides]](https://docs.google.com/presentation/d/1z-BmhiaB5UC7vhCTkENtiH3NsaYEhise2WEWnfHw1_0/edit?usp=sharing)  [[Video]]()
 
 <div class="imgcap">
-<img src="/assets/forumTurisTIC/presentation_1.jpg" height="340">
+<img src="/assets/forumTurisTIC/presentation_1.jpg" height="300">
 </div>
 <div class="imgcap">
-<img src="/assets/forumTurisTIC/presentation_2.jpg" height="340">
+<img src="/assets/forumTurisTIC/presentation_2.jpg" height="300">
 </div>
 
 ### CVCRD2017
@@ -24,7 +24,7 @@ I went to this [summer school](http://cvit.iiit.ac.in/SSDA/) in Jaipur and I pre
 [[Poster](https://drive.google.com/file/d/0B-DM8FPBNpG6clNXVk1MM0hHR1E/view?usp=sharing)]
 
 <div class="imgcap">
-<img src="/assets/poster_india.jpg" height="340">
+<img src="/assets/poster_india.jpg" height="300">
 </div>
 
 ### Master's thesis

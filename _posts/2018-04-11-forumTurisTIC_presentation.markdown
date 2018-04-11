@@ -4,7 +4,7 @@ comments: true
 title:  "Presenting tourism applications of my research at ForumTurisTIC"
 excerpt: "Applying algorithms to learn from images and associated text to Barcelona Instagram images lead to interesting results for the tourism industry, which I presented in ForumTurisTIC."
 date:   20187-02-11 20:00:00
-img: "/assets/forumTurisTIC/presentation_1.jpg"
+img: "/assets/forumTurisTIC/presentation.png"
 mathjax: false
 ---
 
@@ -13,10 +13,10 @@ Applying algorithms to [learn from images and associated text to Barcelona Insta
 [Eurecat](https://eurecat.org/) organizes a tourism forum in Barcelona, [ForumTurisTIC](https://www.forumturistic.com/). I presented there the possibilities of applying my research to tourism analysis in the [inspirational session](https://www.forumturistic.com/ponentes/raul-gomez-eurecat/). The objective was explaining in a non-technical way how the pipeline works and which applications could it have in the tourism industry. Attendants were quite interested in the possibilities.
 
 <div class="imgcap">
-<img src="/assets/forumTurisTIC/presentation_1.jpg" height="400">
+<img src="/assets/forumTurisTIC/presentation_1.jpg" height="300">
 </div>
 <div class="imgcap">
-<img src="/assets/forumTurisTIC/presentation_2.jpg" height="400">
+<img src="/assets/forumTurisTIC/presentation_2.jpg" height="300">
 </div>
 
 **The main points of the presentation where**:
@@ -26,10 +26,10 @@ Applying algorithms to [learn from images and associated text to Barcelona Insta
  - The data available in Instagram related to Barcelona is a lot, and its mainly related to tourism.
 
 	<div class="imgcap">
-	<img src="/assets/forumTurisTIC/instagram_post.png" height="400">
+	<img src="/assets/forumTurisTIC/instagram_post.png" height="300">
 	</div>
 	<div class="imgcap">
-	<img src="/assets/forumTurisTIC/languages.png" height="400">
+	<img src="/assets/forumTurisTIC/languages.png" height="300">
 	</div>
 
 
@@ -42,14 +42,14 @@ Applying algorithms to [learn from images and associated text to Barcelona Insta
  - We can infer which kind of images Instagram users relate to any concept.
 
 	<div class="imgcap">
-	<img src="/assets/forumTurisTIC/im_results.png" height="400">
+	<img src="/assets/forumTurisTIC/im_results.png" height="320">
 	</div>
 
- - This pipeline is extrapolable to any other city (or any other subject).
+ - This pipeline is extrapolable to any other city (or any other subject).  
 
 **Following, in Spanish, the presentation slides and video**.
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQRevpxy_lU5zeacOgbi9qpzgTny8q9ppiIzCCZEx_aGMkQi-8ywt7Rg92OekBdYeEzldCATopj0GNC/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQRevpxy_lU5zeacOgbi9qpzgTny8q9ppiIzCCZEx_aGMkQi-8ywt7Rg92OekBdYeEzldCATopj0GNC/embed?start=false&loop=false&delayms=3000" frameborder="0" width="768" height="455" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 The slides are available [here](https://docs.google.com/presentation/d/1z-BmhiaB5UC7vhCTkENtiH3NsaYEhise2WEWnfHw1_0/edit?usp=sharing).
 
