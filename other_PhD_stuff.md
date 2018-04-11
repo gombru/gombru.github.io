@@ -5,6 +5,16 @@ permalink: /other-material/
 order: 4
 ---
 
+## ForumTurisTIC
+[Eurecat](https://eurecat.org/) organizes a tourism forum in Barcelona, [ForumTurisTIC](https://www.forumturistic.com/). I presented there the possibilities of applying my research to tourism analysis in the [inspirational session](https://www.forumturistic.com/ponentes/raul-gomez-eurecat/). [[Slides]](https://docs.google.com/presentation/d/1z-BmhiaB5UC7vhCTkENtiH3NsaYEhise2WEWnfHw1_0/edit?usp=sharing)  [[Video]]()
+
+<div class="imgcap">
+<img src="/assets/forumTurisTIC/presentation_1.jpg" height="340">
+</div>
+<div class="imgcap">
+<img src="/assets/forumTurisTIC/presentation_2.jpg" height="340">
+</div>
+
 ### CVCRD2017
 In the computer vision center CVCRD2017 is organized each year to present students work. Each student prepares an abstract, some slides and a poster.  
 [[PDF](https://drive.google.com/file/d/0B-DM8FPBNpG6SDhEMDdKSGJJOVU/view?usp=sharing)]   [[Slides](https://docs.google.com/presentation/d/1CQa3Dc0RmdocB1GP2quzxtlNvZEOsUxvI7i1CQ163lc/edit?usp=sharing)]   [[Poster](https://drive.google.com/file/d/0B-DM8FPBNpG6dWNkc3JfUmFhWmM/view?usp=sharing)]
@@ -12,6 +22,10 @@ In the computer vision center CVCRD2017 is organized each year to present studen
 ### Poster at IAPR Summer School on Document Analysis
 I went to this [summer school](http://cvit.iiit.ac.in/SSDA/) in Jaipur and I presented there a poster about the work done in my master thesis.  
 [[Poster](https://drive.google.com/file/d/0B-DM8FPBNpG6clNXVk1MM0hHR1E/view?usp=sharing)]
+
+<div class="imgcap">
+<img src="/assets/poster_india.jpg" height="340">
+</div>
 
 ### Master's thesis
 **Automatic discovery of textual information in images from Social Networks using FCN**  
