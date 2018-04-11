@@ -4,13 +4,13 @@ comments: true
 title:  "Presenting tourism applications of my research at ForumTurisTIC"
 excerpt: "Applying algorithms to learn from images and associated text to Barcelona Instagram images lead to interesting results for the tourism industry, which I presented in ForumTurisTIC."
 date:   2018-02-11 20:00:00
-img: "/assets/forumTurisTIC/presentation.png"
+img: "/assets/forumTurisTIC/presentation.jpg"
 mathjax: false
 ---
 
-Applying algorithms to [learn from images and associated text to Barcelona Instagram images](https://gombru.github.io/2018/01/12/insta_barcelona/) allows analyzing **which words and images Instagram users relate to Barcelona and different concepts**. Since people tend to post more on Instagram when they are traveling and Barcelona is a very touristic city, most of the Instagram data related to Barcelona is from tourist. Therefore, the **results are very interesting for the tourism industry**.   
+Applying algorithms to [learn from images and associated text to Barcelona Instagram images](https://gombru.github.io/2018/01/12/insta_barcelona/) allows analyzing **which words and images Instagram users relate to Barcelona and different concepts**. Since people tend to post more on Instagram when they are traveling and Barcelona is a very touristic city, most of the Instagram data related to Barcelona is from tourists. Therefore, the **results are very interesting for the tourism industry**.   
 
-[Eurecat](https://eurecat.org/) organizes a tourism forum in Barcelona, [ForumTurisTIC](https://www.forumturistic.com/). I presented there the possibilities of applying my research to tourism analysis in the [inspirational session](https://www.forumturistic.com/ponentes/raul-gomez-eurecat/). The objective was **explaining in a non-technical way how the pipeline works and which applications could it have in the tourism industry**. Attendants were quite interested in the possibilities.
+[Eurecat](https://eurecat.org/) organizes a tourism forum in Barcelona, [ForumTurisTIC](https://www.forumturistic.com/), where I presented there the possibilities of applying my research to tourism analysis in the [inspirational session](https://www.forumturistic.com/ponentes/raul-gomez-eurecat/). The objective was **explaining in a non-technical way how the pipeline works and which applications could it have in the tourism industry**. Attendants were quite interested in the possibilities.
 
 <div class="imgcap">
 	<div style="display:inline-block">
@@ -47,17 +47,17 @@ Applying algorithms to [learn from images and associated text to Barcelona Insta
 
 > **elpalace**: 		hotel designhotels monumenthotel mesqhotels hotels luxuryhotel designhotel mobarcelona    
 
- - We can infer which kind of images Instagram users relate to any concept.    
+ - We can infer which kind of images Instagram users relate to any concept and Barcelona.    
 
 
 	<div class="imgcap">
 	<img src="/assets/forumTurisTIC/im_results.png" height="260">
 	</div>
+	<br/>
 
+ - The pipeline is extrapolable to any other city or subject.    
 
- - This pipeline is extrapolable to any other city (or any other subject).    
-
-
+<br/>
 
 ### Slides
 
