@@ -22,5 +22,5 @@ In this personal website I will write about my scientific work, either publicati
 **E-mail**   <a href="mailto:{{ site.email }}">{{ site.email }}</a>  
 **Github**   [gombru](https://github.com/gombru)  
 **Linkedin**   [Raul Gomez Bruballa](https://www.linkedin.com/in/raulgomezbruballa)  
-**Twitter**   [gombru](ttps://twitter.com/gombru)  
+**Twitter**   [gombru](https://twitter.com/gombru)  
 
