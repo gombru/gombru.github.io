@@ -6,7 +6,7 @@ order: 4
 ---
 
 ### ForumTurisTIC
-[Eurecat](https://eurecat.org/) organized a tourism forum in Barcelona, [ForumTurisTIC](https://www.forumturistic.com/). I presented there the possibilities of applying my research on learning from images and associated text to tourism analysis in the [inspirational session](https://www.forumturistic.com/ponentes/raul-gomez-eurecat/). [[Slides]](https://docs.google.com/presentation/d/1z-BmhiaB5UC7vhCTkENtiH3NsaYEhise2WEWnfHw1_0/edit?usp=sharing)  [[Video]]()
+[Eurecat](https://eurecat.org/) organized a tourism forum in Barcelona, [ForumTurisTIC](https://www.forumturistic.com/). I presented there the possibilities of applying my research on learning from images and associated text to tourism analysis in the [inspirational session](https://www.forumturistic.com/ponentes/raul-gomez-eurecat/). [[Slides]](https://docs.google.com/presentation/d/1z-BmhiaB5UC7vhCTkENtiH3NsaYEhise2WEWnfHw1_0/edit?usp=sharing)  [[Video]](https://youtu.be/f80LHPFN-8Q?t=25m47s) [[BlogPost]](https://gombru.github.io/2018/02/11/forumTurisTIC_presentation/)
 
 
 <div class="imgcap">

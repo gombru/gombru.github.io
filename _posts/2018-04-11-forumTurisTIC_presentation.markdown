@@ -66,7 +66,9 @@ Applying algorithms to [learn from images and associated text to Barcelona Insta
 
 
 ### Video
-The presentation video will be available soon.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/f80LHPFN-8Q?rel=0&amp;start=1547" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
  
  
 
