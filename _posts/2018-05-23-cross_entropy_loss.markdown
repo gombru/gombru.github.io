@@ -2,14 +2,14 @@
 layout: post
 comments: true
 title:  "Understanding Categorical Cross-Entropy Loss, Binary Cross-Entropy Loss, Softmax Loss, Logistic Loss, Focal Loss and all those confusing names"
-excerpt: "A review of different variants and names of **Cross-Entropy Loss**, analyzing its different applications, its gradients and the CE Loss layers in deep learning frameworks."
+excerpt: "A review of different variants and names of Cross-Entropy Loss, analyzing its different applications, its gradients and the CE Loss layers in deep learning frameworks."
 date:   2018-05-23 20:00:00
 img: "/assets/cross_entropy_loss/intro.png"
 mathjax: false
 ---
 
 People like to use cool names which are often confusing. When I started playing with CNN beyond single label classification, I got confused with the different names and formulations people write in their papers, and even with the loss layer names of the deep learning frameworks such as Caffe, Pytorch or TensorFlow.
-In this post I group up the different names and variations people use for Cross-Entropy Loss. I explain their main points, use cases and the implementations in different deep learning frameworks.
+In this post I group up the different names and variations people use for **Cross-Entropy Loss**. I explain their main points, use cases and the implementations in different deep learning frameworks.
 
 <div class="imgcap">
 	<img src="/assets/cross_entropy_loss/intro.png" height = "250">
@@ -37,7 +37,7 @@ These functions are transformations we apply to vectors coming out from CNNs (**
 It squashes a vector in the range (0, 1). It is applied independently to each element of **S** **Si**. It's also called **logistic function**.
 
 <div class="imgcap">
-	<img src="/assets/cross_entropy_loss/sigmoid.png" height = "180">
+	<img src="/assets/cross_entropy_loss/sigmoid.png" height = "170">
 </div>
 
 <div class="imgcap">
@@ -95,7 +95,7 @@ The layers of Caffe, Pytorch and Tensorflow than use a Cross-Entropy loss withou
 Also called **Softmax Loss**. It is a **Softmax activation** plus a **Cross-Entropy loss**. If we use this loss, we will train a CNN to output a probability over classes for an input image. It is used for multi-class classification.
 
 <div class="imgcap">
-	<img src="/assets/cross_entropy_loss/softmax_CE_pipeline.png" height = "180">
+	<img src="/assets/cross_entropy_loss/softmax_CE_pipeline.png" height = "170">
 </div>
 
 In the specific (and usual) case of Multi-Class classification the labels are one-hot, so only the positive class **Cp** keeps its term in the loss. There is only one element of the Target vector **T** which is not zero **Ti = Tp**. So discarding the elements of the summation which are zero due to target labels, we can write:
@@ -255,7 +255,7 @@ Moreover, they also weight the contribution of each class to the lose in a more 
 They use Sigmoid activations, so **Focal loss** could also be considered a **Binary Cross-Entropy Loss**. We define it for each binary problem as: 
 
 <div class="imgcap">
-<a href="https://www.codecogs.com/eqnedit.php?latex=FL&space;=&space;-\sum_{i=1}^{C=2}(1&space;-&space;s_{i})^{\gamma&space;})t_{i}&space;log&space;(s_{i})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FL&space;=&space;-\sum_{i=1}^{C=2}(1&space;-&space;s_{i})^{\gamma&space;})t_{i}&space;log&space;(s_{i})" title="FL = -\sum_{i=1}^{C=2}(1 - s_{i})^{\gamma })t_{i} log (s_{i})" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=FL&space;=&space;-\sum_{i=1}^{C=2}(1&space;-&space;s_{i})^{\gamma&space;}t_{i}&space;log&space;(s_{i})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FL&space;=&space;-\sum_{i=1}^{C=2}(1&space;-&space;s_{i})^{\gamma&space;}t_{i}&space;log&space;(s_{i})" title="FL = -\sum_{i=1}^{C=2}(1 - s_{i})^{\gamma }t_{i} log (s_{i})" /></a>
 </div>
 
 Where **(1 - Si)G**, with  the focusing parameter **Gamma >= 0**, is a modulating factor to reduce the influence of correctly classified samples in the loss. With **G = 0**, **Focal Loss** is equivalent to **Binary Cross Entropy Loss**.  
