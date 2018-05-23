@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Understanding Categorical Cross-Entropy Loss, Binary Cross-Entropy Loss, Softmax Loss, Logistic Loss, Focal Loss and all those confusing names"
-excerpt: "A review of different variants and names of Cross-Entropy Loss, analyzing its different applications, its gradients and the CE Loss layers in deep learning frameworks."
+excerpt: "A review of different variants and names of Cross-Entropy Loss, analyzing its different applications, its gradients and the Cross-Entropy Loss layers in deep learning frameworks."
 date:   2018-05-23 20:00:00
 img: "/assets/cross_entropy_loss/intro.png"
 mathjax: false
@@ -50,10 +50,10 @@ Softmax it’s a function, not a loss. It squashes a vector in the range (0, 1) 
 The Softmax function cannot be applied independently to each **Si**, since it depends on all elements of **S**. For a given class **Si**, the Softmax function can be computed as:
 
 <div class="imgcap">
-<a href="https://www.codecogs.com/eqnedit.php?latex=f(s_{i})&space;=&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(s_{i})&space;=&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}" title="f(s_{i}) = \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=f(s)_{i}&space;=&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(s)_{i}&space;=&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}" title="f(s)_{i} = \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}}" /></a>
 </div>
 
-Where **Sj** are the scores inferred by the net for each class in **C**.  
+Where **Sj** are the scores inferred by the net for each class in **C**. Note that the Softmax activations for a class **Si** depends on all the scores in **S**.  
 
 
 > An extense comparison of this two functions can be found [here](http://dataaspirant.com/2017/03/07/difference-between-softmax-function-and-sigmoid-function/)  
