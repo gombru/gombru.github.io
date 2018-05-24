@@ -11,6 +11,8 @@ mathjax: false
 People like to use cool names which are often confusing. When I started playing with CNN beyond single label classification, I got confused with the different names and formulations people write in their papers, and even with the loss layer names of the deep learning frameworks such as Caffe, Pytorch or TensorFlow.
 In this post I group up the different names and variations people use for **Cross-Entropy Loss**. I explain their main points, use cases and the implementations in different deep learning frameworks.
 
+$$\phi$$
+\phi
 <div class="imgcap">
 	<img src="/assets/cross_entropy_loss/intro.png" height = "250">
 </div>
