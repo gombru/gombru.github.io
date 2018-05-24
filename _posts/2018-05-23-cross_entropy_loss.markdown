@@ -8,49 +8,32 @@ img: "/assets/cross_entropy_loss/intro.png"
 mathjax: false
 ---
 
-People like to use cool names which are often confusing. When I started playing with CNN beyond single label classification, I got confused with the different names and formulations people write in their papers, and even with the loss layer names of the deep learning frameworks such as Caffe, Pytorch or TensorFlow.
-In this post I group up the different names and variations people use for **Cross-Entropy Loss**. I explain their main points, use cases and the implementations in different deep learning frameworks.
 
 <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-$$\phi$$
-\phi
+
+People like to use cool names which are often confusing. When I started playing with CNN beyond single label classification, I got confused with the different names and formulations people write in their papers, and even with the loss layer names of the deep learning frameworks such as Caffe, Pytorch or TensorFlow.
+In this post I group up the different names and variations people use for **Cross-Entropy Loss**. I explain their main points, use cases and the implementations in different deep learning frameworks.
+
 <div class="imgcap">
 	<img src="/assets/cross_entropy_loss/intro.png" height = "250">
 </div>
-
-$$
-\begin{align*}
-  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
-      \vdots & \ddots & \vdots \\
-      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
-\end{align*}
-$$
 
 First, let’s introduce some concepts:
 
 ### Tasks
 
 #### Multi-Class Classification
-One-of-many classification. Each sample can belong to ONE of **C** classes. The CNN will have **C** output neurons that can be gathered in a vector **S** (Scores). The Target (ground truth) vector **T** will be a one-hot vector with a positive class and **C-1** negative classes.   
-If **C = 4**, then **T** could be [0 1 0 0].  
-This task is treated as a single classification problem of samples in one of **C** classes.
+One-of-many classification. Each sample can belong to ONE of **$$C$$** classes. The CNN will have **$$C$$** output neurons that can be gathered in a vector **$$s$$** (Scores). The Target (ground truth) vector **$$t$$** will be a one-hot vector with a positive class and **$$C - 1$$** negative classes.   
+If **$$C = 4$$**, then **$$t$$** could be [0 1 0 0].  
+This task is treated as a single classification problem of samples in one of **$$C$$** classes.
 
 #### Multi-Label Classification
-Each sample can belong to more than one class. The CNN will have as well **C** output neurons. The target vector **T** can have more than a positive class, so it will be a vector of 0s and 1s with **C** dimensionality.   
-If **C = 3**, then **T** could be [1 0 1].  
-This task is treated as **C** different binary **(C’ = 2, T’ = 0 or T’ = 1)** and independent classification problems, where each output neuron decides if a sample belongs to a class or not.
+Each sample can belong to more than one class. The CNN will have as well **$$C$$** output neurons. The target vector **$$t$$** can have more than a positive class, so it will be a vector of 0s and 1s with **$$C$$** dimensionality.   
+If **$$C = 3$$**, then **$$t$$** could be [1 0 1].  
+This task is treated as **$$C$$** different binary **$$(C’ = 2, t’ = 0 or t’ = 1)$$** and independent classification problems, where each output neuron decides if a sample belongs to a class or not.
 
 <div class="imgcap">
 	<img src="/assets/cross_entropy_loss/multiclass_multilabel.png" height = "230">
@@ -58,10 +41,10 @@ This task is treated as **C** different binary **(C’ = 2, T’ = 0 or T’ = 1
 
 
 ### Output Activation Functions
-These functions are transformations we apply to vectors coming out from CNNs (**S**) before the loss computation.
+These functions are transformations we apply to vectors coming out from CNNs (**$$s$$**) before the loss computation.
 
 #### Sigmoid
-It squashes a vector in the range (0, 1). It is applied independently to each element of **S** **Si**. It's also called **logistic function**.
+It squashes a vector in the range (0, 1). It is applied independently to each element of **$$s$$** **$$s_i$$**. It's also called **logistic function**.
 
 <div class="imgcap">
 	<img src="/assets/cross_entropy_loss/sigmoid.png" height = "170">
@@ -73,14 +56,14 @@ It squashes a vector in the range (0, 1). It is applied independently to each el
 
 
 #### Softmax
-Softmax it’s a function, not a loss. It squashes a vector in the range (0, 1) and all the resulting elements add up to 1. It is applied to the output scores **S**. As elements represent a class, they can be interpreted as class probabilities.  
-The Softmax function cannot be applied independently to each **Si**, since it depends on all elements of **S**. For a given class **Si**, the Softmax function can be computed as:
+Softmax it’s a function, not a loss. It squashes a vector in the range (0, 1) and all the resulting elements add up to 1. It is applied to the output scores **$$s$$**. As elements represent a class, they can be interpreted as class probabilities.  
+The Softmax function cannot be applied independently to each **$$s_i$$**, since it depends on all elements of **$$s$$**. For a given class **$$s_i$$**, the Softmax function can be computed as:
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=f(s)_{i}&space;=&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(s)_{i}&space;=&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}" title="f(s)_{i} = \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}}" /></a>
 </div>
 
-Where **Sj** are the scores inferred by the net for each class in **C**. Note that the Softmax activations for a class **Si** depends on all the scores in **S**.  
+Where **Sj** are the scores inferred by the net for each class in **$$C$$**. Note that the Softmax activations for a class **$$s_i$$** depends on all the scores in **$$s$$**.  
 
 
 > An extense comparison of this two functions can be found [here](http://dataaspirant.com/2017/03/07/difference-between-softmax-function-and-sigmoid-function/)  
@@ -97,15 +80,15 @@ The **Cross-Entropy Loss**  is actually the only loss we are discussing here. Th
 <a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i}^{C}t_{i}&space;log&space;(s_{i})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i}^{C}t_{i}&space;log&space;(s_{i})" title="CE = -\sum_{i}^{C}t_{i} log (s_{i})" /></a>
 </div>
 
-Where **Ti** and **Si** are the groundtruth and the CNN score for each class **i** in **C**. As usually an activation function (**Sigmoid / Softmax**) is applied to the scores before the CE Loss computation, we write **f(Si)** to refer to the activations.   
+Where **$$t_i$$** and **$$s_i$$** are the groundtruth and the CNN score for each class **$$_i$$** in **$$C$$**. As usually an activation function (**Sigmoid / Softmax**) is applied to the scores before the CE Loss computation, we write **$$f(s_i)$$** to refer to the activations.   
 
-In a **binary classification problem**, where **C’ = 2**, the **Cross Entropy Loss** can be defined also as [[discussion]](https://datascience.stackexchange.com/questions/9302/the-cross-entropy-error-function-in-neural-networks):
+In a **binary classification problem**, where **$$C’ = 2$$**, the **Cross Entropy Loss** can be defined also as [[discussion]](https://datascience.stackexchange.com/questions/9302/the-cross-entropy-error-function-in-neural-networks):
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(s_{i})&space;=&space;-t_{1}&space;log(s_{1})&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;s_{1})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(s_{i})&space;=&space;-t_{1}&space;log(s_{1})&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;s_{1})" title="CE = -\sum_{i=1}^{C'=2}t_{i} log (s_{i}) = -t_{1} log(s_{1}) + (1 - t_{1}) log(1 - s_{1})" /></a>
 </div>
 
-Where it’s assumed that there are two classes: **C1** and **C2**. **T1** [0,1] and **S1** are the groundtruth and the score for **C1**, and **T2 =  1 - T1** and **S2 =  1 - S1** are the groundtruth and the score for **C2**. That is the case when we split a Multi-Label classification problem in **C** binary classification problems. See next Binary Cross-Entropy Loss section for more details.
+Where it’s assumed that there are two classes: **$$C_1$$** and **$$C_2$$**. **$$t_1$$** [0,1] and **$$s_1$$** are the groundtruth and the score for **$$C_1$$**, and **$$t_2 =  1 - t_1$$** and **$$s_2 =  1 - s_1$$** are the groundtruth and the score for **$$C_2$$**. That is the case when we split a Multi-Label classification problem in **$$C$$** binary classification problems. See next Binary Cross-Entropy Loss section for more details.
 
 
 **Logistic Loss** and **Multinomial Logistic Loss** are other names for **Cross-Entropy loss**. [[Discussion]](https://stats.stackexchange.com/questions/166958/multinomial-logistic-loss-vs-cross-entropy-vs-square-error/172790)
@@ -125,7 +108,7 @@ Also called **Softmax Loss**. It is a **Softmax activation** plus a **Cross-Entr
 	<img src="/assets/cross_entropy_loss/softmax_CE_pipeline.png" height = "170">
 </div>
 
-In the specific (and usual) case of Multi-Class classification the labels are one-hot, so only the positive class **Cp** keeps its term in the loss. There is only one element of the Target vector **T** which is not zero **Ti = Tp**. So discarding the elements of the summation which are zero due to target labels, we can write:
+In the specific (and usual) case of Multi-Class classification the labels are one-hot, so only the positive class **$$C_p$$** keeps its term in the loss. There is only one element of the Target vector **$$t$$** which is not zero **$$t_i = t_p$$**. So discarding the elements of the summation which are zero due to target labels, we can write:
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-log\left&space;(&space;\frac{e^{s_{p}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-log\left&space;(&space;\frac{e^{s_{p}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" title="CE = -log\left ( \frac{e^{s_{p}}}{\sum_{j}^{C} e^{s_{j}}} \right )" /></a>
@@ -133,10 +116,10 @@ In the specific (and usual) case of Multi-Class classification the labels are on
 
 Where **Sp** is the CNN score for the positive class.
 
-Defined the loss, now we’ll have to compute its **gradient respect to the output neurons** of the CNN in order to backpropagate it through the net and optimize the defined loss function tuning the net parameters. So we need to compute the gradient of **CE** respect each CNN class score in **S**.
+Defined the loss, now we’ll have to compute its **gradient respect to the output neurons** of the CNN in order to backpropagate it through the net and optimize the defined loss function tuning the net parameters. So we need to compute the gradient of **CE** respect each CNN class score in **$$s$$**.
 The loss terms coming from the negative classes are zero. However, the loss gradient respect those negative classes is not cancelled, since the **Softmax** of the positive class also depends on the negative classes scores.  
 
-The gradient expression will be the same for all **C** except for the ground truth class **Cp**, because the score of **Cp** (**Sp**) is in the nominator.  
+The gradient expression will be the same for all **$$C$$** except for the ground truth class **$$C_p$$**, because the score of **$$C_p$$** (**Sp**) is in the nominator.  
 
 After some calculus, the derivative respect to the positive class is:
 
@@ -150,7 +133,7 @@ And the derivative respect to the other (negative) classes is:
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial}{\partial&space;s_{n}}&space;\left&space;(-log\left&space;(&space;\frac{e^{s_{n}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)&space;\right&space;)&space;=&space;\left&space;(&space;\frac{e^{s_{n}}}{\sum_{j}^{C}e^{s_{j}}}\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial}{\partial&space;s_{n}}&space;\left&space;(-log\left&space;(&space;\frac{e^{s_{n}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)&space;\right&space;)&space;=&space;\left&space;(&space;\frac{e^{s_{n}}}{\sum_{j}^{C}e^{s_{j}}}\right&space;)" title="\frac{\partial}{\partial s_{n}} \left (-log\left ( \frac{e^{s_{n}}}{\sum_{j}^{C} e^{s_{j}}} \right ) \right ) = \left ( \frac{e^{s_{n}}}{\sum_{j}^{C}e^{s_{j}}}\right )" /></a>
 </div>
 
-Where **Sn** is the score of any negative class in **C** different from **Cp**.  
+Where **$$s_n$$** is the score of any negative class in **$$C$$** different from **$$C_p$$**.  
 
 - Caffe: [SoftmaxWithLoss Layer](http://caffe.berkeleyvision.org/tutorial/layers/softmaxwithloss.html). Is limited to multi-class classification.
 - Pytorch: [CrossEntropyLoss](https://pytorch.org/docs/master/nn.html#crossentropyloss).  Is limited to multi-class classification.
@@ -160,13 +143,13 @@ Where **Sn** is the score of any negative class in **C** different from **Cp**.
 
 <span style="color:brown"> **→ Skip this part if you are not interested in Facebook or me using Softmax Loss for multi-label classification, which is not standard.** </span>
 
-When Softmax loss is used is a multi-label scenario, the gradients get a bit more complex, since the loss contains an element for each positive class. Consider **M** are the positive classes of a sample. The **CE Loss** with Softmax activations would be:
+When Softmax loss is used is a multi-label scenario, the gradients get a bit more complex, since the loss contains an element for each positive class. Consider **$$M$$** are the positive classes of a sample. The **CE Loss** with Softmax activations would be:
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;\frac{1}{M}&space;\sum_{p}^{M}&space;-log\left&space;(&space;\frac{e^{s_{p}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;\frac{1}{M}&space;\sum_{p}^{M}&space;-log\left&space;(&space;\frac{e^{s_{p}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" title="CE = \frac{1}{M} \sum_{p}^{M} -log\left ( \frac{e^{s_{p}}}{\sum_{j}^{C} e^{s_{j}}} \right )" /></a>
 </div>
 
-Where each **Sp** in **M** is the CNN score for each positive class. As in Facebook paper, I introduce a scaling factor **1/M** to make the loss invariant to the number of positive classes, which may be different per sample.  
+Where each **$$s_p$$** in **$$M$$** is the CNN score for each positive class. As in Facebook paper, I introduce a scaling factor **1/M** to make the loss invariant to the number of positive classes, which may be different per sample.  
 
 The gradient has different expressions for positive and negative classes. For positive classes:
 
@@ -226,7 +209,7 @@ def backward(self, top, propagate_down, bottom):
                delta[r, c] = scale_factor * (delta[r, c] - 1) + (1 - scale_factor) * delta[r, c]
    bottom[0].diff[...] = delta / bottom[0].num
 ```
-In the backward pass we need to compute the gradients of each element of the batch respect to each one of the classes scores **S**. As the gradient for all the classes **C** except positive classes **M** is equal to *probs*, we assign *probs* values to *delta*. For the positive classes in **M** we subtract 1 to the corresponding *probs* value and use *scale_factor* to match the gradient expression. We compute the mean gradients of all the batch to run the backpropagation.
+In the backward pass we need to compute the gradients of each element of the batch respect to each one of the classes scores **$$s$$**. As the gradient for all the classes **$$C$$** except positive classes **$$M$$** is equal to *probs*, we assign *probs* values to *delta*. For the positive classes in **$$M$$** we subtract 1 to the corresponding *probs* value and use *scale_factor* to match the gradient expression. We compute the mean gradients of all the batch to run the backpropagation.
 
 > The Caffe Python layer of this Softmax loss supporting a multi-label setup with real numbers labels is available [here](https://gist.github.com/gombru/53f02ae717cb1dd2525be090f2d41055)
 
@@ -234,7 +217,7 @@ In the backward pass we need to compute the gradients of each element of the bat
 
 ### Binary Cross-Entropy Loss
 Also called **Sigmoid Cross-Entropy loss**. It is a **Sigmoid activation** plus a **Cross-Entropy loss**. Unlike **Softmax loss** it is independent for each vector component (class), meaning that the loss computed for every vector component is not affected by other component values. That’s why it is used for **multi-label classification**, were the insight of an element belonging to a certain class should not influence the decision for another class.
-It’s called **Binary Cross-Entropy Loss** because it sets up a binary classification problem between **C’ = 2** classes for every class in **C**, as explained above. So when using this Loss, the formulation of **Cross Entroypy Loss** for binary problems is often used:
+It’s called **Binary Cross-Entropy Loss** because it sets up a binary classification problem between **$$C’ = 2$$** classes for every class in **$$C$$**, as explained above. So when using this Loss, the formulation of **Cross Entroypy Loss** for binary problems is often used:
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" title="CE = -\sum_{i=1}^{C'=2}t_{i} log (f(s_{i})) = -t_{1} log(f(s_{1})) + (1 - t_{1}) log(1 - f(s_{1}))" /></a>
@@ -245,7 +228,7 @@ It’s called **Binary Cross-Entropy Loss** because it sets up a binary classifi
 </div>
 
 
-This would be the pipeline for each one of the **C** clases. We set **C** independent binary classification problems **(C’ = 2)**. Then we sum up the loss over the different binary problems. **S1** and **T1** are the score and the gorundtruth label for the class **C1**, which is also the class **Ci** in **C**. **S2 = 1 - S1** and **T2 = 1 - T1** are the score and the groundtruth label of the class **C2**, which is not a “class” in our original problem with **C** classes, but a class we create to set up the binary problem with **C1 = Ci**. We can understand it as a background class.
+This would be the pipeline for each one of the **$$C$$** clases. We set **$$C$$** independent binary classification problems **(C’ = 2)**. Then we sum up the loss over the different binary problems. **$$s_1$$** and **$$t_1$$** are the score and the gorundtruth label for the class **$$C_1$**, which is also the class **$$C_i$$** in **$$C$$**. **$$s_2 = 1 - s_1$$** and **$$t_2 = 1 - t_1$$** are the score and the groundtruth label of the class **$$C_2$$**, which is not a “class” in our original problem with **$$C$$** classes, but a class we create to set up the binary problem with **$$C_1 = C_i$$**. We can understand it as a background class.
 
 The loss can be expressed as:
 
@@ -253,11 +236,11 @@ The loss can be expressed as:
 <a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;\left\{\begin{matrix}&space;&&space;-&space;log(s_{1})&space;&&space;&&space;if&space;&&space;t_{1}&space;=&space;1&space;\\&space;&&space;-&space;log(1&space;-&space;s_{1})&space;&&space;&&space;if&space;&&space;t_{1}&space;=&space;0&space;\end{matrix}\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;\left\{\begin{matrix}&space;&&space;-&space;log(s_{1})&space;&&space;&&space;if&space;&&space;t_{1}&space;=&space;1&space;\\&space;&&space;-&space;log(1&space;-&space;s_{1})&space;&&space;&&space;if&space;&&space;t_{1}&space;=&space;0&space;\end{matrix}\right." title="CE = \left\{\begin{matrix} & - log(s_{1}) & & if & t_{1} = 1 \\ & - log(1 - s_{1}) & & if & t_{1} = 0 \end{matrix}\right." /></a>
 </div>
 
-Where **T1 = 1** means that the class **C1 = Ci** is positive for this sample.  
+Where **T1 = 1** means that the class **$$C_1 = C_i$$** is positive for this sample.  
 
-In this case, the activation function does not depend in scores of other classes in **C** more than **C1 = Ci**. So the gradient respect to the each score **Si** in **S** will only depend on the loss given by its binary problem.  
+In this case, the activation function does not depend in scores of other classes in **$$C$$** more than **$$C_1 = C_i$$**. So the gradient respect to the each score **$$s_i$$** in **$$s$$** will only depend on the loss given by its binary problem.  
 
-The gradient respect to the score **Si = S1** can be written as:
+The gradient respect to the score **$$s_i = s_1$$** can be written as:
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" title="CE = -\sum_{i=1}^{C'=2}t_{i} log (f(s_{i})) = -t_{1} log(f(s_{1})) + (1 - t_{1}) log(1 - f(s_{1}))" /></a>
@@ -285,7 +268,7 @@ They use Sigmoid activations, so **Focal loss** could also be considered a **Bin
 <a href="https://www.codecogs.com/eqnedit.php?latex=FL&space;=&space;-\sum_{i=1}^{C=2}(1&space;-&space;s_{i})^{\gamma&space;}t_{i}&space;log&space;(s_{i})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FL&space;=&space;-\sum_{i=1}^{C=2}(1&space;-&space;s_{i})^{\gamma&space;}t_{i}&space;log&space;(s_{i})" title="FL = -\sum_{i=1}^{C=2}(1 - s_{i})^{\gamma }t_{i} log (s_{i})" /></a>
 </div>
 
-Where **(1 - Si)G**, with  the focusing parameter **Gamma >= 0**, is a modulating factor to reduce the influence of correctly classified samples in the loss. With **G = 0**, **Focal Loss** is equivalent to **Binary Cross Entropy Loss**.  
+Where **$$(1 - s_i)\gamma$$**, with  the focusing parameter **$$\gamma >= 0$$**, is a modulating factor to reduce the influence of correctly classified samples in the loss. With **$$\gamma = 0$$**, **Focal Loss** is equivalent to **Binary Cross Entropy Loss**.  
 
 The loss can be also defined as :
 
@@ -293,9 +276,9 @@ The loss can be also defined as :
 <a href="https://www.codecogs.com/eqnedit.php?latex=FL&space;=&space;\left\{\begin{matrix}&space;&&space;-&space;(1&space;-&space;s_{1})^{\gamma&space;}log(s_{1})&space;&&space;&&space;if&space;&&space;t_{1}&space;=&space;1&space;\\&space;&&space;-&space;(1&space;-&space;(1&space;-&space;s_{1}))^{\gamma&space;}&space;log(1&space;-&space;s_{1})&space;&&space;&&space;if&space;&&space;t_{1}&space;=&space;0&space;\end{matrix}\right" target="_blank"><img src="https://latex.codecogs.com/gif.latex?FL&space;=&space;\left\{\begin{matrix}&space;&&space;-&space;(1&space;-&space;s_{1})^{\gamma&space;}log(s_{1})&space;&&space;&&space;if&space;&&space;t_{1}&space;=&space;1&space;\\&space;&&space;-&space;(1&space;-&space;(1&space;-&space;s_{1}))^{\gamma&space;}&space;log(1&space;-&space;s_{1})&space;&&space;&&space;if&space;&&space;t_{1}&space;=&space;0&space;\end{matrix}\right" title="FL = \left\{\begin{matrix} & - (1 - s_{1})^{\gamma }log(s_{1}) & & if & t_{1} = 1 \\ & - (1 - (1 - s_{1}))^{\gamma } log(1 - s_{1}) & & if & t_{1} = 0 \end{matrix}\right" /></a>
 </div>
 
-Where we have separated formulation for when the class **Ci = C1** is positive or negative (and therefore, the class **C2** is positive). As before, we have **S2 = 1 - S1** and **T2 = 1 - T1**.  
+Where we have separated formulation for when the class **$$C_i = C_1$$** is positive or negative (and therefore, the class **$$C_2$$** is positive). As before, we have **$$s_2 = 1 - s_1$$** and **$$t2 = 1 - t_1$$**.  
 
-The gradient gets a bit more complex due to the inclusion of the modulating factor **(1 - Si)G** in the loss formulation, but it can be deduced using the **Binary Cross-Entropy** gradient expression.  
+The gradient gets a bit more complex due to the inclusion of the modulating factor **$$(1 - s_i)\gamma$$** in the loss formulation, but it can be deduced using the **Binary Cross-Entropy** gradient expression.  
 
 In case **Ci** is positive (**Ti = 1**), the gradient expression is:
 
@@ -303,9 +286,9 @@ In case **Ci** is positive (**Ti = 1**), the gradient expression is:
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial}{\partial&space;s_{i}}&space;\left&space;(&space;FL(f(s_{i}))&space;\right&space;)&space;=&space;(1&space;-&space;f(s_{i}))^{\gamma&space;}(\gamma&space;f(s_{i})&space;log(f(s_{i}))&space;&plus;&space;f(s_{i})&space;-&space;1)&space;\quad&space;if&space;\quad&space;t_{1}&space;=&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial}{\partial&space;s_{i}}&space;\left&space;(&space;FL(f(s_{i}))&space;\right&space;)&space;=&space;(1&space;-&space;f(s_{i}))^{\gamma&space;}(\gamma&space;f(s_{i})&space;log(f(s_{i}))&space;&plus;&space;f(s_{i})&space;-&space;1)&space;\quad&space;if&space;\quad&space;t_{1}&space;=&space;1" title="\frac{\partial}{\partial s_{i}} \left ( FL(f(s_{i})) \right ) = (1 - f(s_{i}))^{\gamma }(\gamma f(s_{i}) log(f(s_{i})) + f(s_{i}) - 1) \quad if \quad t_{1} = 1" /></a>
 </div>
 
-Where **f()** is the **sigmoid** function. To get the gradient expression for a negative **Ci** (**Ti = 0**), we just need to replace **f(Si)** with **(1 - f(Si))** in the expression above.
+Where **f()** is the **sigmoid** function. To get the gradient expression for a negative **Ci** (**Ti = 0**), we just need to replace **$$f(s_i)$$** with **$$(1 - f(s_i))$$** in the expression above.
 
-> Notice that, if the modulating factor **Gamma = 0**, the loss is equivalent to the **CE Loss**, and we end up with the same gradient expression.
+> Notice that, if the modulating factor **$$\gamma = 0$$**, the loss is equivalent to the **CE Loss**, and we end up with the same gradient expression.
 
 I implemented **Focal Loss** in a PyCaffe layer:
 
@@ -332,7 +315,7 @@ def forward(self, bottom, top):
    top[0].data[...] = data_loss
 
 ```
-Where *logprobs[r]* stores, per each element of the batch, the sum of the binary cross entropy per each class. The *focusing_parameter* is  **Gamma**, which by default is 2 and should be defined as a layer parameter in the net prototxt. The *class_balances* can be used to introduce different loss contributions per class, as they do in the Facebook paper.
+Where *logprobs[r]* stores, per each element of the batch, the sum of the binary cross entropy per each class. The *focusing_parameter* is  **$$\gamma$$**, which by default is 2 and should be defined as a layer parameter in the net prototxt. The *class_balances* can be used to introduce different loss contributions per class, as they do in the Facebook paper.
 
 #### Backward pass: Gradients computation
 ```python
