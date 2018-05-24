@@ -8,6 +8,12 @@ img: "/assets/cross_entropy_loss/intro.png"
 mathjax: false
 ---
 
+<script defer src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+$$
+\Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
+$$
+
 People like to use cool names which are often confusing. When I started playing with CNN beyond single label classification, I got confused with the different names and formulations people write in their papers, and even with the loss layer names of the deep learning frameworks such as Caffe, Pytorch or TensorFlow.
 In this post I group up the different names and variations people use for **Cross-Entropy Loss**. I explain their main points, use cases and the implementations in different deep learning frameworks.
 
@@ -29,6 +35,11 @@ This task is treated as a single classification problem of samples in one of **C
 Each sample can belong to more than one class. The CNN will have as well **C** output neurons. The target vector **T** can have more than a positive class, so it will be a vector of 0s and 1s with **C** dimensionality.   
 If **C = 3**, then **T** could be [1 0 1].  
 This task is treated as **C** different binary **(C’ = 2, T’ = 0 or T’ = 1)** and independent classification problems, where each output neuron decides if a sample belongs to a class or not.
+
+<div class="imgcap">
+	<img src="/assets/cross_entropy_loss/multiclass_multilabel.png" height = "230">
+</div>
+
 
 ## Output Activation Functions
 These functions are transformations we apply to vectors coming out from CNNs (**S**) before the loss computation.
