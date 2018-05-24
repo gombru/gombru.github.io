@@ -33,7 +33,7 @@ This task is treated as a single classification problem of samples in one of **$
 #### Multi-Label Classification
 Each sample can belong to more than one class. The CNN will have as well **$$C$$** output neurons. The target vector **$$t$$** can have more than a positive class, so it will be a vector of 0s and 1s with **$$C$$** dimensionality.   
 If **$$C = 3$$**, then **$$t$$** could be [1 0 1].  
-This task is treated as **$$C$$** different binary **$$(C’ = 2, t’ = 0 or t’ = 1)$$** and independent classification problems, where each output neuron decides if a sample belongs to a class or not.
+This task is treated as **$$C$$** different binary **$$(C’ = 2, t’ = 0 \text{ or } t’ = 1)$$** and independent classification problems, where each output neuron decides if a sample belongs to a class or not.
 
 <div class="imgcap">
 	<img src="/assets/cross_entropy_loss/multiclass_multilabel.png" height = "230">
@@ -63,7 +63,7 @@ The Softmax function cannot be applied independently to each **$$s_i$$**, since 
 <a href="https://www.codecogs.com/eqnedit.php?latex=f(s)_{i}&space;=&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(s)_{i}&space;=&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}" title="f(s)_{i} = \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}}" /></a>
 </div>
 
-Where **Sj** are the scores inferred by the net for each class in **$$C$$**. Note that the Softmax activations for a class **$$s_i$$** depends on all the scores in **$$s$$**.  
+Where **$$s_j$$** are the scores inferred by the net for each class in **$$C$$**. Note that the Softmax activations for a class **$$s_i$$** depends on all the scores in **$$s$$**.  
 
 
 > An extense comparison of this two functions can be found [here](http://dataaspirant.com/2017/03/07/difference-between-softmax-function-and-sigmoid-function/)  
@@ -119,7 +119,7 @@ Where **Sp** is the CNN score for the positive class.
 Defined the loss, now we’ll have to compute its **gradient respect to the output neurons** of the CNN in order to backpropagate it through the net and optimize the defined loss function tuning the net parameters. So we need to compute the gradient of **CE** respect each CNN class score in **$$s$$**.
 The loss terms coming from the negative classes are zero. However, the loss gradient respect those negative classes is not cancelled, since the **Softmax** of the positive class also depends on the negative classes scores.  
 
-The gradient expression will be the same for all **$$C$$** except for the ground truth class **$$C_p$$**, because the score of **$$C_p$$** (**Sp**) is in the nominator.  
+The gradient expression will be the same for all **$$C$$** except for the ground truth class **$$C_p$$**, because the score of **$$C_p$$** (**$$s_p$$**) is in the nominator.  
 
 After some calculus, the derivative respect to the positive class is:
 
@@ -149,7 +149,7 @@ When Softmax loss is used is a multi-label scenario, the gradients get a bit mor
 <a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;\frac{1}{M}&space;\sum_{p}^{M}&space;-log\left&space;(&space;\frac{e^{s_{p}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;\frac{1}{M}&space;\sum_{p}^{M}&space;-log\left&space;(&space;\frac{e^{s_{p}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" title="CE = \frac{1}{M} \sum_{p}^{M} -log\left ( \frac{e^{s_{p}}}{\sum_{j}^{C} e^{s_{j}}} \right )" /></a>
 </div>
 
-Where each **$$s_p$$** in **$$M$$** is the CNN score for each positive class. As in Facebook paper, I introduce a scaling factor **1/M** to make the loss invariant to the number of positive classes, which may be different per sample.  
+Where each **$$s_p$$** in **$$M$$** is the CNN score for each positive class. As in Facebook paper, I introduce a scaling factor **$$1/M$$** to make the loss invariant to the number of positive classes, which may be different per sample.  
 
 The gradient has different expressions for positive and negative classes. For positive classes:
 
@@ -157,7 +157,7 @@ The gradient has different expressions for positive and negative classes. For po
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial}{\partial&space;s_{pi}}&space;\left&space;(&space;\frac{1}{M}&space;\sum_{p}^{M}&space;-log\left&space;(&space;\frac{e^{s_{p}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)&space;\right&space;)&space;=&space;\frac{1}{M}&space;\left&space;(&space;\left&space;(&space;\frac{e^{s_{pi}}}{\sum_{j}^{C}e^{s_{j}}}&space;-&space;1&space;\right&space;)&space;&plus;&space;(M&space;-&space;1)&space;\frac{e^{s_{pi}}}{\sum_{j}^{C}e^{s_{j}}}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial}{\partial&space;s_{pi}}&space;\left&space;(&space;\frac{1}{M}&space;\sum_{p}^{M}&space;-log\left&space;(&space;\frac{e^{s_{p}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)&space;\right&space;)&space;=&space;\frac{1}{M}&space;\left&space;(&space;\left&space;(&space;\frac{e^{s_{pi}}}{\sum_{j}^{C}e^{s_{j}}}&space;-&space;1&space;\right&space;)&space;&plus;&space;(M&space;-&space;1)&space;\frac{e^{s_{pi}}}{\sum_{j}^{C}e^{s_{j}}}&space;\right&space;)" title="\frac{\partial}{\partial s_{pi}} \left ( \frac{1}{M} \sum_{p}^{M} -log\left ( \frac{e^{s_{p}}}{\sum_{j}^{C} e^{s_{j}}} \right ) \right ) = \frac{1}{M} \left ( \left ( \frac{e^{s_{pi}}}{\sum_{j}^{C}e^{s_{j}}} - 1 \right ) + (M - 1) \frac{e^{s_{pi}}}{\sum_{j}^{C}e^{s_{j}}} \right )" /></a>
 </div>
 
-Where **Spi** is the score of any positive class.   
+Where **$$s_pi$$** is the score of any positive class.   
 
 For negative classes:
 
@@ -193,7 +193,7 @@ def forward(self, bottom, top):
    top[0].data[...] = data_loss # Store loss
 ```
 
-We first compute Softmax activations for each class and store them in *probs*. Then we compute the loss for each image in the batch considering there might be more than one positive label. We use an *scale_factor* (**M**) and we also multiply losses by the labels, which can be binary or real numbers, so they can be used for instance to introduce class balancing.
+We first compute Softmax activations for each class and store them in *probs*. Then we compute the loss for each image in the batch considering there might be more than one positive label. We use an *scale_factor* (**$$M$$**) and we also multiply losses by the labels, which can be binary or real numbers, so they can be used for instance to introduce class balancing.
 The batch loss will be the mean loss of the elements in the batch. We then save the *data_loss* to display it and the *probs* to use them in the backward pass.
 
 
@@ -228,7 +228,7 @@ It’s called **Binary Cross-Entropy Loss** because it sets up a binary classifi
 </div>
 
 
-This would be the pipeline for each one of the **$$C$$** clases. We set **$$C$$** independent binary classification problems **(C’ = 2)**. Then we sum up the loss over the different binary problems. **$$s_1$$** and **$$t_1$$** are the score and the gorundtruth label for the class **$$C_1$**, which is also the class **$$C_i$$** in **$$C$$**. **$$s_2 = 1 - s_1$$** and **$$t_2 = 1 - t_1$$** are the score and the groundtruth label of the class **$$C_2$$**, which is not a “class” in our original problem with **$$C$$** classes, but a class we create to set up the binary problem with **$$C_1 = C_i$$**. We can understand it as a background class.
+This would be the pipeline for each one of the **$$C$$** clases. We set **$$C$$** independent binary classification problems **(C’ = 2)**. Then we sum up the loss over the different binary problems. **$$s_1$$** and **$$t_1$$** are the score and the gorundtruth label for the class **$$C_1$$**, which is also the class **$$C_i$$** in **$$C$$**. **$$s_2 = 1 - s_1$$** and **$$t_2 = 1 - t_1$$** are the score and the groundtruth label of the class **$$C_2$$**, which is not a “class” in our original problem with **$$C$$** classes, but a class we create to set up the binary problem with **$$C_1 = C_i$$**. We can understand it as a background class.
 
 The loss can be expressed as:
 
@@ -236,7 +236,7 @@ The loss can be expressed as:
 <a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;\left\{\begin{matrix}&space;&&space;-&space;log(s_{1})&space;&&space;&&space;if&space;&&space;t_{1}&space;=&space;1&space;\\&space;&&space;-&space;log(1&space;-&space;s_{1})&space;&&space;&&space;if&space;&&space;t_{1}&space;=&space;0&space;\end{matrix}\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;\left\{\begin{matrix}&space;&&space;-&space;log(s_{1})&space;&&space;&&space;if&space;&&space;t_{1}&space;=&space;1&space;\\&space;&&space;-&space;log(1&space;-&space;s_{1})&space;&&space;&&space;if&space;&&space;t_{1}&space;=&space;0&space;\end{matrix}\right." title="CE = \left\{\begin{matrix} & - log(s_{1}) & & if & t_{1} = 1 \\ & - log(1 - s_{1}) & & if & t_{1} = 0 \end{matrix}\right." /></a>
 </div>
 
-Where **T1 = 1** means that the class **$$C_1 = C_i$$** is positive for this sample.  
+Where **$$t_1 = 1$$** means that the class **$$C_1 = C_i$$** is positive for this sample.  
 
 In this case, the activation function does not depend in scores of other classes in **$$C$$** more than **$$C_1 = C_i$$**. So the gradient respect to the each score **$$s_i$$** in **$$s$$** will only depend on the loss given by its binary problem.  
 
@@ -246,7 +246,7 @@ The gradient respect to the score **$$s_i = s_1$$** can be written as:
 <a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" title="CE = -\sum_{i=1}^{C'=2}t_{i} log (f(s_{i})) = -t_{1} log(f(s_{1})) + (1 - t_{1}) log(1 - f(s_{1}))" /></a>
 </div>
 
-Where **f()** is the **sigmoid** function. It can also be written as: 
+Where **$$f()$$** is the **sigmoid** function. It can also be written as: 
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial}{\partial&space;s_{i}}&space;\left&space;(&space;CE(f(s_{i})\right)&space;=&space;\begin{Bmatrix}&space;s_{i}&space;-&space;1&space;&&&space;if&space;&&space;t_{i}&space;=&space;1\\&space;s_{i}&space;&&&space;if&space;&&space;t_{i}&space;=&space;0&space;\end{Bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial}{\partial&space;s_{i}}&space;\left&space;(&space;CE(f(s_{i})\right)&space;=&space;\begin{Bmatrix}&space;s_{i}&space;-&space;1&space;&&&space;if&space;&&space;t_{i}&space;=&space;1\\&space;s_{i}&space;&&&space;if&space;&&space;t_{i}&space;=&space;0&space;\end{Bmatrix}" title="\frac{\partial}{\partial s_{i}} \left ( CE(f(s_{i})\right) = \begin{Bmatrix} s_{i} - 1 && if & t_{i} = 1\\ s_{i} && if & t_{i} = 0 \end{Bmatrix}" /></a>
@@ -280,7 +280,7 @@ Where we have separated formulation for when the class **$$C_i = C_1$$** is posi
 
 The gradient gets a bit more complex due to the inclusion of the modulating factor **$$(1 - s_i)\gamma$$** in the loss formulation, but it can be deduced using the **Binary Cross-Entropy** gradient expression.  
 
-In case **Ci** is positive (**Ti = 1**), the gradient expression is:
+In case **$$C_i$$** is positive (**$$t_i = 1$$**), the gradient expression is:
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial}{\partial&space;s_{i}}&space;\left&space;(&space;FL(f(s_{i}))&space;\right&space;)&space;=&space;(1&space;-&space;f(s_{i}))^{\gamma&space;}(\gamma&space;f(s_{i})&space;log(f(s_{i}))&space;&plus;&space;f(s_{i})&space;-&space;1)&space;\quad&space;if&space;\quad&space;t_{1}&space;=&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial}{\partial&space;s_{i}}&space;\left&space;(&space;FL(f(s_{i}))&space;\right&space;)&space;=&space;(1&space;-&space;f(s_{i}))^{\gamma&space;}(\gamma&space;f(s_{i})&space;log(f(s_{i}))&space;&plus;&space;f(s_{i})&space;-&space;1)&space;\quad&space;if&space;\quad&space;t_{1}&space;=&space;1" title="\frac{\partial}{\partial s_{i}} \left ( FL(f(s_{i})) \right ) = (1 - f(s_{i}))^{\gamma }(\gamma f(s_{i}) log(f(s_{i})) + f(s_{i}) - 1) \quad if \quad t_{1} = 1" /></a>
