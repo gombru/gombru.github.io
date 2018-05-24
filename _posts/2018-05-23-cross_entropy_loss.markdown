@@ -8,12 +8,6 @@ img: "/assets/cross_entropy_loss/intro.png"
 mathjax: false
 ---
 
-<script defer src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-$$
-\Pr\left(\bigcup_i \Omega_i\right)=\sum_i \Pr(\Omega_i)=\sum_i\Pr(X=u_i)=1
-$$
-
 People like to use cool names which are often confusing. When I started playing with CNN beyond single label classification, I got confused with the different names and formulations people write in their papers, and even with the loss layer names of the deep learning frameworks such as Caffe, Pytorch or TensorFlow.
 In this post I group up the different names and variations people use for **Cross-Entropy Loss**. I explain their main points, use cases and the implementations in different deep learning frameworks.
 
@@ -21,10 +15,26 @@ In this post I group up the different names and variations people use for **Cros
 	<img src="/assets/cross_entropy_loss/intro.png" height = "250">
 </div>
 
+$$
+\begin{align*}
+  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+      \vdots & \ddots & \vdots \\
+      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*}
+$$
 
 First, let’s introduce some concepts:
 
-## Tasks
+### Tasks
 
 #### Multi-Class Classification
 One-of-many classification. Each sample can belong to ONE of **C** classes. The CNN will have **C** output neurons that can be gathered in a vector **S** (Scores). The Target (ground truth) vector **T** will be a one-hot vector with a positive class and **C-1** negative classes.   
@@ -41,7 +51,7 @@ This task is treated as **C** different binary **(C’ = 2, T’ = 0 or T’ = 1
 </div>
 
 
-## Output Activation Functions
+### Output Activation Functions
 These functions are transformations we apply to vectors coming out from CNNs (**S**) before the loss computation.
 
 #### Sigmoid
