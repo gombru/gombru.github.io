@@ -26,7 +26,7 @@ First, let’s introduce some concepts:
 ### Tasks
 
 #### Multi-Class Classification
-One-of-many classification. Each sample can belong to ONE of $$C$$ classes. The CNN will have $$C$$ output neurons that can be gathered in a vector $$s$$ (Scores). The Target (ground truth) vector $$t$$ will be a one-hot vector with a positive class and $$C - 1$$ negative classes.   
+One-of-many classification. Each sample can belong to ONE of $$C$$ classes. The CNN will have $$C$$ output neurons that can be gathered in a vector $$s$$ (Scores). The target (ground truth) vector $$t$$ will be a one-hot vector with a positive class and $$C - 1$$ negative classes.   
 This task is treated as a single classification problem of samples in one of $$C$$ classes.
 
 #### Multi-Label Classification
@@ -72,15 +72,15 @@ Where $$s_j$$ are the scores inferred by the net for each class in $$C$$. Note t
 ## Losses
 
 ### Cross-Entropy loss
-The **Cross-Entropy Loss**  is actually the only loss we are discussing here. The other losses names written in the title are other names or variations of it. The **CE Loss** is defined as:
+The **Cross-Entropy Loss**  is actually the only loss we are discussing here. The other losses names written in the title are other names or variations of it. The CE Loss is defined as:
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i}^{C}t_{i}&space;log&space;(s_{i})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i}^{C}t_{i}&space;log&space;(s_{i})" title="CE = -\sum_{i}^{C}t_{i} log (s_{i})" /></a>
 </div>
 
-Where $$t_i$$ and $$s_i$$ are the groundtruth and the CNN score for each class $$_i$$ in $$C$$. As usually an activation function (**Sigmoid / Softmax**) is applied to the scores before the CE Loss computation, we write $$f(s_i)$$ to refer to the activations.   
+Where $$t_i$$ and $$s_i$$ are the groundtruth and the CNN score for each class $$_i$$ in $$C$$. As **usually an activation function (Sigmoid / Softmax) is applied to the scores before the CE Loss computation**, we write $$f(s_i)$$ to refer to the activations.   
 
-In a **binary classification problem**, where $$C’ = 2$$, the **Cross Entropy Loss** can be defined also as [[discussion]](https://datascience.stackexchange.com/questions/9302/the-cross-entropy-error-function-in-neural-networks):
+In a **binary classification problem**, where $$C’ = 2$$, the Cross Entropy Loss can be defined also as [[discussion]](https://datascience.stackexchange.com/questions/9302/the-cross-entropy-error-function-in-neural-networks):
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(s_{i})&space;=&space;-t_{1}&space;log(s_{1})&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;s_{1})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(s_{i})&space;=&space;-t_{1}&space;log(s_{1})&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;s_{1})" title="CE = -\sum_{i=1}^{C'=2}t_{i} log (s_{i}) = -t_{1} log(s_{1}) + (1 - t_{1}) log(1 - s_{1})" /></a>
@@ -100,7 +100,7 @@ The layers of Caffe, Pytorch and Tensorflow than use a Cross-Entropy loss withou
 
 ### Categorical Cross-Entropy loss
 
-Also called **Softmax Loss**. It is a **Softmax activation** plus a **Cross-Entropy loss**. If we use this loss, we will train a CNN to output a probability over classes for an input image. It is used for multi-class classification.
+Also called **Softmax Loss**. It is a **Softmax activation** plus a **Cross-Entropy loss**. If we use this loss, we will train a CNN to output a probability over the $$C$$ classes for each image. It is used for multi-class classification.
 
 <div class="imgcap">
 	<img src="/assets/cross_entropy_loss/softmax_CE_pipeline.png" height = "170">
@@ -114,8 +114,8 @@ In the specific (and usual) case of Multi-Class classification the labels are on
 
 Where **Sp** is the CNN score for the positive class.
 
-Defined the loss, now we’ll have to compute its **gradient respect to the output neurons** of the CNN in order to backpropagate it through the net and optimize the defined loss function tuning the net parameters. So we need to compute the gradient of **CE** respect each CNN class score in $$s$$.
-The loss terms coming from the negative classes are zero. However, the loss gradient respect those negative classes is not cancelled, since the **Softmax** of the positive class also depends on the negative classes scores.  
+Defined the loss, now we’ll have to compute its **gradient respect to the output neurons** of the CNN in order to backpropagate it through the net and optimize the defined loss function tuning the net parameters. So we need to compute the gradient of CE Loss respect each CNN class score in $$s$$.
+The loss terms coming from the negative classes are zero. However, the loss gradient respect those negative classes is not cancelled, since the Softmax of the positive class also depends on the negative classes scores.  
 
 The gradient expression will be the same for all $$C$$ except for the ground truth class $$C_p$$, because the score of $$C_p$$ ($$s_p$$) is in the nominator.  
 
@@ -141,7 +141,7 @@ Where $$s_n$$ is the score of any negative class in $$C$$ different from $$C_p$$
 
 <span style="color:brown"> **→ Skip this part if you are not interested in Facebook or me using Softmax Loss for multi-label classification, which is not standard.** </span>
 
-When Softmax loss is used is a multi-label scenario, the gradients get a bit more complex, since the loss contains an element for each positive class. Consider $$M$$ are the positive classes of a sample. The **CE Loss** with Softmax activations would be:
+When Softmax loss is used is a multi-label scenario, the gradients get a bit more complex, since the loss contains an element for each positive class. Consider $$M$$ are the positive classes of a sample. The CE Loss with Softmax activations would be:
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;\frac{1}{M}&space;\sum_{p}^{M}&space;-log\left&space;(&space;\frac{e^{s_{p}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;\frac{1}{M}&space;\sum_{p}^{M}&space;-log\left&space;(&space;\frac{e^{s_{p}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" title="CE = \frac{1}{M} \sum_{p}^{M} -log\left ( \frac{e^{s_{p}}}{\sum_{j}^{C} e^{s_{j}}} \right )" /></a>
