@@ -8,6 +8,9 @@ img: "/assets/webvision/softlabels_pipeline.png"
 mathjax: false
 ---
 
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 The [WebVision Challenge](http://www.vision.ee.ethz.ch/webvision/challenge.html) was a competition organized in conjunction with the CVPR2017. It’s an ImageNet like competition, where the participants have to **classify the images between the 1000 ImageNet classes**. The Top-5 accuracy is the ranking metric. The difference is that the systems have to **learn only from web data**. To do that the WebVision dataset is presented. 
 
@@ -181,16 +184,16 @@ Given the softmax loss:
 <a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" title="L = -log\left ( \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}} \right )" /></a>
 </div>
 
-Where **C** are the classes to be inferred [0-999], **i** is the GT class, **Sj** are the scores inferred by the net for each class and **Si** is the score inferred by the net for the GT class.
+Where $$C$$ are the classes to be inferred [0-999], $$i$$ is the GT class, $$s_j$$ are the scores inferred by the net for each class and $$s_i$$ is the score inferred by the net for the GT class.
 We want to add a scalar **&#955;** that weights the loss for each sample depending in how reliable its label is. So we want a softmax loss with soft labels:
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)" title="L = \lambda * -log\left ( \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}} \right )" /></a>
 </div>
 
-Defined the loss, now we have to minimize it. We’ll do so with gradient descent. To do that we **evaluate the gradient of the loss function with respect to the parameters**, so that we know how we should change the parameters to decrease the loss. So we need to compute the gradient respect each **Sj**, which are the scores given by the net for each clas. The gradient expression will be the same for all **C** except for the GT class **i**, because the score of the GT class **Si** is in the nominator.
+Defined the loss, now we have to minimize it. We’ll do so with gradient descent. To do that we **evaluate the gradient of the loss function with respect to the parameters**, so that we know how we should change the parameters to decrease the loss. So we need to compute the gradient respect each $$s_j$$, which are the scores given by the net for each clas. The gradient expression will be the same for all $$C$$ except for the GT class $$i$$, because the score of the GT class $$s_i$$ is in the nominator.
 
-After some calculus, the derivative respect to the GT score **Si** is:
+After some calculus, the derivative respect to the GT score $$s_i$$ is:
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial}{\partial&space;s_{i}}&space;\left&space;(&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)&space;\right&space;)&space;=&space;\lambda&space;\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}e^{s_{j}}}&space;-&space;1&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial}{\partial&space;s_{i}}&space;\left&space;(&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)&space;\right&space;)&space;=&space;\lambda&space;\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}e^{s_{j}}}&space;-&space;1&space;\right&space;)" title="\frac{\partial}{\partial s_{i}} \left ( \lambda * -log\left ( \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}} \right ) \right ) = \lambda \left ( \frac{e^{s_{i}}}{\sum_{j}^{C}e^{s_{j}}} - 1 \right )" /></a>
@@ -202,7 +205,7 @@ And the derivative respect to the other classes would be:
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial}{\partial&space;s_{k}}&space;\left&space;(&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)&space;\right&space;)&space;=&space;\lambda&space;\left&space;(&space;\frac{e^{s_{k}}}{\sum_{j}^{C}e^{s_{j}}}\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial}{\partial&space;s_{k}}&space;\left&space;(&space;\lambda&space;*&space;-log\left&space;(&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}&space;\right&space;)&space;\right&space;)&space;=&space;\lambda&space;\left&space;(&space;\frac{e^{s_{k}}}{\sum_{j}^{C}e^{s_{j}}}\right&space;)" title="\frac{\partial}{\partial s_{k}} \left ( \lambda * -log\left ( \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}} \right ) \right ) = \lambda \left ( \frac{e^{s_{k}}}{\sum_{j}^{C}e^{s_{j}}}\right )" /></a>
 </div>
 
-Where **k** is a class from **C** different from **i**.
+Where $$k$$ is a class from $$C$$ different from $$i$$.
 
 ### Softmax loss with soft labels: Coding it in Caffe
 
@@ -229,7 +232,7 @@ def forward(self, bottom, top):
    self.diff[...] = probs
    top[0].data[...] = data_loss
 ```
-For each image of the batch, we have one label score **&#955;**, one label **i**, and a score for each one of the classes **C** **Sj**. So we compute the softmax loss for each image of the batch and multiply it by the label score. The batch loss will be the mean loss of the elements in the batch.
+For each image of the batch, we have one label score **&#955;**, one label $$i$$, and a score for each one of the classes $$C$$ $$s_j$$. So we compute the softmax loss for each image of the batch and multiply it by the label score. The batch loss will be the mean loss of the elements in the batch.
 We then save the data_loss to display it and the probs to use them in the backward pass.
 
 
@@ -245,7 +248,7 @@ def backward(self, top, propagate_down, bottom):
          delta[r,:] *= labels_scores[r]
    bottom[i].diff[...] = delta / bottom[0].num
 ```
-In the backward pass we need to compute the gradients of each element of the batch respect to each one of the classes scores **Sj**. As the gradient for all the classes **C** except the GT class **i** is equal to *probs*  **&#955;**, we assign *probs* values to *delta*. Then for the Gt class **i** (*int(labels[r])*) we subtract 1 to match the gradient expression. Finally we multiply all the gradient expressions by the labels scores **&#955;**. We compute the mean gradients of all the batch to run the backpropagation.
+In the backward pass we need to compute the gradients of each element of the batch respect to each one of the classes scores $$s_j$$. As the gradient for all the classes $$C$$ except the GT class $$i$$ is equal to *probs*  **&#955;**, we assign *probs* values to *delta*. Then for the Gt class $$i$$ (*int(labels[r])*) we subtract 1 to match the gradient expression. Finally we multiply all the gradient expressions by the labels scores **&#955;**. We compute the mean gradients of all the batch to run the backpropagation.
 
 > The Caffe Python layer of this softmax loss using soft labels is available [here](https://github.com/gombru/WebVision/blob/master/googlenet/SoftMaxSoftLabel.py).
 
