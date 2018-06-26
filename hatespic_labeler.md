@@ -6,7 +6,7 @@ order: 10
 ---
 
 <center>
-	<object data="https://pytorch.org/tutorials/beginner/data_loading_tutorial.html" width="600" height="700"> 
+	<object data="http://158.109.9.237:8080/" width="600" height="700"> 
 	    Your browser doesn’t support the object tag. 
 	</object>
 </center>
