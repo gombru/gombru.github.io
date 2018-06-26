@@ -9,3 +9,6 @@ order: 10
 
 <iframe src="https://www.sitepoint.com/community/t/embed-a-webpage-within-another-webpage/230037/4">
 </iframe>
+
+<object type="text/html" data="https://www.sitepoint.com/community/t/embed-a-webpage-within-another-webpage/230037/4"">
+</object>
