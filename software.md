@@ -5,6 +5,10 @@ permalink: /software/
 order: 3
 ---
 
+### HateSPic Labeler ###
+
+A web tool to label tweets with images in Hate Speech or not. [Help me labeling here](https://gombru.github.io/hatespic_labeler/).
+
 ### SetaMind ###
 
 An Android App that, given a photo of a mushroom, recogonizes its species. Using it is very simple: Take a photo of the mushroom with your phone and SetaMind will recognize the specie and will provide information about it, being able to recognize 24 different species. It uses a CNN that works locally in the phone.    
