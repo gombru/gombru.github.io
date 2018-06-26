@@ -7,6 +7,8 @@ order: 10
 
 ### HateSPic Labeler ###
 
-<object data="https://stackoverflow.com/questions/17148357/including-external-html-file-to-another-html-file"> 
+<object data="https://pytorch.org/tutorials/beginner/data_loading_tutorial.html"> 
     Your browser doesn’t support the object tag. 
 </object>
+
+<iframe src="https://www.w3schools.com/howto/howto_html_include.asp"></iframe>
