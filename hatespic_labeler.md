@@ -20,18 +20,18 @@ In the data to be labeled here, which comes from Twitter, it can be summarized a
 
 Note that not all critic tweets are Hate Speech:
 
-*"Rachel, you are stupid as all women are."*   -->  Is Hate Speech, because it attacks a group of people based on gender.
+<span style="color:brown">*"Rachel, you are stupid as all women are."*</span>     Is Hate Speech, because it attacks a group of people based on gender.
 
-*"Rachel, you are stupid."*   -->  Is not Hate Speech.
+<span style="color:brown">"Rachel, you are stupid."*</span>     Is not Hate Speech.
 
 ### Examples
 
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/hatespic_labeler/hate_1.png" height = "320">
+		<img src="/assets/hatespic_labeler/hate_1.png" height = "330">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/hatespic_labeler/hate_2.png" height = "320">
+		<img src="/assets/hatespic_labeler/hate_2.png" height = "330">
 	</div>
 	<div class="thecap">
 	The first example (that will appear always as the first instance to label as a test) is Hate Speech because is racist. The second one is Hate Speech because is sexist.
