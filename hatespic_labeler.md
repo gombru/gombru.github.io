@@ -20,9 +20,12 @@ In the data to be labeled here, which comes from Twitter, it can be summarized a
 
 Note that not all critic tweets are Hate Speech:
 
-<span style="color:brown">*"Rachel, you are stupid as all women are."*</span>     Is Hate Speech, because it attacks a group of people based on gender.
+<span style="color:brown">*"Rachel, you are stupid as all women are."*</span>     
+Is Hate Speech, because it attacks a group of people based on gender.
 
-<span style="color:brown">"Rachel, you are stupid."*</span>     Is not Hate Speech.
+
+<span style="color:brown">"Rachel, you are stupid."*</span>     
+Is not Hate Speech.
 
 ### Examples
 
