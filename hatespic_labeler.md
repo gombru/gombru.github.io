@@ -29,6 +29,8 @@ Is not Hate Speech.
 
 ### Examples
 
+<div class="imgcap"><img src="/assets/hatespic_labeler/hate_button.png" height = "30"></div>
+
 <div class="imgcap">
 	<div style="display:inline-block">
 		<img src="/assets/hatespic_labeler/hate_1.png" height = "330">
@@ -41,15 +43,30 @@ Is not Hate Speech.
 	</div>
 </div>
 
+<div class="imgcap"><img src="/assets/hatespic_labeler/nothate_button.png" height = "30"></div>
+
+<div class="imgcap">
+	<div style="display:inline-block">
+		<img src="/assets/hatespic_labeler/nothate_1.png" height = "330">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+		<img src="/assets/hatespic_labeler/nothate_2.png" height = "330">
+	</div>
+	<div class="thecap">
+	These posts are not Hate Speech, because they are not attacks on a protected category of people or based on race, gender, religion, etc..
+	</div>
+</div>
+
+
 
 
 ### The HateSPic project
-There are several works in automatic Hate Speech detection, but all of them use only textual data. A recent survey of them can be found here ([Schmidt, 2017](http://www.aclweb.org/anthology/W17-1101)). With this HateSPic project we pretend to extend that work to a multi-modal (text and image) analysis. Our goal is to build a model to automatically detect Hate Speech exploiting both textual and visual data.
+There are several works in automatic Hate Speech detection, but all of them use only textual data. A recent survey of them can be found here ([Schmidt, 2017](http://www.aclweb.org/anthology/W17-1101)). With this HateSPic project we pretend to extend that work to a multi-modal (text and image) analysis. Our goal is to **build a model to automatically detect Hate Speech exploiting both textual and visual data**.
 Notice that in some text + image publications nor text or image separately are Hate Speech, but the combination of them is (see the examples above). 
 
 As the Hate Speech detection in multi-modal publications problem has not been adressed yet, there are not available annotated datasets. This HateSPic Labeler will help us to create a dataset, using the human annotations generated here and exploiting the knwoledge extracted from existing text-only annotated datasets.
 
 ### Data selection
-The data to be labeled are tweets suspected of containing Hate Speech. In order to make the selection, we have selected tweets containing hate words ([see Hatebase.org](https://www.hatebase.org/)) and we have used a machine learning model trained on existing text-only databases to filter them. To ensure the dataset diversity, some random tweets will also appear.
+The data to be labeled are tweets suspected of containing Hate Speech. In order to make the selection, we have **selected tweets containing hate words** ([see Hatebase.org](https://www.hatebase.org/)) and we have used a **machine learning model trained on existing text-only databases to filter them**. To ensure the dataset diversity, some random tweets will also appear.
 
 Notice that, despite the filtering, the presence of Hate Speech might be small. So it will be normal to label most tweets as Not Hate.
