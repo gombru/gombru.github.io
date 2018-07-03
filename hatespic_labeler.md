@@ -6,7 +6,7 @@ order: 10
 ---
 
 <center>
-	<object data="http://158.109.9.237:45993/" width="600" height="700"> 
+	<object data="http://158.109.9.237:45993" width="600" height="700"> 
 	    Your browser doesn’t support the object tag. 
 	</object>
 </center>
