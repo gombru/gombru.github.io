@@ -4,12 +4,18 @@ title: HateSPic Labeler
 permalink: /hatespic_labeler/
 order: 10
 ---
-
+<!---
 <center>
-	<object data="https://158.109.9.237:45993" width="600" height="700"> 
+	<object data="http://158.109.9.237:45993" width="600" height="700"> 
 	    Your browser doesn’t support the object tag. 
 	</object>
 </center>
+-->
+
+<div class="imgcap">
+<a href="http://158.109.9.237:45993"
+target="_blank"><img src="/assets/hatespic_labeler/labeler.png" height = "550"></a>
+</div>
 
 ### What is Hate Speech?
 Hate speech is defined as ([Facebook, 2016](https://www.facebook.com/notes/facebook-safety/controversial-harmful-and-hateful-speech-on-facebook/574430655911054/), [Twitter, 2016](https://help.twitter.com/en/rules-and-policies/hateful-conduct-policy)): 
