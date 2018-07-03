@@ -69,6 +69,18 @@ Applying algorithms to [learn from images and associated text to Barcelona Insta
 
 <p align="center"><iframe align="middle" width="560" height="315" src="https://www.youtube.com/embed/f80LHPFN-8Q?rel=0&amp;start=1547" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
  
+
+### Press
+
+[Si tu empresa o destino sale en Instagram ¿sabes qué dicen las fotos de ti?](https://www.hosteltur.com/127827_si-tu-empresa-destino-sale-instagram-sabes-dicen-fotos-ti.html) -Hosteltur  
+[La inteligencia artificial será la bola de cristal del turismo](https://www.hosteltur.lat/110760_inteligencia-artificial-sera-bola-cristal-turismo.html) -Hosteltur  
+[Un algoritmo determinará el futuro del turismo mundial](https://www.metropoliabierta.com/el-pulso-de-la-ciudad/tecnologia/algoritmo-determinara-futuro-turismo-mundial_6094_102.html) -Metropoliabierta  
+[Los algoritmos y el futuro del turismo global](http://www.lookoutpro.com/los-algoritmos-futuro-del-turismo-global/)  -Lookout Pro  
+[La inteligencia artificial irrumpe en el turismo](http://www.comunicatur.info/es/la-inteligencia-artificial-irrumpe-en-el-turismo/)  -Comunicatur  
+[El turismo utilizará inteligencia artificial para prever tendencias antes de cinco años](https://www.discapnet.es/actualidad/2018/04/el-turismo-utilizara-inteligencia-artificial-para-prever-tendencias-antes-de)  -Discapnet  
+[Lo que nos dice Instagram de Barcelona (y sabemos gracias al Deep Learning)](https://eurecat.org/es/deep-learning-intagram-barcelona/)  -Eurecat Blog  
+ 
+
  
 
 
