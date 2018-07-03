@@ -11,7 +11,7 @@ A web tool to label tweets with images in Hate Speech or not. [Help me labeling 
 
 <div class="imgcap">
 <img src="/assets/hatespic_labeler/labeler.png" height="300">
-</div
+</div>
 
 ### SetaMind ###
 
