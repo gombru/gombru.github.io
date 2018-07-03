@@ -6,7 +6,7 @@ order: 10
 ---
 
 <center>
-	<object data="http://158.109.9.237:8080/" width="600" height="700"> 
+	<object data="http://158.109.9.237:45993/" width="600" height="700"> 
 	    Your browser doesn’t support the object tag. 
 	</object>
 </center>
@@ -14,7 +14,7 @@ order: 10
 ### What is Hate Speech?
 Hate speech is defined as ([Facebook, 2016](https://www.facebook.com/notes/facebook-safety/controversial-harmful-and-hateful-speech-on-facebook/574430655911054/), [Twitter, 2016](https://help.twitter.com/en/rules-and-policies/hateful-conduct-policy)): 
 
-> "Direct and serious attacks on any protected category of people **based on** their race, ethnicity, national origin, religion, sex, gender, sexual orientation, disability or disease.
+> "Direct and serious attacks on any protected category of people **based on** their race, ethnicity, national origin, religion, sex, gender, sexual orientation, disability or disease."
 
 In the data to be labeled here, which comes from Twitter, it can be summarized as **racism** and **sexism**.
 
