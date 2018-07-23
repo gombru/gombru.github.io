@@ -4,6 +4,16 @@ title: Publications
 permalink: /publications/
 order: 2
 ---
+
+### TextTopicNet - Self-Supervised Learning of Visual Features Through Embedding Images on Semantic Text Spaces
+Yash Patel, Lluis Gomez, **Raul Gomez**, Marçal Rusiñol, Dismosthenis Karatzas and CV Jawahar.   
+arXiv preprint arXiv:1807.02110, 2018. [[PDF](https://arxiv.org/abs/1807.02110)]  
+
+This work proposes a self-supervised method to learn competitive visual features from wikipedia articles and its associated images.   
+<div class="imgcap">
+<img src="/assets/publications/TextTopicNet.png" height="250">
+</div>
+
 ### ICDAR2017 Robust Reading Challenge on COCO-Text
 **Raul Gomez**, Baoguang Shi, Lluis Gomez, Lukas Numann, Andreas Veit, Jiri Matas, Serge Belongie and Dismosthenis Karatzas.   
 ICDAR, 2017. [[PDF](http://ieeexplore.ieee.org/abstract/document/8270165/)]  

@@ -79,6 +79,7 @@ Applying algorithms to [learn from images and associated text to Barcelona Insta
 [La inteligencia artificial irrumpe en el turismo](http://www.comunicatur.info/es/la-inteligencia-artificial-irrumpe-en-el-turismo/)  - Comunicatur  
 [El turismo utilizará inteligencia artificial para prever tendencias antes de cinco años](https://www.discapnet.es/actualidad/2018/04/el-turismo-utilizara-inteligencia-artificial-para-prever-tendencias-antes-de)  - Discapnet  
 [Lo que nos dice Instagram de Barcelona (y sabemos gracias al Deep Learning)](https://eurecat.org/es/deep-learning-intagram-barcelona/)  - Eurecat Blog  
+[Lo más popular de Barcelona en Instagram](https://www.thenewbarcelonapost.com/es/lo-mas-popular-de-barcelona-en-instagram/) - The New Barcelona Post
  
 
  
