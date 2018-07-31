@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HateSPic Labeler
+title: Hate Speech Labeler
 permalink: /hatespic_labeler/
 order: 10
 ---
@@ -66,11 +66,11 @@ Is not Hate Speech.
 
 
 
-### The HateSPic project
-There are several works in automatic Hate Speech detection, but all of them use only textual data. A recent survey of them can be found here ([Schmidt, 2017](http://www.aclweb.org/anthology/W17-1101)). With this HateSPic project we pretend to extend that work to a multi-modal (text and image) analysis. Our goal is to **build a model to automatically detect Hate Speech exploiting both textual and visual data**.
+### The project
+There are several works in automatic Hate Speech detection, but all of them use only textual data. A recent survey of them can be found here ([Schmidt, 2017](http://www.aclweb.org/anthology/W17-1101)). With this project we pretend to extend that work to a multi-modal (text and image) analysis. Our goal is to **build a model to automatically detect Hate Speech exploiting both textual and visual data**.
 Notice that in some text + image publications nor text or image separately are Hate Speech, but the combination of them is (see the examples above). 
 
-As the Hate Speech detection in multi-modal publications problem has not been adressed yet, there are not available annotated datasets. This HateSPic Labeler will help us to create a dataset, using the human annotations generated here and exploiting the knwoledge extracted from existing text-only annotated datasets.
+As the Hate Speech detection in multi-modal publications problem has not been adressed yet, there are not available annotated datasets. This Hate Speech Labeler will help us to create a dataset, using the human annotations generated here and exploiting the knwoledge extracted from existing text-only annotated datasets.
 
 ### Data selection
 The data to be labeled are tweets suspected of containing Hate Speech. In order to make the selection, we have **selected tweets containing hate words** ([see Hatebase.org](https://www.hatebase.org/)) and we have used a **machine learning model trained on existing text-only databases to filter them**. To ensure the dataset diversity, some random tweets will also appear.

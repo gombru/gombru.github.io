@@ -5,7 +5,7 @@ permalink: /software/
 order: 3
 ---
 
-### HateSPic Labeler ###
+### Hate Seech Labeler ###
 
 A web tool to label tweets with images in Hate Speech or not. [Help me labeling here](https://gombru.github.io/hatespic_labeler/).
 
