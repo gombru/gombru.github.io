@@ -83,7 +83,7 @@ The CNN training strategy is the same as explained in [this former blogpost](htt
 To **compare the performance of the different text embeddings in an image retrieval task**, we set some queries and inspect visually the top 5 retrieved results for them. They were selected to cover a wide area of semantic concepts that are usually present in Web and Social Media data. Both simple and complex queries are divided in four different categories: Urban, weather, food and people. The simple queries are: Car, skyline, bike; sunrise, snow, rain; ice-cream, cake, pizza; woman, man, kid. The complex queries are: Yellow + car, skyline + night, bike + park; sunrise + beach; snow + ski; rain + umbrella; ice-cream + beach, chocolate + cake; pizza + wine; woman + bag, man + boat, kid + dog. For complex queries, only images containing both querying concepts are considered correct.
 Results on transfer learning (ex. training on InstaCities1M and testing on WebVision) are also given.
 
-<div class="imgcap">S
+<div class="imgcap">
 <img src="/assets/LearningToLearnFromWebData/top5.png" height="440">
 	<div class="thecap">
 	 Performance InstaCities1M, WebVision and transfer learning. First column shows the mean P@5 for all the queries, second for the simple queries and third for complex queries.
