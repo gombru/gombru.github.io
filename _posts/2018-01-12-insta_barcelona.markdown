@@ -8,7 +8,7 @@ img: "/assets/insta_barcelona/breakfast.jpg"
 mathjax: false
 ---
 
-In a former post, [Learning to Learn from Web Data -not published yet-](https://gombru.github.io/), we explain how to embed images and text in the same vectorial space with semantic structure. We compare the performance of different text embeddings, and we prove that Social Media data can be used to learn the mapping of both images and text to this common space. 
+In a former post, [Learning to Learn from Web Data](https://gombru.github.io/2018/05/23/learning_from_web_data/), we explain how to embed images and text in the same vectorial space with semantic structure. We compare the performance of different text embeddings, and we prove that Social Media data can be used to learn the mapping of both images and text to this common space. 
 
 ## Objective
 
@@ -33,7 +33,7 @@ Once the embeddings are learnt, we will be able to **infer what people talks abo
 
 > The code used is available [here](https://github.com/gombru/insbcn).
 
-> For a more detailed explanation of the embeddings learnt, please refer [here -not published yet-](https://gombru.github.io/) or [here](https://gombru.github.io/2017/06/30/learning_from_instagram/).
+> For a more detailed explanation of the embeddings learnt, please refer [here](https://gombru.github.io/2018/05/23/learning_from_web_data/) or [here](https://gombru.github.io/2017/06/30/learning_from_instagram/).
 
 ## Data adquisition and filtering
 
