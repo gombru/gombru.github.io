@@ -5,6 +5,25 @@ permalink: /publications/
 order: 2
 ---
 
+### Learning from Barcelona Instagram data what Locals and Tourists post about its Neighbourhoods
+**Raul Gomez**, Lluis Gomez, Jaume Gibert, Dismosthenis Karatzas.  
+ECCV MULA workshop, 2018.
+
+Learning relations between text, images and Barcelona neighbourhoods to study the differences between locals and tourists in social media publications and their relations with the different neighbourhoods.
+<div class="imgcap">
+<img src="/assets/BarcelonaNeighbourhoods/pipeline.png" height="250">
+</div>
+
+### Learning to Learn from Web Data through Deep Semantic Embeddings
+**Raul Gomez**, Lluis Gomez, Jaume Gibert, Dismosthenis Karatzas.  
+ECCV MULA workshop, 2018.
+
+A performance comparison between different text embeddings for self-supervised learning from images and associated text in an image retrieval setup.
+<div class="imgcap">
+<img src="/assets/LearningToLearnFromWebData/pipeline_horizontal.png" height="250">
+</div>
+
+
 ### TextTopicNet - Self-Supervised Learning of Visual Features Through Embedding Images on Semantic Text Spaces
 Yash Patel, Lluis Gomez, **Raul Gomez**, Marçal Rusiñol, Dismosthenis Karatzas and CV Jawahar.   
 arXiv preprint arXiv:1807.02110, 2018. [[PDF](https://arxiv.org/abs/1807.02110)]  
@@ -34,7 +53,7 @@ The former DLPR workshop publication lead to this journal publication. We extend
 
 ### Improving Text Proposals for Scene Images with Fully Convolutional Networks
 Dena Bazazian, **Raul Gomez**, Anguelos Nicolaou, Lluis Gomez, Dimosthenis Karatzas and Andrew Bagdanov.  
-ICPR workshop (DLPR), 2016. [[PDF](https://arxiv.org/abs/1702.05089)]  
+ICPR DLPR workshop, 2016. [[PDF](https://arxiv.org/abs/1702.05089)]  
 
 This came out from my MS's thesis. It's about how to use a text detection FCN to improve the text proposals algorithm (developed by [Lluis Gomez i Bigorda](http://lluisgomez.github.io/), one of my advisors). The code for the FCN model training is [here](https://github.com/gombru/TextFCN) and the code for the text proposals pipeline is [here](https://github.com/gombru/TextProposalsInitialSuppression). Watching the FCN detect text in real time is pretty cool.
 <div class="imgcap">
