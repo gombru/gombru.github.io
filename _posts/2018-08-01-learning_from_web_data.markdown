@@ -22,7 +22,7 @@ I used two training datasets:
 
  - **WebVision:**  A dataset from the [CVPR WebVision challenge](https://www.vision.ee.ethz.ch/webvision/) (1.0 version), composed of images collected from Flickr and Google images querying with the Imagenet class names. So basically is a noisy version of the ImageNet dataset with 2.4 million images. The text associated to the images included is the image description, the page name and the flickr hashtags.
 
- - **InstaCities1M:** A datasets I collected which is presented [in this blog post]() -available soon-. It is formed by Instagram images associated with one of the 10 most populated English speaking cities. It contains a total of 1M images. 
+ - **InstaCities1M:** A datasets I collected which is presented [in this blog post](https://gombru.github.io/2018/08/01/InstaCities1M/) -available soon-. It is formed by Instagram images associated with one of the 10 most populated English speaking cities. It contains a total of 1M images. 
 
 Those datasets where divided in a training set, a validation set and a test (or retrieval) set.
 

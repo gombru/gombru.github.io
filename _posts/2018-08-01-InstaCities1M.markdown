@@ -13,11 +13,11 @@ I've have created a dataset of social media images with associated text, **Insta
 **This dataset is published together with the ECCV 2018 MULA Workshop paper "Learning to Learn from Web Data through Deep Semantic Embeddings". A blog post about that paper is available [here](https://gombru.github.io/2018/08/01/learning_from_web_data/).** 
 
 <div class="imgcap">
-<img src="/assets/InstaCities1M/logo.png" height="300">
+<img src="/assets/InstaCities1M/logo.png" height="280">
 </div>
 
 
-The dataset can be downloaded [here](https://mega.nz/#!GRQkDSKD!kUN8JdZOHquqOwdMR4JHTsXBmWIRjnbFT70AWrQBaig)
+The dataset can be downloaded [here](https://mega.nz/#!GRQkDSKD!kUN8JdZOHquqOwdMR4JHTsXBmWIRjnbFT70AWrQBaig).
 
 > Cities used: London, New York, Sydney, Los Angeles, Chicago, Melbourne, Miami, Toronto, Singapore and San Francisco.
 
