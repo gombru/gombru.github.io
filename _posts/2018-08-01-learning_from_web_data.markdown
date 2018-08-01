@@ -14,15 +14,15 @@ The article consist on a **performance comparison of different text embeddings (
 
 ## Why are you doing this performance comparison?
 
-At the beginning of my PhD I started playing with Social Media data to find what useful things we could learn from it. The first post of this blog [Using Instagram data to learn a city classifier](https://gombru.github.io/2017/06/25/city_classifier/) is my first pubished experiment. Then, following the work of my supervisor Lluis Gomez [Deep-embeddings of images into text topic spaces](https://arxiv.org/pdf/1705.08631.pdf) (CVPR 2017) I started playing with the text associated to images. Using a similar pipeline as him, and proved that Instagram data was useful to [learn an image retrieval system](https://gombru.github.io/2017/06/30/learning_from_instagram/). As I’m doing an industrial PhD and I like applied research, I tried to apply that pipeline to specific problems, such as [inferring ingredients from food images]https://gombru.github.io/2017/07/19/inferring_ingredients/). All those works use LDA topic modeling to encode text, and I wondered if that one was the best text embedding to learn from Web and Social Media data. I **searched for performance comparisons and I couldn’t found one. So I decided to do it**. 
+At the beginning of my PhD I started playing with Social Media data to find what useful things we could learn from it. The first post of this blog [Using Instagram data to learn a city classifier](https://gombru.github.io/2017/06/25/city_classifier/) is my first pubished experiment. Then, following the work of my supervisor Lluis Gomez [Deep-embeddings of images into text topic spaces](https://arxiv.org/pdf/1705.08631.pdf) (CVPR 2017) I started playing with the text associated to images. Using a similar pipeline as him, and proved that Instagram data was useful to [learn an image retrieval system](https://gombru.github.io/2017/06/30/learning_from_instagram/). As I’m doing an industrial PhD and I like applied research, I tried to apply that pipeline to specific problems, such as [inferring ingredients from food images](https://gombru.github.io/2017/07/19/inferring_ingredients/). **All those works use LDA topic modeling to encode text, and I wondered if that one was the best text embedding to learn from Web and Social Media data. I searched for performance comparisons and I couldn’t found one. So I decided to do it**. 
 
 ## The data
 
-I used two trained datasets:
+I used two training datasets:
 
  - **WebVision:**  A dataset from the [CVPR WebVision challenge](https://www.vision.ee.ethz.ch/webvision/) (1.0 version), composed of images collected from Flickr and Google images querying with the Imagenet class names. So basically is a noisy version of the ImageNet dataset with 2.4 million images. The text associated to the images included is the image description, the page name and the flickr hashtags.
 
- - **InstaCities1M:** A datasets I collected which is presented [in this blog post](). It is formed by Instagram images associated with one of the 10 most populated English speaking cities. It contains a total of 1M images. 
+ - **InstaCities1M:** A datasets I collected which is presented [in this blog post]() -available soon-. It is formed by Instagram images associated with one of the 10 most populated English speaking cities. It contains a total of 1M images. 
 
 Those datasets where divided in a training set, a validation set and a test (or retrieval) set.
 
@@ -36,7 +36,7 @@ As an only test dataset and to compare my results with other methods, I also use
 - **Word2Vec**: Learns relationships between words automatically using a feed-forward neural network. It builds distributed semantic representations of words using the context of them considering both words before and after the target word.
 - **Doc2Vec**. Is an extension of Word2Vec to documents.
 - **GloVe**: It is a count-based model. It learns the word vectors by essentially doing dimensionality reduction on the co-occurrence counts matrix.
--**FastText**: While Word2Vec and GloVe treat each word in a corpus like an atomic entity, FastText treats each word as composed of character ngrams. So the vector of a word is made of the sum of this character ngrams. This is specially useful for morphologically rich languages. This way, it achieves generating better word embedding for rare words and embeddings for out of vocabulary words. 
+- **FastText**: While Word2Vec and GloVe treat each word in a corpus like an atomic entity, FastText treats each word as composed of character ngrams. So the vector of a word is made of the sum of this character ngrams. This is specially useful for morphologically rich languages. This way, it achieves generating better word embedding for rare words and embeddings for out of vocabulary words. 
 
 ## The pipeline
 
@@ -71,7 +71,7 @@ While LDA and Doc2Vec can generate embeddings for documents, Word2Vec, GloVe and
 
 The CNN training strategy is the same as explained in [this former blogpost](https://gombru.github.io/2017/06/30/learning_from_instagram/). 
 
-> All the code use in this project is available [here]().
+> All the code use in this project is available [here](https://github.com/gombru/LearnFromWebData/).
 
 > In later experiments, I have found out that using a contrastive loss (using the image, its caption embedding and a negative caption embedding) leads to better results. In a near future, I will publish a post discussing that.
 
@@ -95,7 +95,7 @@ Results on transfer learning (ex. training on InstaCities1M and testing on WebVi
 The MIRFlickr dataset is used to compare our results with other image retreival by text methods. Results show that our method is superior when training with MIRFlickr data, and achieves competitive performance when trained with WebVision or InstaCities1M.
 
 <div class="imgcap">
-<img src="/assets/LearningToLearnFromWebData/map_MIRFlickr.png" height="600">
+<img src="/assets/LearningToLearnFromWebData/map_MIRFlickr.png" height="440">
 	<div class="thecap">
 	 MAP on the image by text retrieval task on MIRFlickr.
 	</div>
