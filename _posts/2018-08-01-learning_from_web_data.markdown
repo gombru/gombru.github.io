@@ -64,7 +64,7 @@ The [Gensim](http://radimrehurek.com/gensim) implementation of all the text embe
 
 While LDA and Doc2Vec can generate embeddings for documents, Word2Vec, GloVe and FastText only generate word embeddings. To get documents embeddings from these methods, we consider two standard strategies: First, computing the document embedding as the mean embedding of its words. Second, computing a tf-idf weighted mean of the words in the document.
 
-### Visual Embeddings
+### Visual Embedding
 
 **A CNN is trained to regress text embeddings from the correlated images minimizing a sigmoid cross-entropy loss**. This loss is used to minimize distances between the text and image embeddings.
 **The GoogleNet architecture is used, customizing the last layer to regress a vector of the same dimensionality as the text embedding**. We train with a Stochastic Gradient Descent optimizer with a learning rate of 0.001, multiplied by 0.1 every 100,000 iterations, and a momentum of 0.9. The batch size is set to 120 and random cropping and mirroring are used as online data augmentation. With these settings the CNN trainings converge around 300K-500K iterations. We use the Caffe framework and initialize with the ImageNet trained model to make the training faster. Notice that, despite initializing with a model trained with human-annotated data, this does not denote a dependence on annotated data, since the resulting model can generalize to much more concepts than the ImageNet classes. We trained one model from scratch obtaining similar results, although more training iterations were needed.
@@ -83,8 +83,8 @@ The CNN training strategy is the same as explained in [this former blogpost](htt
 To **compare the performance of the different text embeddings in an image retrieval task**, we set some queries and inspect visually the top 5 retrieved results for them. They were selected to cover a wide area of semantic concepts that are usually present in Web and Social Media data. Both simple and complex queries are divided in four different categories: Urban, weather, food and people. The simple queries are: Car, skyline, bike; sunrise, snow, rain; ice-cream, cake, pizza; woman, man, kid. The complex queries are: Yellow + car, skyline + night, bike + park; sunrise + beach; snow + ski; rain + umbrella; ice-cream + beach, chocolate + cake; pizza + wine; woman + bag, man + boat, kid + dog. For complex queries, only images containing both querying concepts are considered correct.
 Results on transfer learning (ex. training on InstaCities1M and testing on WebVision) are also given.
 
-<div class="imgcap">
-<img src="/assets/LearningToLearnFromWebData/top5.png" height="500">
+<div class="imgcap">S
+<img src="/assets/LearningToLearnFromWebData/top5.png" height="440">
 	<div class="thecap">
 	 Performance InstaCities1M, WebVision and transfer learning. First column shows the mean P@5 for all the queries, second for the simple queries and third for complex queries.
 	</div>
@@ -95,7 +95,7 @@ Results on transfer learning (ex. training on InstaCities1M and testing on WebVi
 The MIRFlickr dataset is used to compare our results with other image retreival by text methods. Results show that our method is superior when training with MIRFlickr data, and achieves competitive performance when trained with WebVision or InstaCities1M.
 
 <div class="imgcap">
-<img src="/assets/LearningToLearnFromWebData/map_MIRFlickr.png" height="440">
+<img src="/assets/LearningToLearnFromWebData/map_MIRFlickr.png" height="400">
 	<div class="thecap">
 	 MAP on the image by text retrieval task on MIRFlickr.
 	</div>
