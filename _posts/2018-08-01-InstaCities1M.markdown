@@ -17,7 +17,7 @@ I've have created a dataset of social media images with associated text, **Insta
 </div>
 
 
-The dataset can be downloaded [here](https://mega.nz/#!GRQkDSKD!kUN8JdZOHquqOwdMR4JHTsXBmWIRjnbFT70AWrQBaig).
+<span style="color:brown"><center>**[Download the dataset](https://mega.nz/#!GRQkDSKD!kUN8JdZOHquqOwdMR4JHTsXBmWIRjnbFT70AWrQBaig)**</center></span>
 
 > Cities used: London, New York, Sydney, Los Angeles, Chicago, Melbourne, Miami, Toronto, Singapore and San Francisco.
 
