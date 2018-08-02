@@ -92,7 +92,7 @@ Img2NeighCtx image by neighborhood retrieval results for different neighborhoods
 
 When talking about El Born (Sant Pere), tourist tend to post photos of bikes, since there are many tourist oriented stores offering bike renting services there, while locals tend to post photos of its bars and streets. When posting about El Poblesec 9, tourist tend to post photos of the food they have in its popularity increasing restaurants, while locals tend to post photos of themselves, its bars or its art galleries. When posting about El Poblenou 9, the kind of images people post using the three languages are similar and related to design and art. This is because El Poblenou neighbourhood has been promoted as a technology and design hub in Barcelona, following the 22@ plan. This plan has attracted many for- eign workers to live in the area. Therefore, and in contrast to other neighborhoods, the majority of English publications related to El Poblenou are not from tourists but from people that have settled here, and appear to have the same interests in El Poblenou as the Catalan and Spanish speakers.
 
-### Images associated to districts
+### Images associated to other concepts
 Img2NeighCtx is very useful to retrieve images associated to each neighborhood in each one of the languages. In a similar way we trained Img2NeighCtx to predict Neigh-borhood Contexts from images, we can train a net to directly embed images in the Word2Vec space. (This is the same we did in [this former post](https://gombru.github.io/2018/01/12/insta_barcelona/))
 
 <div class="imgcap">
