@@ -30,13 +30,6 @@ As an only test dataset and to compare my results with other methods, I also use
 
   - **MIRFlickr:** It contains 25K images collected from Flickr annotated using 24 predefined concepts.
 
-## Text embeddings
-
- - **LDA**: Latent Dirichlet Allocation learns latent topics from a collection of text documents and maps words to a vector of probabilities of those topics. It can describe a document by assigning topic distributions to them, which in turn have word distributions assigned.
-- **Word2Vec**: Learns relationships between words automatically using a feed-forward neural network. It builds distributed semantic representations of words using the context of them considering both words before and after the target word.
-- **Doc2Vec**. Is an extension of Word2Vec to documents.
-- **GloVe**: It is a count-based model. It learns the word vectors by essentially doing dimensionality reduction on the co-occurrence counts matrix.
-- **FastText**: While Word2Vec and GloVe treat each word in a corpus like an atomic entity, FastText treats each word as composed of character ngrams. So the vector of a word is made of the sum of this character ngrams. This is specially useful for morphologically rich languages. This way, it achieves generating better word embedding for rare words and embeddings for out of vocabulary words. 
 
 ## The pipeline
 
@@ -60,6 +53,13 @@ As an only test dataset and to compare my results with other methods, I also use
 3. Retrieve the closest images.
 
 ### Text Embeddings 
+
+ - **LDA**: Latent Dirichlet Allocation learns latent topics from a collection of text documents and maps words to a vector of probabilities of those topics. It can describe a document by assigning topic distributions to them, which in turn have word distributions assigned.
+- **Word2Vec**: Learns relationships between words automatically using a feed-forward neural network. It builds distributed semantic representations of words using the context of them considering both words before and after the target word.
+- **Doc2Vec**. Is an extension of Word2Vec to documents.
+- **GloVe**: It is a count-based model. It learns the word vectors by essentially doing dimensionality reduction on the co-occurrence counts matrix.
+- **FastText**: While Word2Vec and GloVe treat each word in a corpus like an atomic entity, FastText treats each word as composed of character ngrams. So the vector of a word is made of the sum of this character ngrams. This is specially useful for morphologically rich languages. This way, it achieves generating better word embedding for rare words and embeddings for out of vocabulary words. 
+
 The [Gensim](http://radimrehurek.com/gensim) implementation of all the text embeddings was used. For GloVe, the [python implementation by Maciej Kula](http://github.com/maciejkula/glove-python) was used.
 
 While LDA and Doc2Vec can generate embeddings for documents, Word2Vec, GloVe and FastText only generate word embeddings. To get documents embeddings from these methods, we consider two standard strategies: First, computing the document embedding as the mean embedding of its words. Second, computing a tf-idf weighted mean of the words in the document.
