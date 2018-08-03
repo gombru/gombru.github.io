@@ -8,15 +8,20 @@ img: "/assets/BarcelonaNeighbourhoods/pipeline.png"
 mathjax: false
 ---
 
-<span style="color:brown">**This work is published in ECCV 2018 MULA Workshop as "Learning from #Barcelona Instagram data" and will be available soon. Refer to the paper to access the full and formal article. Here I explain informally and briefly the experiments conducted and the conclusions obtained.**</span>
+<span style="color:brown">**This work will be presented in ECCV 2018 MULA Workshop as "Learning from #Barcelona Instagram data" and will be available soon. Refer to the paper to access the full and formal article. Here I explain informally and briefly the experiments conducted and the conclusions obtained.**</span>
 
 ## Motivation
-I research on designing pipelines that can learn from web data (images with associated text) in a self-supervised way. I wanted to **apply this pipeline to a real life problem** to test how it works beyond scientific datasets and to show its potential applications. That's way I collected a dataset of Instagram images associated with Barcelona, **InstaBarcelona**. In the post [What do people think about Barcelona?](https://gombru.github.io/2018/01/12/insta_barcelona/) I explain how I trained an image by text retrieval system with this data, and how it can be used to **retrieve which images Instagram users relate with Barcelona and any other text concept**. I presented this results at ForumTurisTIC in Barcelona [check this post](https://gombru.github.io/2018/02/11/forumTurisTIC_presentation/) and **got a big interest from the tourism industry**.  
+I research on designing pipelines that can learn from web data (images with associated text) in a self-supervised way. I wanted to **apply this pipeline to a real life problem** to test how it works beyond scientific datasets and to show its potential applications. That's way I collected a dataset of Instagram images associated with Barcelona, **InstaBarcelona**. In the post [What do people think about Barcelona?](https://gombru.github.io/2018/01/12/insta_barcelona/) I explain how I trained an image by text retrieval system with this data, and how it can be used to **retrieve which images Instagram users relate with Barcelona and any other text concept**. I presented this results at ForumTurisTIC in Barcelona ([check this post](https://gombru.github.io/2018/02/11/forumTurisTIC_presentation/)) and **got a big interest from the tourism industry**.  
 
-**Barcelona has a big problem with tourism**. It revives around 10 million tourists every year. That causes conflicts between tourists and the tourism industry and other local organizations, conflicts that are highly **concentrated on certain neighborhoods** with requested tourist attractions. People tend to post more on Instagram when they are traveling. In this work we learn what locals and tourist highlight about every neighbourhood. **The objective is to provide a tool to analyze which neighbourhoods have bigger differences in locals vs tourist activity, which ones concentrate most of the tourism and why**. The proposed pipeline can be extended to any other city of subject, if enough Social Media data is available.
+**Barcelona has a big problem with tourism**. It receives around 10 million tourists every year. That causes conflicts between tourists and the tourism industry and other local organizations, conflicts that are highly **concentrated on certain neighborhoods** with requested tourist attractions. In this work we learn what locals and tourist highlight about every neighbourhood. **The objective is to provide a tool to analyze which neighbourhoods have bigger differences in locals vs tourist activity, which ones concentrate most of the tourism and why**. The proposed pipeline can be extended to any other city or subject, if enough Social Media data is available.
 
 ## InstaBarcelona Dataset
 To perform the presented analysis we gathered a dataset of Instagram images related to Barcelona uploaded between September and December of 2017. That means images with a caption where the word ”Barcelona” appears. We collected around 1.3 million images. In order to discard spam and other undesirable images, we performed several dataset cleanings (check details in the paper). To infer the language of the captions Google’s language detection API was used. The resulting dataset, contains 597,766 image-captions pairs. From those pairs 331,037 are English publications, 171,825 Spanish publications and 94,311 Catalan publications. 
+
+<div class="imgcap">
+<img src="/assets/ingredients/InstaBarcelona.png" height="200">
+</div>
+
 
 **[Download the dataset](https://mega.nz/#!LFQG2AhI!WSS4BHOZivkowLcKRPiKI3ZDK5FAIhX6bbzlFt3jOiw)**
 
