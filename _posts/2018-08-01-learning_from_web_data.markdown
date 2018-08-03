@@ -92,7 +92,7 @@ Results on transfer learning (ex. training on InstaCities1M and testing on WebVi
 
 ### Experiments to compare performance with other methods on MIRFlickr
 
-The MIRFlickr dataset is used to compare our results with other image retreival by text methods. Results show that our method is superior when training with MIRFlickr data, and achieves competitive performance when trained with WebVision or InstaCities1M.
+The MIRFlickr dataset is used to compare our results with other image retrival by text methods. Results show that our method is superior when training with MIRFlickr data, and achieves competitive performance when trained with WebVision or InstaCities1M.
 
 <div class="imgcap">
 <img src="/assets/LearningToLearnFromWebData/map_MIRFlickr.png" height="400">
