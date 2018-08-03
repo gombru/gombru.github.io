@@ -19,7 +19,7 @@ I research on designing pipelines that can learn from web data (images with asso
 To perform the presented analysis we gathered a dataset of Instagram images related to Barcelona uploaded between September and December of 2017. That means images with a caption where the word ”Barcelona” appears. We collected around 1.3 million images. In order to discard spam and other undesirable images, we performed several dataset cleanings (check details in the paper). To infer the language of the captions Google’s language detection API was used. The resulting dataset, contains 597,766 image-captions pairs. From those pairs 331,037 are English publications, 171,825 Spanish publications and 94,311 Catalan publications. 
 
 <div class="imgcap">
-<img src="/assets/ingredients/InstaBarcelona.png" height="200">
+<img src="/assets/BarcelonaNeighbourhoods/InstaBarcelona.png" height="200">
 </div>
 
 
@@ -44,7 +44,7 @@ We count the **number of mentions per district and neighbourhoods respect to the
 </div>
 
 
-The above figure shows how Ciutat Vella and Eixample are the most mentioned districts in the three languages. This makes sense since those districts concentrate the most representative and touristic Barcelona attractions, and people tend to post more on Instagram when they are traveling and to use the word Barcelona when they are uploading a Barcelona representative image. The % of images that this most touristic districts concentrate is much bigger for English than for local languages, specially forCiutat Vella, Barcelona’s old town, known as the most touristic district.
+The above figure shows how Ciutat Vella and Eixample are the most mentioned districts in the three languages. This makes sense since those districts concentrate the most representative and touristic Barcelona attractions, and people tend to post more on Instagram when they are traveling and to use the word Barcelona when they are uploading a Barcelona representative image. The % of images that this most touristic districts concentrate is much bigger for English than for local languages, specially for Ciutat Vella, Barcelona’s old town, the most touristic district.
 
 
 <div class="imgcap">
@@ -83,7 +83,7 @@ An image worths a thousand words. Word2Vec allows us to find the words that auth
 	</div>
 </div>
 
-Img2NeighCtx is a GoogleNet based CNN that **learns to infer Neighbourhood Similarities from images**. The last classification layer is replaced by a fully connected layer with 82 outputs, which is the dimensionality of the Neighborhood Space, and uses a ranking loss to learn to embed images with similar captions Neighborhood Contexts nearby. **Read the paper for more details**
+Img2NeighCtx is a GoogleNet based CNN that **learns to infer Neighbourhood Similarities from images**. The last classification layer is replaced by a fully connected layer with 82 outputs, which is the dimensionality of the Neighborhood Space, and uses a ranking loss to learn to embed images with similar captions Neighborhood Contexts nearby. **Read the paper for more details!**
 
 ### Images associated to districts
 Once Img2NeighCtx has been trained to embed images in the Neighborhood Space, it can be used in a straightforward manner in an image by neighbourhood retrieval task. The CNN has learned from the images and the associated captions to extract visual features useful to relate images to the different neighborhoods. Using as a query a neighborhood represented as a one hot vector in the Neighborhood Space, we can infer the kind of images that Instagram users writing in English, Spanish or Catalan relate to that neighborhood.
