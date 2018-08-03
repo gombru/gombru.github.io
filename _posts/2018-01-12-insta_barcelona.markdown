@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "What do people think about Barcelona?"
+title:  "What Do People Think about Barcelona?"
 excerpt: "A joint image and text embedding is trained using Instagram data related with Barcelona. It is shown how the embedding can be used to do interesting social or commercial analysis, which can be extrapolated to other topics."
 date:   2018-01-12 20:00:00
 img: "/assets/insta_barcelona/breakfast.jpg"

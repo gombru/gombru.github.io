@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Using Instagram data to learn a city classifier"
+title:  "Using Instagram Data to Learn a City Classifier"
 excerpt: "Construction of InstaCities1M, a dataset of Instagram images associated to a city and training of a CNN that learns to classify images betweeen the different cities. A simple experiment to show how social media data can be used to learn."
 date:   2017-06-25 20:00:00
 img: "/assets/cities_classification/post_img.png"

@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Data augmentation benchmarking on CNN training"
+title:  "Data Augmentation Benchmarking on CNN Training"
 excerpt: "Benchmarking of different data augmentation techniques to train a CNN for image classification. Does data augmentation help to get a model that generalizes better?"
 date:   2017-09-14 20:00:00
 img: "/assets/data_augmentation/augmented_images.png"

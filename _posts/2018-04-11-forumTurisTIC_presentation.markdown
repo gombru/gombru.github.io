@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Presenting tourism applications of my research at ForumTurisTIC"
+title:  "Presenting Tourism Applications of my Research at ForumTurisTIC"
 excerpt: "Applying algorithms to learn from images and associated text to Barcelona Instagram images lead to interesting results for the tourism industry, which I presented in ForumTurisTIC."
 date:   2018-02-11 20:00:00
 img: "/assets/forumTurisTIC/presentation.jpg"

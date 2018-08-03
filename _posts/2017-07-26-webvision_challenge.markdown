@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "About my participation in the WebVision Challenge"
+title:  "About my Participation in the WebVision Challenge"
 excerpt: "An ImageNet-like competition but training with noisy data collected from the web. Notes about training a GoogleNet from scratch in a cluster and about how to combine images, noisy labels and associated text to train a classifier."
 date:   2017-07-26 20:00:00
 img: "/assets/webvision/softlabels_pipeline.png"

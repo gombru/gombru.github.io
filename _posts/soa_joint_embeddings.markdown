@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "State of the art of joint image and text embeddings"
+title:  "State of the Art of Joint Image and Text Embeddings"
 excerpt: "A generic state of the art on joint image and text embeddings, gathering the latest publications in the field."
 date:   2018-01-22 20:00:00
 img: "/assets/soa_joint_embeddings/contrastive_based.png"

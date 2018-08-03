@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Inferring ingredients from food images"
+title:  "Inferring Ingredients from Food Images"
 excerpt: "A LDA and a CNN are used to embbed the ingredients lists and the food images respectibly in a topic space. The CNN can predict topic distributions from food images, and from the topic distribution we predict the ingredients."
 date:   2017-07-19 20:00:00
 img: "/assets/ingredients/img6.jpg"

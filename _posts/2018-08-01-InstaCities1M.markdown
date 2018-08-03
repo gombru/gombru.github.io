@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "The InstaCities1M dataset"
+title:  "The InstaCities1M Dataset"
 excerpt: "A dataset of social media images with associated text formed by Instagram images associated with one of the 10 most populated English speaking cities."
 date:   2018-08-01 20:00:00
 img: "/assets/InstaCities1M/logo.png"

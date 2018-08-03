@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "SetaMind: Building an android app that identifies the species of a mushroom"
+title:  "SetaMind: Building an Android App that Identifies the Species of a Mushroom"
 excerpt: "SetaMind is a simple Android application: You take a picture of a mushroom with your phone and the app identifies the species and provides information about it. To identify the species it uses a classification CNN that runs locally in the phone."
 date:   2017-08-16 20:00:00
 img: "/assets/setamind/setamind.png"
