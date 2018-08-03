@@ -19,11 +19,11 @@ I research on designing pipelines that can learn from web data (images with asso
 To perform the presented analysis we gathered a dataset of Instagram images related to Barcelona uploaded between September and December of 2017. That means images with a caption where the word ”Barcelona” appears. We collected around 1.3 million images. In order to discard spam and other undesirable images, we performed several dataset cleanings (check details in the paper). To infer the language of the captions Google’s language detection API was used. The resulting dataset, contains 597,766 image-captions pairs. From those pairs 331,037 are English publications, 171,825 Spanish publications and 94,311 Catalan publications. 
 
 <div class="imgcap">
-<img src="/assets/BarcelonaNeighbourhoods/InstaBarcelona.png" height="400">
+<img src="/assets/BarcelonaNeighbourhoods/InstaBarcelona.png" height="500">
 </div>
 
-<p align="center">
-**[Download the dataset](https://mega.nz/#!LFQG2AhI!WSS4BHOZivkowLcKRPiKI3ZDK5FAIhX6bbzlFt3jOiw)**
+<p align="center">    
+<b><a href="https://mega.nz/#!LFQG2AhI!WSS4BHOZivkowLcKRPiKI3ZDK5FAIhX6bbzlFt3jOiw">Download the dataset</a></b>
 </p>
 
 ## Proposed pipeline
