@@ -162,6 +162,40 @@ First retrieved images for multimodal queries (concepts are added or removed to 
  - **Words with different meanings or uses.** Words with different meanings or words that people use in different scenarios introduce unexpected behaviors. For instance when we query ”woman + bag” in the InstaCities1M dataset we usually retrieve images of pink bags. The reason is that people tend to write ”woman” in an image caption when pink stuff appears. Those are considered errors in our evaluation, but inferring which images people relate with certain words in Social Media can be a very interesting research.
 
 
+## TSNE plots
+
+Inspired by Kaparthy who [uses t-SNE to visualize CNN layer features](http://cs.stanford.edu/people/karpathy/cnnembed/), **we use [t-SNE](https://github.com/lvdmaaten/bhtsne/)  to visualize the learnt joint visual and textual embedding**. t-SNE is a non-linear dimensionality reduction method, which we use on our 400 dimensional embeddings to produce 2 dimensional embeddings. 
+For each one of the given 400 dimensional visual or textual embeddings, t-SNE computes a 2 dimensional embedding arranging elements that have a similar representation nearby, providing a way to visualize the learnt joint image-text space.
+
+**This representation lets us create a 2-Dimensional image where we can appreciate clusters of the images that have been mapped near in the joint space.** We show images of different dimensions that show different semantic granularity. See the full size images to appreciate the results.
+
+<div class="imgcap">
+	<div style="display:inline-block">
+		<img src="/assets/LearningToLearnFromWebData/InstaCities1M_Word2vec_2k.jpg" height = "290">
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
+		<img src="/assets/LearningToLearnFromWebData/InstaCities1M_Word2vec_4k.jpg" height = "290">
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
+		<img src="/assets/LearningToLearnFromWebData/WebVision_Word2Vec_2k.jpg" height = "290">
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
+		<img src="/assets/LearningToLearnFromWebData/WebVision_Word2Vec_4k.jpg" height = "290">
+	</div>
+	<div class="thecap">
+	Top images are t-SNE representations of the Word2Vec model trained with InstaCities1M. Bot images of the Word2Vec model trained with WebVision.
+	</div>
+</div>
+
+Download t-SNE from InstaCities1M [2k](https://github.com/gombru/gombru.github.io/blob/master/assets/LearningToLearnFromWebData/InstaCities1M_Word2vec_2k.jpg), [4k](https://github.com/gombru/gombru.github.io/blob/master/assets/LearningToLearnFromWebData/InstaCities1M_Word2vec_4k.jpg)
+
+Download t-SNE from WebVision [2k](https://github.com/gombru/gombru.github.io/blob/master/assets/LearningToLearnFromWebData/WebVision_Word2Vec_2k.jpg), [4k](https://github.com/gombru/gombru.github.io/blob/master/assets/LearningToLearnFromWebData/WebVision_Word2Vec_4k.jpg)
+
+
+> Off topic: This [Hover Zoom Chrome addon](https://chrome.google.com/webstore/detail/hover-zoom/nonjdcjchghhkdoolnlbekcfllmednbl) shows full size images when hovering on them and it's pretty usefull.
+
+
+
 ## Conclusions
 
 This work proves that Web and Social media data can be used to train in a self-supervised way the proposed image retrieval by text pipeline achieving competitive performance over supervised methods.

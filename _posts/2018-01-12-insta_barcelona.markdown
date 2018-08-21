@@ -414,7 +414,7 @@ As the regression CNN has learnt to map images to the Word2Vec space, we can do 
 
 ## TSNE plots
 
-Inspired by Kaparthy who [uses t-SNE to visualize CNN layer features](http://cs.stanford.edu/people/karpathy/cnnembed/), **we use [t-SNE](https://github.com/lvdmaaten/bhtsne/)  to visualize the learnt joint visual and textual embedding**. t-SNE is a non-linear dimensionality reduction method, which we use on our 300 dimensional embeddings to produce 2 dimensional embeddings. 
+Inspired by Kaparthy who [uses t-SNE to visualize CNN layer features](http://cs.stanford.edu/people/karpathy/cnnembed/), **we use [t-SNE](https://github.com/lvdmaaten/bhtsne/)  to visualize the learnt joint visual and textual embedding**. t-SNE is a non-linear dimensionality reduction method, which we use on our 400 dimensional embeddings to produce 2 dimensional embeddings. 
 For each one of the given 400 dimensional visual or textual embeddings, t-SNE computes a 2 dimensional embedding arranging elements that have a similar representation nearby, providing a way to visualize the learnt joint image-text space.
 
 **This representation lets us create a 2-Dimensional image where we can appreciate clusters of the images that have been mapped near in the joint space. In practice, images appearing nearer are images that people post with similar words in Instagram.** We show images of different dimensions that show different semantic granularity. See the full size images to appreciate the results.
