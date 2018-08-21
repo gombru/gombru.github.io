@@ -7,7 +7,7 @@ order: 2
 
 ### Learning from Barcelona Instagram data what Locals and Tourists post about its Neighbourhoods
 **Raul Gomez**, Lluis Gomez, Jaume Gibert, Dismosthenis Karatzas.  
-ECCV MULA workshop, 2018.
+ECCV MULA workshop, 2018. [[PDF](https://arxiv.org/abs/1808.06369)]
 
 Learning relations between text, images and Barcelona neighbourhoods to study the differences between locals and tourists in social media publications and their relations with the different neighbourhoods.
 <div class="imgcap">
@@ -16,7 +16,7 @@ Learning relations between text, images and Barcelona neighbourhoods to study th
 
 ### Learning to Learn from Web Data through Deep Semantic Embeddings
 **Raul Gomez**, Lluis Gomez, Jaume Gibert, Dismosthenis Karatzas.  
-ECCV MULA workshop, 2018.
+ECCV MULA workshop, 2018. [[PDF](https://arxiv.org/abs/1808.06368)]
 
 A performance comparison between different text embeddings for self-supervised learning from images and associated text in an image retrieval setup.
 <div class="imgcap">

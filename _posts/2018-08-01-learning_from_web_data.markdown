@@ -8,7 +8,7 @@ img: "/assets/LearningToLearnFromWebData/pipeline_horizontal.png"
 mathjax: false
 ---
 
-<span style="color:brown">**This work will be presented in ECCV 2018 MULA Workshop as "Learning to Learn from Web Data through Deep Semantic Embeddings" and will be available soon. Refer to the paper to access the full and formal article. Here I explain informally and briefly the experiments conducted and the conclusions obtained.**</span>
+<span style="color:brown">**This work will be presented in ECCV 2018 MULA Workshop as "Learning to Learn from Web Data through Deep Semantic Embeddings" [[PDF](https://arxiv.org/abs/1808.06368)]. Refer to the paper to access the full and formal article. Here I explain informally and briefly the experiments conducted and the conclusions obtained.**</span>
 
 The article consist on a **performance comparison of different text embeddings (Word2Vec, GloVe, Doc2Vec, FasText and LDA) on an image by text retrieval task**. To do a fair comparison, a multimodal retrieval pipeline where the text embedding is an independent block, is proposed. The different text embeddings can be adequate to different data or tasks. I focus on **researching which ones work better when learning from Web and Social Media data**, which consists on **images associated to a short text**, which can be a sentence or a group of tags. The work also **proves that training with noisy and free Social Media data we can achieve state of the art performances in the image by text retrieval task**.
 

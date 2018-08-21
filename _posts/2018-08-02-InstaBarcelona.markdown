@@ -8,7 +8,7 @@ img: "/assets/BarcelonaNeighbourhoods/pipeline.png"
 mathjax: false
 ---
 
-<span style="color:brown">**This work will be presented in ECCV 2018 MULA Workshop as "Learning from #Barcelona Instagram data what Locals and Tourists post about its Neighbourhoods" and will be available soon. Refer to the paper to access the full and formal article. Here I explain informally and briefly the experiments conducted and the conclusions obtained.**</span>
+<span style="color:brown">**This work will be presented in ECCV 2018 MULA Workshop as "Learning from #Barcelona Instagram data what Locals and Tourists post about its Neighbourhoods" [[PDF](https://arxiv.org/abs/1808.06369)]. Refer to the paper to access the full and formal article. Here I explain informally and briefly the experiments conducted and the conclusions obtained.**</span>
 
 ## Motivation
 I research on designing pipelines that can learn from web data (images with associated text) in a self-supervised way. I wanted to **apply this pipeline to a real life problem** to test how it works beyond scientific datasets and to show its potential applications. That's way I collected a dataset of Instagram images associated with Barcelona, **InstaBarcelona**. In the post [What do people think about Barcelona?](https://gombru.github.io/2018/01/12/insta_barcelona/) I explain how I trained an image by text retrieval system with this data, and how it can be used to **retrieve which images Instagram users relate with Barcelona and any other text concept**. I presented this results at ForumTurisTIC in Barcelona ([check this post](https://gombru.github.io/2018/02/11/forumTurisTIC_presentation/)) and **got a big interest from the tourism industry**.  

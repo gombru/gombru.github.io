@@ -7,7 +7,7 @@ order: 4
 
 ### Poster at International Computer Vision Summer School 2018
 I went to this [summer school](http://iplab.dmi.unict.it/icvss2018/Home) in Sicily where I presented a poster about the work done applying self-supervised learning to Social Media Barcelona data.  
-[[Poster](https://docs.google.com/presentation/d/18p-LwU2EcEIizNus5XX-uW_U72sD6FASSrtxDqH6i_s/edit?usp=sharing)]
+[[Poster](https://docs.google.com/presentation/d/18p-LwU2EcEIizNus5XX-uW_U72sD6FASSrtxDqH6i_s/edit?usp=sharing)]. This work was later published in ECCV MULA Workshop [[PDF](https://arxiv.org/abs/1808.06369)]-
 
 <div class="imgcap">
 <img src="/assets/poster_icvss.jpg" height="240">
