@@ -150,10 +150,10 @@ First retrieved images for multimodal queries (concepts are added or removed to 
 	</div>
 </div>
 
-Extra qualitative results:
+**Extra qualitative results:**
 
 <div class="imgcap">
-<img src="/assets/LearningToLearnFromWebData/retrieval_results.png" height="500">
+<img src="/assets/LearningToLearnFromWebData/retrieval_results.png" height="850">
 	<div class="thecap">
 First retrieved images with Word2Vec on InstaCities1M.
 	</div>
