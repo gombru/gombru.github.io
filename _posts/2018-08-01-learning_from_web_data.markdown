@@ -80,7 +80,7 @@ The CNN training strategy is the same as explained in [this former blogpost](htt
 
 ### Experiments on WebVision and InstaCities1M datasets
 
-To **compare the performance of the different text embeddings in an image retrieval task**, we set some queries and inspect visually the top 5 retrieved results for them. They were selected to cover a wide area of semantic concepts that are usually present in Web and Social Media data. Both simple and complex queries are divided in four different categories: Urban, weather, food and people. The simple queries are: Car, skyline, bike; sunrise, snow, rain; ice-cream, cake, pizza; woman, man, kid. The complex queries are: Yellow + car, skyline + night, bike + park; sunrise + beach; snow + ski; rain + umbrella; ice-cream + beach, chocolate + cake; pizza + wine; woman + bag, man + boat, kid + dog. For complex queries, only images containing both querying concepts are considered correct.
+To **compare the performance of the different text embeddings in an image retrieval task**, we set some queries and inspect visually the top 5 retrieved results for them. They were selected to cover a wide area of semantic concepts that are usually present in Web and Social Media data. Both simple and complex queries are divided in four different categories: Urban, weather, food and people. The simple queries are: Car, skyline, bike; sunrise, snow, rain; icecream, cake, pizza; woman, man, kid. The complex queries are: Yellow + car, skyline + night, bike + park; sunrise + beach; snow + ski; rain + umbrella; ice-cream + beach, chocolate + cake; pizza + wine; woman + bag, man + boat, kid + dog. For complex queries, only images containing both querying concepts are considered correct.
 Results on transfer learning (ex. training on InstaCities1M and testing on WebVision) are also given.
 
 <div class="imgcap">
@@ -146,10 +146,39 @@ First retrieved images for text queries using Word2Vec on WebVision. Concepts ar
 <div class="imgcap">
 <img src="/assets/LearningToLearnFromWebData/results_by_image.png" height="600">
 	<div class="thecap">
-First retrieved images for multimodal queries (concepts are added or removed to bias the results) with Word2Vec on Web- Vision.
+First retrieved images for multimodal queries (concepts are added or removed to bias the results) with Word2Vec on WebVision.
 	</div>
 </div>
 
+Extra qualitative results:
+
+<div class="imgcap">
+<img src="/assets/LearningToLearnFromWebData/retrieval_results.png" height="500">
+	<div class="thecap">
+First retrieved images with Word2Vec on InstaCities1M.
+	</div>
+</div>
+
+<div class="imgcap">
+<img src="/assets/LearningToLearnFromWebData/basketball.png" height="500">
+	<div class="thecap">
+First retrieved images for basketball related concepts with Word2Vec on InstaCities1M.
+	</div>
+</div>
+
+<div class="imgcap">
+<img src="/assets/LearningToLearnFromWebData/haircut.png" height="500">
+	<div class="thecap">
+First retrieved images for haircut related concepts with Word2Vec on InstaCities1M.
+	</div>
+</div>
+
+<div class="imgcap">
+<img src="/assets/LearningToLearnFromWebData/image_queries.png" height="500">
+	<div class="thecap">
+First retrieved images for multimodal queries (concepts are added or removed to bias the results) with Word2Vec on InstaCities1M.
+	</div>
+</div>
 
 
 
