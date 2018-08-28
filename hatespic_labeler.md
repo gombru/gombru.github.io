@@ -33,6 +33,24 @@ Is Hate Speech, because it attacks a group of people based on gender.
 <span style="color:brown">"Rachel, you are stupid."*</span>     
 Is not Hate Speech.
 
+## Rules to label Hate Speech
+Extracted from Wassem article "[Hateful Symbols or Hateful People? Predictive Features for Hate Speech Detection on Twitter](https://www.aclweb.org/anthology/N/N16/N16-2013.pdf)".
+
+
+A tweet is offensive if it
+
+1. uses a sexist or racial slur.
+2. attacks a minority.
+3. seeks to silence a minority.
+4. criticizes a minority (without a well founded argument).
+5. promotes, but does not directly use, hate speech or violent crime.
+6. criticizes a minority and uses a straw man argument.
+7. blatantly misrepresents truth or seeks to distort views on a minority with unfounded claims.
+8. shows support of problematic hash tags. E.g. “#BanIslam”, “#whoriental”, “#whitegenocide”
+9. negatively stereotypes a minority.
+10. defends xenophobia or sexism.
+11. contains a screen name that is offensive, as per the previous criteria, the tweet is ambiguous (at best), and the tweet is on a topic that satisfies any of the above criteria.
+
 ### Examples
 
 <div class="imgcap"><img src="/assets/hatespic_labeler/hate_button.png" height = "30"></div>
