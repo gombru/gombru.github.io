@@ -33,7 +33,7 @@ Is Hate Speech, because it attacks a group of people based on gender.
 <span style="color:brown">"Rachel, you are stupid."*</span>     
 Is not Hate Speech.
 
-#### Rules to label Hate Speech
+### Rules to label Hate Speech
 Extracted from Wassem article "[Hateful Symbols or Hateful People? Predictive Features for Hate Speech Detection on Twitter](https://www.aclweb.org/anthology/N/N16/N16-2013.pdf)".
 
 
