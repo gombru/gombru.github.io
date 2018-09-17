@@ -5,6 +5,21 @@ permalink: /other-material/
 order: 4
 ---
 
+### Attended to ECCV 2018 in Munich
+I attended to ECCV 2018 where I presented an oral and a poster in the [Multimodal Learning and Applicattions Workshop](https://mula2018.github.io/).  
+Oral: "Learning to Learn from Web Data through Deep Semantic Embeddings" [[PDF](https://arxiv.org/abs/1808.06368)] [[Slides](https://docs.google.com/presentation/d/10JJCGCN96-f5Rt20db3TYiJsMavFD2ebHNJ91X8ov7I/edit?usp=sharing)] [[Poster](https://docs.google.com/presentation/d/1oDGuzbw2x7uShMcc4ExqonRdRF7Rx4vcZmVaAwNrdpU/edit?usp=sharing)]  
+Poster: "Learning from Barcelona Instagram data what Locals and Tourists post about its Neighbourhoods" [[PDF](https://arxiv.org/abs/1808.06369)] [[Poster](https://docs.google.com/presentation/d/18p-LwU2EcEIizNus5XX-uW_U72sD6FASSrtxDqH6i_s/edit?usp=sharing)]
+
+<div class="imgcap">
+	<div style="display:inline-block">
+	<img src="/assets/eccv/oral_eccv.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
+	<img src="/assets/eccv/poster_eccv.jpg" height="240">
+	</div>
+</div>
+
+
 ### Poster at International Computer Vision Summer School 2018
 I went to this [summer school](http://iplab.dmi.unict.it/icvss2018/Home) in Sicily where I presented a poster about the work done applying self-supervised learning to Social Media Barcelona data.  
 [[Poster](https://docs.google.com/presentation/d/18p-LwU2EcEIizNus5XX-uW_U72sD6FASSrtxDqH6i_s/edit?usp=sharing)]. This work was later published in ECCV MULA Workshop [[PDF](https://arxiv.org/abs/1808.06369)]-

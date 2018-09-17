@@ -5,6 +5,15 @@ permalink: /publications/
 order: 2
 ---
 
+### Learning to Learn from Web Data through Deep Semantic Embeddings
+**Raul Gomez**, Lluis Gomez, Jaume Gibert, Dismosthenis Karatzas.  
+ECCV MULA workshop (Oral), 2018. [[PDF](https://arxiv.org/abs/1808.06368)] [[Slides](https://docs.google.com/presentation/d/10JJCGCN96-f5Rt20db3TYiJsMavFD2ebHNJ91X8ov7I/edit?usp=sharing)]
+
+A performance comparison between different text embeddings for self-supervised learning from images and associated text in an image retrieval setup.
+<div class="imgcap">
+<img src="/assets/LearningToLearnFromWebData/pipeline_horizontal.png" height="250">
+</div>
+
 ### Learning from Barcelona Instagram data what Locals and Tourists post about its Neighbourhoods
 **Raul Gomez**, Lluis Gomez, Jaume Gibert, Dismosthenis Karatzas.  
 ECCV MULA workshop, 2018. [[PDF](https://arxiv.org/abs/1808.06369)]
@@ -13,16 +22,6 @@ Learning relations between text, images and Barcelona neighbourhoods to study th
 <div class="imgcap">
 <img src="/assets/BarcelonaNeighbourhoods/pipeline.png" height="250">
 </div>
-
-### Learning to Learn from Web Data through Deep Semantic Embeddings
-**Raul Gomez**, Lluis Gomez, Jaume Gibert, Dismosthenis Karatzas.  
-ECCV MULA workshop, 2018. [[PDF](https://arxiv.org/abs/1808.06368)]
-
-A performance comparison between different text embeddings for self-supervised learning from images and associated text in an image retrieval setup.
-<div class="imgcap">
-<img src="/assets/LearningToLearnFromWebData/pipeline_horizontal.png" height="250">
-</div>
-
 
 ### TextTopicNet - Self-Supervised Learning of Visual Features Through Embedding Images on Semantic Text Spaces
 Yash Patel, Lluis Gomez, **Raul Gomez**, Marçal Rusiñol, Dismosthenis Karatzas and CV Jawahar.   
