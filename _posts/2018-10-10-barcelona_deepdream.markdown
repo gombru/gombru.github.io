@@ -4,7 +4,7 @@ comments: true
 title:  "Barcelona DeepDream"
 excerpt: "Using the Google DeepDream algorithm on models trained with #Barcelona Instagram data to visualize what the users (and the CNN) highlight from the city."
 date:   2018-10-10 20:00:00
-img: "/assets/BarcelonaDeepDream/intro.jpg"
+img: "/assets/BarcelonaDeepDream/intro_wide.jpg"
 mathjax: false
 ---
 
@@ -23,19 +23,19 @@ I recommend reading their blog post. They also provide a [IPython notebook](http
 To understand what the algorithm is doing, let's inspect what it does in the first iterations.
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/sky.jpg" height = "170">
+		<img src="/assets/BarcelonaDeepDream/sky.jpg" height = "200">
 	</div>
 
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/sky-5.jpg" height = "170">
+		<img src="/assets/BarcelonaDeepDream/sky-5.jpg" height = "200">
 	</div>
 
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/sky-10.jpg" height = "170">
+		<img src="/assets/BarcelonaDeepDream/sky-10.jpg" height = "200">
 	</div>
 
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/sky-15.jpg" height = "170">
+		<img src="/assets/BarcelonaDeepDream/sky-15.jpg" height = "200">
 	</div>
 	<div class="thecap">
 	The sky image on the top-left is the input image. In this experiment we are asking the net (which is a GoogleNet) to amplify the features recognized by the inception_5a/3x3 layer. "What do you see in the sky? I want more of it". The top-right image is the result after 10 iterations. It shows that the image sees a dog in the cloud on the left, and some other unrecognizable shapes all over the image. The images on the bot show the result after 15 and 20 iterations, where all the recognized patterns have been amplified. 
@@ -77,7 +77,7 @@ It's even more hallucinatory seeing the iterative process in the opposite direct
 <div class="imgcap">
 	<img src="/assets/BarcelonaDeepDream/city-reverse.gif">
 	<div class="thecap">
-	5000 iterations of the previous experiment with a step of 10.
+	3000 iterations of the previous experiment with a step of 10.
 	</div>
 </div>
 
@@ -87,19 +87,19 @@ We don't even need to use an input image. We can use random noise as the startin
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/noise-5.jpg" height = "170">
+		<img src="/assets/BarcelonaDeepDream/noise-5.jpg" height = "200">
 	</div>
 
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/noise-10.jpg" height = "170">
+		<img src="/assets/BarcelonaDeepDream/noise-10.jpg" height = "200">
 	</div>
 
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/noise-15.jpg" height = "170">
+		<img src="/assets/BarcelonaDeepDream/noise-15.jpg" height = "200">
 	</div>
 
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/noise-35.jpg" height = "170">
+		<img src="/assets/BarcelonaDeepDream/noise-35.jpg" height = "200">
 	</div>
 	<div class="thecap">
 	Images at 10, 50, 150 and 350 iterations using random noise as the starting point.
