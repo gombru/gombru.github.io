@@ -23,18 +23,22 @@ I recommend reading their blog post. They also provide a [IPython notebook](http
 To understand what the algorithm is doing, let's inspect what it does in the first iterations.
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/sky.jpg" height = "150">
+		<img src="/assets/BarcelonaDeepDream/sky.jpg" height = "170">
 	</div>
 
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/sky-5.jpg" height = "150">
+		<img src="/assets/BarcelonaDeepDream/sky-5.jpg" height = "170">
 	</div>
 
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/sky-10.jpg" height = "150">
+		<img src="/assets/BarcelonaDeepDream/sky-10.jpg" height = "170">
+	</div>
+
+	<div style="display:inline-block; margin-left: 2px;">
+		<img src="/assets/BarcelonaDeepDream/sky-15.jpg" height = "170">
 	</div>
 	<div class="thecap">
-	The sky image on the left is the input image. In this experiment we are asking the net (which is a GoogleNet) to amplify the features recognized by the inception_5a/3x3 layer. "What do you see in the sky? I want more of it". The central image is the result after 10 iterations. It shows that the image sees a dog in the cloud on the left, and some other unrecognizable shapes all over the image. The image on the right shows the result after 50 iterations, where all the recognized patterns have been amplified. 
+	The sky image on the top-left is the input image. In this experiment we are asking the net (which is a GoogleNet) to amplify the features recognized by the inception_5a/3x3 layer. "What do you see in the sky? I want more of it". The top-right image is the result after 10 iterations. It shows that the image sees a dog in the cloud on the left, and some other unrecognizable shapes all over the image. The images on the bot show the result after 15 and 20 iterations, where all the recognized patterns have been amplified. 
 	</div>
 </div>
 
@@ -83,19 +87,24 @@ We don't even need to use an input image. We can use random noise as the startin
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/noise-5.jpg" height = "150">
+		<img src="/assets/BarcelonaDeepDream/noise-5.jpg" height = "170">
 	</div>
 
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/noise-15.jpg" height = "150">
+		<img src="/assets/BarcelonaDeepDream/noise-10.jpg" height = "170">
 	</div>
 
 	<div style="display:inline-block; margin-left: 2px;">
-		<img src="/assets/BarcelonaDeepDream/noise-35.jpg" height = "150">
+		<img src="/assets/BarcelonaDeepDream/noise-15.jpg" height = "170">
+	</div>
+
+	<div style="display:inline-block; margin-left: 2px;">
+		<img src="/assets/BarcelonaDeepDream/noise-35.jpg" height = "170">
 	</div>
 	<div class="thecap">
-	Images at 10, 150 and 350 iterations using random noise as the starting point.
+	Images at 10, 50, 150 and 350 iterations using random noise as the starting point.
 	</div>
+</div>
 
 ### Guided Hallucinations
 Instead of asking the net to amplify what a layer recognizes on an image, we can guide the hallucinations. We do that by using a guide image and asking the net to amplify in the input image what it sees in that guide image.
