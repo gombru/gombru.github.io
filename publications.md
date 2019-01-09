@@ -8,7 +8,7 @@ order: 2
 
 ### Self-Supervised Learning from Web Data for Multimodal Retrieval
 **Raul Gomez**, Lluis Gomez, Jaume Gibert, Dismosthenis Karatzas.  
-Book Chapter submitted to Multi-Modal Scene Understanding. [[PDF-TOUPDATE](https://arxiv.org/abs/1808.06368)] 
+Book Chapter submitted to Multi-Modal Scene Understanding. [[PDF](https://arxiv.org/abs/1901.02004)] 
 
 An extended version of the ECCVW article linked below containing extra experiments, qualitative results and a deeper analysis.
 <div class="imgcap">
