@@ -182,7 +182,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/boat_0.png">
 </div>
 
-
+<br><br>
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
