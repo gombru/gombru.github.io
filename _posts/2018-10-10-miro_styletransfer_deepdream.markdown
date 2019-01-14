@@ -59,7 +59,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	</div>
 </div>
 
-
+<br>
 
 **More styling: On top we show the original image and the source style image, on bottom the styled image.**
 
@@ -76,7 +76,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/india2_0.png">
 </div>
 
-
+<br>
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -91,7 +91,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/india_3.png">
 </div>
 
-
+<br>
 
 
 <div class="imgcap">
@@ -107,7 +107,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/lanzarote_2.png">
 </div>
 
-
+<br>
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -122,7 +122,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/volcano_5.png">
 </div>
 
-
+<br>
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -137,7 +137,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/cactus_8.png">
 </div>
 
-
+<br>
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -152,7 +152,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/mountain_6.png">
 </div>
 
-
+<br>
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -167,7 +167,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/island_7.png">
 </div>
 
-
+<br>
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -182,7 +182,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/boat_0.png">
 </div>
 
-<br><br>
+<br>
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
