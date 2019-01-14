@@ -9,13 +9,13 @@ mathjax: false
 ---
 ## Neural Style Transfer
 ### The Neural Style Transfer algorithm
-Neural Style Transfer uses Deep Convolutional Neural Networks to transfer the *style* of one source image to another keeping its *content*. It's often applied to transfer the style of a paiting to a real word image. The key here is: How do we define *style* and how do we define *content*?  
+Neural Style Transfer uses Deep Convolutional Neural Networks to transfer the *style* of one source image to another keeping its *content*. It's often applied to transfer the style of a painting to a real word image. The key here is: How do we define *style* and how do we define *content*?  
 
   - *Style*: Aesthetic of the image (line style, color range, brush strokes, cubist patterns, etc.)
   - *Content*: Image objects and shapes that make the scene recognizable.
 
 #### How are *style* and *content* represented in a CNN?  
-CNNs are atached convolutional layers where each layer processes the previous layer output. The first convolutional layer operates directly over the image pixels. Regardless the task the CNN is optimized for, this layer will learn to recognize simple patterns from images, such as edges or color. Next layers will learn to recognize a little bit more complex patterns, such as corners or textures. Last layers will learn to recognize more complex patterns related to the task the CNN is optimized for. If it is trained to classify buildings, it will be sensible to windows or door shapes, and if it is trained to classify faces, it will sensible to eyes or mouths.
+CNNs are attached convolutional layers where each layer processes the previous layer output. The first convolutional layer operates directly over the image pixels. Regardless the task the CNN is optimized for, this layer will learn to recognize simple patterns from images, such as edges or color. Next layers will learn to recognize a little bit more complex patterns, such as corners or textures. Last layers will learn to recognize more complex patterns related to the task the CNN is optimized for. If it is trained to classify buildings, it will be sensible to windows or door shapes, and if it is trained to classify faces, it will sensible to eyes or mouths.
 Simple features (extracted by the first layers) are called low-level features, and complex features (extracted by the lasts layers) high-level features.
 
 <div class="imgcap">
@@ -204,10 +204,10 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 ##  DeepDream 
 ### The DeepDream algorithm
 DeepDream is an [algorithm by Google](https://ai.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html) that magnifies the visual features that a CNN detects in an image, producing images where the recognized patterns are amplified. I research in methods to learn visual features from paired visual and textual data in a self-supervised way. A natural source of this multimodal data is the Web and the social media networks.
-**A detailed explanation of how I train this models, of how the DeepDream algorithm works, and of how I apply it to them, can be found in [the Barcelona Deep Dram blog post](https://gombru.github.io/2018/10/10/barcelona_deepdream/) where I apply DeepDream to a model trained with #Barcelona Instagram data. I recommend reading it to understand what we are visualizing in the following images**.
+**A detailed explanation of how I train this models, of how the DeepDream algorithm works, and of how I apply it to them, can be found in [the Barcelona Deep Dream blog post](https://gombru.github.io/2018/10/10/barcelona_deepdream/) where I apply DeepDream to a model trained with #Barcelona Instagram data. I recommend reading it to understand what we are visualizing in the following images**.
 
 ### Miró DeepDream
-I collected 200K Instagram posts containing #joanmiro and #miro hastags, and trained a CNN model to learn visual features from those images using the text as a supervisory signal. The CNN learns filters to recognize the visual patters that are most useful to differentiate between images with different associated texts. DeepDream allows to visualize those patterns, amplifying them and showing them in a single image.
+I collected 200K Instagram posts containing #joanmiro and #miro hashtags, and trained a CNN model to learn visual features from those images using the text as a supervisory signal. The CNN learns filters to recognize the visual patterns that are most useful to differentiate between images with different associated texts. DeepDream allows to visualize those patterns, amplifying them and showing them in a single image.
 
 The following images show the visual patterns recognized by different layers of the CNN model (GoogleNet).
 
