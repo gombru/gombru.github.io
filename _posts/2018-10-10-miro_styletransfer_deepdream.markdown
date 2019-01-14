@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "A CNN can learn Miró' surrealism: Miró Neural Style Transfer & DeepDream"
+title:  "A CNN can learn Miró' surrealism: Joan Miró Neural Style Transfer & DeepDream"
 excerpt: "Magenta Neural Style Transfer is trained to transfer the style of different paintings by Joan Miró.  DeepDream is applied on models trained with #joanmiró data to visualize which visual features a CNN learns from those posts."
 date:   2019-01-14 20:00:00
 img: "/assets/MiroStyleTransferDeepDream/miro_intro.png"
@@ -32,8 +32,8 @@ Based on those observations, Neural Style proposes the following definitions (si
 
 
 #### How does it work?
-Neural Style Transfer uses two different CNNs in the training phase: An **Image Transformation Network**, which is the one trained and the one that will generate the styled images, and a **Loss Network**, which is a pretrained and frozen classification CNN (VGG-16) used to compute the *Style-Loss* and the *Content-Loss* used to train the **Image Transformation Network**.  
- The training process is as follows: We chose a **source style image** (in our case a **Joan Miró painting** image) and we forward it though the **Loss Network** (VGG-16). Then we use a general classification dataset, such as ImageNet.  We forward each ImageNet image though the **Loss Network**, and compute a *Style-Loss* **based on the similarity between low-level activations with the source style image**. Then we forward the ImageNet image though the **Image Transformation Network**, and forward its output through the **Loss Network**. There, a *Content-Loss* (**based on the similarity between higher-level activations with the original ImageNet image**.
+Neural Style Transfer uses two different CNNs in the training phase: An **Image Transformation Network**, which is the one trained and the one that will generate the styled images, and a **Loss Network**, which is a pretrained and frozen classification CNN (VGG-16) used to compute the *Style-Loss* and the *Content-Loss* used to train the Image Transformation Network.  
+ The training process is as follows: We chose a **source style image** (in our case a **Joan Miró painting** image) and we forward it though the Loss Network (VGG-16). Then we use a general classification dataset, such as ImageNet.  We forward each ImageNet image though the Loss Network, and compute a *Style-Loss* based on the similarity between low-level activations with the source style image. Then we forward the ImageNet image though the Image Transformation Network, and forward its output through the Loss Network. There, a *Content-Loss* based on the similarity between higher-level activations with the original ImageNet image.
 
 <div class="imgcap">
 	<img src="/assets/MiroStyleTransferDeepDream/style_transfer_pipeline.png">
@@ -43,13 +43,13 @@ Neural Style Transfer uses two different CNNs in the training phase: An **Image 
 </div>
 
 
-The Neural Style transfer algorithm I've schematically explained and used here was developed by google. It's explained deeply in their paper ["A Learned Representation for Artistic Style"](https://arxiv.org/abs/1610.07629) and also in their [blog post](https://ai.googleblog.com/2016/10/supercharging-style-transfer.html) about it. This Google work is based on Justin Johnson paper ["Perceptual Losses for Real-Time Style Transfer and Super-Resolution"](https://arxiv.org/abs/1603.08155).  
+The Neural Style transfer algorithm I've schematically explained and used here was developed by Google. It's explained deeply in their paper ["A Learned Representation for Artistic Style"](https://arxiv.org/abs/1610.07629) and also in their [blog post](https://ai.googleblog.com/2016/10/supercharging-style-transfer.html) about it. This Google work is based on Justin Johnson paper ["Perceptual Losses for Real-Time Style Transfer and Super-Resolution"](https://arxiv.org/abs/1603.08155).  
 To train the Joan Miró style transfer model, I've used TensorFlow Magenta implementation, which is available [here](https://github.com/tensorflow/magenta/tree/master/magenta/models/image_stylization).
 
 ### Miró Neural Style Transfer
 
-I trained a Neural Style Transfer model with 9 different Joan Miró paintings source styles. Here I show the results in a few testing images.  
-\
+I trained a Neural Style Transfer model with 9 different Joan Miró paintings source styles. Here I show the results in a few testing images. 
+
 **Results in my cat image for the 9 source styles.**
 
 <div class="imgcap">
@@ -59,7 +59,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	</div>
 </div>
 
-\
+
 
 **More styling: On top we show the original image and the source style image, on bottom the styled image.**
 
@@ -76,7 +76,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/india2_0.png">
 </div>
 
-\
+
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -92,7 +92,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 </div>
 
 
-\
+
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -107,7 +107,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/lanzarote_2.png">
 </div>
 
-\
+
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -122,7 +122,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/volcano_5.png">
 </div>
 
-\
+
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -137,7 +137,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/cactus_8.png">
 </div>
 
-\
+
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -152,7 +152,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/mountain_6.png">
 </div>
 
-\
+
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -167,7 +167,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/island_7.png">
 </div>
 
-\
+
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -182,7 +182,7 @@ I trained a Neural Style Transfer model with 9 different Joan Miró paintings so
 	<img src="/assets/MiroStyleTransferDeepDream/boat_0.png">
 </div>
 
-\
+
 
 <div class="imgcap">
 	<div style="display:inline-block; margin-left: 2px;">
@@ -217,16 +217,9 @@ The following images show the visual patterns recognized by different layers of 
 </div>
 
 <div class="imgcap">
-	<img src="/assets/MiroStyleTransferDeepDream/miro_eyes.jpg">
-</div>
-
-<div class="imgcap">
 	<img src="/assets/MiroStyleTransferDeepDream/miro_forest.jpg">
 </div>
 
-<div class="imgcap">
-	<img src="/assets/MiroStyleTransferDeepDream/miro_eyes_reverse.gif">
-</div>
 
 **Miró Lakes** 
 <div class="imgcap">
