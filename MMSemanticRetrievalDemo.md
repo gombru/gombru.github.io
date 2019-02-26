@@ -14,14 +14,14 @@ order: 10
 
 <div class="imgcap">
 <a href="http://158.109.9.237:45993"
-target="_blank"><img src="/assets/MMSemanticRetrievalDemo/demo.png" height = "400"></a>
+target="_blank"><img src="/assets/MMSemanticRetrievalDemo/demo.png" height = "300"></a>
 </div>
 
 **A joint multi-modal space for images and words with semantic structure has been learnt from Social Media data in a self-supervised way.
 This demo lets explore that space, using words and images as queries, and allowing to perform arithmetics between them.**
 
 <p align="center">   
-**[Go to the demo!](https://gombru.github.io/MMSemanticRetrievalDemo/)**
+<b><a href="https://gombru.github.io/MMSemanticRetrievalDemo/">Go to the demo</a></b>
 </p>
 
 
@@ -29,13 +29,18 @@ This demo lets explore that space, using words and images as queries, and allowi
 
 This demo shows the work in the following publications. Read them to understand what is it showing.
 
-Learning to Learn from Web Data through Deep Semantic Embeddings  
-ECCV MULA workshop, 2018.  
-https://arxiv.org/abs/1808.06368  
+**[Learning to Learn from Web Data through Deep Semantic Embeddings](https://arxiv.org/abs/1808.06368)**  
+ECCV MULA workshop, 2018.
+  
+**[Self-Supervised Learning from Web Data for Multimodal Retrieval](https://arxiv.org/abs/1901.02004)**  
+Book Chapter submitted to Multi-Modal Scene Understanding.
 
-Self-Supervised Learning from Web Data for Multimodal Retrieval  
-Book Chapter submitted to Multi-Modal Scene Understanding.  
-https://arxiv.org/abs/1901.02004  
+The work is also explained in a more informal way in this blog posts:
+**[Learning Image Topics from Instagram to Build an Image Retrieval System](https://gombru.github.io/2017/06/30/learning_from_instagram/)**
+**[What Do People Think about Barcelona?](https://gombru.github.io/2018/01/12/insta_barcelona/)**
+**[Learning to Learn from Web Data](https://gombru.github.io/2018/08/01/learning_from_web_data/)**
+
+
 
 ## Demo configuration
 
@@ -89,3 +94,6 @@ Sometimes, to get the desired output you might want to give more weight to a ter
 
 [IMG_1]+park+park+park
 
+## Demo code
+The code of this demo is available [here](https://github.com/gombru/MMSemanticRetrievalDemo).  
+To get the code to train the textual and visual models that generate the joint embeddings, please refer to the aforementioned papers.

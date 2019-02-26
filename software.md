@@ -16,8 +16,8 @@ A web tool to label tweets with images in Hate Speech or not. [Help me labeling 
 
 ### Multi-Modal Semantic Image Retrieval Demo ###
 
-A joint multi-modal space for images and words with semantic structure has been learnt from Social Media data in a self-supervised way. This demo lets explore that space, using words and images as queries, and allowing to perform arithmetics between them.   
-[Go to the demo!](https://gombru.github.io/MMSemanticRetrievalDemo/).
+A joint multi-modal space for images and words with semantic structure has been learnt from Social Media data in a self-supervised way. This demo lets explore that space, using words and images as queries, and allowing to perform arithmetics between them.       
+**[Go to the demo](https://gombru.github.io/MMSemanticRetrievalDemo/)**
 
 <div class="imgcap">
 <img src="/assets/MMSemanticRetrievalDemo/demo.png" height="300">
