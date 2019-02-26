@@ -20,7 +20,7 @@ A joint multi-modal space for images and words with semantic structure has been 
 **[Go to the demo](https://gombru.github.io/MMSemanticRetrievalDemo/)**
 
 <div class="imgcap">
-<img src="/assets/MMSemanticRetrievalDemo/demo.png" height="300">
+<img src="/assets/MMSemanticRetrievalDemo/demo_old.png" height="300">
 </div>
 
 ### SetaMind ###
