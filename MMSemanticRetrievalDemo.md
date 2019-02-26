@@ -14,7 +14,7 @@ order: 10
 
 <div class="imgcap">
 <a href="http://158.109.9.237:45993"
-target="_blank"><img src="/assets/MMSemanticRetrievalDemo/demo.png" height = "300"></a>
+target="_blank"><img src="/assets/MMSemanticRetrievalDemo/demo.png" height = "500"></a>
 </div>
 
 **A joint multi-modal space for images and words with semantic structure has been learnt from Social Media data in a self-supervised way.
