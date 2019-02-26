@@ -36,9 +36,9 @@ ECCV MULA workshop, 2018.
 Book Chapter submitted to Multi-Modal Scene Understanding.
 
 The work is also explained in a more informal way in this blog posts:
-**[Learning Image Topics from Instagram to Build an Image Retrieval System](https://gombru.github.io/2017/06/30/learning_from_instagram/)**
-**[What Do People Think about Barcelona?](https://gombru.github.io/2018/01/12/insta_barcelona/)**
-**[Learning to Learn from Web Data](https://gombru.github.io/2018/08/01/learning_from_web_data/)**
+**[Learning Image Topics from Instagram to Build an Image Retrieval System](https://gombru.github.io/2017/06/30/learning_from_instagram/)**  
+**[What Do People Think about Barcelona?](https://gombru.github.io/2018/01/12/insta_barcelona/)**  
+**[Learning to Learn from Web Data](https://gombru.github.io/2018/08/01/learning_from_web_data/)**  
 
 
 
