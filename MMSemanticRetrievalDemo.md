@@ -21,7 +21,7 @@ target="_blank"><img src="/assets/MMSemanticRetrievalDemo/demo.png" height = "30
 This demo lets explore that space, using words and images as queries, and allowing to perform arithmetics between them.**
 
 <p align="center">   
-<b><a href="https://gombru.github.io/MMSemanticRetrievalDemo/">Go to the demo</a></b>
+<b><a href="http://158.109.9.237:45993">Go to the demo</a></b>
 </p>
 
 
