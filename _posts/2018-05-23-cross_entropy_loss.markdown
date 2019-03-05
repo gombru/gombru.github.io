@@ -83,7 +83,7 @@ Where $$t_i$$ and $$s_i$$ are the groundtruth and the CNN score for each class $
 In a **binary classification problem**, where $$C’ = 2$$, the Cross Entropy Loss can be defined also as [[discussion]](https://datascience.stackexchange.com/questions/9302/the-cross-entropy-error-function-in-neural-networks):
 
 <div class="imgcap">
-<a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(s_{i})&space;=&space;-t_{1}&space;log(s_{1})&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;s_{1})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(s_{i})&space;=&space;-t_{1}&space;log(s_{1})&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;s_{1})" title="CE = -\sum_{i=1}^{C'=2}t_{i} log (s_{i}) = -t_{1} log(s_{1}) + (1 - t_{1}) log(1 - s_{1})" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(s_{i})&space;=&space;-t_{1}&space;log(s_{1})&space;-&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;s_{1})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(s_{i})&space;=&space;-t_{1}&space;log(s_{1})&space;-&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;s_{1})" title="CE = -\sum_{i=1}^{C'=2}t_{i} log (s_{i}) = -t_{1} log(s_{1}) - (1 - t_{1}) log(1 - s_{1})" /></a>
 </div>
 
 Where it’s assumed that there are two classes: $$C_1$$ and $$C_2$$. $$t_1$$ [0,1] and $$s_1$$ are the groundtruth and the score for $$C_1$$, and $$t_2 =  1 - t_1$$ and $$s_2 =  1 - s_1$$ are the groundtruth and the score for $$C_2$$. That is the case when we split a Multi-Label classification problem in $$C$$ binary classification problems. See next Binary Cross-Entropy Loss section for more details.
@@ -218,7 +218,7 @@ Also called **Sigmoid Cross-Entropy loss**. It is a **Sigmoid activation** plus 
 It’s called **Binary Cross-Entropy Loss** because it sets up a binary classification problem between $$C’ = 2$$ classes for every class in $$C$$, as explained above. So when using this Loss, the formulation of **Cross Entroypy Loss** for binary problems is often used:
 
 <div class="imgcap">
-<a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" title="CE = -\sum_{i=1}^{C'=2}t_{i} log (f(s_{i})) = -t_{1} log(f(s_{1})) + (1 - t_{1}) log(1 - f(s_{1}))" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;-&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;-&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" title="CE = -\sum_{i=1}^{C'=2}t_{i} log (f(s_{i})) = -t_{1} log(f(s_{1})) - (1 - t_{1}) log(1 - f(s_{1}))" /></a>
 </div>
 
 <div class="imgcap">
@@ -241,7 +241,7 @@ In this case, the activation function does not depend in scores of other classes
 The gradient respect to the score $$s_i = s_1$$ can be written as:
 
 <div class="imgcap">
-<a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;&plus;&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" title="CE = -\sum_{i=1}^{C'=2}t_{i} log (f(s_{i})) = -t_{1} log(f(s_{1})) + (1 - t_{1}) log(1 - f(s_{1}))" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;-&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?CE&space;=&space;-\sum_{i=1}^{C'=2}t_{i}&space;log&space;(f(s_{i}))&space;=&space;-t_{1}&space;log(f(s_{1}))&space;-&space;(1&space;-&space;t_{1})&space;log(1&space;-&space;f(s_{1}))" title="CE = -\sum_{i=1}^{C'=2}t_{i} log (f(s_{i})) = -t_{1} log(f(s_{1})) - (1 - t_{1}) log(1 - f(s_{1}))" /></a>
 </div>
 
 Where $$f()$$ is the **sigmoid** function. It can also be written as: 
