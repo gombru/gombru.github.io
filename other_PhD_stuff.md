@@ -12,6 +12,7 @@ The demo is available online [here](https://gombru.github.io/MMSemanticRetrieval
 <div class="imgcap">
 	<div style="display:inline-block">
 	<img src="/assets/mwc.png" height="240">
+	</div>
 </div>
 
 ### Attended to ECCV 2018 in Munich
