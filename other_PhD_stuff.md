@@ -5,6 +5,15 @@ permalink: /other-material/
 order: 4
 ---
 
+### Demo at Mobile World Congress
+A demo of my work on Multi-Modal Semantic Image Retrieval was shown at Barcelona Mobile World Congress in the Computer Vision Center stand.
+The demo is available online [here](https://gombru.github.io/MMSemanticRetrievalDemo/).
+
+<div class="imgcap">
+	<div style="display:inline-block">
+	<img src="/assets/mwc.png" height="240">
+</div>
+
 ### Attended to ECCV 2018 in Munich
 I attended to ECCV 2018 where I presented an oral and a poster in the [Multimodal Learning and Applicattions Workshop](https://mula2018.github.io/).  
 Oral: "Learning to Learn from Web Data through Deep Semantic Embeddings" [[PDF](https://arxiv.org/abs/1808.06368)] [[Slides](https://docs.google.com/presentation/d/10JJCGCN96-f5Rt20db3TYiJsMavFD2ebHNJ91X8ov7I/edit?usp=sharing)] [[Poster](https://docs.google.com/presentation/d/1oDGuzbw2x7uShMcc4ExqonRdRF7Rx4vcZmVaAwNrdpU/edit?usp=sharing)]  
