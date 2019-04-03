@@ -61,7 +61,7 @@ The Softmax function cannot be applied independently to each $$s_i$$, since it d
 <a href="https://www.codecogs.com/eqnedit.php?latex=f(s)_{i}&space;=&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(s)_{i}&space;=&space;\frac{e^{s_{i}}}{\sum_{j}^{C}&space;e^{s_{j}}}" title="f(s)_{i} = \frac{e^{s_{i}}}{\sum_{j}^{C} e^{s_{j}}}" /></a>
 </div>
 
-Where $$s_j$$ are the scores inferred by the net for each class in $$C$$. Note that the Softmax activations for a class $$s_i$$ depends on all the scores in $$s$$.  
+Where $$s_j$$ are the scores inferred by the net for each class in $$C$$. Note that the Softmax activation for a class $$s_i$$ depends on all the scores in $$s$$.  
 
 
 > An extense comparison of this two functions can be found [here](http://dataaspirant.com/2017/03/07/difference-between-softmax-function-and-sigmoid-function/)  
@@ -214,7 +214,7 @@ In the backward pass we need to compute the gradients of each element of the bat
 
 
 ### Binary Cross-Entropy Loss
-Also called **Sigmoid Cross-Entropy loss**. It is a **Sigmoid activation** plus a **Cross-Entropy loss**. Unlike **Softmax loss** it is independent for each vector component (class), meaning that the loss computed for every vector component is not affected by other component values. That’s why it is used for **multi-label classification**, were the insight of an element belonging to a certain class should not influence the decision for another class.
+Also called **Sigmoid Cross-Entropy loss**. It is a **Sigmoid activation** plus a **Cross-Entropy loss**. Unlike **Softmax loss** it is independent for each vector component (class), meaning that the loss computed for every CNN output vector component is not affected by other component values. That’s why it is used for **multi-label classification**, were the insight of an element belonging to a certain class should not influence the decision for another class.
 It’s called **Binary Cross-Entropy Loss** because it sets up a binary classification problem between $$C’ = 2$$ classes for every class in $$C$$, as explained above. So when using this Loss, the formulation of **Cross Entroypy Loss** for binary problems is often used:
 
 <div class="imgcap">
@@ -226,7 +226,7 @@ It’s called **Binary Cross-Entropy Loss** because it sets up a binary classifi
 </div>
 
 
-This would be the pipeline for each one of the $$C$$ clases. We set $$C$$ independent binary classification problems $$(C’ = 2)$$. Then we sum up the loss over the different binary problems. $$s_1$$ and $$t_1$$ are the score and the gorundtruth label for the class $$C_1$$, which is also the class $$C_i$$ in $$C$$. $$s_2 = 1 - s_1$$ and $$t_2 = 1 - t_1$$ are the score and the groundtruth label of the class $$C_2$$, which is not a “class” in our original problem with $$C$$ classes, but a class we create to set up the binary problem with $$C_1 = C_i$$. We can understand it as a background class.
+This would be the pipeline for each one of the $$C$$ clases. We set $$C$$ independent binary classification problems $$(C’ = 2)$$. Then we sum up the loss over the different binary problems: We sum up the gradients of every binary problem to backpropagate, and the losses to monitor the global loss. $$s_1$$ and $$t_1$$ are the score and the gorundtruth label for the class $$C_1$$, which is also the class $$C_i$$ in $$C$$. $$s_2 = 1 - s_1$$ and $$t_2 = 1 - t_1$$ are the score and the groundtruth label of the class $$C_2$$, which is not a “class” in our original problem with $$C$$ classes, but a class we create to set up the binary problem with $$C_1 = C_i$$. We can understand it as a background class.
 
 The loss can be expressed as:
 
