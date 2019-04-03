@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Understanding  Ranking Loss, Contrastive Loss, Margin Loss, Triplet Loss, Hinge Loss, and all those confusing Names"
-excerpt: "A review of different variants and names of Ranking Losses, Siamese Nets, Triplet Nets, their application on multi-modal retrieval and Ranking Loss layers in deep learning frameworks."
+excerpt: "A review of different variants and names of Ranking Losses, Siamese Nets, Triplet Nets and their application in multi-modal self-supervised learning."
 date:   2019-04-03 20:00:00
 img: "/assets/ranking_loss/intro.png"
 mathjax: false
@@ -34,7 +34,7 @@ Both of them compare distances between representations of training data samples.
 ### Pairwise Ranking Loss
 
 <div class="imgcap">
-<img src="/assets/ranking_loss/pairwise_ranking_loss_faces.png" height="450">
+<img src="/assets/ranking_loss/pairwise_ranking_loss_faces.png" height="400">
 	<div class="thecap">
 	Example of a pairwise ranking loss setup to train a net for image face verification. In this setup, the weights of the CNNs are shared. We call it siamese nets.  But a pairwise ranking loss can be used in other setups, or with other nets.
 	</div>
@@ -151,7 +151,7 @@ The setup is the following: We use fixed text embeddings (GloVe) and we **only l
 
 
 <div class="imgcap">
-<img src="/assets/ranking_loss/triplet_loss_multimodal.png" height="350">
+<img src="/assets/ranking_loss/triplet_loss_multimodal.png" height="300">
 	<div class="thecap">
 	Triplet Ranking Loss training of a multi-modal retrieval pipeline. The text GloVe embeddings are fixed, and we train the CNN to embed the image closer to its positive text than to the negative text.	</div>
 </div>
