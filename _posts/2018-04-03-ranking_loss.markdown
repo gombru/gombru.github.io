@@ -198,3 +198,5 @@ Using this setup we computed some quantitative results to **compare Triplet Rank
  - [**contrastive_loss**](https://www.tensorflow.org/api_docs/python/tf/contrib/losses/metric_learning/contrastive_loss). Pairwise Ranking Loss.
 
  - [**triplet_semihard_loss**](https://www.tensorflow.org/api_docs/python/tf/contrib/losses/metric_learning/triplet_semihard_loss). Triplet loss with semi-hard negative mining.   
+  
+  
