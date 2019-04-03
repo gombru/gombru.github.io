@@ -4,7 +4,7 @@ comments: true
 title:  "Understanding  Ranking Loss, Contrastive Loss, Margin Loss, Triplet Loss, Hinge Loss, and all those confusing Names"
 excerpt: "A review of different variants and names of Ranking Losses, Siamese Nets, Triplet Nets, their application on multi-modal retrieval and Ranking Loss layers in deep learning frameworks."
 date:   2019-04-03 20:00:00
-img: "/assets/ranking_loss/into.png"
+img: "/assets/ranking_loss/intro.png"
 mathjax: false
 ---
 
@@ -163,7 +163,7 @@ In this setup we only train the image representation, namely the CNN. Being $$i$
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(i,t_p,t_n)&space;=&space;max(0,m&space;&plus;&space;\left&space;\|&space;f(i)-t_p&space;\right&space;\|&space;-&space;\left&space;\|&space;f(i)&space;-&space;t_n&space;\right&space;\|)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(i,t_p,t_n)&space;=&space;max(0,m&space;&plus;&space;\left&space;\|&space;f(i)-t_p&space;\right&space;\|&space;-&space;\left&space;\|&space;f(i)&space;-&space;t_n&space;\right&space;\|)" title="L(i,t_p,t_n) = max(0,m + \left \| f(i)-t_p \right \| - \left \| f(i) - t_n \right \|)" /></a>
 </div>
 
-Using this setup we computed some quantitative results to **compare Triplet Ranking Loss training with Cross-Entropy Loss training**. I’m not going to explain experiment details here, but the set up is the same as the one used in ([paper](https://arxiv.org/abs/1901.02004), ([blogpost](https://gombru.github.io/2018/08/01/learning_from_web_data/)). Basically, we do some textual queries and evaluate the image by text retrieval performance when learning from Social Media data in a self-supervised way. **Results using a Triplet Ranking Loss are significantly better than using a Cross-Entropy Loss**.
+Using this setup we computed some quantitative results to **compare Triplet Ranking Loss training with Cross-Entropy Loss training**. I’m not going to explain experiment details here, but the set up is the same as the one used in ([paper](https://arxiv.org/abs/1901.02004), [blogpost](https://gombru.github.io/2018/08/01/learning_from_web_data/)). Basically, we do some textual queries and evaluate the image by text retrieval performance when learning from Social Media data in a self-supervised way. **Results using a Triplet Ranking Loss are significantly better than using a Cross-Entropy Loss**.
 
 <div class="imgcap">
 <img src="/assets/ranking_loss/results.png" height="200">
