@@ -12,7 +12,7 @@ mathjax: false
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-After the success of my post [Understanding Categorical Cross-Entropy Loss, Binary Cross-Entropy Loss, Softmax Loss, Logistic Loss, Focal Loss and all those confusing names](https://gombru.github.io/2018/05/23/cross_entropy_loss/), and after checking that Triplet Loss outperforms Cross-Entropy loss in my main research topic ([Multi-Modal Retrieval](https://gombru.github.io/2018/08/01/learning_from_web_data/)) I decided to write a similar post explaining Ranking Losses functions.
+After the success of my post [Understanding Categorical Cross-Entropy Loss, Binary Cross-Entropy Loss, Softmax Loss, Logistic Loss, Focal Loss and all those confusing names](https://gombru.github.io/2018/05/23/cross_entropy_loss/), and after checking that Triplet Loss outperforms Cross-Entropy Loss in my main research topic ([Multi-Modal Retrieval](https://gombru.github.io/2018/08/01/learning_from_web_data/)) I decided to write a similar post explaining Ranking Losses functions.
 
 **Ranking Losses are used in different areas, tasks and neural networks setups (like Siamese Nets or Triplet Nets). That’s why they receive different names such as Contrastive Loss, Margin Loss, Hinge Loss or Triplet Loss.** 
 
@@ -22,7 +22,7 @@ Unlike other loss functions, such as Cross-Entropy Loss or Mean Square Error Los
 
 Ranking Losses functions are very flexible in terms of training data: We just need a similarity score between data points to use them. That score can be binary (similar / dissimilar). As an example, imagine a face verification dataset, where we know which face images belong to the same person (similar), and which not (dissimilar). Using a Ranking Loss function, we can train a CNN to infer if two face images belong to the same person or not.  
 
-To use a Ranking Loss function we first **extract features** from two (or three) input data points, until we get an embedded representation for each of them. Then, we define a metric function to **measure the similarity** between those representations, for instance euclidian distance. Finally, we **train the feature extractors to produce similar representations for both inputs, in case the inputs are similar, or distant representations for the two inputs, in case they are dissimilar**.  
+To use a Ranking Loss function we first **extract features from two (or three) input data points and get an embedded representation** for each of them. Then, we define a metric function to **measure the similarity between those representations**, for instance euclidian distance. Finally, we **train the feature extractors to produce similar representations for both inputs, in case the inputs are similar, or distant representations for the two inputs, in case they are dissimilar**.  
 We don’t even care about the values of the representations, only about the distances between them. However, **this training methodology has demonstrated to produce powerful representations** for different tasks.
 
 
@@ -42,7 +42,7 @@ Both of them compare distances between representations of training data samples.
 
 **Is this setup positive and negative pairs of training data points are used. Positive pairs are composed by an anchor sample $$x_a$$ and a positive sample $$x_p$$, which is similar to $$x_a$$ in the metric we aim to learn, and negative pairs composed by an anchor sample $$x_a$$ and a negative sample $$x_n$$, which is dissimilar to $$x_a$$ in that metric.**  
 
-The objective is to **learn sample representations with a small distance $$d$$ between them for positive pairs, and greater distance than some margin value $$m$$ for negative pairs**. **Pairwise Ranking Loss** forces representations to have $$0$$ distance for positive pairs, and a distance greater than a margin for negative pairs. Being $$r_a$$, $$r_p$$ and $$r_n$$ the samples representations and $$d$$ a distance function, we can write:  
+**The objective is to learn representations with a small distance $$d$$ between them for positive pairs, and greater distance than some margin value $$m$$ for negative pairs**. Pairwise Ranking Loss forces representations to have $$0$$ distance for positive pairs, and a distance greater than a margin for negative pairs. Being $$r_a$$, $$r_p$$ and $$r_n$$ the samples representations and $$d$$ a distance function, we can write:  
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;\left\{\begin{matrix}&space;&&space;d(r_a,r_p)&space;&&space;&&space;if&space;&&space;PositivePair&space;\\&space;&&space;max(0,&space;m&space;-&space;d(r_a,r_n))&space;&&space;&&space;if&space;&&space;NegativePair&space;\end{matrix}\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;\left\{\begin{matrix}&space;&&space;d(r_a,r_p)&space;&&space;&&space;if&space;&&space;PositivePair&space;\\&space;&&space;max(0,&space;m&space;-&space;d(r_a,r_n))&space;&&space;&&space;if&space;&&space;NegativePair&space;\end{matrix}\right." title="L = \left\{\begin{matrix} & d(r_a,r_p) & & if & PositivePair \\ & max(0, m - d(r_a,r_n)) & & if & NegativePair \end{matrix}\right." /></a>
@@ -68,13 +68,13 @@ If $$r_0$$ and $$r_1$$ are the pair elements representations, $$y$$ is a binary 
 	</div>
 </div>
 
-This setup **outperforms the former by using triplets of training data samples**, instead of pairs. The triplets are formed by an anchor sample $$x_a$$, a positive sample $$x_p$$ and a negative sample $$x_n$$. **The objective is that the distance between the anchor sample and the negative sample representations $$d(r_a, r_n)$$ is greater (and bigger than a margin $$m$$) than the distance between the anchor and positive representations $$d(r_a, r_p)$$**. We can write:  
+This setup **outperforms the former by using triplets of training data samples**, instead of pairs. The triplets are formed by an anchor sample $$x_a$$, a positive sample $$x_p$$ and a negative sample $$x_n$$. **The objective is that the distance between the anchor sample and the negative sample representations $$d(r_a, r_n)$$ is greater (and bigger than a margin $$m$$) than the distance between the anchor and positive representations $$d(r_a, r_p)$$**. With the same notation, we can write:  
 
 <div class="imgcap">
 <a href="https://www.codecogs.com/eqnedit.php?latex=L(r_a,r_p,r_n)&space;=&space;max(0,m&space;&plus;&space;d(r_a,r_p)&space;-&space;d(r_a,r_n))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(r_a,r_p,r_n)&space;=&space;max(0,m&space;&plus;&space;d(r_a,r_p)&space;-&space;d(r_a,r_n))" title="L(r_a,r_p,r_n) = max(0,m + d(r_a,r_p) - d(r_a,r_n))" /></a>
 </div>
 
-Let’s analyze 3 situations:  
+Let’s analyze 3 situations of this loss:  
 
  - **Easy Triplets**: $$d(r_a,r_n) > d(r_a,r_p) + m$$. The negative sample is already sufficiently distant to the anchor sample respect to the positive sample in the embedding space. The loss is $$0$$ and the net parameters are not updated.
  - **Hard Triplets**: $$d(r_a,r_n) < d(r_a,r_p)$$. The negative sample is closer to the anchor than the positive. The loss is positive (and greater than $$m$$).
@@ -106,21 +106,23 @@ The optimal way for negatives selection is highly dependent on the task. But I�
 
 ## Other names used for Ranking Losses
 
+Ranking Losses are essentialy the ones explained above, and are used in many different aplications with the same formulation or minor variations. However, different names are used for them, which can be confusing. Here I explain why those names are used.  
+
 - **Ranking loss**: This name comes from the information retrieval field, where we want to train models to **rank** items in an specific order.
-- **Margin Loss**: This name comes from the fact that these losses use a margin to compare samples distances.
-- **Contrastive Loss**: Contrastive refers to the fact that these losses are computed contrasting two or more data points representations. This name is often used for Pairwise Ranking Loss.
+- **Margin Loss**: This name comes from the fact that these losses use a margin to compare samples representations distances.
+- **Contrastive Loss**: Contrastive refers to the fact that these losses are computed contrasting two or more data points representations. This name is often used for Pairwise Ranking Loss, but I've never seen using it in a setup with triplets.
 - **Triplet Loss**: Often used as loss name when triplet training pairs are employed.
 - **Hinge loss**: Also known as **max-margin objective**. It’s used for training SVMs for classification. It has a similar formulation in the sense that it optimizes until a margin. That’s why this name is sometimes used for Ranking Losses.
 
 
 ## Siamese and triplet nets
 
-Siamese and triplet nets are training setups where Pairwise Ranking Loss and Triplet Ranking Loss are used. However, those losses, can be also used in other setups.**   
+Siamese and triplet nets are training setups where Pairwise Ranking Loss and Triplet Ranking Loss are used. But those losses can be also used in other setups.   
 **In these setups, the representations for the training samples in the pair or triplet are computed with identical nets with shared weights (with the same CNN).**
 
 #### Siamese Nets
 
-Are built by two identical CNNs with shared weights (both CNNs have the same weights). Each one of these nets processes an image and produces a representation. Those representations are compared for similarity. Then, a **Pairwise Ranking Loss** is used to train the network, such that the distance between representations produced by similar images  is small, and the distance between representations of dis-similar images is big.   
+Are built by **two identical CNNs with shared weights** (both CNNs have the same weights). Each one of these nets processes an image and produces a representation. Those representations are compared and a distance between them is computed. Then, a **Pairwise Ranking Loss is used to train the network**, such that the distance between representations produced by similar images  is small, and the distance between representations of dis-similar images is big.   
 
 Since in a siamese net setup the representations for both elements in the pair are computed by the same CNN, being $$f(x)$$ that CNN, we can write the **Pairwise Ranking Loss** as: 
 
@@ -130,7 +132,7 @@ Since in a siamese net setup the representations for both elements in the pair a
 
 #### Triplet Nets
 
-The idea is similar to a siamese net, but a triplet net has three branches (three CNNs with shared weights). The model is trained by simultaneously giving a positive and a negative image to the corresponding anchor image, and using a **Triplet Ranking Loss**. That lets the net learn better which images are similar and different to the anchor image.   
+The idea is similar to a siamese net, but **a triplet net has three branches (three CNNs with shared weights)**. The model is trained by simultaneously giving a positive and a negative image to the corresponding anchor image, and **using a Triplet Ranking Loss**. That lets the net learn better which images are similar and different to the anchor image.   
 
 In the case of triplet nets, since the same CNN $$f(x)$$ is used to compute the representations for the three triplet elements, we can write the **Triplet Ranking Loss** as :
 
@@ -141,10 +143,11 @@ In the case of triplet nets, since the same CNN $$f(x)$$ is used to compute the 
 
 ## Ranking Loss for Multi-Modal Retrieval
 
-In my research, I’ve been using **Triplet Ranking Loss** for multimodal retrieval of images and text. The training data consists in a dataset of images with associated text, which in my case are Social Media images. The objective is **to learn embeddings of the images and the words in the same space, so we can perform cross-modal retrieval**. To do that, I first learn and freeze words embeddings from solely the text, using algorithms such as Word2Vec or GloVe. Then, I aim to **train a CNN to embed the images in that same space**: The idea would be to learn to **embed an image and its associated caption in the same point in the multimodal embedding space**.  
+In my research, I’ve been using **Triplet Ranking Loss** for multimodal retrieval of images and text. The training data consists in a dataset of images with associated text. **The objective is to learn embeddings of the images and the words in the same space for cross-modal retrieval**. To do that, we first **learn and freeze words embeddings** from solely the text, using algorithms such as Word2Vec or GloVe. Then, we aim to **train a CNN to embed the images in that same space**: The idea is to learn to **embed an image and its associated caption in the same point in the multimodal embedding space**.  
 
-The first approach to do that, was training a CNN to directly predict text embeddings from images using a **Cross-Entropy Loss**. Results were nice, but later **I found out that using a **Triplet Ranking Loss** I get better results.   
-The setup is the following: I use fixed text embeddings (GloVe) and I **only learn the image representation** (CNN). So **the anchor sample $$a$$ is the image, the positive sample $$p$$ is the text associated to that image, and the negative sample $$n$$ is the text of another “negative” image**. To choose the negative text, I explored different online **negative mining strategies, using the distances in the GloVe space with the positive text embedding. Triplets mining is particularly sensible in this problem, since there are not established classes. Given the diversity of the images, we have many easy triplets. But we have to be carefull mining hard-negatives, since the text associated to another image can be also valid for an anchor image.**  
+The first approach to do that, was training a CNN to **directly predict text embeddings from images using a Cross-Entropy Loss**. Results were nice, but later **we found out that using a Triplet Ranking Loss results were better**.  
+
+The setup is the following: We use fixed text embeddings (GloVe) and we **only learn the image representation** (CNN). So **the anchor sample $$a$$ is the image, the positive sample $$p$$ is the text associated to that image, and the negative sample $$n$$ is the text of another “negative” image**. To choose the negative text, we explored different online **negative mining strategies, using the distances in the GloVe space with the positive text embedding. Triplets mining is particularly sensible in this problem, since there are not established classes**. Given the diversity of the images, we have many easy triplets. But we have to be carefull mining hard-negatives, since the text associated to another image can be also valid for an anchor image.  
 
 
 <div class="imgcap">
@@ -154,7 +157,7 @@ The setup is the following: I use fixed text embeddings (GloVe) and I **only lea
 </div>
 
 
-Using this setup I computed some quantitative results to compare **Triplet Ranking Loss** training with **Cross-Entropy Loss** training. I’m not going to explain experiment details here, but the set up is the same as the one used in [paper](https://arxiv.org/abs/1901.02004) [blogpost](https://gombru.github.io/2018/08/01/learning_from_web_data/). Basically, we set some textual queries and evaluate the image by text retrieval performance when learning from Social Media data in a self-supervised way. **Results using a Triplet Ranking Loss are significantly better than using a Cross-Entropy Loss**.
+Using this setup we computed some quantitative results to **compare Triplet Ranking Loss training with Cross-Entropy Loss training**. I’m not going to explain experiment details here, but the set up is the same as the one used in ([paper](https://arxiv.org/abs/1901.02004), ([blogpost](https://gombru.github.io/2018/08/01/learning_from_web_data/)). Basically, we do some textual queries and evaluate the image by text retrieval performance when learning from Social Media data in a self-supervised way. **Results using a Triplet Ranking Loss are significantly better than using a Cross-Entropy Loss**.
 
 <div class="imgcap">
 <img src="/assets/ranking_loss/results.png" height="200">
