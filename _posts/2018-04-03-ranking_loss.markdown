@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "Understanding  Ranking Loss, Contrastive Loss, Margin Loss, Triplet Loss, Hinge Loss, and all those confusing names"
+title:  "Understanding  Ranking Loss, Contrastive Loss, Margin Loss, Triplet Loss, Hinge Loss and all those confusing names"
 excerpt: "A review of different variants and names of Ranking Losses, Siamese Nets, Triplet Nets and their application in multi-modal self-supervised learning."
 date:   2019-04-03 20:00:00
 img: "/assets/ranking_loss/intro.png"
