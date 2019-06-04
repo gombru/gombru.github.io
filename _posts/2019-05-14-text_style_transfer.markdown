@@ -25,7 +25,7 @@ As our baseline model we used the neural style transfer model proposed by Google
 Our initial experiments were simple: Train the baseline model with scene text images to see it it could learn to transfer text styles. And yes, it could!
 
 <div class="imgcap">
-	<img src="/assets/text_style_transfer/results_all_image.png" width="550">
+	<img src="/assets/text_style_transfer/results_all_image.png" width="700">
 	<div class="thecap">
 	Results of the baseline model transfering scene text styles to scene images. On top, original image is shown. In the middle, 3 of the style images used to train the model are shown. In the bottom, the results of styling the images with those styles.
 	</div>
@@ -64,19 +64,19 @@ To achieve a successful training, we had to weight the contributions of textual 
 We trained a model using 34 styles from the COCO-Text dataset. Next, some results using both the two-stage and the end-to-end model on COCO-Text images:
 
 <div class="imgcap">
-	<img src="/assets/text_style_transfer/sc.png" width="550">
+	<img src="/assets/text_style_transfer/sc.png" width="800">
 </div>
 
 The model also allows to interpolate between styles:
 
 <div class="imgcap">
-	<img src="/assets/text_style_transfer/sc_weighted.png" width="550">
+	<img src="/assets/text_style_transfer/sc_weighted.png" width="800">
 </div>
 
 We also experimented using this model to transfer scene text styles to machine printed and handwritten text images:
 
 <div class="imgcap">
-	<img src="/assets/text_style_transfer/mt_ht_sc.png" width="550">
+	<img src="/assets/text_style_transfer/mt_ht_sc.png" width="600">
 </div>
 
 Stylizing machine printed text with scene text styles can have very interesting application in augmented reality scenarios, where we want to generate an image keeping the original scene text style but changing its content. In the following examples, "Icdar" and "Sydney" Arial text has been stylized with scene text stiles and manually inserted in the images:
@@ -91,7 +91,7 @@ Results of the scene text model are appealing. It **successfully learns and tran
 We used the **two-stage Selective Text Style Transfer pipeline to augment several text detection datasets** (ICDAR 2013, ICDAR 2015 and COCO-Text). Then we trained the [EAST text detector](https://github.com/argman/EAST) on plain and augmented datasets. Training with the augmented datasets, **resulted on a boost in text detection performance** in all the experiments. In this experiment, we used a text style transfer model trained with 96 styles from ICDAR 2015.
 
 <div class="imgcap">
-	<img src="/assets/text_style_transfer/table.png" width="300">
+	<img src="/assets/text_style_transfer/table.png" width="500">
 </div>
 
 This data augmentation technique has important benefits compared to other methods:
@@ -115,26 +115,26 @@ It succesfully copies some style features between machine printed text images:
 And also to scene text images where text is not big or difficult:
 
 <div class="imgcap">
-	<img src="/assets/text_style_transfer/sc_mt.png" width="300">
+	<img src="/assets/text_style_transfer/sc_mt.png" width="600">
 </div>
 
 But fails when transferring style to handwritten style images: It transfers correctly some style features, but breaks the content:
 
 <div class="imgcap">
-	<img src="/assets/text_style_transfer/hw_mt.png" width="300">
+	<img src="/assets/text_style_transfer/hw_mt.png" width="600">
 </div>
 
 ### Handwritten Text Style Transfer
 We also trained a model to transfer handwritten styles. It correctly transfers some writer style features between handwritten text images:
 
 <div class="imgcap">
-	<img src="/assets/text_style_transfer/hr.png" width="300">
+	<img src="/assets/text_style_transfer/hr.png" width="600">
 </div>
 
 The transference of handwritten style to machine printed text, only works for some machine printed fonts similar to handwritten styles:
 
 <div class="imgcap">
-	<img src="/assets/text_style_transfer/mt_hr.png" width="300">
+	<img src="/assets/text_style_transfer/mt_hr.png" width="600">
 </div>
 
 ## Conclusions
