@@ -6,8 +6,8 @@ order: 2
 ---
 
 ### Selective Style Transfer for Text
-**Raul Gomez***, Ali Furkan Biten*, Lluis Gomez, Jaume Gibert, Marçal Rusiñol, Dismosthenis Karatzas.  
-ICDAR 2019. [[PDF](https://arxiv.org/)] 
+**Raul Gomez**\*, Ali Furkan Biten\*, Lluis Gomez, Jaume Gibert, Marçal Rusiñol, Dismosthenis Karatzas.  
+ICDAR, 2019. [[PDF](https://arxiv.org/)]   
 
 A selective style transfer model is trained to learn text styles and transfer them to text instances found in images. Experiments in different text domains (scene text, machine printed text and handwritten text) show the potential of text style transfer in different applications.
 <div class="imgcap">
