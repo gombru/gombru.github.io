@@ -5,6 +5,14 @@ permalink: /publications/
 order: 2
 ---
 
+### Selective Style Transfer for Text
+**Raul Gomez***, Ali Furkan Biten*, Lluis Gomez, Jaume Gibert, Marçal Rusiñol, Dismosthenis Karatzas.  
+ICDAR 2019. [[PDF](https://arxiv.org/)] 
+
+A selective style transfer model is trained to learn text styles and transfer them to text instances found in images. Experiments in different text domains (scene text, machine printed text and handwritten text) show the potential of text style transfer in different applications.
+<div class="imgcap">
+<img src="/assets/text_style_transfer/intro.png" height="250">
+</div>
 
 ### Self-Supervised Learning from Web Data for Multimodal Retrieval
 **Raul Gomez**, Lluis Gomez, Jaume Gibert, Dismosthenis Karatzas.  
