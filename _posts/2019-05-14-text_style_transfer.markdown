@@ -8,17 +8,17 @@ img: "/assets/text_style_transfer/intro.png"
 mathjax: false
 ---
 
-<span style="color:brown">**This is joint work with Ali Furkan Biten and will be published in ICDAR 2019 as "Selective Style Transfer on Text"[[PDF](https://arxiv.org/abs/1906.01466)].
+<span style="color:brown">**This is joint work with Ali Furkan Biten and will be published in ICDAR 2019 as "Selective Style Transfer for Text" [[PDF](https://arxiv.org/abs/1906.01466)].
 Refer to the paper to access the full and formal article. Here I explain informally and briefly the experiments conducted and the conclusions obtained.**</span>
 
-## Text Style Transfer
-Style Transfer is the task of transferring the *style* of one source image to another keeping its *content*. It's often applied to transfer the style of a painting to a real word image. In that context, the style to be transferred is the line style, the color palette, the brush strokes or the cubist patterns of the painting. In [this blog post](https://gombru.github.io/2019/01/14/miro_styletransfer_deepdream/), where I train a conventional neural style transfer model to transfer Joan Miró painting styles, I explain how style transfer models work. If is the first time you meet neural style transfer, it's a must before you continue this reading.  
+
+Style Transfer is the task of transferring the *style* of one source image to another keeping its *content*. It's often applied to transfer the style of a painting to a real word image. In that context, the style to be transferred is the line style, the color palette, the brush strokes or the cubist patterns of the painting. In [this blog post](https://gombru.github.io/2019/01/14/miro_styletransfer_deepdream/), where I train a conventional neural style transfer model to transfer Joan Miró painting styles, I explain how style transfer models work. If is the first time you meet neural style transfer, it's a must before you continue this reading.
 
 
 In this work we **explore the possibilities of style transfer in the text domain**. We hypothesis that, when working with text images, **style transfer models can learn to transfer a text style (color, text font, etc) to image text instances preserving the original characters**. If that hypothesis is true, text style transfer would have many applications. When working with scene text images, we could generate synthetic images keeping the original text transcription but with a different text style. We could also use it in augmented reality scenarios to stylize any *Arial* text with the text style of the image to augment. Both of these applications would be **very useful as data augmentation techniques**, as shown later in this post. The realistic result we get, prompt that it could also have **artistic applications for graphic design**.
 Text style transfer can also be very useful in other text domains: We could train a model to *Arialize* any text found in an image, or to copy the style of a writer in the handwritten text domain.
 
-### Pipeline
+### Methodology
 As our baseline model we used the neural style transfer model proposed by Google in ["A Learned Representation for Artistic Style"](https://arxiv.org/abs/1610.07629). We initially used their TensorFlow Magenta implementation, which is available [here](https://github.com/tensorflow/magenta/tree/master/magenta/models/image_stylization). But the code is quite inefficient and outdated, so we reimplemented it in Pytorch.  
 
 Our initial experiments were simple: Train the baseline model with scene text images to see it it could learn to transfer text styles. And yes, it could!
