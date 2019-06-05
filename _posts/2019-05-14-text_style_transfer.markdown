@@ -18,7 +18,7 @@ Style Transfer is the task of transferring the *style* of one source image to an
 In this work we **explore the possibilities of style transfer in the text domain**. We hypothesis that, when working with text images, **style transfer models can learn to transfer a text style (color, text font, etc) to image text instances preserving the original characters**. If that hypothesis is true, text style transfer would have many applications. When working with scene text images, we could generate synthetic images keeping the original text transcription but with a different text style. We could also use it in augmented reality scenarios to stylize any *Arial* text with the text style of the image to augment. Both of these applications would be **very useful as data augmentation techniques**, as shown later in this post. The realistic result we get, prompt that it could also have **artistic applications for graphic design**.
 Text style transfer can also be very useful in other text domains: We could train a model to *Arialize* any text found in an image, or to copy the style of a writer in the handwritten text domain.
 
-### Methodology
+## Methodology
 As our baseline model we used the neural style transfer model proposed by Google in ["A Learned Representation for Artistic Style"](https://arxiv.org/abs/1610.07629). We initially used their TensorFlow Magenta implementation, which is available [here](https://github.com/tensorflow/magenta/tree/master/magenta/models/image_stylization). But the code is quite inefficient and outdated, so we reimplemented it in Pytorch.  
 
 Our initial experiments were simple: Train the baseline model with scene text images to see it it could learn to transfer text styles. And yes, it could!
@@ -32,7 +32,7 @@ Our initial experiments were simple: Train the baseline model with scene text im
 
 To make those results useful for any task, we had to be able to **transfer the text style only to textual areas** of the destination image. We called this task **Selective Text Style Transfer**, and came out with two different approaches: A **two-stage** and an **end-to-end** model.
 
-#### Two-Stage model
+### Two-Stage model
 The proposed two-stage architecture for selective text style transfer stylizes all the image using the baseline model. Then, the probability of each pixel of belonging to a textual area is computed using [TextFCN](https://github.com/gombru/TextFCN). Finally, a **blending weighted by the text probability map of the original and the stylized image** copies style only to textual areas.
 
 <div class="imgcap">
@@ -42,7 +42,7 @@ The proposed two-stage architecture for selective text style transfer stylizes a
 	</div>
 </div>
 
-#### End-To-End model
+### End-To-End model
 The end-to-end model is inspired by the [neural network distillation idea by Hinton](https://arxiv.org/abs/1503.02531), where a single net is trained to perform the tasks of different nets at once. In our case, **we train an image transformation network** (with the same architecture as the original style transfer network) **to perform the tasks of style transfer and text detection at once**, and at the end to transfer the style only to textual areas.  
 To train this model we use the COCO-Text dataset (instead of ImageNet), which has annotated text bounding boxes. The training procedure is as follows: We first stylize the whole image with a pre-trained, frozen style transfer model. Then, using the GT annotations, we create an image where only the GT text bounding boxes are stylized. Finally we train the end-to-end model to produce that image given the original image, minimizing a Mean Square Error Loss.  
 
