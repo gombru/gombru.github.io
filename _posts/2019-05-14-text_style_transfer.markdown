@@ -8,8 +8,7 @@ img: "/assets/text_style_transfer/intro.png"
 mathjax: false
 ---
 
-<span style="color:brown">**This is joint work with Ali Furkan Biten and will be published in ICDAR 2019 as "Selective Style Transfer on Text"
-<!--[[PDF](#)] (soon available).-->
+<span style="color:brown">**This is joint work with Ali Furkan Biten and will be published in ICDAR 2019 as "Selective Style Transfer on Text"[[PDF](https://arxiv.org/abs/1906.01466)].
 Refer to the paper to access the full and formal article. Here I explain informally and briefly the experiments conducted and the conclusions obtained.**</span>
 
 ## Text Style Transfer
@@ -56,7 +55,7 @@ To train this model we use the COCO-Text dataset (instead of ImageNet), which ha
 
 To achieve a successful training, we had to weight the contributions of textual pixels and non-textual pixels to the loss, empowering the contribution of the first ones. This is because textual areas are very small compared to background in COCO-Text. Check the paper for details!
 
-> The PyTorch code of both the baseline model and the end-to-end model, as well as the trained models, will be available soon.
+> The PyTorch code of both the baseline model and the end-to-end model are available [here](https://github.com/furkanbiten/SelectiveTextStyleTransfer).
 
 
 ## Results
