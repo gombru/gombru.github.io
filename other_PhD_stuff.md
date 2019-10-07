@@ -5,6 +5,20 @@ permalink: /other-material/
 order: 4
 ---
 
+### Poster and tutorial at ICDAR 2019 in Sydney
+I attended to ICDAR 2019 in Sydney, were I presented my [Selective Style Transfer for Text](https://gombru.github.io/2019/05/14/text_style_transfer/) poster.
+I also participated in the tutorial organized by my research group: [Vision and Language: the text modality in computer vision](https://sites.google.com/view/icdar2019-vl)  
+[[Tutorial Slides]](https://docs.google.com/presentation/d/1ijIqtYHxY_LaoMLrZnGs89a58mCHPjGp23pOPoOD328/edit?usp=sharing) [[Poster]](https://docs.google.com/presentation/d/13R3_hXrxKiOwRtfIB0g_0Pr20sHLIwwW11GrZi__O6E/edit?usp=sharing) [[Paper]](https://arxiv.org/abs/1906.01466)
+
+<div class="imgcap">
+	<div style="display:inline-block">
+	<img src="/assets/poster_icdar.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
+	<img src="/assets/eccv/tutorial_icdar.jpg" height="240">
+	</div>
+</div>
+
 ### Demo at Mobile World Congress
 A demo of my work on Multi-Modal Semantic Image Retrieval was shown at Barcelona Mobile World Congress in the Computer Vision Center stand.
 The demo is available online [here](https://gombru.github.io/MMSemanticRetrievalDemo/).

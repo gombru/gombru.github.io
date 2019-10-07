@@ -5,6 +5,15 @@ permalink: /publications/
 order: 2
 ---
 
+### ARSI: An Aerial Robot for Sewer Inspection
+François Chataigner, Pedro Cavestany, Marcel Soler, Carlos Rizzo, Jesus-Pablo Gonzalez, Carles Bosch, Jaume Gibert, Antonio Torrente, **Raúl Gomez**, Daniel Serrano.  
+Advances in Robotics Research: From Lab to Market, 2019. [[PDF](https://link.springer.com/chapter/10.1007/978-3-030-22327-4_12)]   
+
+A robotic system, consisting on a drone with several cameras and sensors, is designed to make the work of sewer inspection brigades safer and more efficient. My contribution to this work is a FCN able to detect defects in the sewer manifested as irregular texture on its walls.
+<div class="imgcap">
+<img src="/assets/arsi.png" height="250">
+</div>
+
 ### Selective Style Transfer for Text
 **Raul Gomez**\*, Ali Furkan Biten\*, Lluis Gomez, Jaume Gibert, Marçal Rusiñol, Dismosthenis Karatzas.  
 ICDAR, 2019. [[PDF](https://arxiv.org/abs/1906.01466)]   
