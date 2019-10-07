@@ -49,7 +49,7 @@ It squashes a vector in the range (0, 1). It is applied independently to each el
 </div>
 
 <div class="imgcap">
-<a href="https://www.codecogs.com/eqnedit.php?latex=f(s_{i})&space;=&space;\frac{1}{1&space;&plus;&space;e^{s_{i}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(s_{i})&space;=&space;\frac{1}{1&space;&plus;&space;e^{s_{i}}}" title="f(s_{i}) = \frac{1}{1 + e^{s_{i}}}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=f(s_{i})&space;=&space;\frac{1}{1&space;&plus;&space;e^{-s_{i}}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(s_{i})&space;=&space;\frac{1}{1&space;&plus;&space;e^{-s_{i}}}" title="f(s_{i}) = \frac{1}{1 + e^{-s_{i}}}" /></a>
 </div>
 
 
