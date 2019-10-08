@@ -1,0 +1,11 @@
+---
+layout: post
+comments: true
+title:  "Exploring Hate Speech Detection in Multimodal Publications"
+excerpt: "We target the problem of hate speech detection in multimodal publications formed by a text and an image. We gather and annotate a large scale dataset from Twitter, MMHS150K, and propose different models that jointly analyze textual and visual information for hate speech detection."
+date:   2019-10-09 20:00:00
+img: "/assets/text_style_transfer/intro.png"
+mathjax: false
+---
+
+## WILL BE AVAILABLE SOON
