@@ -11,12 +11,12 @@ mathjax: false
 <span style="color:brown">**This work has been accepted for publication in [WACV 2020](http://wacv20.wacv.net/). Refer to the [paper](https://arxiv.org/) to access the full and formal article. Here I explain informally and briefly the experiments conducted and the conclusions obtained.**</span>
 
 
-## What is Multi Modal Hate Speech?
+## What is Multimodal Hate Speech?
 Hate speech is defined as ([Facebook, 2016](https://www.facebook.com/notes/facebook-safety/controversial-harmful-and-hateful-speech-on-facebook/574430655911054/), [Twitter, 2016](https://help.twitter.com/en/rules-and-policies/hateful-conduct-policy)):
 
 > "Direct and serious attacks on any protected category of people **based on** their race, ethnicity, national origin, religion, sex, gender, sexual orientation, disability or disease."
 
-Modern social media content usually include images and text. Some of these multimodal publications are **only hate speech because of the combination of the text with a certain image**. That is because the presence of offensive terms does not itself signify hate speech, and **the presence of hate speech is often determined by the context of a publication**. Moreover, users authoring hate speech tend to intentionally construct publications where the text is not enough to determine they are hate speech. This happens especially in Twitter, where multimodal tweets are formed by an image and a short text, which in many cases is not enough to judge them. Following, some paradigmatic examples were a joint interpretation of the image and the text is required to identify that they are hate speech.
+Modern social media content usually include images and text. Some of these multimodal publications are **only hate speech because of the combination of the text with a certain image**. That is because the presence of offensive terms does not itself signify hate speech, and **the presence of hate speech is often determined by the context of a publication**. Moreover, users authoring hate speech tend to intentionally construct publications where the text is not enough to determine they are hate speech. This happens especially in Twitter, where multimodal tweets are formed by an image and a short text, which in many cases is not enough to judge them. Following, some paradigmatic examples were a **joint interpretation of the image and the text is required to identify that they are hate speech**.
 
 <div class="imgcap">
 	<div style="display:inline-block">
@@ -26,12 +26,14 @@ Modern social media content usually include images and text. Some of these multi
 		<img src="/assets/hatespic_labeler/hate_2.png" height = "330">
 	</div>
 	<div class="thecap">
-	The first example is Hate Speech because is racist. The second one is Hate Speech because is sexist. In both cases, a joint interpretation of the image and the text is required to identify them as hate speech.
+	The first example is Hate Speech because it's racist. The second one is Hate Speech because it's sexist. In both cases, a joint interpretation of the image and the text is required to identify them as hate speech.
 	</div>
 </div>
 
-There are several works in automatic Hate Speech detection, but all of them use only textual data. A recent survey of them can be found here ([Schmidt, 2017](http://www.aclweb.org/anthology/W17-1101)). With this project we pretend to extend that work to a multi-modal (text and image) analysis. As the Hate Speech detection in multi-modal publications problem has not been adressed yet, there are not available annotated datasets. That's why we created and made available **MMHS150K**.
 
+There are several works in automatic Hate Speech detection, but all of them use only textual data. A recent survey of them can be found [here](http://www.aclweb.org/anthology/W17-1101)). With this project we pretend to extend that work to a multi-modal (text and image) analysis. As the Hate Speech detection in multi-modal publications problem has not been adressed yet, **there are not available  datasets. That's why we created and made available MMHS150K**.
+
+<span style="color:brown">Recently two related papers, also working on hate speech detection on images and text appeared. In [this work](https://research.fb.com/publications/exploring-deep-multimodal-fusion-of-text-and-photo-for-hate-speech-classification/) Facebook uses user-reported data from their Social Network to conduct a similar research (though they probably won't publish the dataset). In [this other work](https://arxiv.org/abs/1910.02334) they target the similar task of detecting hate speech MEMES containing visual and textual information.</span>
 
 ## The MMHS150K Dataset
 Existing hate speech datasets contain only textual data. We create a new **manually annotated** multimodal hate speech dataset formed by **150,000 tweets, each one of them containing text and an image**. We call the dataset **MMHS150K**. 
@@ -44,20 +46,28 @@ We annotate the gathered tweets using the crowdsourcing platform Amazon Mechanic
 We received a lot of valuable feedback from the annotators. Most of them had understood the task correctly, but they were worried because of its subjectivity. This is indeed a subjective task, highly dependent on the annotator convictions and sensitivity. However, we expect to get cleaner annotations the more strong the attack is, which are the publications we are more interested on detecting. Below, the percentage of tweets labeled in each one of the classes, and the percentage of hate and not hate tweets for the most frequent keywords.
 
 <div class="imgcap">
-	<img src="/assets/mmhs/classes_pie.png" width="280">
+	<img src="/assets/mmhs/classes_pie.png" width="360">
 	<div class="thecap">
 	Percentage of tweets per class in MMHS150K.
 	</div>
 </div>
 
 <div class="imgcap">
-	<img src="/assets/mmhs/words_hate.png" width="650">
+	<img src="/assets/mmhs/words_hate.png" width="700">
 	<div class="thecap">
 	 Percentage of hate and not hate tweets for top keywords of MMHS150K.
 	</div>
 </div>
 
 ### Dataset Contents
+
+<div class="imgcap">
+	<img src="/assets/mmhs/mmhs150k_examples.png" width="650">
+	<div class="thecap">
+	 Tweets from MMHS150K where the visual informationadds relevant context for the hate speech detection task.
+	</div>
+</div>
+
 ```
 img_resized/
 	Images resized such that their shortest size is 500 pixels
@@ -83,17 +93,10 @@ splits/val_ids.txt
 splits/test_ids.txt
 	Contain the tweets IDs used in the 3 splits
 ```
+
 <p align="center">
-<b><a href="https://mega.nz/#!KNQjWQLY!MKdAUOdUcd5y-wImE4Cp_Bl9T2iLAwDBdqeld9M8SXQ">Download MMHS150K</a></b>
+<b><a href="https://mega.nz/#!KNQjWQLY!MKdAUOdUcd5y-wImE4Cp_Bl9T2iLAwDBdqeld9M8SXQ">Download MMHS150K (6 GB)</a></b>
 </p>
-
-
-<div class="imgcap">
-	<img src="/assets/mmhs/mmhs150k_examples.png" width="650">
-	<div class="thecap">
-	 Tweets from MMHS150K where the visual informationadds relevant context for the hate speech detection task.
-	</div>
-</div>
 
 ## Methodology
 The **objectives of this work** are to **introduce the task of hate speech detection on multimodal publications**, to **create and open a dataset for that task**, and to **explore the performance of state of the art multimodal machine learning models** in the task. As a **baseline, we train an LSTM for hate speech detection using only the tweets text**. We aim to train **multimodal models that exploit also the visual information to outperform the LSTM by succesfully detecting those hate speech instances where the interpretation of the visual information is needed**.  
@@ -126,6 +129,7 @@ The table below shows the F-score, the Area Under the ROC Curve (AUC) and the me
 	<div class="thecap">
 	 Performance of the proposed models, the LSTM and random scores.  The Inputs column indicate which inputs are available at training and testing time.
 	</div>
+</div>
 
 First, notice that given the subjectivity of the task and the discrepancies between annotators, getting optimal scores in the evaluation metrics is virtually impossible. However, a system with relatively low metric scores can still be very useful for hate speech detection in a real application: it will fire on publications for which most annotators agree they are hate, which are often the stronger attacks.  
 The FCM trained only with images gets decent results, considering that in many publications the images might not give any useful information for the task. The following figure shows some representative examples of the top hate and not hate scored images of this model. Many hate tweets are accompanied by demeaning nudity images, being sexist or homophobic. Other racist tweets are accompanied by images caricaturing black people.  Finally, MEMES are also typically used in hate speech publications. The top scored images for not hate are portraits of people belonging to minorities. This is due to the use of slur inside these communities without an  offensive  intention, such  as  the  word nigga inside  the afroamerican community or the word dyke inside the lesbian community. These results show  that images can be effectively used to discriminate between offensive and non-offensive uses of those words.
