@@ -5,6 +5,15 @@ permalink: /publications/
 order: 2
 ---
 
+### Exploring Hate Speech Detection in Multimodal Publications 
+**Raul Gomez**, Jaume Gibert, Lluis Gomez, Dimosthenis Karatzas.  
+Winter Conference on Applications of Computer Vision, 2020. [[PDF](https://)]   
+
+The problem of hate speech detection in multimodal publications formed by a text and an image is targeted. A large scale dataset from Twitter, MMHS150K, is created and different models that jointly analyze textual and visual information for hate speech detection are proposed.
+<div class="imgcap">
+<img src="/assets/mmhs/intro.png" height="250">
+</div>
+
 ### ARSI: An Aerial Robot for Sewer Inspection
 François Chataigner, Pedro Cavestany, Marcel Soler, Carlos Rizzo, Jesus-Pablo Gonzalez, Carles Bosch, Jaume Gibert, Antonio Torrente, **Raúl Gomez**, Daniel Serrano.  
 Advances in Robotics Research: From Lab to Market, 2019. [[PDF](https://link.springer.com/chapter/10.1007/978-3-030-22327-4_12)]   

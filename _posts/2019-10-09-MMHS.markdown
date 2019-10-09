@@ -62,7 +62,7 @@ We received a lot of valuable feedback from the annotators. Most of them had und
 ### Dataset Contents
 
 <div class="imgcap">
-	<img src="/assets/mmhs/mmhs150k_examples.png" width="650">
+	<img src="/assets/mmhs/mmhs150k_examples.png" width="720">
 	<div class="thecap">
 	 Tweets from MMHS150K where the visual informationadds relevant context for the hate speech detection task.
 	</div>
