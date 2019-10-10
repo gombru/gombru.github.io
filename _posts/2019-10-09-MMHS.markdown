@@ -8,7 +8,7 @@ img: "/assets/mmhs/intro.png"
 mathjax: false
 ---
 
-<span style="color:brown">**This work has been accepted for publication in [WACV 2020](http://wacv20.wacv.net/). Refer to the [paper](https://arxiv.org/) to access the full and formal article. Here I explain informally and briefly the experiments conducted and the conclusions obtained.**</span>
+<span style="color:brown">**This work has been accepted for publication in [WACV 2020](http://wacv20.wacv.net/). Refer to the [paper](https://arxiv.org/pdf/1910.03814.pdf) to access the full and formal article. Here I explain informally and briefly the experiments conducted and the conclusions obtained.**</span>
 
 
 ## What is Multimodal Hate Speech?
