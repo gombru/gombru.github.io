@@ -5,10 +5,34 @@ permalink: /other-material/
 order: 4
 ---
 
+### Research stay in University of Trento
+From December 2019 until March 2020 I'll be working with the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/), lead by [Nicu Sebe](http://disi.unitn.it/~sebe/), in the University of Trento.
+
+<div class="imgcap">
+	<div style="display:inline-block">
+	<img src="/assets/trento.jpg" height="240">
+	</div>
+</div>
+
+
+### Presentation at DLBCN 2019
+The [Deep Learning Barcelona Symposium](https://sites.google.com/view/dlbcn2019) aims at showcasing research on deep learning carried out by scientists in/from Barcelona. There I presented my WACV article [Exploring Hate Speech Detection in Multimodal Publications](https://arxiv.org/pdf/1910.03814.pdf).  
+[[Slides](https://docs.google.com/presentation/d/18g1dTUguPlOvagEaTVXwR9XsTE_CAH5T9Bc7uQR-KtQ/edit?usp=sharing)]
+
+<div class="imgcap">
+	<div style="display:inline-block">
+	<img src="/assets/dlbcn_1.jpeg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
+	<img src="/assets/dlbcn_2.jpeg" height="240">
+	</div>
+</div>
+
+
 ### Poster and tutorial at ICDAR 2019 in Sydney
 I attended to ICDAR 2019 in Sydney, were I presented my [Selective Style Transfer for Text](https://gombru.github.io/2019/05/14/text_style_transfer/) poster.
 I also participated in the tutorial organized by my research group: [Vision and Language: the text modality in computer vision](https://sites.google.com/view/icdar2019-vl).  
-[[Tutorial Slides]](https://docs.google.com/presentation/d/1ijIqtYHxY_LaoMLrZnGs89a58mCHPjGp23pOPoOD328/edit?usp=sharing) [[Poster]](https://docs.google.com/presentation/d/13R3_hXrxKiOwRtfIB0g_0Pr20sHLIwwW11GrZi__O6E/edit?usp=sharing) [[Paper]](https://arxiv.org/abs/1906.01466)
+[[Tutorial Slides](https://docs.google.com/presentation/d/1ijIqtYHxY_LaoMLrZnGs89a58mCHPjGp23pOPoOD328/edit?usp=sharing)]  [[Poster](https://docs.google.com/presentation/d/13R3_hXrxKiOwRtfIB0g_0Pr20sHLIwwW11GrZi__O6E/edit?usp=sharing)]  [[Paper](https://arxiv.org/abs/1906.01466)]
 
 <div class="imgcap">
 	<div style="display:inline-block">
@@ -45,8 +69,8 @@ Poster: "Learning from #Barcelona Instagram data what Locals and Tourists post a
 
 
 ### Poster at International Computer Vision Summer School 2018
-I went to this [summer school](http://iplab.dmi.unict.it/icvss2018/Home) in Sicily where I presented a poster about the work done applying self-supervised learning to Social Media Barcelona data.  
-[[Poster](https://docs.google.com/presentation/d/18p-LwU2EcEIizNus5XX-uW_U72sD6FASSrtxDqH6i_s/edit?usp=sharing)]. This work was later published in ECCV MULA Workshop [[PDF](https://arxiv.org/abs/1808.06369)]-
+I went to this [summer school](http://iplab.dmi.unict.it/icvss2018/Home) in Sicily where I presented a poster about the work done applying self-supervised learning to Social Media Barcelona data. This work was later published in ECCV MULA Workshop.  
+[[Poster](https://docs.google.com/presentation/d/18p-LwU2EcEIizNus5XX-uW_U72sD6FASSrtxDqH6i_s/edit?usp=sharing)]  [[PDF](https://arxiv.org/abs/1808.06369)]
 
 <div class="imgcap">
 <img src="/assets/poster_icvss.jpg" height="240">
@@ -54,7 +78,8 @@ I went to this [summer school](http://iplab.dmi.unict.it/icvss2018/Home) in Sici
 
 
 ### ForumTurisTIC
-[Eurecat](https://eurecat.org/) organized a tourism forum in Barcelona, [ForumTurisTIC](https://www.forumturistic.com/). I presented there the possibilities of applying my research on learning from images and associated text to tourism analysis in the [inspirational session](https://www.forumturistic.com/ponentes/raul-gomez-eurecat/). [[Slides]](https://docs.google.com/presentation/d/1z-BmhiaB5UC7vhCTkENtiH3NsaYEhise2WEWnfHw1_0/edit?usp=sharing)  [[Video]](https://youtu.be/f80LHPFN-8Q?t=25m47s) [[BlogPost]](https://gombru.github.io/2018/02/11/forumTurisTIC_presentation/)
+[Eurecat](https://eurecat.org/) organized a tourism forum in Barcelona, [ForumTurisTIC](https://www.forumturistic.com/). I presented there the possibilities of applying my research on learning from images and associated text to tourism analysis in the [inspirational session](https://www.forumturistic.com/ponentes/raul-gomez-eurecat/).  
+[[Slides](https://docs.google.com/presentation/d/1z-BmhiaB5UC7vhCTkENtiH3NsaYEhise2WEWnfHw1_0/edit?usp=sharing)]  [[Video](https://youtu.be/f80LHPFN-8Q?t=25m47s)]  [[BlogPost](https://gombru.github.io/2018/02/11/forumTurisTIC_presentation/)]
 
 
 <div class="imgcap">
