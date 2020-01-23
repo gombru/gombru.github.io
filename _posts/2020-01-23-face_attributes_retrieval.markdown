@@ -105,7 +105,7 @@ This work stayed as a fast toy experiment, so I've not compared its performance 
 
 
 <div class="imgcap">
-	<img src="/assets/face_retrieval/results.png" width="560">
+	<img src="/assets/face_retrieval/results.png" width="500">
 	<div class="thecap">
 	Results. Attribute multiplier, stands for a scalar multiplied by the attributes vector embedding in step 4., in order to control its influence in the resulting query embedding.
 	</div>
