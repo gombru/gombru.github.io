@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Face Images Retrieval with Attributes Modifications"
 excerpt: "Design of an image retrieval system able to retrieve images similar to a query image but with some modified attributes. In this case, I work with face images and attributes describing face characteristics."
-date:   2020-01-023 20:00:00
+date:   2020-01-23 20:00:00
 img: "/assets/face_retrieval/intro.png"
 mathjax: false
 ---
