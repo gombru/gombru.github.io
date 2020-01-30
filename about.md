@@ -9,7 +9,9 @@ I'm **Raúl Gómez Bruballa**, an industrial PhD student in [Eurecat](https://eu
 
 I was born in Altafulla and moved to Barcelona to study telecomunications engenieering with an specialization in audiovisuals systems at the Universitat Politècnica de Catalunya. After that I did a computer vision master at the UAB, where now I'm doing my PhD toguether with Eurecat, the catalonia technological center.
 
-In this personal website I will write about my scientific work, either publications, toy experiments or coding stuff.
+In this personal website I will write about my scientific work, either publications, toy experiments or coding stuff.  
+
+My CV is available [here](https://drive.google.com/open?id=1lVkR3tW6dt93ExcdVR7Jy6NJCQxKR81s).
 
 
 <div class="imgcap">
@@ -23,4 +25,5 @@ In this personal website I will write about my scientific work, either publicati
 **Github**   [gombru](https://github.com/gombru)  
 **Linkedin**   [Raul Gomez Bruballa](https://www.linkedin.com/in/raulgomezbruballa)  
 **Twitter**   [gombru](https://twitter.com/gombru)  
+**Instagram**   [raulgombru](https://www.instagram.com/raulgombru/)  
 
