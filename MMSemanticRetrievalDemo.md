@@ -6,14 +6,14 @@ order: 10
 ---
 <!---
 <center>
-	<object data="http://158.109.9.237:45993" width="600" height="700"> 
+	<object data="http://158.109.9.190:45993" width="600" height="700"> 
 	    Your browser doesn’t support the object tag. 
 	</object>
 </center>
 -->
 
 <div class="imgcap">
-<a href="http://158.109.9.237:45993"
+<a href="http://158.109.9.190:45993"
 target="_blank"><img src="/assets/MMSemanticRetrievalDemo/demo.png" height = "500"></a>
 </div>
 
@@ -21,7 +21,7 @@ target="_blank"><img src="/assets/MMSemanticRetrievalDemo/demo.png" height = "50
 This demo lets explore that space, using words and images as queries, and allowing to perform arithmetics between them.**
 
 <p align="center">   
-<b><a href="http://158.109.9.237:45993">Go to the demo</a></b>
+<b><a href="http://158.109.9.190:45993">Go to the demo</a></b>
 </p>
 
 
