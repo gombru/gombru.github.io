@@ -73,6 +73,10 @@ Where $$s_j$$ are the scores inferred by the net for each class in $$C$$. Note t
 > Activation functions are used to transform vectors before computing the loss in the training phase. In testing, when the loss is no longer applied, activation functions are also used to get the CNN outputs.
 
 
+<span style="color:brown"> **If you prefer video format, I made a video out of this post. Also in Spanish:** </span>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/635cmrp4z40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Losses
 
 ### Cross-Entropy loss
