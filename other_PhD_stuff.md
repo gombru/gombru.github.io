@@ -5,8 +5,20 @@ permalink: /other-material/
 order: 4
 ---
 
+### Attended to WACV 2020 in Aspen, Colorado
+I attended to WACV 2020 where I presented my work "Exploring Hate Speech Detection in Multimodal Publications" as an spotlight and a poster. [[PDF](https://arxiv.org/pdf/1910.03814.pdf)] [[Slides](https://docs.google.com/presentation/d/1l9rPVWFXm80WoxaHwGGE1Cwn5WoDMsApz8Kaxf9Acro/edit?usp=sharing)] [[Poster](https://docs.google.com/presentation/d/1oDGuzbw2x7uShMcc4ExqonRdRF7Rx4vcZmVaAwNrdpU/edit?usp=sharing)] [[Poster](https://docs.google.com/presentation/d/1g5axv7ZyHme8uwobzvhsg-afvf_KX3UCzikkZz3-7Mc/edit?usp=sharing)]
+
+<div class="imgcap">
+	<div style="display:inline-block">
+	<img src="/assets/wacv_poster.jpeg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
+	<img src="/assets/wacv_oral.jpeg" height="240">
+	</div>
+</div>
+
 ### Research stay in University of Trento
-From December 2019 until March 2020 I'll be working with the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/), lead by [Nicu Sebe](http://disi.unitn.it/~sebe/), in the University of Trento.
+From December 2019 until March 2020 I was working with the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/), lead by [Nicu Sebe](http://disi.unitn.it/~sebe/), in the University of Trento.
 
 <div class="imgcap">
 	<div style="display:inline-block">
