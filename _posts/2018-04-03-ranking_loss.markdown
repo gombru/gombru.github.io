@@ -37,8 +37,7 @@ Both of them compare distances between representations of training data samples.
 
 <span style="color:brown"> **If you prefer video format, I made a video out of this post. Also available in Spanish:** </span>
 <center>
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=yIdtx3pQkdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yIdtx3pQkdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
  
 ### Pairwise Ranking Loss
