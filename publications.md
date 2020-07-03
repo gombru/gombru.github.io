@@ -5,6 +5,16 @@ permalink: /publications/
 order: 2
 ---
 
+### Location Sensitive Image Retrieval and Tagging 
+**Raul Gomez**, Jaume Gibert, Lluis Gomez, Dimosthenis Karatzas.  
+ECCV, 2020. [[PDF](https://arxiv.org/)]   
+
+We design a model to retrieve images related to a query hashtag and near to a given location, and to tag images exploiting their location information.
+
+<div class="imgcap">
+<img src="/assets/LocSens/bridges.png" height="180">
+</div>
+
 ### Exploring Hate Speech Detection in Multimodal Publications 
 **Raul Gomez**, Jaume Gibert, Lluis Gomez, Dimosthenis Karatzas.  
 Winter Conference on Applications of Computer Vision, 2020. [[PDF](https://arxiv.org/pdf/1910.03814.pdf)]   

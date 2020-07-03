@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title:  "LocSens: Location Sensitive Image Retrieval and Tagging"
+title:  "Location Sensitive Image Retrieval and Tagging"
 excerpt: "We design a model to retrieve images related to a query hashtag and near to a given location, and to tag images exploiting their location information."
 date:   2020-06-03 20:00:00
 img: "/assets/LocSens/bridges.png"
@@ -17,7 +17,9 @@ mathjax: false
 > The code used in this work is available [here](https://github.com/gombru/LocSens).
 > The ECCV reviews and rebuttal of this paper are available [here](https://openreview.net).
 
-In this work we train a neural network to **score triplets of image, hashtag and geolocation by plausibility**, and exploit that model to **retrieve images related to a given hashtag and near to a given location**, and to **tag images exploiting both their visual information and their geolocation**. We train on a large scale dataset of Web (Flickr) images with associated tags and geolocations: [YFCC100M](https://multimediacommons.wordpress.com/yfcc100m-core-dataset/). We find that, to train the model for the retrieval task, it is a must to balance the query hashtag and location influence in the ranking, and we design a technique to do that. We demonstrate that the retrieval model can be trained to retrieve images related to a query hashtag and near to a query location at different location granularities, and that the tagging model exploits location to outperform location agnostic tagging models.
+In this work we train a neural network to **score triplets of image, hashtag and geolocation by plausibility**, and exploit that model to **retrieve images related to a given hashtag and near to a given location**, and to **tag images exploiting both their visual information and their geolocation**. 
+
+We train on a large scale dataset of Web (Flickr) images with associated tags and geolocations: [YFCC100M](https://multimediacommons.wordpress.com/yfcc100m-core-dataset/). We find that, to train the model for the retrieval task, it is a must to balance the query hashtag and location influence in the ranking, and we design a technique to do that. We demonstrate that the retrieval model can be trained to retrieve images related to a query hashtag and near to a query location at different location granularities, and that the tagging model exploits location to outperform location agnostic tagging models.
 
 <div class="imgcap">
 	<img src="/assets/LocSens/bridges.png" width="750">
@@ -62,7 +64,7 @@ We have *25M images with an average of 4.25 hashtags*. The tags are noisy and hi
  The following table shows the results of this three setups on image retrieval an image tagging. The MLC training was very unstable due to class imbalance. We tried different techniques to balance the classes, but couldn't achieve consistent results. MCC classification outperforms the other methods by a big margin in both tasks, despite it is counter intuitive, because it is setting a naturally multi-label task (multiple positive hashtags per image) as a multi-class task (a single positive class per image.) Please read the paper for more details of this training, evaluation details and results analysis.
 
  <div class="imgcap">
-	<img src="/assets/LocSens/retrieval_agnostic.png" width="160">
+	<img src="/assets/LocSens/retrieval_agnostic.png" width="145">
 	<div class="thecap">
 	Precision at 10 score on location agnostic image retrieval.
 	</div>
