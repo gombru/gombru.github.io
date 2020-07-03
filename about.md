@@ -11,7 +11,7 @@ I was born in Altafulla and moved to Barcelona to study telecomunications engeni
 
 In this personal website I will write about my scientific work, either publications, toy experiments or coding stuff.  
 
-My CV is available [here](https://drive.google.com/open?id=1lVkR3tW6dt93ExcdVR7Jy6NJCQxKR81s).
+My CV is available [here](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy6NJCQxKR81s/view?usp=sharing).
 
 
 <div class="imgcap">
