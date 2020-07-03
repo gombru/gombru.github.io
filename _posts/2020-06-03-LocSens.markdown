@@ -20,13 +20,13 @@ mathjax: false
 In this work we train a neural network to **score triplets of image, hashtag and geolocation by plausibility**, and exploit that model to **retrieve images related to a given hashtag and near to a given location**, and to **tag images exploiting both their visual information and their geolocation**. We train on a large scale dataset of Web (Flickr) images with associated tags and geolocations: [YFCC100M](https://multimediacommons.wordpress.com/yfcc100m-core-dataset/). We find that, to train the model for the retrieval task, it is a must to balance the query hashtag and location influence in the ranking, and we design a technique to do that. We demonstrate that the retrieval model can be trained to retrieve images related to a query hashtag and near to a query location at different location granularities, and that the tagging model exploits location to outperform location agnostic tagging models.
 
 <div class="imgcap">
-	<img src="/assets/LocSens/bridges.png" width="800">
+	<img src="/assets/LocSens/bridges.png" width="750">
 	<div class="thecap">
 	Top retrieved image by LocSens for the query hashtag bridge at different locations.	</div>
 </div>
 
 <div class="imgcap">
-	<img src="/assets/LocSens/temple.png" width="800">
+	<img src="/assets/LocSens/temple.png" width="750">
 	<div class="thecap">
 	Top retrieved image by LocSens for the query hashtag temple at different locations.	</div>
 </div>
@@ -62,7 +62,7 @@ We have *25M images with an average of 4.25 hashtags*. The tags are noisy and hi
  The following table shows the results of this three setups on image retrieval an image tagging. The MLC training was very unstable due to class imbalance. We tried different techniques to balance the classes, but couldn't achieve consistent results. MCC classification outperforms the other methods by a big margin in both tasks, despite it is counter intuitive, because it is setting a naturally multi-label task (multiple positive hashtags per image) as a multi-class task (a single positive class per image.) Please read the paper for more details of this training, evaluation details and results analysis.
 
  <div class="imgcap">
-	<img src="/assets/LocSens/retrieval_agnostic.png" width="300">
+	<img src="/assets/LocSens/retrieval_agnostic.png" width="160">
 	<div class="thecap">
 	Precision at 10 score on location agnostic image retrieval.
 	</div>
@@ -135,7 +135,7 @@ Please read the paper for a more detailed explanation and analysis of the result
 The next figure shows qualitative retrieval results of several hashtags at different locations. It demonstrates that the model **successfully fuses textual and location information to retrieve images related to the joint interpretation of the two query modalities**, being able to retrieve images related to the same concept across a wide range of locations with different geographical distances between them. LocSens goes beyond retrieving the most common images from each geographical location, as it is demonstrated by the *winter* results in Berlin or the *car* results in Paris.
 
 <div class="imgcap">
-	<img src="/assets/LocSens/retrieval_results.png" width="800">
+	<img src="/assets/LocSens/retrieval_results.png" width="750">
 	<div class="thecap">
 	Query hashtags with different query locations and top 3 retrieved images. 
 	</div>
@@ -145,7 +145,7 @@ The next figure shows results for hashtag queries in different locations where s
 Similarly, if we query for *ski* images in El Cairo and Sydney, we get images of the desert and water sports respectively, which have visual similarities with *ski* images.
 
 <div class="imgcap">
-	<img src="/assets/LocSens/failures_retrieval.png" width="800">
+	<img src="/assets/LocSens/failures_retrieval.png" width="750">
 	<div class="thecap">
 	Query hashtags with different query locations and top 3 retrieved images. 
 	</div>
@@ -157,7 +157,7 @@ The evaluation of image tagging is more simple and standard: LocSens has as inpu
 The following table shows image tagging results of the location agnostic models and LocSens.
 
 <div class="imgcap">
-	<img src="/assets/LocSens/tagging_table.png" width="600">
+	<img src="/assets/LocSens/tagging_table.png" width="500">
 	<div class="thecap">
 	Image tagging: Accuracy at 1, Accuracy at 10, percentage of predicted tags and percentage of correctly predicted tags of the frequency baseline, location agnostic prediction and the location sensitive model.
 	</div>
@@ -168,7 +168,7 @@ Please refer to the paper for a detailed analysis of this tagging results. In th
 The next figure shows a comparison of the tagging results of MCC and LocSens, that demonstrate how the later **successfully processes jointly visual and location information to assign tags referring to the concurrence of both data modalities**. As seen in the first example, besides assigning tags directly related to the given location (*london*) and discarding tags related to locations far from the given one (*newyork*), LocSens predicts tags that need the joint interpretation of visual and location information (*thames*).
 
 <div class="imgcap">
-	<img src="/assets/LocSens/tagging_results.png" width="800">
+	<img src="/assets/LocSens/tagging_results.png" width="750">
 	<div class="thecap">
    Images with their locations and groundtruth hashtags and the corresponding top 5 hashtags predicted by the location agnostic MCC model and LocSens.
 	</div>
@@ -178,7 +178,7 @@ The next figure shows LocSens tagging results on images with different faked loc
 In the example of an image of a road, it predicts as one of the most probable tags *carretera* (which means *road* in spanish) if the image is from Costa Rica, while it predicts *hills*, *Cumbria* and *Scotland* if the image is from Edinburgh, referring to the geography and the regions names around. If the image is from Chicago, it predicts *interstate*, since the road in it may be from the United States interstate highway system.
 
 <div class="imgcap">
-	<img src="/assets/LocSens/tagging_results_multiple.png" width="800">
+	<img src="/assets/LocSens/tagging_results_multiple.png" width="750">
 	<div class="thecap">
    LocSens top predicted hashtags for images with different faked locations.
 	</div>
