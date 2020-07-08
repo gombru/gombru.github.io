@@ -12,7 +12,7 @@ mathjax: false
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-<span style="color:brown">**This work has been published in ECCV 2020. Refer to the [paper](https://arxiv.org/) to access the full and formal article. Here I explain informally and briefly the experiments conducted and the conclusions obtained.**</span>
+<span style="color:brown">**This work has been published in ECCV 2020. Refer to the [paper](https://arxiv.org/abs/2007.03375) to access the full and formal article. Here I explain informally and briefly the experiments conducted and the conclusions obtained.**</span>
 
 > The code used in this work is available [here](https://github.com/gombru/LocSens).
 > The ECCV reviews and rebuttal of this paper are available [here](https://openreview.net).
@@ -47,13 +47,13 @@ We follow this steps:
 
 ## Data
 
-In this work we use the [YFCC100M](https://multimediacommons.wordpress.com/yfcc100m-core-dataset/) dataset, which contains 100 Million images with associated tags and geolocations (latitude and longitude), and other metadata we don't use in this work. We filter out the images without geolocation, images without tags, etc., and end up with 25 million images. We create a large hashtag vocabulary consisting on the most frequent 100k tags. For more details about the vocabulary creation, the splits used and the data preprocessing, read the [paper](https://arxiv.org/). In the [LocSens GitHub](https://github.com/gombru/LocSens) there are also the original splits and vocabulary.
+In this work we use the [YFCC100M](https://multimediacommons.wordpress.com/yfcc100m-core-dataset/) dataset, which contains 100 Million images with associated tags and geolocations (latitude and longitude), and other metadata we don't use in this work. We filter out the images without geolocation, images without tags, etc., and end up with 25 million images. We create a large hashtag vocabulary consisting on the most frequent 100k tags. For more details about the vocabulary creation, the splits used and the data preprocessing, read the [paper](https://arxiv.org/abs/2007.03375). In the [LocSens GitHub](https://github.com/gombru/LocSens) there are also the original splits and vocabulary.
 We will input the geolocation to our model as raw latitude and longitude, but normalized to range between [0-1]. Note that 0 and 1 latitude fall on the poles while 0 and 1 represent the same longitude because of its circular nature and falls on the Pacific. So, despite other location encodings could be considered, this straightforward normalization seems to be, by chance, adequate.
 
 ## Learning with Hashtag Supervision
 
 The first step of this work is to *learn image (and tags) representations* (in a location agnostic setup). This representations will be after input to LocSens, which will be trained with pre-computed visual and tags representations.
-We have *25M images with an average of 4.25 hashtags*. The tags are noisy and highly unbalanced. We benchmark different training strategies to learn images and tags representations, in what we call a *learning with hashtag supervision* task. Here I briefly mention the setups tried and the results, but I strongly recommend you to *read the [paper](https://arxiv.org/) if you are interested in this comparison*.
+We have *25M images with an average of 4.25 hashtags*. The tags are noisy and highly unbalanced. We benchmark different training strategies to learn images and tags representations, in what we call a *learning with hashtag supervision* task. Here I briefly mention the setups tried and the results, but I strongly recommend you to *read the [paper](https://arxiv.org/abs/2007.03375) if you are interested in this comparison*.
 
  - **MCC.** We setup the problem as a Multi-Class Classification problem. At each iteration one of the images tags is selected as positive, and a CNN is trained with a Softmax activation with that positive tag and a Cross-Entropy Loss. Before the classification layer, we add a 300-dimensional layer, which allows us to learn both images and tags embeddings. Learn more about MCC in my former [blogpost](https://gombru.github.io/2018/05/23/cross_entropy_loss/).
 
@@ -200,6 +200,6 @@ In the example of an image of a road, it predicts as one of the most probable ta
  - **Experimentation under more controlled scenarios.** In this work we have focused on learning from large scale Social Media data. Further experimentation under more controlled scenarios where the location information is meaningful in all cases is another interesting research setup to evaluate the same tasks of location sensitive image retrieval and tagging.
 
 
- Read the ECCV2020 [paper](https://arxiv.org/) for more details about this work.
+ Read the ECCV2020 [paper](https://arxiv.org/abs/2007.03375) for more details about this work.
 
 

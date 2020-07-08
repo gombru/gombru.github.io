@@ -7,7 +7,7 @@ order: 2
 
 ### Location Sensitive Image Retrieval and Tagging 
 **Raul Gomez**, Jaume Gibert, Lluis Gomez, Dimosthenis Karatzas.  
-ECCV, 2020. [[PDF](https://arxiv.org/)]   
+ECCV, 2020. [[PDF](https://arxiv.org/abs/2007.03375)]   
 
 We design a model to retrieve images related to a query hashtag and near to a given location, and to tag images exploiting their location information.
 
