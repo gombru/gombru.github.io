@@ -41,13 +41,16 @@ Both of them compare distances between representations of training data samples.
 
 
 
-<a class="twitter-follow-button"
-  href="https://twitter.com/gombru">
-Follow @gombru</a>
-
-<script src="https://apis.google.com/js/platform.js"></script>
-<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
-
+<div class="imgcap">
+	<div style="display:inline-block">
+		<a class="twitter-follow-button"
+		  href="https://twitter.com/gombru">
+		Follow @gombru</a>
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
+		<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
+	</div>
+</div>
 
 
 ### Pairwise Ranking Loss
