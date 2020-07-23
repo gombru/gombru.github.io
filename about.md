@@ -24,6 +24,9 @@ My CV is available [here](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy
 **E-mail**   <a href="mailto:{{ site.email }}">{{ site.email }}</a>  
 **Github**   [gombru](https://github.com/gombru)  
 **Linkedin**   [Raul Gomez Bruballa](https://www.linkedin.com/in/raulgomezbruballa)  
-**Twitter**   [gombru](https://twitter.com/gombru)  
 **Instagram**   [raulgombru](https://www.instagram.com/raulgombru/)  
+**Twitter**   [gombru](https://twitter.com/gombru)  
+<a href="https://twitter.com/gombru?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @gombru</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+**YouTube**   [gombru](https://www.youtube.com/channel/UC3vvewvchL5Si3bix1Kis6A?view_as=subscriber)  
+<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
 
