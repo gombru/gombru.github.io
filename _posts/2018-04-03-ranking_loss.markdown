@@ -43,9 +43,7 @@ Both of them compare distances between representations of training data samples.
 
 <div class="imgcap">
 	<div style="display:inline-block">
-		<a class="twitter-follow-button"
-		  href="https://twitter.com/gombru">
-		Follow @gombru</a>
+<a href="https://twitter.com/gombru?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @gombru</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</div>
 	<div style="display:inline-block; margin-left: 5px;">
 		<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
