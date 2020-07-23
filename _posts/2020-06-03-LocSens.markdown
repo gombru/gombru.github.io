@@ -45,6 +45,13 @@ We follow this steps:
  4. Location sensitive image tagging: LocSens can rank tags given an image+location query.
 
 
+
+ <span style="color:brown"> **If you prefer video format, here is the video I made to present the article in (online) ECCV 2020** </span>
+<center>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/rxFPGbIHbko" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+
 ## Data
 
 In this work we use the [YFCC100M](https://multimediacommons.wordpress.com/yfcc100m-core-dataset/) dataset, which contains 100 Million images with associated tags and geolocations (latitude and longitude), and other metadata we don't use in this work. We filter out the images without geolocation, images without tags, etc., and end up with 25 million images. We create a large hashtag vocabulary consisting on the most frequent 100k tags. For more details about the vocabulary creation, the splits used and the data preprocessing, read the [paper](https://arxiv.org/abs/2007.03375). In the [LocSens GitHub](https://github.com/gombru/LocSens) there are also the original splits and vocabulary.

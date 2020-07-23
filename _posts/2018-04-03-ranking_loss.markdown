@@ -39,7 +39,16 @@ Both of them compare distances between representations of training data samples.
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yIdtx3pQkdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
- 
+
+<a class="twitter-follow-button"
+  href="https://twitter.com/gombru">
+Follow @gombru</a>
+
+<script src="https://apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
+
+
+
 ### Pairwise Ranking Loss
 
 <div class="imgcap">
