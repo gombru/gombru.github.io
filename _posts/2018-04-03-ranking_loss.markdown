@@ -42,7 +42,7 @@ Both of them compare distances between representations of training data samples.
 
 
 <div class="imgcap">
-	<div style="display:inline-block>
+	<div style="display:inline-block">
 		<script src="https://apis.google.com/js/platform.js"></script>
 		<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
 	</div>
@@ -222,7 +222,7 @@ Using this setup we computed some quantitative results to **compare Triplet Rank
   
 
 <div class="imgcap">
-	<div style="display:inline-block>
+	<div style="display:inline-block">
 		<script src="https://apis.google.com/js/platform.js"></script>
 		<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
 	</div>

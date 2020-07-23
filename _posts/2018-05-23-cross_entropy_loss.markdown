@@ -79,7 +79,7 @@ Where $$s_j$$ are the scores inferred by the net for each class in $$C$$. Note t
 </center>
 
 <div class="imgcap">
-	<div style="display:inline-block>
+	<div style="display:inline-block">
 		<script src="https://apis.google.com/js/platform.js"></script>
 		<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
 	</div>
@@ -367,7 +367,7 @@ Keras Loss Functions Guide: [Keras Loss Functions: Everything You Need To Know](
 
 
 <div class="imgcap">
-	<div style="display:inline-block>
+	<div style="display:inline-block">
 		<script src="https://apis.google.com/js/platform.js"></script>
 		<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
 	</div>

@@ -29,7 +29,7 @@ My CV is available [here](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy
 **YouTube**   [gombru](https://www.youtube.com/channel/UC3vvewvchL5Si3bix1Kis6A?view_as=subscriber)    
 
 <div class="imgcap">
-	<div style="display:inline-block>
+	<div style="display:inline-block">
 		<script src="https://apis.google.com/js/platform.js"></script>
 		<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
 	</div>
