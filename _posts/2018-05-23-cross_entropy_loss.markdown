@@ -352,3 +352,6 @@ def backward(self, top, propagate_down, bottom):
 
 > The Focal Loss Caffe python layer is available [here](https://gist.github.com/gombru/881668fb065adc8f263725caa0722ab2).
 
+### Additional Resources
+Keras Loss Functions Guide: [Keras Loss Functions: Everything You Need To Know](https://neptune.ai/blog/keras-loss-functions)
+
