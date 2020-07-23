@@ -28,8 +28,12 @@ My CV is available [here](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy
 **Twitter**   [gombru](https://twitter.com/gombru)  
 **YouTube**   [gombru](https://www.youtube.com/channel/UC3vvewvchL5Si3bix1Kis6A?view_as=subscriber)    
 
+<div class="imgcap">
+	<div style="display:inline-block>
+		<script src="https://apis.google.com/js/platform.js"></script>
+		<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
+	</div>
+	<div style="display:inline-block; margin-left: 25px;">
 <a href="https://twitter.com/gombru?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @gombru</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<script src="https://apis.google.com/js/platform.js"></script>
-
-<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
+	</div>
+</div>

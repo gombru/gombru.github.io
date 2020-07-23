@@ -42,12 +42,12 @@ Both of them compare distances between representations of training data samples.
 
 
 <div class="imgcap">
-	<div style="display:inline-block">
-<a href="https://twitter.com/gombru?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @gombru</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-	</div>
-	<div style="display:inline-block; margin-left: 5px;">
+	<div style="display:inline-block>
 		<script src="https://apis.google.com/js/platform.js"></script>
 		<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
+	</div>
+	<div style="display:inline-block; margin-left: 25px;">
+<a href="https://twitter.com/gombru?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @gombru</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</div>
 </div>
 
@@ -220,3 +220,13 @@ Using this setup we computed some quantitative results to **compare Triplet Rank
 
  - [**triplet_semihard_loss**](https://www.tensorflow.org/api_docs/python/tf/contrib/losses/metric_learning/triplet_semihard_loss). Triplet loss with semi-hard negative mining.   
   
+
+<div class="imgcap">
+	<div style="display:inline-block>
+		<script src="https://apis.google.com/js/platform.js"></script>
+		<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
+	</div>
+	<div style="display:inline-block; margin-left: 25px;">
+<a href="https://twitter.com/gombru?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @gombru</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+</div>

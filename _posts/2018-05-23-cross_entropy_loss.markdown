@@ -78,6 +78,16 @@ Where $$s_j$$ are the scores inferred by the net for each class in $$C$$. Note t
 <iframe width="560" height="315" src="https://www.youtube.com/embed/635cmrp4z40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
+<div class="imgcap">
+	<div style="display:inline-block>
+		<script src="https://apis.google.com/js/platform.js"></script>
+		<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
+	</div>
+	<div style="display:inline-block; margin-left: 25px;">
+<a href="https://twitter.com/gombru?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @gombru</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+</div>
+
 ## Losses
 
 ### Cross-Entropy loss
@@ -355,3 +365,13 @@ def backward(self, top, propagate_down, bottom):
 ### Additional Resources
 Keras Loss Functions Guide: [Keras Loss Functions: Everything You Need To Know](https://neptune.ai/blog/keras-loss-functions)
 
+
+<div class="imgcap">
+	<div style="display:inline-block>
+		<script src="https://apis.google.com/js/platform.js"></script>
+		<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
+	</div>
+	<div style="display:inline-block; margin-left: 25px;">
+<a href="https://twitter.com/gombru?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @gombru</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+</div>
