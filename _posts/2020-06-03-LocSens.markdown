@@ -52,6 +52,7 @@ We follow this steps:
 </center>
 
 <div class="imgcap">
+<script src="https://apis.google.com/js/platform.js"></script>
 <div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
 </div>
 
