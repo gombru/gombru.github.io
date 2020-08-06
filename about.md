@@ -15,7 +15,7 @@ My CV is available [here](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy
 
 
 <div class="imgcap">
-<img src="/assets/me2.jpeg" height="340">
+<img src="/assets/IMG_20190927_075523.jpg" height="300">
 </div>
 
 
