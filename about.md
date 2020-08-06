@@ -15,11 +15,11 @@ My CV is available [here](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy
 
 
 <div class="imgcap">
-<img src="/assets/IMG_20190927_075523.jpg" height="300">
+<img src="/assets/IMG_20190927_075523.jpg" height="340">
 </div>
 
 
-### Places you can find me:
+### Places you can find me besides in the mountains:
 
 **E-mail**   <a href="mailto:{{ site.email }}">{{ site.email }}</a>  
 **Github**   [gombru](https://github.com/gombru)  
