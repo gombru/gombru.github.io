@@ -95,7 +95,12 @@ splits/test_ids.txt
 ```
 
 <p align="center">
-<b><a href="https://mega.nz/#!2IQnmQDI!q_wNTGPqIdoN7uOxF_BfPZxsCmkjnxt5HrFNIeSOdYw">Download MMHS150K (6 GB)</a></b>
+<b>
+	Download MMHS150K (6 GB)
+	<a href="https://drive.google.com/file/d/1S9mMhZFkntNnYdO-1dZXwF_8XIiFcmlF/view?usp=sharing">Google Drive</a>  
+	|
+	<a href="https://mega.nz/#!2IQnmQDI!q_wNTGPqIdoN7uOxF_BfPZxsCmkjnxt5HrFNIeSOdYw">Mega</a>
+</b>	
 </p>
 
 ## Methodology
