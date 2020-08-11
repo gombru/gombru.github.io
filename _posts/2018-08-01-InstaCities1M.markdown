@@ -18,8 +18,9 @@ I've have created a dataset of social media images with associated text, **Insta
 
 <p align="center">    
 <b>
-Download InstaCities1M (17.5 GB): <a href="https://mega.nz/#!GRQkDSKD!kUN8JdZOHquqOwdMR4JHTsXBmWIRjnbFT70AWrQBaig"> Mega </a> | 
-  <a href="https://google.com"> Google Drive 
+Download InstaCities1M (17.5 GB): 
+  <a href="https://mega.nz/#!GRQkDSKD!kUN8JdZOHquqOwdMR4JHTsXBmWIRjnbFT70AWrQBaig"> Mega </a> | 
+  <a href="https://google.com"> Google Drive </a>
   </b>
 </p>
 
@@ -28,7 +29,9 @@ Download InstaCities1M (17.5 GB): <a href="https://mega.nz/#!GRQkDSKD!kUN8JdZOHq
 A subset of the dataset, containing only the 100K images with captions associated with New York, is also available.
 <p align="center">    
 <b>
-Download InstaNY100K (1.7 GB): <a href="https://drive.google.com/file/d/1blGgEOlrHrM0-NAQxYVRwMlfiHDvVHXb/view?usp=sharing">Google Drive</a></b>
+Download InstaNY100K (1.7 GB): 
+  <a href="https://drive.google.com/file/d/1blGgEOlrHrM0-NAQxYVRwMlfiHDvVHXb/view?usp=sharing">Google Drive</a>
+</b>
 </p>
 
 To download the images from Instagram I used [InstaLooter](https://github.com/althonos/InstaLooter), a simple python script that parses the Instagram web without the need API access (The instagram API is only available for approved apps). You can download images quite fast for that, depending on what do you search. I simply did queries with the city names, and I got the 1M images after 2 weeks and some problems. 
