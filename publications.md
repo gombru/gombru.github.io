@@ -5,6 +5,17 @@ permalink: /publications/
 order: 2
 ---
 
+### Retrieval Guided Unsupervised Multi-Domain Image to Image Translation 
+**Raul Gomez**\*,Yahui Liu\*, Marco De Nadai, Nicu Sebe, Bruno Lepri, Dimosthenis Karatzas.  
+ACM MM, 2020. [[PDF](https://arxiv.org/abs/2008.04991)]   
+
+We propose using an image retrieval system to boost the performance of an image to image translation system, experimenting with a dataset of face images.
+
+<div class="imgcap">
+<img src="/assets/retrieval_guided_I2I.jpeg" height="180">
+</div>
+
+
 ### Location Sensitive Image Retrieval and Tagging 
 **Raul Gomez**, Jaume Gibert, Lluis Gomez, Dimosthenis Karatzas.  
 ECCV, 2020. [[PDF](https://arxiv.org/abs/2007.03375)]   
