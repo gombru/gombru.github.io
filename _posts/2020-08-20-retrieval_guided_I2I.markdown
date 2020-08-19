@@ -21,7 +21,7 @@ This work builds over [GMM-UNIT](https://arxiv.org/abs/2003.06788), a model for 
 In this paper **we propose a method that improves GMM-UNIT performance by exploiting an image retrieval system that provides during training real images similar to the input one but with the desired target attributes**. The hypothesis is that GMM-UNIT can benefit from those real retrieved images to generate more realistic images.
 
 <div class="imgcap">
-<img src="/assets/retrieval_guided_I2I/I2I_results_comparison.png" width="750">
+<img src="/assets/retrieval_guided_I2I/I2I_results_comparison.png" width="600">
 <div class="thecap">
 Results of the original GMM-UNIT model and its proposed improvement (RG-UNIT).</div>
 </div>
@@ -58,7 +58,7 @@ The retrieval system input is a concatenation of the content features and the at
 To create the triplets to train our model, we exploit the GMM-UNIT I2I translation system trained in step 1, as explained in the following figure:
 
 <div class="imgcap">
-<img src="/assets/retrieval_guided_I2I/triplets.png" width="750">
+<img src="/assets/retrieval_guided_I2I/triplets.png" width="800">
 </div>
 
 - **Anchor**: The content features of a given image and the desired target attributes.
@@ -74,7 +74,7 @@ To create the triplets to train our model, we exploit the GMM-UNIT I2I translati
 The **negatives mining strategy is crucial for the training**, as shown in these results:
 
 <div class="imgcap">
-<img src="/assets/retrieval_guided_I2I/retrieval_quantitative_results.png" width="500">
+<img src="/assets/retrieval_guided_I2I/retrieval_quantitative_results.png" width="400">
 </div>
 
 Here some results of the trained retrieval system:
@@ -90,7 +90,7 @@ Now we have a retrieval system able to find real images with the desired content
 This is the training pipeline of the proposed retrieval guided image to image model:
 
 <div class="imgcap">
-<img src="/assets/retrieval_guided_I2I/full_pipeline.png" width="750">
+<img src="/assets/retrieval_guided_I2I/full_pipeline.png" width="800">
 </div>
 
 The idea is simple: The retrieval system returns the images it founds and their content features are concatenated with the generator input. Importantly, the content and attributes feature extractors (**$$E_c$$, $$E_a$$**) are frozen during this training. Else, the retrieval system would fail.
@@ -100,13 +100,13 @@ The idea is simple: The retrieval system returns the images it founds and their 
 Quantitative results show that the retrieval guidance boosts GMM-UNIT performance in different image quality metrics:
 
 <div class="imgcap">
-<img src="/assets/retrieval_guided_I2I/I2I_quantitative_results.png" width="500">
+<img src="/assets/retrieval_guided_I2I/I2I_quantitative_results.png" width="400">
 </div>
 
 An important and nice feature of the retrieval guidance, is that its **retrieval set is not limited to annotated images**. Therefore, the **retrieval guidance can benefit from additional unnanotated data**, which can possibly boost even more the performance. To simulate that scenario, we train the RG-UNIT with a subset of the dataset, but include the whole dataset as the retrieval set. That results in a bigger performance improvement:
 
 <div class="imgcap">
-<img src="/assets/retrieval_guided_I2I/I2_quantitative_results_2.png" width="500">
+<img src="/assets/retrieval_guided_I2I/I2_quantitative_results_2.png" width="400">
 </div>
 
 ## Qualitative Results
