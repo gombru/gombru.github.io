@@ -97,6 +97,8 @@ splits/test_ids.txt
 <p align="center">
 <b>
 	Download MMHS150K (6 GB)
+	<a href="http://datasets.cvc.uab.es/MMHS150K/MMHS150K.zip">CVC (Lab)</a>  
+	|
 	<a href="https://drive.google.com/file/d/1S9mMhZFkntNnYdO-1dZXwF_8XIiFcmlF/view?usp=sharing">Google Drive</a>  
 	|
 	<a href="https://mega.nz/#!2IQnmQDI!q_wNTGPqIdoN7uOxF_BfPZxsCmkjnxt5HrFNIeSOdYw">Mega</a>
