@@ -32,7 +32,7 @@ Dr. Francesc Moreno (Universitat Politècnica de Cataunya, Institut de Robòtica
 
 Dr. Dimosthenis Karatzas (Centre de Visió per Computador, Universitat Autònoma de Barcelona)
 
-Thesis Co-Directors:
+**Thesis Co-Directors:**
 
 Dr. Lluis Gómez (Centre de Visió per Computador, Universitat Autònoma de Barcelona)
 
