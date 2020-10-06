@@ -19,6 +19,14 @@ order: 5
 </div>
 </center>
 
+<div class="imgcap">
+<img src="/assets/retrieval_guided_I2I.jpeg" height="180">
+</div>
+
+<div class="imgcap">
+	<img src="/assets/phd_defence.png" height="330">
+</div>
+
 
 - **Date & time**: 08/10/2020 - 12:00h (Spanish time, GMT+2)
 - [**Live Stream**](http://www.cvc.uab.es/?p=7127)
