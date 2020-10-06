@@ -28,7 +28,7 @@ We design a model to retrieve images related to a query hashtag and near to a gi
 
 ### Exploring Hate Speech Detection in Multimodal Publications 
 **Raul Gomez**, Jaume Gibert, Lluis Gomez, Dimosthenis Karatzas.  
-Winter Conference on Applications of Computer Vision, 2020. [[PDF](https://arxiv.org/pdf/1910.03814.pdf)] [[Slides](https://docs.google.com/presentation/d/1l9rPVWFXm80WoxaHwGGE1Cwn5WoDMsApz8Kaxf9Acro/edit?usp=sharing)] [[Poster](https://docs.google.com/presentation/d/1g5axv7ZyHme8uwobzvhsg-afvf_KX3UCzikkZz3-7Mc/edit?usp=sharing)]  
+Winter Conference on Applications of Computer Vision, 2020. [[PDF](https://arxiv.org/pdf/1910.03814.pdf)] [[Slides](https://docs.google.com/presentation/d/1l9rPVWFXm80WoxaHwGGE1Cwn5WoDMsApz8Kaxf9Acro/edit?usp=sharing)] [[Poster](https://docs.google.com/presentation/d/1g5axv7ZyHme8uwobzvhsg-afvf_KX3UCzikkZz3-7Mc/edit?usp=sharing)]    
 The problem of hate speech detection in multimodal publications formed by a text and an image is targeted. A large scale dataset from Twitter, MMHS150K, is created and different models that jointly analyze textual and visual information for hate speech detection are proposed.
 <div class="imgcap">
 <img src="/assets/mmhs/intro.png" height="180">
@@ -63,7 +63,8 @@ An extended version of the ECCVW article linked below containing extra experimen
 
 ### Learning to Learn from Web Data through Deep Semantic Embeddings
 **Raul Gomez**, Lluis Gomez, Jaume Gibert, Dismosthenis Karatzas.  
-ECCV MULA workshop (Oral), 2018. [[PDF](https://arxiv.org/abs/1808.06368)]  [[Slides](https://docs.google.com/presentation/d/10JJCGCN96-f5Rt20db3TYiJsMavFD2ebHNJ91X8ov7I/edit?usp=sharing)] [[Poster](https://docs.google.com/presentation/d/1oDGuzbw2x7uShMcc4ExqonRdRF7Rx4vcZmVaAwNrdpU/edit?usp=sharing)]
+ECCV MULA workshop (Oral), 2018. [[PDF](https://arxiv.org/abs/1808.06368)]  [[Slides](https://docs.google.com/presentation/d/10JJCGCN96-f5Rt20db3TYiJsMavFD2ebHNJ91X8ov7I/edit?usp=sharing)] [[Poster](https://docs.google.com/presentation/d/1oDGuzbw2x7uShMcc4ExqonRdRF7Rx4vcZmVaAwNrdpU/edit?usp=sharing)]  
+
 A performance comparison between different text embeddings for self-supervised learning from images and associated text in an image retrieval by text setup.
 <div class="imgcap">
 <img src="/assets/LearningToLearnFromWebData/pipeline_horizontal.png" height="180">
