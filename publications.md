@@ -29,6 +29,7 @@ We design a model to retrieve images related to a query hashtag and near to a gi
 ### Exploring Hate Speech Detection in Multimodal Publications 
 **Raul Gomez**, Jaume Gibert, Lluis Gomez, Dimosthenis Karatzas.  
 Winter Conference on Applications of Computer Vision, 2020. [[PDF](https://arxiv.org/pdf/1910.03814.pdf)] [[Slides](https://docs.google.com/presentation/d/1l9rPVWFXm80WoxaHwGGE1Cwn5WoDMsApz8Kaxf9Acro/edit?usp=sharing)] [[Poster](https://docs.google.com/presentation/d/1g5axv7ZyHme8uwobzvhsg-afvf_KX3UCzikkZz3-7Mc/edit?usp=sharing)]    
+
 The problem of hate speech detection in multimodal publications formed by a text and an image is targeted. A large scale dataset from Twitter, MMHS150K, is created and different models that jointly analyze textual and visual information for hate speech detection are proposed.
 <div class="imgcap">
 <img src="/assets/mmhs/intro.png" height="180">
