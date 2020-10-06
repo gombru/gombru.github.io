@@ -7,20 +7,10 @@ order: 5
 
 ### Exploiting the Interplay between Visual and Textual Data for Scene Interpretation
 
-Machine learning experimentation under controlled scenarios and standard datasets is necessary to compare algorithms performance by evaluating all of them in the same setup. However, experimentation on how those algorithms perform on unconstrained data and applied tasks to solve real world problems is also a must to ascertain how that research can contribute to our society.
 
 <div class="imgcap">
-	<img src="/assets/phd_defence.png" width="768">
+	<img src="/assets/phd_defence.png" height="320">
 </div>
-
-<img src="/assets/phd_defence.png" width="768">
-
-<div class="imgcap">
-	<div style="display:inline-block">
-	<img src="/assets/phd_defence.png" width="768">
-	</div>
-</div>
-
 
 
 - **Date & time**: 08/10/2020 - 12:00h (Spanish time, GMT+2)
