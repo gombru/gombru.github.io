@@ -61,7 +61,7 @@ Applying algorithms to [learn from images and associated text to Barcelona Insta
 
 ### Slides
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQRevpxy_lU5zeacOgbi9qpzgTny8q9ppiIzCCZEx_aGMkQi-8ywt7Rg92OekBdYeEzldCATopj0GNC/embed?start=false&loop=false&delayms=3000" frameborder="0" width="768" height="455" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR279Isz0FZ5o43C-kK2RilqIHkZzg6p4uZddrSJBp0D8fWKqCQbawoWj5_hvMvtxsW-VhclryBAys5/embed?start=false&loop=false&delayms=3000" frameborder="0" width="768" height="455" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 [Download](https://docs.google.com/presentation/d/1z-BmhiaB5UC7vhCTkENtiH3NsaYEhise2WEWnfHw1_0/edit?usp=sharing).
 
 
