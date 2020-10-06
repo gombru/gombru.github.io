@@ -15,10 +15,6 @@ We propose using an image retrieval system to boost the performance of an image 
 <img src="/assets/retrieval_guided_I2I.jpeg" height="180">
 </div>
 
-<div class="imgcap">
-	<img src="/assets/phd_defence.png" height="330">
-</div>
-
 ### Location Sensitive Image Retrieval and Tagging 
 **Raul Gomez**, Jaume Gibert, Lluis Gomez, Dimosthenis Karatzas.  
 ECCV, 2020. [[PDF](https://arxiv.org/abs/2007.03375)] [[Poster](https://docs.google.com/presentation/d/1vaV3Ad3JXel7wPK_KjuyQ6PRXF1AfW3AZVwHvhZ36VM/edit?usp=sharing)] [[Video](https://www.youtube.com/watch?v=rxFPGbIHbko)]  

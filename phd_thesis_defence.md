@@ -5,23 +5,8 @@ permalink: /phd_defence/
 order: 5
 ---
 
-### Exploiting the Interplay between Visual and Textual Data for Scene Interpretation
+## Exploiting the Interplay between Visual and Textual Data for Scene Interpretation
 
-<center>
-<div class="imgcap">
-	<center>
-	<div style="display:inline-block">
-	<center>
-	<img src="/assets/phd_defence.png">
-	</center>
-	</div>
-	</center>
-</div>
-</center>
-
-<div class="imgcap">
-<img src="/assets/retrieval_guided_I2I.jpeg" height="180">
-</div>
 
 <div class="imgcap">
 	<img src="/assets/phd_defence.png" height="330">
