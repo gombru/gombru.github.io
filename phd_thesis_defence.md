@@ -8,7 +8,7 @@ order: 5
 ### Exploiting the Interplay between Visual and Textual Data for Scene Interpretation
 
 <div class="imgcap">
-	<img src="/assets/phd_defence.png" height="310">
+<img src="/assets/phd_defence.png">
 </div>
 
 - **Date & time**: 08/10/2020 - 12:00h (Spanish time, GMT+2)
