@@ -9,7 +9,7 @@ order: 5
 
 <div class="imgcap">
 	<div style="display:inline-block">
-	<img src="/assets/phd_defence.png">
+	<img src="/assets/phd_defence.png" height="400">
 	</div>
 </div>
 
