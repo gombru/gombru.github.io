@@ -7,7 +7,7 @@ order: 2
 
 ### Retrieval Guided Unsupervised Multi-Domain Image to Image Translation 
 **Raul Gomez**\*,Yahui Liu\*, Marco De Nadai, Nicu Sebe, Bruno Lepri, Dimosthenis Karatzas.  
-ACM MM, 2020. [[PDF](https://arxiv.org/abs/2008.04991)]   
+ACM MM, 2020. [[PDF](https://arxiv.org/abs/2008.04991)]  [[Slides](https://docs.google.com/presentation/d/1ni9NZ3gh_DOM76B6DMcxaThSN_LAKsUE0zl90yLvses/edit?usp=sharing)] [[Video](https://www.youtube.com/watch?v=fqPGhQY3ZoM)]  
 
 We propose using an image retrieval system to boost the performance of an image to image translation system, experimenting with a dataset of face images.
 
@@ -18,7 +18,7 @@ We propose using an image retrieval system to boost the performance of an image 
 
 ### Location Sensitive Image Retrieval and Tagging 
 **Raul Gomez**, Jaume Gibert, Lluis Gomez, Dimosthenis Karatzas.  
-ECCV, 2020. [[PDF](https://arxiv.org/abs/2007.03375)]   
+ECCV, 2020. [[PDF](https://arxiv.org/abs/2007.03375)] [[Poster](https://docs.google.com/presentation/d/1vaV3Ad3JXel7wPK_KjuyQ6PRXF1AfW3AZVwHvhZ36VM/edit?usp=sharing)] [[Video](https://www.youtube.com/watch?v=rxFPGbIHbko)]  
 
 We design a model to retrieve images related to a query hashtag and near to a given location, and to tag images exploiting their location information.
 
@@ -28,8 +28,7 @@ We design a model to retrieve images related to a query hashtag and near to a gi
 
 ### Exploring Hate Speech Detection in Multimodal Publications 
 **Raul Gomez**, Jaume Gibert, Lluis Gomez, Dimosthenis Karatzas.  
-Winter Conference on Applications of Computer Vision, 2020. [[PDF](https://arxiv.org/pdf/1910.03814.pdf)]   
-
+Winter Conference on Applications of Computer Vision, 2020. [[PDF](https://arxiv.org/pdf/1910.03814.pdf)] [[Slides](https://docs.google.com/presentation/d/1l9rPVWFXm80WoxaHwGGE1Cwn5WoDMsApz8Kaxf9Acro/edit?usp=sharing)] [[Poster](https://docs.google.com/presentation/d/1g5axv7ZyHme8uwobzvhsg-afvf_KX3UCzikkZz3-7Mc/edit?usp=sharing)]  
 The problem of hate speech detection in multimodal publications formed by a text and an image is targeted. A large scale dataset from Twitter, MMHS150K, is created and different models that jointly analyze textual and visual information for hate speech detection are proposed.
 <div class="imgcap">
 <img src="/assets/mmhs/intro.png" height="180">
@@ -37,7 +36,7 @@ The problem of hate speech detection in multimodal publications formed by a text
 
 ### ARSI: An Aerial Robot for Sewer Inspection
 François Chataigner, Pedro Cavestany, Marcel Soler, Carlos Rizzo, Jesus-Pablo Gonzalez, Carles Bosch, Jaume Gibert, Antonio Torrente, **Raúl Gomez**, Daniel Serrano.  
-Advances in Robotics Research: From Lab to Market, 2019. [[PDF](https://link.springer.com/chapter/10.1007/978-3-030-22327-4_12)]   
+Advances in Robotics Research: From Lab to Market, 2019. [[PDF](https://link.springer.com/chapter/10.1007/978-3-030-22327-4_12)]     
 
 A robotic system, consisting on a drone with several cameras and sensors, is designed to make the work of sewer inspection brigades safer and more efficient. My contribution to this work is a FCN able to detect defects in the sewer manifested as irregular texture on its walls.
 <div class="imgcap">
@@ -46,7 +45,7 @@ A robotic system, consisting on a drone with several cameras and sensors, is des
 
 ### Selective Style Transfer for Text
 **Raul Gomez**\*, Ali Furkan Biten\*, Lluis Gomez, Jaume Gibert, Marçal Rusiñol, Dismosthenis Karatzas.  
-ICDAR, 2019. [[PDF](https://arxiv.org/abs/1906.01466)]   
+ICDAR, 2019. [[PDF](https://arxiv.org/abs/1906.01466)]  [[Poster](https://docs.google.com/presentation/d/13R3_hXrxKiOwRtfIB0g_0Pr20sHLIwwW11GrZi__O6E/edit?usp=sharing)]
 
 A selective style transfer model is trained to learn text styles and transfer them to text instances found in images. Experiments in different text domains (scene text, machine printed text and handwritten text) show the potential of text style transfer in different applications.
 <div class="imgcap">
@@ -64,16 +63,15 @@ An extended version of the ECCVW article linked below containing extra experimen
 
 ### Learning to Learn from Web Data through Deep Semantic Embeddings
 **Raul Gomez**, Lluis Gomez, Jaume Gibert, Dismosthenis Karatzas.  
-ECCV MULA workshop (Oral), 2018. [[PDF](https://arxiv.org/abs/1808.06368)] [[Slides](https://docs.google.com/presentation/d/10JJCGCN96-f5Rt20db3TYiJsMavFD2ebHNJ91X8ov7I/edit?usp=sharing)]
-
-A performance comparison between different text embeddings for self-supervised learning from images and associated text in an image retrieval setup.
+ECCV MULA workshop (Oral), 2018. [[PDF](https://arxiv.org/abs/1808.06368)]  [[Slides](https://docs.google.com/presentation/d/10JJCGCN96-f5Rt20db3TYiJsMavFD2ebHNJ91X8ov7I/edit?usp=sharing)] [[Poster](https://docs.google.com/presentation/d/1oDGuzbw2x7uShMcc4ExqonRdRF7Rx4vcZmVaAwNrdpU/edit?usp=sharing)]
+A performance comparison between different text embeddings for self-supervised learning from images and associated text in an image retrieval by text setup.
 <div class="imgcap">
 <img src="/assets/LearningToLearnFromWebData/pipeline_horizontal.png" height="180">
 </div>
 
 ### Learning from Barcelona Instagram data what Locals and Tourists post about its Neighbourhoods
 **Raul Gomez**, Lluis Gomez, Jaume Gibert, Dismosthenis Karatzas.  
-ECCV MULA workshop, 2018. [[PDF](https://arxiv.org/abs/1808.06369)]
+ECCV MULA workshop, 2018. [[PDF](https://arxiv.org/abs/1808.06369)] [[Poster](https://docs.google.com/presentation/d/18p-LwU2EcEIizNus5XX-uW_U72sD6FASSrtxDqH6i_s/edit?usp=sharing)]
 
 Learning relations between text, images and Barcelona neighbourhoods to study the differences between locals and tourists in social media publications and their relations with the different neighbourhoods.
 <div class="imgcap">

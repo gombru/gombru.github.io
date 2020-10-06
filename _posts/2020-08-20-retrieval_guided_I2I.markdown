@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "Retrieval Guided Unsupervised Multi-Domain Image to Image Translation"
 excerpt: "We propose using an image retrieval system to boost the performance of an image to image translation system, experimenting with a dataset of face images."
-date: 2020-06-03 20:00:00
+date: 2020-08-20 20:00:00
 img: "/assets/retrieval_guided_I2I.jpeg"
 mathjax: false
 ---

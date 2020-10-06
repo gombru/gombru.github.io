@@ -1,9 +1,18 @@
 ---
 layout: page
-title: Other PhD stuff
-permalink: /other-material/
+title: Activity
+permalink: /activity/
 order: 4
 ---
+
+### Internship at Huawei Ireland Research Center
+Since September 2020 I'm in Dublin doing an internship with Huawei, where I'm researching in video understanding.
+
+<div class="imgcap">
+	<div style="display:inline-block">
+	<img src="/assets/dublin.jpg" height="240">
+	</div>
+</div>
 
 ### Attended to WACV 2020 in Aspen, Colorado
 I attended to WACV 2020 where I presented my work "Exploring Hate Speech Detection in Multimodal Publications" as an spotlight and a poster. [[PDF](https://arxiv.org/pdf/1910.03814.pdf)] [[Slides](https://docs.google.com/presentation/d/1l9rPVWFXm80WoxaHwGGE1Cwn5WoDMsApz8Kaxf9Acro/edit?usp=sharing)] [[Poster](https://docs.google.com/presentation/d/1g5axv7ZyHme8uwobzvhsg-afvf_KX3UCzikkZz3-7Mc/edit?usp=sharing)]
