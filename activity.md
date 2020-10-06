@@ -14,6 +14,13 @@ Since September 2020 I'm in Dublin doing an internship with Huawei, where I'm re
 	</div>
 </div>
 
+### Poster at (online) ECCV 2020
+I presented online a poster in ECCV 2020: Location Sensitive Image Retrieval and Tagging. [[PDF](https://arxiv.org/abs/2007.03375)] [[Poster](https://docs.google.com/presentation/d/1vaV3Ad3JXel7wPK_KjuyQ6PRXF1AfW3AZVwHvhZ36VM/edit?usp=sharing)] [[Video](https://www.youtube.com/watch?v=rxFPGbIHbko)] 
+
+<center>
+ <iframe width="427" height="240" src="https://www.youtube.com/embed/rxFPGbIHbko" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
 ### Attended to WACV 2020 in Aspen, Colorado
 I attended to WACV 2020 where I presented my work "Exploring Hate Speech Detection in Multimodal Publications" as an spotlight and a poster. [[PDF](https://arxiv.org/pdf/1910.03814.pdf)] [[Slides](https://docs.google.com/presentation/d/1l9rPVWFXm80WoxaHwGGE1Cwn5WoDMsApz8Kaxf9Acro/edit?usp=sharing)] [[Poster](https://docs.google.com/presentation/d/1g5axv7ZyHme8uwobzvhsg-afvf_KX3UCzikkZz3-7Mc/edit?usp=sharing)]
 
