@@ -5,6 +5,18 @@ permalink: /activity/
 order: 4
 ---
 
+### PhD Thesis Defence 
+08/10/2020 I defended my PhD thesis in the Computer Vision Center under hard Covid restrictions. And yep, I'm already a Dr.!. You can find my thesis, the presentation slides, and a video of the defence [here](https://gombru.github.io/phd_defence/). 
+
+<div class="imgcap">
+	<div style="display:inline-block">
+	<img src="/assets/thesis_2.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
+	<img src="/assets/thesis_4.jpg" height="240">
+	</div>
+</div>
+
 ### Internship at Huawei Ireland Research Center
 Since September 2020 I'm in Dublin doing an internship with Huawei, where I'm researching in video understanding.
 

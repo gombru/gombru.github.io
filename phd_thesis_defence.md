@@ -13,12 +13,31 @@ order: 5
 </div>
 
 
-- **Date & time**: 08/10/2020 - 12:00h (Spanish time, GMT+2)
-- [**Live Stream**](http://www.cvc.uab.es/?p=7127)
-- [**Slides**](https://docs.google.com/presentation/d/1LUnzsnMyzRCg23v7q_uMM9bcpubHAxovpUdsz4vYZH0/edit?usp=sharing)
 - [**Thesis**](https://drive.google.com/file/d/1ljxxzqbqq2kZPUjV1_-aQOOG6omAg69y/view?usp=sharing)
+- [**Slides**](https://docs.google.com/presentation/d/1LUnzsnMyzRCg23v7q_uMM9bcpubHAxovpUdsz4vYZH0/edit?usp=sharing)
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR279Isz0FZ5o43C-kK2RilqIHkZzg6p4uZddrSJBp0D8fWKqCQbawoWj5_hvMvtxsW-VhclryBAys5/embed?start=false&loop=false&delayms=3000" frameborder="0" width="768" height="455" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<p align="center"><iframe align="middle" width="560" height="315" src="https://www.youtube.com/embed/FvH18kpzvjQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+
+**Photos:**
+
+<div class="imgcap">
+	<div style="display:inline-block">
+	<img src="/assets/thesis_2.jpg" height="260">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+	<img src="/assets/thesis_1.jpg" height="260">
+	</div>
+</div>
+
+<div class="imgcap">
+	<div style="display:inline-block">
+	<img src="/assets/thesis_4.jpg" height="260">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+	<img src="/assets/thesis_3.jpg" height="260">
+	</div>
+</div>
+
 
 **Committee:**
 
