@@ -29,7 +29,7 @@ Results of the original GMM-UNIT model and its proposed improvement (RG-UNIT).</
 
  <span style="color:brown"> **If you prefer video format, here is the video I made to present the article in (online) ACM MM 2020** </span>
 <center>
- <iframe width="560" height="315" src="https://www.youtube.com/watch?v=fqPGhQY3ZoM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/fqPGhQY3ZoM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
 <div class="imgcap">

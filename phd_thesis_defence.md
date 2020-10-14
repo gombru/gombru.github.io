@@ -12,10 +12,8 @@ order: 5
 	<img src="/assets/phd_defence.png" height="320">
 </div>
 
-<center>
 - [**Thesis**](https://drive.google.com/file/d/1ljxxzqbqq2kZPUjV1_-aQOOG6omAg69y/view?usp=sharing)
 - [**Slides**](https://docs.google.com/presentation/d/1LUnzsnMyzRCg23v7q_uMM9bcpubHAxovpUdsz4vYZH0/edit?usp=sharing)
-</center>
 
 <p align="center"><iframe align="middle" width="720" height="405" src="https://www.youtube.com/embed/FvH18kpzvjQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
 
