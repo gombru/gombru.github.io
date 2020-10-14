@@ -26,6 +26,23 @@ In this paper **we propose a method that improves GMM-UNIT performance by exploi
 Results of the original GMM-UNIT model and its proposed improvement (RG-UNIT).</div>
 </div>
 
+
+ <span style="color:brown"> **If you prefer video format, here is the video I made to present the article in (online) ACM MM 2020** </span>
+<center>
+ <iframe width="560" height="315" src="https://www.youtube.com/watch?v=fqPGhQY3ZoM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
+<div class="imgcap">
+	<div style="display:inline-block">
+		<script src="https://apis.google.com/js/platform.js"></script>
+		<div class="g-ytsubscribe" data-channelid="UC3vvewvchL5Si3bix1Kis6A" data-layout="full" data-count="default"></div>
+	</div>
+	<div style="display:inline-block; margin-left: 25px;">
+<a href="https://twitter.com/gombru?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">Follow @gombru</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+</div>
+
+
 ## Data
 We use the [Large-scale CelebFaces Attributes (CelebA) Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset which contains around **200k celebrity face images with 40 annotated binary attributes**.
 

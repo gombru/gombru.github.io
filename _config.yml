@@ -1,7 +1,7 @@
 # Site settings
 title: Raúl Gómez blog
 email: raulgombru@gmail.com
-description: "Computer vision, deep learning and image processing stuff by Raúl Gómez Bruballa, PhD student at Eurecat and CVC (UAB), Barcelona."
+description: "Computer vision, deep learning and image processing stuff by Raúl Gómez Bruballa, PhD in computer vision."
 baseurl: ""
 url: "http://gombru.github.io"
 twitter_username: gombru

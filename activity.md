@@ -26,6 +26,13 @@ Since September 2020 I'm in Dublin doing an internship with Huawei, where I'm re
 	</div>
 </div>
 
+### Poster at (online) ACM MM 2020
+I presented online a poster in ACMM MM 2020: "Retrieval Guided Unsupervised Multi-Domain Image to Image Translation". This work was done during my research stay at University of Trento. [[PDF](https://arxiv.org/abs/2008.04991)]  [[Slides](https://docs.google.com/presentation/d/1ni9NZ3gh_DOM76B6DMcxaThSN_LAKsUE0zl90yLvses/edit?usp=sharing)] [[Video](https://www.youtube.com/watch?v=fqPGhQY3ZoM)] 
+
+<center>
+ <iframe width="427" height="240" src="https://www.youtube.com/embed/fqPGhQY3ZoM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+
 ### Poster at (online) ECCV 2020
 I presented online a poster in ECCV 2020: "Location Sensitive Image Retrieval and Tagging". [[PDF](https://arxiv.org/abs/2007.03375)] [[Poster](https://docs.google.com/presentation/d/1vaV3Ad3JXel7wPK_KjuyQ6PRXF1AfW3AZVwHvhZ36VM/edit?usp=sharing)] [[Video](https://www.youtube.com/watch?v=rxFPGbIHbko)] 
 
