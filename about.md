@@ -6,7 +6,7 @@ order: 1
 ---
 
 I'm **Raúl Gómez Bruballa** and I was born in Altafulla and moved to Barcelona to study telecommunications engineering with an specialization in audiovisuals systems at the [Universitat Politècnica de Catalunya](https://telecos.upc.edu/en?set_language=en). After that I did a computer vision master at the [Computer Vision Center](http://www.cvc.uab.es/) (UAB), where I also did my PhD together with [Eurecat](https://eurecat.org/), the Catalonia technological center, under an industrial PhD program.
-During my PhD I have researched on diverse topics involving visual and textual data, focusing on learning from Web and Social Media data and on applied research. Those topics include multi-modal image retrieval, image tagging, multi-modal hate speech detection or scene text detection.
+During my PhD I researched on diverse topics involving visual and textual data, focusing on learning from Web and Social Media data and on applied research. Those topics include multi-modal image retrieval, image tagging, multi-modal hate speech detection or scene text detection.
 
 During my PhD I did research stay at the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/), in the University of Trento, and an internship in at [Huawei Ireland Research Center](https://www.linkedin.com/company/huawei-ireland-research-center/mycompany/), in the behavior analysis group.
 

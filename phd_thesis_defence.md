@@ -7,6 +7,8 @@ order: 5
 
 ### Exploiting the Interplay between Visual and Textual Data for Scene Interpretation
 
+**I successfully defended my PhD the 08/10/2020 and got an excellent Cum Laude. In this page the thesis pdf, the presentation slides, and a video of the presentation are made available.**
+
 
 <div class="imgcap">
 	<img src="/assets/phd_defence.png" height="320">

@@ -6,7 +6,7 @@ order: 4
 ---
 
 ### PhD Thesis Defence 
-08/10/2020 I defended my PhD thesis in the Computer Vision Center under hard Covid restrictions. And yep, I'm already a Dr.!. You can find my thesis, the presentation slides, and a video of the defence [here](https://gombru.github.io/phd_defence/). 
+08/10/2020 I defended my PhD thesis in the Computer Vision Center under hard Covid restrictions. And yep, I'm already a Dr.! Got an exellent Cum Laude. You can find my thesis, the presentation slides, and a video of the defence [here](https://gombru.github.io/phd_defence/). 
 
 <div class="imgcap">
 	<div style="display:inline-block">
