@@ -17,9 +17,7 @@ In this personal website I write about my scientific work, either publications, 
 <img src="/assets/IMG_20190927_075523.jpg" height="300">
 </div>
 
-<p align="center">
 [**Curriculum**](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy6NJCQxKR81s/view?usp=sharing)  |  [**Publications**](https://gombru.github.io/publications/)
-</p>
 
 ### Places you can find me besides in the mountains:
 
@@ -193,7 +191,7 @@ I developed tools that learn from images and associated text, and applied that t
  - I presented an application of this work to #Barcelona Instagram images and tourism in the [TurisTICForum of Barcelona](https://gombru.github.io/2018/01/12/insta_barcelona).
 
 **Blog**  
-I have a blog where I explain my PhD work, toy experiments and general machine learning concepts. One of its articles explaining Cross-Entropy Loss is featured in the Deep Learning [fast.ai](https://www.fast.ai/) course and in the [deeplearning.ai](https://www.deeplearning.ai/programs/) Introduction to TensorFlow course. It’s visited by 15k people per month. https://gombru.github.io/. I constantly receive good feedback aplauding my intuitive explanations.  
+I have a [blog](https://gombru.github.io/) where I explain my PhD work, toy experiments and general machine learning concepts. One of its articles explaining Cross-Entropy Loss is featured in the Deep Learning [fast.ai](https://www.fast.ai/) course and in the [deeplearning.ai](https://www.deeplearning.ai/programs/) Introduction to TensorFlow course. It’s visited by 15k people per month. I constantly receive good feedback aplauding my intuitive explanations.  
 
 
 ### Recommendation Letters
