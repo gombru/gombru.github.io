@@ -2,7 +2,7 @@
 layout: page
 title: Activity
 permalink: /activity/
-order: 4
+order: 2
 ---
 
 ### PhD Thesis Defence 

@@ -2,7 +2,7 @@
 layout: page
 title: Software
 permalink: /software/
-order: 3
+order: 10
 ---
 <!---
 ### Hate Speech Labeler ###

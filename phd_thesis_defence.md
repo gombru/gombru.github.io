@@ -2,7 +2,7 @@
 layout: page
 title: PhD Thesis Defence
 permalink: /phd_defence/
-order: 5
+order: 10
 ---
 
 ### Exploiting the Interplay between Visual and Textual Data for Scene Interpretation
