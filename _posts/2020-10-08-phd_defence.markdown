@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "PhD Thesis Defence"
 excerpt: "I successfully defended my PhD the 08/10/2020 and got an excellent Cum Laude. In this post the thesis pdf, the presentation slides, and a video of the presentation are made available."
-date: 2020-08-10 20:00:00
+date: 2020-10-08 20:00:00
 img: "/assets/thesis_all.png"
 mathjax: false
 ---
@@ -46,6 +46,16 @@ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 	<img src="/assets/thesis_3.jpg" height="260">
 	</div>
 </div>
+
+<div class="imgcap">
+	<div style="display:inline-block">
+	<img src="/assets/thesis_book_1.jpg" height="260">
+	</div>
+	<div style="display:inline-block; margin-left: 10px;">
+	<img src="/assets/thesis_book_2.jpg" height="260">
+	</div>
+</div>
+
 
 
 **Committee:**

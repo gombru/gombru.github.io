@@ -17,9 +17,9 @@ In this personal website I write about my scientific work, either publications, 
 <img src="/assets/IMG_20190927_075523.jpg" height="300">
 </div>
 
-<div style="display:inline-block; margin-left: 25px;">
-[Curriculum](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy6NJCQxKR81s/view?usp=sharing)  |  [Publications](https://gombru.github.io/publications/)
-</div>
+<p align="center">
+[**Curriculum**](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy6NJCQxKR81s/view?usp=sharing)  |  [**Publications**](https://gombru.github.io/publications/)
+</p>
 
 ### Places you can find me besides in the mountains:
 
@@ -49,17 +49,17 @@ In this personal website I write about my scientific work, either publications, 
 ### Education
 
 **2016–2020 PhD in Computer Vision**  
-Eurecat and Computer Vision Center, Universitat Autónoma de Barcelona, Exellent Cum Laude. Supervised by Dr. Dimosthenis Karatzas, Dr. Lluis Gómez and Dr. Jaume Gibert.
- - **Research stay in University of Trento**. Working with the Multimedia and Human Understanding Group, lead by Nicu Sebe.
- - **Internship in Huawei Ireland Research Center**. Research intern in Huawei, working in the human behaviour analysis group.  
+[Eurecat](https://eurecat.org/en/field-of-knowledge/audiovisual-technologies/) and [Computer Vision Center](http://www.cvc.uab.es/), Universitat Autónoma de Barcelona, Exellent Cum Laude. Supervised by Dr. Dimosthenis Karatzas, Dr. Lluis Gómez and Dr. Jaume Gibert.
+ - **Research stay in University of Trento**. Working with the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/#/), lead by Nicu Sebe.
+ - **Internship in Huawei Ireland Research Center**. Research intern in Huawei, working in the human [behaviour analysis group](https://www.linkedin.com/company/huawei-ireland-research-center/mycompany/).  
 
 
 **2015–2016 Master in Computer Vision**  
-Universitat Autónoma de Barcelona. GPA – 8.45.
+[Oficial master](https://pagines.uab.cat/mcv/) at Universitat Autónoma de Barcelona. GPA – 8.45.
 
 
 **2010–2014 Bachelor’s Degree in Telecomunications Engineering**  
-Universistat Politécnica de Catalunya, GPA – 6.8. Specialized in Audiovisual Systems
+[ETSETB](https://telecos.upc.edu/ca), Universistat Politécnica de Catalunya, GPA – 6.8. Specialized in Audiovisual Systems
 
 ### Experience
 
@@ -81,7 +81,7 @@ Internship in the context of the master thesis. Worked on text detection.
 ### Computer Vision R&D
 
 **Image Retrieval**  
-I've an extense experience training deep models for image retrieval, using triplet nets architectures and [ranking losses](https://gombru.github.io/2019/04/03/ranking_loss/).
+I've an extense experience training deep models for image retrieval, using triplet nets architectures and [ranking losses](https://gombru.github.io/2019/04/03/ranking_loss/) with different deep learning frameworks.
  - Image by text retrieval learning from Social Media data. [[Project](https://gombru.github.io/2018/08/01/learning_from_web_data/)]
  - Face images by attributes retrieval. [[Project](https://gombru.github.io/2020/01/23/face_attributes_retrieval/)]
  - Image retrieval by text and location. [[Project](https://gombru.github.io/2020/06/03/LocSens/)]
@@ -98,16 +98,16 @@ I've an extense experience training deep models for image retrieval, using tripl
 
 
 **Image Tagging and Classification**  
-I've also worked in the image tagging tasks (or [Multi Label Classification](https://gombru.github.io/2018/05/23/cross_entropy_loss/)) applied to different scenarios.
+I've also designed and trained models for image tagging tasks (or [Multi Label Classification](https://gombru.github.io/2018/05/23/cross_entropy_loss/)) applied to different scenarios.
  - Tagging of geolocated images. [[Project](https://gombru.github.io/2020/06/03/LocSens/)].
  - Finding the ingredients of food images. [[Project](https://gombru.github.io/2017/07/19/inferring_ingredients/)]
 
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/about/tagging_1.png" height = "180">
+		<img src="/assets/about/tagging_1.png" height = "160">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/about/tagging_2.jpg" height = "180">
+		<img src="/assets/about/tagging_2.jpg" height = "160">
 	</div>
 </div>
 
@@ -151,7 +151,7 @@ I've experience in scene text detection and have worked in several projects in t
 		<img src="/assets/publications/coco-text.png" height = "180">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/about/text.png" height = "180">
+		<img src="/assets/about/text_2.png" height = "180">
 	</div>
 </div>
 
@@ -160,7 +160,7 @@ I've worked on video action recognition for human behaviour analysis, improving 
 
  <div class="imgcap">
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/about/ava_demo.gif" height = "140">
+		<img src="/assets/about/ava_demo.gif" height = "180">
 	</div>
 </div>
 
@@ -178,8 +178,8 @@ I've also experience with NLP and have trained word representation models (Word2
 ### Other Projects
 
 **Technical Courses Development**  
-I've worked developing technical courses to teach machine learning to computer scientist by doing applied projects.
- -  Manning: [Image Retrieval usingTextual Inquiry with Deep Learning](https://www.manning.com/?a_aid=VPNIoT)
+I've worked developing online technical courses to teach machine learning to computer scientist by doing applied projects.
+ -  Manning: [Image Retrieval using Textual Inquiry with Deep Learning](https://www.manning.com/?a_aid=VPNIoT)
 
 **External Writer**  
 I've worked as a freelance technical writer and have recognized written communications skills, especially to explain technical concepts in an intuitive way.
