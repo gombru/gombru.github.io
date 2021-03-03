@@ -17,17 +17,9 @@ In this personal website I write about my scientific work, either publications, 
 <img src="/assets/IMG_20190927_075523.jpg" height="300">
 </div>
 
-[**Curriculum**](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy6NJCQxKR81s/view?usp=sharing)  |  [**Publications**](https://gombru.github.io/publications/)
-
-### Places you can find me besides in the mountains:
-
-**E-mail**   <a href="mailto:{{ site.email }}">{{ site.email }}</a>  
-**Github**   [gombru](https://github.com/gombru)  
-**Linkedin**   [Raul Gomez Bruballa](https://www.linkedin.com/in/raulgomezbruballa)  
-**Instagram**   [raulgombru](https://www.instagram.com/raulgombru/)  
-**Twitter**   [gombru](https://twitter.com/gombru)  
-**YouTube**   [gombru](https://www.youtube.com/channel/UC3vvewvchL5Si3bix1Kis6A?view_as=subscriber)  
-
+<p align="center">
+[**Curriculum**](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy6NJCQxKR81s/view?usp=sharing)  &nbsp;&nbsp;  [**Publications**](https://gombru.github.io/publications/)
+</p>
 
 <div class="imgcap">
 	<div style="display:inline-block">
@@ -40,6 +32,15 @@ In this personal website I write about my scientific work, either publications, 
 </div>
 
 
+### Places you can find me besides in the mountains:
+
+**E-mail**   <a href="mailto:{{ site.email }}">{{ site.email }}</a>  
+**Github**   [gombru](https://github.com/gombru)  
+**Linkedin**   [Raul Gomez Bruballa](https://www.linkedin.com/in/raulgomezbruballa)  
+**Instagram**   [raulgombru](https://www.instagram.com/raulgombru/)  
+**Twitter**   [gombru](https://twitter.com/gombru)  
+**YouTube**   [gombru](https://www.youtube.com/channel/UC3vvewvchL5Si3bix1Kis6A?view_as=subscriber)  
+
 
 ## Portfolio
 	
@@ -47,9 +48,9 @@ In this personal website I write about my scientific work, either publications, 
 ### Education
 
 **2016–2020 PhD in Computer Vision**  
-[Eurecat](https://eurecat.org/en/field-of-knowledge/audiovisual-technologies/) and [Computer Vision Center](http://www.cvc.uab.es/), Universitat Autónoma de Barcelona, Exellent Cum Laude. Supervised by Dr. Dimosthenis Karatzas, Dr. Lluis Gómez and Dr. Jaume Gibert.
- - **Research stay in University of Trento**. Working with the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/#/), lead by Nicu Sebe.
- - **Internship in Huawei Ireland Research Center**. Research intern in Huawei, working in the human [behaviour analysis group](https://www.linkedin.com/company/huawei-ireland-research-center/mycompany/).  
+[Eurecat](https://eurecat.org/en/field-of-knowledge/audiovisual-technologies/) and [Computer Vision Center](http://www.cvc.uab.es/), Universitat Autónoma de Barcelona, Exellent Cum Laude.
+ - **Research stay in University of Trento**. Working with the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/#/).
+ - **Internship in Huawei Ireland Research Center**. Working in the human [behaviour analysis group](https://www.linkedin.com/company/huawei-ireland-research-center/mycompany/).  
 
 
 **2015–2016 Master in Computer Vision**  
@@ -73,7 +74,7 @@ EURECAT Technology Centre, Barcelona. Worked on R&D computer vision consultancy 
 Computer Vision Centre, Barcelona. Working with Convolutional Neural Networks in image text understanding.
 
 
-**2015–2016 Internship, EURECAT, Barcelona.**  
+**2015–2016 Research Intern (MS), EURECAT, Barcelona.**  
 Internship in the context of the master thesis. Worked on text detection.
 
 ### Computer Vision R&D
