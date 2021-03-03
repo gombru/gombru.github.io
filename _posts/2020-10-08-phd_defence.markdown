@@ -4,7 +4,7 @@ comments: true
 title: "PhD Thesis Defence"
 excerpt: "I successfully defended my PhD the 08/10/2020 and got an excellent Cum Laude. In this post the thesis pdf, the presentation slides, and a video of the presentation are made available."
 date: 2020-08-10 20:00:00
-img: "/assets/thesis_all.png
+img: "/assets/thesis_all.png"
 mathjax: false
 ---
 

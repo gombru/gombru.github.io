@@ -89,10 +89,10 @@ I've an extense experience training deep models for image retrieval, using tripl
 
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/about/retrieval_2.png" height = "140">
+		<img src="/assets/about/retrieval_2.png" height = "180">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/about/retrieval_1.png" height = "140">
+		<img src="/assets/about/retrieval_1.png" height = "180">
 	</div>
 </div>
 
@@ -104,10 +104,10 @@ I've also worked in the image tagging tasks (or [Multi Label Classification](htt
 
 <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/about/tagging_1.png" height = "140">
+		<img src="/assets/about/tagging_1.png" height = "180">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/about/tagging_2.png" height = "140">
+		<img src="/assets/about/tagging_2.jpg" height = "180">
 	</div>
 </div>
 
@@ -118,10 +118,10 @@ I've experience training object detection models (YOLO, Faster-RCNN, Mask-RCNN, 
 
  <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/about/detection_1.jpg" height = "140">
+		<img src="/assets/about/detection_1.jpg" height = "180">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/about/detection_2.png" height = "140">
+		<img src="/assets/about/detection_2.png" height = "180">
 	</div>
 </div>
 
@@ -133,10 +133,10 @@ I've trained object segmentation models (FCN, Mask-RCNN) for different tasks.
 
  <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/facefcn/FaceFCN.gif" height = "140">
+		<img src="/assets/facefcn/FaceFCN.gif" height = "180">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/publications/fcn.gif" height = "140">
+		<img src="/assets/publications/fcn.gif" height = "180">
 	</div>
 </div>
 
@@ -148,10 +148,10 @@ I've experience in scene text detection and have worked in several projects in t
 
  <div class="imgcap">
 	<div style="display:inline-block">
-		<img src="/assets/publications/coco-text.png" height = "140">
+		<img src="/assets/publications/coco-text.png" height = "180">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/about/text.png" height = "140">
+		<img src="/assets/about/text.png" height = "180">
 	</div>
 </div>
 
