@@ -18,7 +18,7 @@ In this personal website I write about my scientific work, either publications, 
 </div>
 
 <div style="display:inline-block; margin-left: 25px;">
-[**Curriculum**](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy6NJCQxKR81s/view?usp=sharing)  |  [**Publications**](https://gombru.github.io/publications/)
+[Curriculum](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy6NJCQxKR81s/view?usp=sharing)  |  [Publications](https://gombru.github.io/publications/)
 </div>
 
 ### Places you can find me besides in the mountains:
