@@ -39,9 +39,11 @@ En este vídeo muestro qué patrones visuales aprende una red neuronal (CNN) de 
 Artículo en mi blog sobre [Barcelona Deep Dream](https://gombru.github.io/2018/10/10/barcelona_deepdream/).  
 Artículo sobre cómo [entreno la CNN con imágenes de Instagram y su texto asociado](https://gombru.github.io/2018/01/12/insta_barcelona/).
 
-<p align="center"><iframe align="middle" width="720" height="405" src="https://www.youtube.com/embed/untbvn7Vjt0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p align="center"><iframe align="middle" width="720" height="405" src="https://www.youtube.com/embed/untbvn7Vjt0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>  
 
+  
 
+  
 
 <div class="imgcap">
 	<div style="display:inline-block">
