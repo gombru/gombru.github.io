@@ -14,8 +14,11 @@ order: 10
 	<img src="/assets/phd_defence.png" height="320">
 </div>
 
-- [**Thesis**](https://drive.google.com/file/d/1ljxxzqbqq2kZPUjV1_-aQOOG6omAg69y/view?usp=sharing)
-- [**Slides**](https://docs.google.com/presentation/d/1LUnzsnMyzRCg23v7q_uMM9bcpubHAxovpUdsz4vYZH0/edit?usp=sharing)
+<p align="center">
+	<a style="font-weight:bold" href="https://drive.google.com/file/d/1ljxxzqbqq2kZPUjV1_-aQOOG6omAg69y/view?usp=sharing"> Thesis</a>
+	&nbsp;
+	<a style="font-weight:bold" href="https://docs.google.com/presentation/d/1LUnzsnMyzRCg23v7q_uMM9bcpubHAxovpUdsz4vYZH0/edit?usp=sharing"> Slides</a>
+</p>
 
 <p align="center"><iframe align="middle" width="720" height="405" src="https://www.youtube.com/embed/FvH18kpzvjQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
 
@@ -41,10 +44,10 @@ order: 10
 
 <div class="imgcap">
 	<div style="display:inline-block">
-	<img src="/assets/thesis_book_1.jpg" height="500">
+	<img src="/assets/thesis_book_1.jpg" height="450">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-	<img src="/assets/thesis_book_2.jpg" height="500">
+	<img src="/assets/thesis_book_2.jpg" height="450">
 	</div>
 </div>
 

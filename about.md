@@ -19,7 +19,7 @@ In this personal website I write about my scientific work, either publications, 
 
 <p align="center">
 	<a style="font-weight:bold" href="https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy6NJCQxKR81s/view?usp=sharing"> Curriculum</a>
-	&nbsp;
+	&nbsp;&nbsp;
 	<a style="font-weight:bold" href="https://gombru.github.io/publications/"> Publications</a>
 </p>
 
@@ -34,15 +34,29 @@ In this personal website I write about my scientific work, either publications, 
 </div>
 
 
-### Places you can find me besides in the mountains:
+<p align="center">
+<em>Places you can find me besides in the mountains:</em>
+	<a href="mailto:{{ site.email }}">{{ site.email }}</a>
+	&nbsp;&nbsp;&nbsp;
+	<a style="font-weight:bold" href="https://github.com/gombru"> Github</a>
+	<br>
+	<a style="font-weight:bold" href="https://www.linkedin.com/in/raulgomezbruballa"> Linkedin</a>
+	&nbsp;&nbsp;&nbsp;
+	<a style="font-weight:bold" href="https://twitter.com/gombru"> Twitter</a>
+	<br>
+	<a style="font-weight:bold" href="https://www.youtube.com/channel/UC3vvewvchL5Si3bix1Kis6A?view_as=subscriber"> YouTube</a>
+	&nbsp;&nbsp;&nbsp;
+	<a style="font-weight:bold" href="https://www.instagram.com/raulgombru/"> Instragram</a>
+</p>
 
+<!---
 **E-mail**   <a href="mailto:{{ site.email }}">{{ site.email }}</a>  
 **Github**   [gombru](https://github.com/gombru)  
 **Linkedin**   [Raul Gomez Bruballa](https://www.linkedin.com/in/raulgomezbruballa)  
 **Instagram**   [raulgombru](https://www.instagram.com/raulgombru/)  
 **Twitter**   [gombru](https://twitter.com/gombru)  
 **YouTube**   [gombru](https://www.youtube.com/channel/UC3vvewvchL5Si3bix1Kis6A?view_as=subscriber)  
-
+-->
 
 ## Portfolio
 	
@@ -197,6 +211,6 @@ I developed tools that learn from images and associated text, and applied that t
 I have a [blog](https://gombru.github.io/) where I explain my PhD work, toy experiments and general machine learning concepts. One of its articles explaining Cross-Entropy Loss is featured in the Deep Learning [fast.ai](https://www.fast.ai/) course and in the [deeplearning.ai](https://www.deeplearning.ai/programs/) Introduction to TensorFlow course. It’s visited by 15k people per month. I constantly receive good feedback aplauding my intuitive explanations.  
 
 
+<!---
 ### Recommendation Letters
-
-Ask for them.
+-->
