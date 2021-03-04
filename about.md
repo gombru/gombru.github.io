@@ -18,7 +18,9 @@ In this personal website I write about my scientific work, either publications, 
 </div>
 
 <p align="center">
-[**Curriculum**](https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy6NJCQxKR81s/view?usp=sharing)  &nbsp;&nbsp;  [**Publications**](https://gombru.github.io/publications/)
+	<a style="font-weight:bold" href="https://drive.google.com/file/d/1lVkR3tW6dt93ExcdVR7Jy6NJCQxKR81s/view?usp=sharing"> Curriculum</a>
+	&nbsp;
+	<a style="font-weight:bold" href="https://gombru.github.io/publications/"> Publications</a>
 </p>
 
 <div class="imgcap">
@@ -99,7 +101,7 @@ I've an extense experience training deep models for image retrieval, using tripl
 **Image Tagging and Classification**  
 I've also designed and trained models for image tagging tasks (or [Multi Label Classification](https://gombru.github.io/2018/05/23/cross_entropy_loss/)) applied to different scenarios.
  - Tagging of geolocated images. [[Project](https://gombru.github.io/2020/06/03/LocSens/)].
- - Finding the ingredients of food images. [[Project](https://gombru.github.io/2017/07/19/inferring_ingredients/)]
+ - Finding ingredients in food images. [[Project](https://gombru.github.io/2017/07/19/inferring_ingredients/)]
 
 <div class="imgcap">
 	<div style="display:inline-block">
@@ -159,7 +161,7 @@ I've worked on video action recognition for human behaviour analysis, improving 
 
  <div class="imgcap">
 	<div style="display:inline-block; margin-left: 10px;">
-		<img src="/assets/about/ava_demo.gif" height = "180">
+		<img src="/assets/about/ava_demo.gif" height = "200">
 	</div>
 </div>
 

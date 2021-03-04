@@ -49,10 +49,10 @@ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 
 <div class="imgcap">
 	<div style="display:inline-block">
-	<img src="/assets/thesis_book_1.jpg" height="260">
+	<img src="/assets/thesis_book_1.jpg" height="500">
 	</div>
 	<div style="display:inline-block; margin-left: 10px;">
-	<img src="/assets/thesis_book_2.jpg" height="260">
+	<img src="/assets/thesis_book_2.jpg" height="500">
 	</div>
 </div>
 
