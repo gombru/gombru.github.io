@@ -35,7 +35,9 @@ In this personal website I write about my scientific work, either publications, 
 
 
 <p align="center">
-<em>Places you can find me besides in the mountains:</em>
+	<br>
+<em><strong>Places you can find me besides in the mountains:</strong></em>
+	<br>
 	<a href="mailto:{{ site.email }}">{{ site.email }}</a>
 	&nbsp;&nbsp;&nbsp;
 	<a style="font-weight:bold" href="https://github.com/gombru"> Github</a>
