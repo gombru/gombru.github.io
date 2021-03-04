@@ -39,15 +39,15 @@ In this personal website I write about my scientific work, either publications, 
 <em><strong>Places you can find me besides in the mountains:</strong></em>
 	<br>
 	<a href="mailto:{{ site.email }}">{{ site.email }}</a>
-	&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<a style="font-weight:bold" href="https://github.com/gombru"> Github</a>
 	<br>
 	<a style="font-weight:bold" href="https://www.linkedin.com/in/raulgomezbruballa"> Linkedin</a>
-	&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<a style="font-weight:bold" href="https://twitter.com/gombru"> Twitter</a>
 	<br>
 	<a style="font-weight:bold" href="https://www.youtube.com/channel/UC3vvewvchL5Si3bix1Kis6A?view_as=subscriber"> YouTube</a>
-	&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<a style="font-weight:bold" href="https://www.instagram.com/raulgombru/"> Instragram</a>
 </p>
 
@@ -85,7 +85,7 @@ Huawei Ireland Research Center, Dublin. Working on video action recognition for 
 
 
 **2016-2020 Computer Vision Researcher**  
-EURECAT Technology Centre, Barcelona. Worked on R&D computer vision consultancy projects and on the PhD research.
+Eurecat Technology Centre, Barcelona. Worked on R&D computer vision consultancy projects and on the PhD research.
 
 
 **2016-2017 Research assistant**  
