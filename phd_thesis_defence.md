@@ -16,7 +16,7 @@ order: 10
 
 <p align="center">
 	<a style="font-weight:bold" href="https://drive.google.com/file/d/1ljxxzqbqq2kZPUjV1_-aQOOG6omAg69y/view?usp=sharing"> Thesis</a>
-	&nbsp;
+	&nbsp;&nbsp;&nbsp;
 	<a style="font-weight:bold" href="https://docs.google.com/presentation/d/1LUnzsnMyzRCg23v7q_uMM9bcpubHAxovpUdsz4vYZH0/edit?usp=sharing"> Slides</a>
 </p>
 
