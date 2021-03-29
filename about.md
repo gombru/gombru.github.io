@@ -80,7 +80,12 @@ In this personal website I write about my scientific work, either publications, 
 
 ### Experience
 
-**2020-Present Research Intern (PhD).**  
+
+**2021-Present Data Scientist - Computer Vision.**  
+Shutterstock, Dublin. 
+
+
+**2020-2021 Research Intern (PhD).**  
 Huawei Ireland Research Center, Dublin. Working on video action recognition for human behaviour analysis.
 
 
