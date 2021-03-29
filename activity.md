@@ -5,6 +5,15 @@ permalink: /activity/
 order: 2
 ---
 
+### Data Scientist @ Shutterstock
+On 29/03/2021 I started working as a Data Scientist at Shutterstock, in Dublin.
+
+<div class="imgcap">
+	<div style="display:inline-block">
+	<img src="/assets/dublin_2.jpg" height="240">
+	</div>
+</div>
+
 ### PhD Thesis Defence 
 08/10/2020 I defended my PhD thesis in the Computer Vision Center under hard Covid restrictions. And yep, I'm already a Dr.! Got an exellent Cum Laude. You can find my thesis, the presentation slides, and a video of the defence [here](https://gombru.github.io/phd_defence/). 
 
