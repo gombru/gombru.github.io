@@ -10,7 +10,7 @@ On 29/03/2021 I started working as a Data Scientist at Shutterstock, in Dublin.
 
 <div class="imgcap">
 	<div style="display:inline-block">
-	<img src="/assets/dublin_2.jpg" height="240">
+	<img src="/assets/dublin2.jpg" height="240">
 	</div>
 </div>
 
@@ -31,7 +31,10 @@ Since September 2020 I'm in Dublin doing an internship with Huawei, where I'm re
 
 <div class="imgcap">
 	<div style="display:inline-block">
-	<img src="/assets/dublin.jpg" height="240">
+	<img src="/assets/dublin_2.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
+	<img src="/assets/ireland.jpg" height="240">
 	</div>
 </div>
 
@@ -66,6 +69,9 @@ From December 2019 until March 2020 I was working with the [Multimedia and Human
 
 <div class="imgcap">
 	<div style="display:inline-block">
+	<img src="/assets/trento_2.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
 	<img src="/assets/trento.jpg" height="240">
 	</div>
 </div>
@@ -96,6 +102,9 @@ I also participated in the tutorial organized by my research group: [Vision and 
 	</div>
 	<div style="display:inline-block; margin-left: 5px;">
 	<img src="/assets/tutorial_icdar.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
+	<img src="/assets/sidney.jpg" height="240">
 	</div>
 </div>
 
@@ -129,7 +138,12 @@ I went to this [summer school](http://iplab.dmi.unict.it/icvss2018/Home) in Sici
 [[Poster](https://docs.google.com/presentation/d/18p-LwU2EcEIizNus5XX-uW_U72sD6FASSrtxDqH6i_s/edit?usp=sharing)]  [[PDF](https://arxiv.org/abs/1808.06369)]
 
 <div class="imgcap">
-<img src="/assets/poster_icvss.jpg" height="240">
+	<div style="display:inline-block">
+	<img src="/assets/eccv/poster_icvss.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
+	<img src="/assets/sicily.jpg" height="240">
+	</div>
 </div>
 
 
@@ -155,8 +169,14 @@ In the computer vision center CVCRD2017 is organized each year to present studen
 I went to this [summer school](http://cvit.iiit.ac.in/SSDA/) in Jaipur and I presented there a poster about the work done in my master thesis.  
 [[Poster](https://drive.google.com/file/d/0B-DM8FPBNpG6clNXVk1MM0hHR1E/view?usp=sharing)]
 
+
 <div class="imgcap">
-<img src="/assets/poster_india.jpg" height="240">
+	<div style="display:inline-block">
+	<img src="/assets/poster_india.jpg" height="240">
+	</div>
+	<div style="display:inline-block; margin-left: 5px;">
+	<img src="/assets/jaipur.jpg" height="240">
+	</div>
 </div>
 
 ### Master's thesis
