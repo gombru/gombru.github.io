@@ -6,7 +6,7 @@ order: 2
 ---
 
 ### Data Scientist @ Shutterstock
-On 29/03/2021 I started working as a Data Scientist at Shutterstock, in Dublin.
+On 29/03/2021 I started working as a Data Scientist at Shutterstock, in Dublin, where I'm developing Recommendation Systems.
 
 <div class="imgcap">
 	<div style="display:inline-block">
@@ -27,7 +27,7 @@ On 29/03/2021 I started working as a Data Scientist at Shutterstock, in Dublin.
 </div>
 
 ### Internship at Huawei Ireland Research Center
-Since September 2020 I'm in Dublin doing an internship with Huawei, where I'm researching in video understanding.
+Starting September 2020 I did a 6 months internship with Huawei in Dublin, where I researched on video action localization and recognition.
 
 <div class="imgcap">
 	<div style="display:inline-block">
@@ -139,7 +139,7 @@ I went to this [summer school](http://iplab.dmi.unict.it/icvss2018/Home) in Sici
 
 <div class="imgcap">
 	<div style="display:inline-block">
-	<img src="/assets/eccv/poster_icvss.jpg" height="240">
+	<img src="/assets/poster_icvss.jpg" height="240">
 	</div>
 	<div style="display:inline-block; margin-left: 5px;">
 	<img src="/assets/sicily.jpg" height="240">
