@@ -7,7 +7,9 @@ order: 1
 
 I'm **Raúl Gómez Bruballa** and I was born in Altafulla and moved to Barcelona to study telecommunications engineering with an specialization in audiovisuals systems at the [Universitat Politècnica de Catalunya](https://telecos.upc.edu/en?set_language=en). After that I did a computer vision master at the [Computer Vision Center](http://www.cvc.uab.es/) (UAB), where I also did my PhD together with [Eurecat](https://eurecat.org/), the Catalonia technological center, under an industrial PhD program.
 During my PhD I researched on diverse topics involving visual and textual data, focusing on learning from Web and Social Media data and on applied research. Those topics include multi-modal image retrieval, image tagging, multi-modal hate speech detection or scene text detection.
-During my PhD I did research stay at the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/), in the University of Trento, and an internship in at [Huawei Ireland Research Center](https://www.linkedin.com/company/huawei-ireland-research-center/mycompany/), in the behavior analysis group.
+During my PhD I did research stay at the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/), in the University of Trento, and an internship in at [Huawei Ireland Research Center](https://www.linkedin.com/company/huawei-ireland-research-center/mycompany/), in the behavior analysis group.  
+
+Currently I'm working at Shutterstock, in Dublin, where I'm developing Recommendation Systems.
 
 I'm interested in computer vision, deep learning and image processing, and I like to work on research and development projects that have a direct impact in our society. 
 In this personal website I write about my scientific work, either publications, toy experiments or coding stuff.
@@ -82,7 +84,7 @@ In this personal website I write about my scientific work, either publications, 
 
 
 **2021-Present Data Scientist - Computer Vision.**  
-Shutterstock, Dublin. 
+Shutterstock, Dublin. Developing Recommendation Systems.
 
 
 **2020-2021 Research Intern (PhD).**  
