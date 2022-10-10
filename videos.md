@@ -5,6 +5,11 @@ permalink: /videos/
 order: 4
 ---
 
+### Learning Users’ Preferred Visual Styles in an Image Marketplace - ACM RecSys 2022
+After my PhD I joined Shutterstock where I've been working on Recommender Systems. I gave a talk in ACM RecSys 2022 explaining what I've been up to the last year: Visual Styles RecSys: a model that learns users' visual style preferences transversal to the projects they work on, and which aims to personalise the content served at Shutterstock. You can find the paper and more resources [here](https://gombru.github.io/2022/10/10/acm_recsys/)
+
+<p align="center"><iframe align="middle" width="720" height="405" src="https://www.youtube.com/embed/GVLjwuFvhyY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+
 ### PhD Thesis Defence
  I defended my PhD thesis "Exploiting the Interplay between Visual and Textual Data for Scene Interpretation" in the Computer Vision Center under hard Covid restrictions. And yep, I'm already a Dr.! Got an exellent Cum Laude. You can find my thesis, the presentation slides, and a video of the defence [here](https://gombru.github.io/phd_defence/). 
 
