@@ -5,11 +5,11 @@ permalink: /publications/
 order: 3
 ---
 
-### Learning Users’ Preferred Visual Styles in an Image Marketplace 
+### Learning Users’ Preferred Visual Styles in an Image Marketplace   
 **Raul Gomez**, Lauren Burnham-King, Alessandra Sala. Shutterstock.
 ACM RecSys, 2022. [[PDF](https://dl.acm.org/doi/pdf/10.1145/3523227.3547382)] [[Slides](https://drive.google.com/file/d/1HCXO7KlkESHQhFeHp57tPHco_siLJ3-M/view?usp=sharing)] [[Poster](https://drive.google.com/file/d/1i3fqZxunmF2usg2Ii4DYQtsnsbl1dCUK/view?usp=sharing)] [[Video](https://youtu.be/GVLjwuFvhyY)] 
 
-After my PhD I joined Shutterstock where I've been working on Recommender Systems. In this article we present Visual Styles RecSys, a model that learns users' visual style preferences transversal to the projects creatives work on, and which aim to personalise the content served at Shutterstock. It was presented as an oral in ACM RecSys '22 industrial track. A [BlogPost](https://www.shutterstock.com/blog/data-science-building-content-personalization) and an extended [technical report](https://arxiv.org/abs/2208.10902) about this work have also been published.
+After my PhD I joined Shutterstock where I've been working on Recommender Systems. In this article we present Visual Styles RecSys, a model that learns users' visual style preferences transversal to the projects they work on, and which aims to personalise the content served at Shutterstock. It was presented as an oral in ACM RecSys '22 industrial track. A [BlogPost](https://www.shutterstock.com/blog/data-science-building-content-personalization) and an extended [technical report](https://arxiv.org/abs/2208.10902) about this work have also been published.
 
 <div class="imgcap">
 <img src="/assets/acm_recsys.png" height="180">
