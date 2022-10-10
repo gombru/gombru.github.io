@@ -5,6 +5,17 @@ permalink: /publications/
 order: 3
 ---
 
+### Learning Users’ Preferred Visual Styles in an Image Marketplace 
+**Raul Gomez**, Lauren Burnham-King, Alessandra Sala. Shutterstock.
+ACM RecSys, 2022. [[PDF]([https://arxiv.org/abs/2008.04991](https://dl.acm.org/doi/pdf/10.1145/3523227.3547382))]  [[Slides]([https://docs.google.com/presentation/d/1ni9NZ3gh_DOM76B6DMcxaThSN_LAKsUE0zl90yLvses/edit?usp=sharing](https://drive.google.com/file/d/1HCXO7KlkESHQhFeHp57tPHco_siLJ3-M/view?usp=sharing))] [[Poster]([[https://www.youtube.com/watch?v=fqPGhQY3ZoM](https://youtu.be/GVLjwuFvhyY](https://drive.google.com/file/d/1i3fqZxunmF2usg2Ii4DYQtsnsbl1dCUK/view?usp=sharing)))]  
+[[Video]([https://www.youtube.com/watch?v=fqPGhQY3ZoM](https://youtu.be/GVLjwuFvhyY))]  
+
+After my PhD I joined Shutterstock where I've been working on Recommender Systems. In this article we present Visual Styles RecSys, a model that learns users' visual style preferences transversal to the projects creatives work on, and which aim to personalise the content served at Shutterstock. It was presented as an oral in ACM RecSys '22 industrial track. A [BlogPost](https://www.shutterstock.com/blog/data-science-building-content-personalization) and an extended [technical report](https://arxiv.org/abs/2208.10902) about this work have also been published.
+
+<div class="imgcap">
+<img src="/assets/acm_recsys.png" height="180">
+</div>
+
 ### Retrieval Guided Unsupervised Multi-Domain Image to Image Translation 
 **Raul Gomez**\*,Yahui Liu\*, Marco De Nadai, Nicu Sebe, Bruno Lepri, Dimosthenis Karatzas.  
 ACM MM, 2020. [[PDF](https://arxiv.org/abs/2008.04991)]  [[Slides](https://docs.google.com/presentation/d/1ni9NZ3gh_DOM76B6DMcxaThSN_LAKsUE0zl90yLvses/edit?usp=sharing)] [[Video](https://www.youtube.com/watch?v=fqPGhQY3ZoM)]  
