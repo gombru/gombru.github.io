@@ -6,7 +6,7 @@ order: 2
 ---
 
 ### Talk @ ACM RecSys 2022 in Seattle
-I gave a talk in ACM RecSys 2022 explaining what I've been up to the last year: Visual Styles RecSys: a model that learns users' visual style preferences transversal to the projects they work on, and which aims to personalise the content served at Shutterstock. 
+I gave a talk in ACM RecSys 2022 explaining what I've been up to the last year: Visual Styles RecSys: a model that learns users' visual style preferences transversal to the projects they work on, and which aims to personalise the content served at Shutterstock. You can find the paper and more resources [here](https://gombru.github.io/2022/06/25/visual_styles_recsys/).
 
 <p align="center"><iframe align="middle" width="720" height="405" src="https://www.youtube.com/embed/GVLjwuFvhyY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
 
