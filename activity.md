@@ -5,6 +5,12 @@ permalink: /activity/
 order: 2
 ---
 
+### Talk @ ACM RecSys 2022 in Seattle
+I gave a talk in ACM RecSys 2022 explaining what I've been up to the last year: Visual Styles RecSys: a model that learns users' visual style preferences transversal to the projects they work on, and which aims to personalise the content served at Shutterstock. 
+
+<p align="center"><iframe align="middle" width="720" height="405" src="https://www.youtube.com/embed/GVLjwuFvhyY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+
+
 ### Data Scientist @ Shutterstock
 On 29/03/2021 I started working as a Data Scientist at Shutterstock, in Dublin, where I'm developing Recommendation Systems.
 
