@@ -18,10 +18,7 @@ I've have created a dataset of social media images with associated text, **Insta
 
 <p align="center">    
 <b>
-Download InstaCities1M (17.5 GB): 
-  <a href="http://datasets.cvc.uab.es/InstaCities1M/InstaCities1M.zip"> CVC (Lab) </a> | 
-  <a href="https://drive.google.com/file/d/1SCh8gSoyvrJ7N9OwlRcWc65zo1qf6SAy/view?usp=sharing"> Google Drive </a> | 
-  <a href="https://mega.nz/#!GRQkDSKD!kUN8JdZOHquqOwdMR4JHTsXBmWIRjnbFT70AWrQBaig"> Mega </a>
+(Dataset taken down by petition of Meta)
   </b>
 </p>
 
