@@ -9,7 +9,7 @@ mathjax: false
 ---
 
 <div class="imgcap">
-	<img src="/assets/text-to-image" height="320">
+	<img src="/assets/text-to-image.png" height="320">
 </div>
 
 Read post in [Shutterstock blog](https://www.shutterstock.com/blog/dataset-quality-caption-richness-text-to-image-models?utm_source=linkedin&utm_medium=social_media_organic&utm_campaign=raul_031826_blogshare).
