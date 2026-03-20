@@ -5,15 +5,26 @@ permalink: /about/
 order: 1
 ---
 
-I'm **Raúl Gómez Bruballa** and I was born in Altafulla and moved to Barcelona to study telecommunications engineering with an specialization in audiovisuals systems at the [Universitat Politècnica de Catalunya](https://telecos.upc.edu/en?set_language=en). After that I did a computer vision master at the [Computer Vision Center](http://www.cvc.uab.es/) (UAB), where I also did my PhD together with [Eurecat](https://eurecat.org/), the Catalonia technological center, under an industrial PhD program.
+**2017** - Trained a **GoogLeNet (Inception v1)** CNN on **ImageNet from scratch** using a **4-GPU machine we built in-house at Eurecat**. Had to code the gradients of a **custom self-supervised loss in Caffe**.
+
+**2018** - Wrote blog posts with intuitive explanations of **[Cross Entropy Loss](https://gombru.github.io/2018/05/23/cross_entropy_loss/)** and **[Ranking Loss](https://gombru.github.io/2018/05/23/cross_entropy_loss/)** that got cited in reference tutorials and still get **~10k views/month**.
+
+**2019** - Attempted to develop **CLIP before CLIP** but missed because I used only **one random element in the batch as negative instead of all**. 
+
+**2020** - Learned everything about **video** and **huge computing clusters** pushing the **SoA of video action recognition** at Huawei.
+
+**2021** - Learned everything about **RecSys** by creating an **R&D framework from scratch at Shutterstock** (and found that my latest **PhD ECCV publication** was actually a RecSys!)
+
+**2022** - Consolidated my **RecSys (and A/B testing!) knowledge** at Shutterstock by **productionalizing 2 models**, publishing at **ACM RecSys** and submitting **2 patents**.
+
+**2023** - Generative time! Training **text-to-image models from scratch** with the huge Shutterstock catalog. **4 models deployed. 6 patents.**
+
+**2025** - **Principal Applied Scientist. Leading SSTK ML in the Generative Era.**
+
+
+I studied telecommunications engineering with an specialization in audiovisuals systems at the [Universitat Politècnica de Catalunya](https://telecos.upc.edu/en?set_language=en). After that I did a computer vision master at the [Computer Vision Center](http://www.cvc.uab.es/) (UAB), where I also did my PhD together with [Eurecat](https://eurecat.org/), the Catalonia technological center, under an industrial PhD program.
 During my PhD I researched on diverse topics involving visual and textual data, focusing on learning from Web and Social Media data and on applied research. Those topics include multi-modal image retrieval, image tagging, multi-modal hate speech detection or scene text detection.
-During my PhD I did research stay at the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/), in the University of Trento, and an internship in at [Huawei Ireland Research Center](https://www.linkedin.com/company/huawei-ireland-research-center/mycompany/), in the behavior analysis group.  
-
-**Currently I'm a Principal Applied Scientist at Shutterstock. Leading SSTK ML in the Generative Era.**
-
-I'm interested in computer vision, deep learning and image processing, and I like to work on research and development projects that have a direct impact in our society. 
-In this personal website I write about my scientific work, either publications, toy experiments or coding stuff.
-
+During my PhD I did research stay at the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/), in the University of Trento, and an internship in at [Huawei Ireland Research Center](https://www.linkedin.com/company/huawei-ireland-research-center/mycompany/), in the behavior analysis group. **Currently I'm a Principal Applied Scientist at Shutterstock. Leading SSTK ML in the Generative Era.**
 
 <div class="imgcap">
 <img src="/assets/IMG_20190927_075523.jpg" height="300">
