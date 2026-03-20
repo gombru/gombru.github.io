@@ -22,10 +22,6 @@ order: 1
 **2025** - **Principal Applied Scientist. Leading SSTK ML in the Generative Era.**
 
 
-I studied telecommunications engineering with an specialization in audiovisuals systems at the [Universitat Politècnica de Catalunya](https://telecos.upc.edu/en?set_language=en). After that I did a computer vision master at the [Computer Vision Center](http://www.cvc.uab.es/) (UAB), where I also did my PhD together with [Eurecat](https://eurecat.org/), the Catalonia technological center, under an industrial PhD program.
-During my PhD I researched on diverse topics involving visual and textual data, focusing on learning from Web and Social Media data and on applied research. Those topics include multi-modal image retrieval, image tagging, multi-modal hate speech detection or scene text detection.
-During my PhD I did research stay at the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/), in the University of Trento, and an internship in at [Huawei Ireland Research Center](https://www.linkedin.com/company/huawei-ireland-research-center/mycompany/), in the behavior analysis group. **Currently I'm a Principal Applied Scientist at Shutterstock. Leading SSTK ML in the Generative Era.**
-
 <div class="imgcap">
 <img src="/assets/IMG_20190927_075523.jpg" height="300">
 </div>
@@ -69,26 +65,7 @@ During my PhD I did research stay at the [Multimedia and Human Understanding Gro
 **YouTube**   [gombru](https://www.youtube.com/channel/UC3vvewvchL5Si3bix1Kis6A?view_as=subscriber)  
 -->
 
-## Portfolio
-	
-
-### Education
-
-**2016–2020 PhD in Computer Vision**  
-[Eurecat](https://eurecat.org/en/field-of-knowledge/audiovisual-technologies/) and [Computer Vision Center](http://www.cvc.uab.es/), Universitat Autónoma de Barcelona, Exellent Cum Laude.
- - **Research stay in University of Trento**. Working with the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/#/).
- - **Internship in Huawei Ireland Research Center**. Working in the human [behaviour analysis group](https://www.linkedin.com/company/huawei-ireland-research-center/mycompany/).  
-
-
-**2015–2016 Master in Computer Vision**  
-[Oficial master](https://pagines.uab.cat/mcv/) at Universitat Autónoma de Barcelona. GPA – 8.45.
-
-
-**2010–2014 Bachelor’s Degree in Telecomunications Engineering**  
-[ETSETB](https://telecos.upc.edu/ca), Universistat Politécnica de Catalunya, GPA – 6.8. Specialized in Audiovisual Systems
-
 ### Experience
-
 
 **2021-Present Data Scientist - Computer Vision.**  
 Shutterstock, Dublin. Generative, Computer Vision, RecSys.
@@ -108,6 +85,21 @@ Computer Vision Centre, Barcelona. Working with Convolutional Neural Networks in
 
 **2015–2016 Research Intern (MS), EURECAT, Barcelona.**  
 Internship in the context of the master thesis. Worked on text detection.
+
+### Education
+
+**2016–2020 PhD in Computer Vision**  
+[Eurecat](https://eurecat.org/en/field-of-knowledge/audiovisual-technologies/) and [Computer Vision Center](http://www.cvc.uab.es/), Universitat Autónoma de Barcelona, Exellent Cum Laude.
+ - **Research stay in University of Trento**. Working with the [Multimedia and Human Understanding Group](http://mhug.disi.unitn.it/#/).
+ - **Internship in Huawei Ireland Research Center**. Working in the human [behaviour analysis group](https://www.linkedin.com/company/huawei-ireland-research-center/mycompany/).  
+
+
+**2015–2016 Master in Computer Vision**  
+[Oficial master](https://pagines.uab.cat/mcv/) at Universitat Autónoma de Barcelona. GPA – 8.45.
+
+
+**2010–2014 Bachelor’s Degree in Telecomunications Engineering**  
+[ETSETB](https://telecos.upc.edu/ca), Universistat Politécnica de Catalunya, GPA – 6.8. Specialized in Audiovisual Systems
 
 ### Computer Vision R&D
 
