@@ -12,4 +12,4 @@ mathjax: false
 	<img src="/assets/music-genres.png" height="320">
 </div>
 
-Read post in [Shutterstock blog]([https://www.shutterstock.com/blog/music-genre-prediction])).
+Read post in [Shutterstock blog](https://www.shutterstock.com/blog/music-genre-prediction).
