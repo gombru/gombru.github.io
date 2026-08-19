@@ -22,10 +22,16 @@ In this post I group up the different names and variations people use for **Cros
 </div>
 
 <div class="imgcap">
-<img src="https://fivecents.app/brand/five-cents-ai-podcasts-blog-banner.png" height="200">
-	<div class="thecap">
-	[Five Cents](https://fivecents.app/download) generates personalized AI podcasts for what matters to you: create episodes on demand, hear news tailored to your interests, and explore travel guides in audio.
-	</div>
+  <a href="https://fivecents.app/download">
+    <img
+      src="https://fivecents.app/brand/five-cents-ai-podcasts-blog-banner.png"
+      height="200"
+      alt="Five Cents: AI Podcasts"
+    >
+  </a>
+  <div class="thecap">
+    Five Cents generates personalized AI podcasts for what matters to you: create episodes on demand, hear news tailored to your interests, and explore travel guides in audio.
+  </div>
 </div>
 
 First, let’s introduce some concepts:
