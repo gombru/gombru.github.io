@@ -25,9 +25,12 @@ Ranking Losses functions are very flexible in terms of training data: We just ne
 To use a Ranking Loss function we first **extract features from two (or three) input data points and get an embedded representation** for each of them. Then, we define a metric function to **measure the similarity between those representations**, for instance euclidian distance. Finally, we **train the feature extractors to produce similar representations for both inputs, in case the inputs are similar, or distant representations for the two inputs, in case they are dissimilar**.  
 We don’t even care about the values of the representations, only about the distances between them. However, **this training methodology has demonstrated to produce powerful representations** for different tasks.
 
-<center>
-<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7IT2QI&placement=gombrugithubio" id="_carbonads_js"></script>
-</center>
+<div class="imgcap">
+<img src="https://fivecents.app/brand/five-cents-ai-podcasts-blog-banner.png" height="400">
+	<div class="thecap">
+	Five Cents generates personalized AI podcasts for what matters to you: create episodes on demand, hear news tailored to your interests, and explore travel guides in audio.
+	</div>
+</div>
 
 ## Ranking Losses Formulation
 
