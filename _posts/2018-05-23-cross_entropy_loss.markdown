@@ -21,9 +21,12 @@ In this post I group up the different names and variations people use for **Cros
 	<img src="/assets/cross_entropy_loss/intro.png" height = "250">
 </div>
 
-<center>
-<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7IT2QI&placement=gombrugithubio" id="_carbonads_js"></script>
-</center>
+<div class="imgcap">
+<img src="https://fivecents.app/brand/five-cents-ai-podcasts-blog-banner.png" height="400">
+	<div class="thecap">
+	Five Cents generates personalized AI podcasts for what matters to you: create episodes on demand, hear news tailored to your interests, and explore travel guides in audio.
+	</div>
+</div>
 
 First, let’s introduce some concepts:
 
