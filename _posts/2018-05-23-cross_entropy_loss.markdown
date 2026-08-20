@@ -22,7 +22,7 @@ In this post I group up the different names and variations people use for **Cros
 </div>
 
 <div class="imgcap">
-  <a href="https://fivecents.app/download">
+  <a href="https://fivecents.app/download?utm_source=gombru_blog&utm_medium=referral&utm_campaign=ai_podcasts_banner">
     <img
       src="https://fivecents.app/brand/five-cents-ai-podcasts-blog-banner.png"
       height="200"
