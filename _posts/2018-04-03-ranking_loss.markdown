@@ -26,7 +26,7 @@ To use a Ranking Loss function we first **extract features from two (or three) i
 We don’t even care about the values of the representations, only about the distances between them. However, **this training methodology has demonstrated to produce powerful representations** for different tasks.
 
 <div class="imgcap">
-  <a href="https://fivecents.app/download">
+  <a href="https://fivecents.app/download?utm_source=gombru_blog&utm_medium=referral&utm_campaign=ai_podcasts_banner">
     <img
       src="https://fivecents.app/brand/five-cents-ai-podcasts-blog-banner.png"
       height="200"
